@@ -1,3 +1,7 @@
-//
-// Created by basybe on 2/14/25.
-//
+#include <iostream>
+
+int main (){
+
+    std::cout<< "Hello world \n";
+
+}
