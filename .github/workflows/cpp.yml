@@ -14,9 +14,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install dependencies
-      run:
+      run: |
         sudo apt-get update
-        sudo apt-get install libgtest-dev
+        sudo apt-get install -y cmake libgtest-dev build-essential
+
+    - name: Build and install gtest
+      run: |
+        cd /usr/src/gtest
+        sudo cmake CMakeLists.txt
+        sudo make
+        sudo cp *.a /usr/lib
     - name: make
       run: make
 
