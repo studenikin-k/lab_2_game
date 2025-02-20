@@ -17,13 +17,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y cmake libgtest-dev build-essential
-
-    - name: Build and install gtest
-      run: |
-        cd /usr/src/gtest
-        sudo cmake CMakeLists.txt
-        sudo make
-        sudo cp *.a /usr/lib
     - name: make
       run: make
 
