@@ -2,9 +2,9 @@
 
 
 TEST(Сheck,check){
-    EXPECT_TRUE (0==0);
+    EXPECT_TRUE (1==1);
 }
 
 TEST (check1,Check1){
-    EXPECT_FALSE (1==3);
+    EXPECT_FALSE (1==2);
 }
