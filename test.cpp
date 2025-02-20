@@ -6,5 +6,5 @@ TEST(Сheck,check){
 }
 
 TEST (check1,Check1){
-    EXPECT_FALSE (1==0);
+    EXPECT_FALSE (1==2);
 }
