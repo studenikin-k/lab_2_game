@@ -1,8 +1,11 @@
 CC=g++
 CFLAGS=-Werror -Wpedantic -Wall -std=c++17
 LDFLAGS=-lgtest -lgtest_main -lpthread
-SOURCES=test.cpp
-OBJECTS=$(SOURCES:.cpp=.o)
+SOURCE_DIRECTORIES = src src/characters src/inventory
+TEST_DIRECTORY = tests
+SOURCES=$(wildcard $(patsubst %,%/*.cpp,$(SOURCE_DIRECTORIES))) main.cpp
+TESTS = $(wildcard $(TEST_DIRECTORY)/*.cpp)
+OBJECTS=$(SOURCES:.cpp=.o) $(TESTS:.cpp=.o)
 EXECUTABLE=test
 
 all: $(EXECUTABLE)
@@ -17,3 +20,4 @@ $(EXECUTABLE): $(OBJECTS)
 
 clean:
 	rm -rf $(EXECUTABLE) $(OBJECTS) *.mk
+
