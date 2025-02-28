@@ -17,11 +17,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake libgtest-dev build-essential
-  make:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
+          
       - name: make
         run: make
+      - name: run_test
+        run: ./test
