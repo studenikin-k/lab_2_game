@@ -1,7 +1,9 @@
 #include "opponent.h"
 
-opponent::opponent(std::string &_name, unsigned int _level, unsigned int _health, unsigned int _damage,
-                   unsigned int _armor, unsigned int _accuracy, unsigned int _stun, unsigned int _dodge):character() {
+opponent::opponent(const std::string &_name, const unsigned int _level,
+                   const unsigned int _health, const unsigned int _damage,
+                   const unsigned int _armor, const unsigned int _accuracy,
+                   const unsigned int _stun, const unsigned int _dodge): character() {
     setName(_name);
     setLevel(_level);
     setHealth(_health);

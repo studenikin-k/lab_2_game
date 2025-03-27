@@ -25,11 +25,12 @@ public:
 
     void setDodge(unsigned int dodge);
 
-    void showInShop();
-    void showInInventory();
+    void showInShop() const;
+    void showInInventory() const;
 
     coins price;
     slotOfEquipment slot;
+    unsigned int armor_;
 
     [[nodiscard]] slotOfEquipment getSlot() const;
 
@@ -66,7 +67,7 @@ public:
 
 class Gloves : public equipment {
 public:
-    Gloves(const std::string &_name, unsigned int _level, unsigned int _health,
+    Gloves(const std::string &_name, const unsigned int _level, const unsigned int _health,
            unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price) :
             equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Gloves, _style, _price) {};
 };
@@ -74,16 +75,16 @@ public:
 
 class Pants : public equipment {
 public:
-    Pants(const std::string &_name, unsigned int _level, unsigned int _health,
-          unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price) :
+    Pants(const std::string &_name, const unsigned int _level, const unsigned int _health,
+          const unsigned int _armor, const unsigned int _dodge, const warStyle _style, const coins _price) :
             equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Pants, _style, _price) {};
 };
 
 
 class Boots : public equipment {
 public:
-    Boots(const std::string &_name, unsigned int _level, unsigned int _health,
-          unsigned int _armor, unsigned int _dodge, slotOfEquipment _slot, warStyle _style, coins _price) :
+    Boots(const std::string &_name, const unsigned int _level, const unsigned int _health,
+          const unsigned int _armor, const unsigned int _dodge, slotOfEquipment _slot, const warStyle _style, const coins _price) :
             equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Boots, _style, _price) {};
 };
 

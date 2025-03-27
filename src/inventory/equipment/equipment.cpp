@@ -1,9 +1,9 @@
 #include "equipment.h"
 
-equipment::equipment(const std::string &_name, unsigned int _level, unsigned int _health,
-                     unsigned int _armor, unsigned int _dodge,
-                     slotOfEquipment _slot, warStyle _style, coins _price)
-        : inventory(), price(_price), slot(_slot), style(_style) {
+equipment::equipment(const std::string &_name, const unsigned int _level, const unsigned int _health,
+                     const unsigned int _armor, const unsigned int _dodge,
+                     const slotOfEquipment _slot, const warStyle _style, const coins _price)
+        : inventory(), price(_price), slot(_slot), armor_(_armor), style(_style) {
     setName(_name);
     setLevel(_level);
     setHealth(_health);
@@ -56,7 +56,7 @@ void equipment::setPrice(const coins &_price) {
     equipment::price = _price;
 }
 
-void equipment::showInShop() {
+void equipment::showInShop() const {
     std::cout << "Название: " << equipment::getName() << std::endl <<
               "Тип предмета: " << slotOfEquipmentToString(equipment::slot) << std::endl <<
               "Уровень премета: " << equipment::getLevel() << std::endl <<
@@ -69,7 +69,7 @@ void equipment::showInShop() {
 
 
 }
-void equipment::showInInventory() {
+void equipment::showInInventory() const {
     std::cout << "Название: " << equipment::getName() << std::endl <<
               "Тип предмета: " << slotOfEquipmentToString(equipment::slot) << std::endl <<
               "Уровень премета: " << equipment::getLevel() << std::endl <<

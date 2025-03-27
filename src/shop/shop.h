@@ -5,6 +5,7 @@
 #include <memory>
 #include <algorithm>
 #include <unordered_map>
+#include <iostream>
 #include "../inventory/equipment/equipment.h"
 #include "../inventory/weapon/weapon.h"
 #include "../inventory/potion/potion.h"

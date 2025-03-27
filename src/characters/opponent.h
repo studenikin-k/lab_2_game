@@ -4,7 +4,7 @@
 #include "character.h"
 class opponent : character {
 public:
-    opponent(std::string &,unsigned int,unsigned int, unsigned int, unsigned int,unsigned int,
+    opponent(const std::string &,unsigned int,unsigned int, unsigned int, unsigned int,unsigned int,
     unsigned int, unsigned int);
     ~opponent()= default;
 
@@ -17,7 +17,7 @@ private:
     std::string name;
     unsigned int level{};
 public:
-    unsigned int getLevel() const;
+    [[nodiscard]] unsigned int getLevel() const;
 
     void setLevel(unsigned int level);
 };

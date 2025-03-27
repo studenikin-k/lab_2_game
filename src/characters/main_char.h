@@ -20,27 +20,32 @@ public:
 
     ~main_char() = default;
 
-    std::unordered_map<slotOfEquipment, std::unique_ptr<equipment>> Equipment;
-    std::unordered_map<slotOfPotion, std::unique_ptr<potion>> Potions;
+    std::unordered_map<slotOfEquipment, std::unique_ptr<equipment> > Equipment;
+    std::unordered_map<slotOfPotion, std::unique_ptr<potion> > Potions;
 
     bag Bag;
 
     std::unique_ptr<weapon> gun;
 
-    coins balance{};
+    static coins balance;
 
     void equip(std::unique_ptr<equipment> item);
-    void takeOff(std::unique_ptr<equipment>);
+
+    void takeOff(const std::unique_ptr<equipment> &);
 
     void equip(std::unique_ptr<weapon> item);
+
     void takeOffWeapon();
 
     void equip(std::unique_ptr<potion> item);
-    void takeOff(std::unique_ptr<potion>);
 
-   void buyEquipment(std::unique_ptr<equipment> _item);
-   void buyWeapon(std::unique_ptr<weapon> _weapon);
-   void buyPotion(std::unique_ptr<potion> _potion);
+    void takeOff(const std::unique_ptr<potion> &);
+
+    static void buyEquipment(std::unique_ptr<equipment> _item);
+
+    static void buyWeapon(std::unique_ptr<weapon> _weapon);
+
+    static void buyPotion(std::unique_ptr<potion> _potion);
 
     [[nodiscard]] const std::string &getName() const;
 
@@ -50,15 +55,11 @@ public:
 
     static void setLevel(unsigned int level);
 
-
-
 private:
     static unsigned int level;
 
-
 private:
     std::string name{};
-
 };
 
 std::ostream &operator<<(std::ostream &os, const main_char &pers);
