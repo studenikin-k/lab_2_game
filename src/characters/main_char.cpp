@@ -2,9 +2,12 @@
 
 unsigned int main_char::level = 0;
 
-main_char::main_char(const std::string &_name, unsigned int _level, unsigned int _health, unsigned int _damage,
-                     unsigned int _armor, unsigned int _accuracy, unsigned int _stun,
-                     unsigned int _dodge, const coins &cash) : character() {
+coins main_char::balance{};
+
+main_char::main_char(const std::string &_name, const unsigned int _level, const unsigned int _health,
+                    const unsigned int _damage,
+                     const unsigned int _armor, const unsigned int _accuracy, const unsigned int _stun,
+                     const unsigned int _dodge, const coins &cash) : character() {
     setName(_name);
     setLevel(_level);
     setHealth(_health);
@@ -84,8 +87,8 @@ void main_char::equip(std::unique_ptr<equipment> item) {
     std::cout << "Надето: " << Equipment[slot]->getName() << std::endl;
 }
 
-void main_char::takeOff(std::unique_ptr<equipment> item) {
-    slotOfEquipment slot = item->slot;
+void main_char::takeOff(const std::unique_ptr<equipment> &item) {
+    const slotOfEquipment slot = item->slot;
     if (Equipment[slot] != nullptr) {
 
         main_char::setHealth(main_char::getHealth() - Equipment[slot]->getHealth());
@@ -164,7 +167,7 @@ void main_char::equip(std::unique_ptr<potion> item) {
         return;
     }
 
-    slotOfPotion slot = item->slot;
+    const slotOfPotion slot = item->slot;
 
     if (Potions[slot]) {
         std::cout << "Снято: " << Potions[slot]->getName() << std::endl;
@@ -177,7 +180,7 @@ void main_char::equip(std::unique_ptr<potion> item) {
     std::cout << "Надето: " << Potions[slot]->getName() << std::endl;
 }
 
-void main_char::takeOff(std::unique_ptr<potion> item) {
+void main_char::takeOff(const std::unique_ptr<potion> &item) {
     slotOfPotion slot = item->slot;
 
     if (Potions[slot] != nullptr) {
