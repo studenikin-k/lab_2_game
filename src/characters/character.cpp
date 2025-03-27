@@ -12,11 +12,11 @@ character::character(){
 
 
 
-int character::getHealth() const {
+unsigned int character::getHealth() const {
     return health;
 }
 
-void character::setHealth(int _health) {
+void character::setHealth(unsigned int _health) {
     character::health = _health;
 }
 
