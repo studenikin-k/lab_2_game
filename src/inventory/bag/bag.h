@@ -10,21 +10,23 @@
 
 class bag {
 public:
-    bag()=default;
+    bag() = default;
 
-    void inputIntoBag(std::unique_ptr<equipment> item);
-    void inputIntoBag(std::unique_ptr<weapon> gun);
-    void inputIntoBag(std::unique_ptr<potion> potion);
-    
+     void inputIntoBag(std::unique_ptr<equipment> item);
+
+     void inputIntoBag(std::unique_ptr<weapon> gun);
+
+     void inputIntoBag(std::unique_ptr<potion> potion);
+
     void outputEquipmentFromBag(const std::string &name);
+
     void outputWeaponFromBag(const std::string &name);
+
     void outputPotionFromBag(const std::string &name);
 
-    std::vector<std::unique_ptr<equipment>> bagEquipment={};
-    std::vector<std::unique_ptr<weapon>> bagWeapon={};
-    std::vector<std::unique_ptr<potion>> bagPotion={};
-
-
+    std::vector<std::unique_ptr<equipment> > bagEquipment;
+    std::vector<std::unique_ptr<weapon> > bagWeapon;
+    std::vector<std::unique_ptr<potion> > bagPotion;
 };
 
 

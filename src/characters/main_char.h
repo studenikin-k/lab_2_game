@@ -23,7 +23,7 @@ public:
     std::unordered_map<slotOfEquipment, std::unique_ptr<equipment> > Equipment;
     std::unordered_map<slotOfPotion, std::unique_ptr<potion> > Potions;
 
-    bag Bag;
+   static  bag Bag;
 
     std::unique_ptr<weapon> gun;
 

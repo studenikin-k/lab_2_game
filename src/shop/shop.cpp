@@ -2,7 +2,6 @@
 
 
 void shop::showContents() {
-
     bool exit = false;
 
     while (!exit) {
@@ -83,28 +82,32 @@ void shop::showContents() {
 
                 int equipLotNum;
 
-                std::cout<< "Выберите лот, который вы хотите купить. \n\n";
+                std::cout << "Выберите лот, который вы хотите купить. \n\n";
                 std::cout << "Введите номер лота: ";
                 std::cin >> equipLotNum;
                 std::cout << std::endl << std::endl;
 
                 if (equipLotNum > counter) {
-                  std::cout << "Такого лота нет." <<std::endl;
-                  break;
+                    std::cout << "Такого лота нет." << std::endl;
+                    break;
                 }
 
                 counter = 0;
 
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: equipmentShop[i][slot]) {
-                        if (counter == equipLotNum && main_char::balance.copper >= it.second->price.copper ) {
+                        if (counter == equipLotNum && main_char::balance.copper >= it.second->price.copper) {
                             main_char::buyEquipment(std::move(it.second));
+                            std::cout << "Вы купили: " << it.second->getName() << std::endl;
+                            std::cout << std::endl;
+                            break;
+                        } else if (main_char::balance.copper < it.second->price.copper) {
+                            std::cout << "Недостаточно денег для покупки предмета.";
                             break;
                         }
                         counter++;
                     }
                 }
-
 
                 break;
             case 2:
@@ -130,7 +133,6 @@ void shop::showContents() {
                 slotOfWeapon weapon;
 
                 switch (typeOfWeapon) {
-
                     case 1:
                         weapon = slotOfWeapon::Axe;
                         break;
@@ -173,31 +175,38 @@ void shop::showContents() {
                         }
                     }
                 }
+
                 std::cout << std::endl;
-            std::cout << std::endl;
 
-            int lot_num;
 
-            std::cout<< "Выберите лот, который вы хотите купить. \n\n";
-            std::cout << "Введите номер лота: ";
-            std::cin >> lot_num;
-            std::cout << std::endl << std::endl;
+                int weaponLotNum;
 
-            if (lot_num > counter) {
-                std::cout << "Такого лота нет." <<std::endl;
-                break;
-            }
+                std::cout << "Выберите лот, который вы хотите купить. \n\n";
+                std::cout << "Введите номер лота: ";
+                std::cin >> weaponLotNum;
+                std::cout << std::endl << std::endl;
 
-            counter = lot_num;
+                if (weaponLotNum > counter) {
+                    std::cout << "Такого лота нет." << std::endl;
+                    break;
+                }
 
-            for (int i = 0; i <= level; i++) {
-                for (auto &it: equipmentShop[i][slot]) {
-                    if (counter == lot_num && main_char::balance.copper >= it.second->price.copper ) {
-                        main_char::buyEquipment(std::move(it.second));
+                counter = 0;
+
+                for (int i = 0; i <= level; i++) {
+                    for (auto &it: weaponShop[i][weapon]) {
+                        if (counter == weaponLotNum && main_char::balance.copper >= it.second->price.copper) {
+                            main_char::buyWeapon(std::move(it.second));
+                            std::cout << "Вы купили: " << it.second->getName() << std::endl;
+                            std::cout << std::endl;
+                            break;
+                        } else if (main_char::balance.copper < it.second->price.copper) {
+                            std::cout << "Недостаточно денег для покупки предмета.";
+                            break;
+                        }
+                        counter++;
                     }
                 }
-            }
-
 
                 break;
 
@@ -218,10 +227,9 @@ void shop::showContents() {
 
                 std::cout << std::endl << std::endl;
 
-                slotOfPotion potion = {};
+                slotOfPotion potion;
 
                 switch (typeOfPotion) {
-
                     case 1:
                         potion = slotOfPotion::Health;
                         break;
@@ -258,7 +266,37 @@ void shop::showContents() {
                         }
                     }
                 }
+
                 std::cout << std::endl;
+
+                int potionLotNum;
+
+                std::cout << "Выберите лот, который вы хотите купить. \n\n";
+                std::cout << "Введите номер лота: ";
+                std::cin >> potionLotNum;
+                std::cout << std::endl << std::endl;
+
+                if (weaponLotNum > counter) {
+                    std::cout << "Такого лота нет." << std::endl;
+                    break;
+                }
+
+                counter = 0;
+
+                for (int i = 0; i <= level; i++) {
+                    for (auto &it: potionShop[i]) {
+                        if (counter == potionLotNum && main_char::balance.copper >= it.second->price.copper) {
+                            main_char::buyPotion(std::move(it.second));
+                            std::cout << "Вы купили: " << it.second->getName() << std::endl;
+                            std::cout << std::endl;
+                            break;
+                        } else if (main_char::balance.copper < it.second->price.copper) {
+                            std::cout << "Недостаточно денег для покупки предмета.";
+                            break;
+                        }
+                        counter++;
+                    }
+                }
 
             case 4:
                 exit = true;
@@ -270,5 +308,4 @@ void shop::showContents() {
                 break;
         }
     }
-
 }

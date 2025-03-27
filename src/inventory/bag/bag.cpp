@@ -2,6 +2,8 @@
 #include <algorithm>
 #include <vector>
 
+
+
 void bag::inputIntoBag(std::unique_ptr<equipment> item) {
 
 
