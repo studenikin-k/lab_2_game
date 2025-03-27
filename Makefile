@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-Werror -Wpedantic -Wall -std=c++17
 LDFLAGS=-lgtest -lgtest_main -lpthread
-SOURCE_DIRECTORIES = src src/characters src/inventory
+SOURCE_DIRECTORIES = src
 TEST_DIRECTORY = tests
 SOURCES=$(wildcard $(patsubst %,%/*.cpp,$(SOURCE_DIRECTORIES))) main.cpp
 TESTS = $(wildcard $(TEST_DIRECTORY)/*.cpp)
