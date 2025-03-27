@@ -3,6 +3,7 @@
 unsigned int main_char::level = 0;
 
 coins main_char::balance{};
+bag main_char::Bag{};
 
 main_char::main_char(const std::string &_name, const unsigned int _level, const unsigned int _health,
                     const unsigned int _damage,
