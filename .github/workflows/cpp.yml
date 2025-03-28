@@ -19,6 +19,9 @@ jobs:
           sudo apt-get install -y cmake libgtest-dev build-essential
           
       - name: make
-        run: cmake build ..
+        run: |
+          cd build
+          cmake build ..
+          make
       - name: run_test
         run: ./test
