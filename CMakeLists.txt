@@ -26,7 +26,8 @@ file(GLOB TEST_SOURCES
 )
 
 
-add_executable(main ${MAIN_SOURCES})
+add_executable(main ${MAIN_SOURCES}
+        src/main.cpp)
 
 # Создание исполняемого файла для тестов
 add_executable(tests ${TEST_SOURCES})
