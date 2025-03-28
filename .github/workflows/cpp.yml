@@ -8,17 +8,27 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake libgtest-dev build-essential
-          
-      - name: make
-        run: make
-      - name: run_test
-        run: ./test
+
+      - name: Clean Build
+        run: |
+          rm -rf build/*
+          cmake -B build -S .
+
+      - name: Build
+        run: |
+          cd build
+          make
+
+      - name: Run Tests
+        run: |
+          cd build
+          ./tests
