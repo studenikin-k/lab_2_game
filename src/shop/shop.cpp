@@ -87,7 +87,7 @@ void shop::showContents() {
                 std::cin >> equipLotNum;
                 std::cout << std::endl << std::endl;
 
-                if (equipLotNum > counter) {
+                if (equipLotNum >= counter) {
                     std::cout << "Такого лота нет." << std::endl;
                     break;
                 }
@@ -96,7 +96,7 @@ void shop::showContents() {
 
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: equipmentShop[i][slot]) {
-                        if (counter == equipLotNum && main_char::balance.copper >= it.second->price.copper) {
+                        if (counter + 1 == equipLotNum && main_char::balance.copper >= it.second->price.copper) {
                             main_char::buyEquipment(std::move(it.second));
                             std::cout << "Вы купили: " << it.second->getName() << std::endl;
                             std::cout << std::endl;
@@ -186,7 +186,7 @@ void shop::showContents() {
                 std::cin >> weaponLotNum;
                 std::cout << std::endl << std::endl;
 
-                if (weaponLotNum > counter) {
+                if (weaponLotNum >= counter) {
                     std::cout << "Такого лота нет." << std::endl;
                     break;
                 }
@@ -195,7 +195,7 @@ void shop::showContents() {
 
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: weaponShop[i][weapon]) {
-                        if (counter == weaponLotNum && main_char::balance.copper >= it.second->price.copper) {
+                        if (counter + 1 == weaponLotNum && main_char::balance.copper >= it.second->price.copper) {
                             main_char::buyWeapon(std::move(it.second));
                             std::cout << "Вы купили: " << it.second->getName() << std::endl;
                             std::cout << std::endl;
@@ -276,7 +276,7 @@ void shop::showContents() {
                 std::cin >> potionLotNum;
                 std::cout << std::endl << std::endl;
 
-                if (weaponLotNum > counter) {
+                if (potionLotNum >= counter) {
                     std::cout << "Такого лота нет." << std::endl;
                     break;
                 }
@@ -285,7 +285,7 @@ void shop::showContents() {
 
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: potionShop[i]) {
-                        if (counter == potionLotNum && main_char::balance.copper >= it.second->price.copper) {
+                        if (counter + 1 == potionLotNum && main_char::balance.copper >= it.second->price.copper) {
                             main_char::buyPotion(std::move(it.second));
                             std::cout << "Вы купили: " << it.second->getName() << std::endl;
                             std::cout << std::endl;
@@ -297,7 +297,7 @@ void shop::showContents() {
                         counter++;
                     }
                 }
-
+                break;
             case 4:
                 exit = true;
                 break;

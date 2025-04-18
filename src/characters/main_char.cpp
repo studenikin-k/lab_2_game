@@ -1,5 +1,4 @@
 #include "main_char.h"
-
 unsigned int main_char::level = 0;
 
 coins main_char::balance{};
