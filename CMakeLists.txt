@@ -28,16 +28,15 @@ file(GLOB TEST_SOURCES
 
 add_executable(main ${MAIN_SOURCES})
 
-# Создание исполняемого файла для тестов
 add_executable(tests ${TEST_SOURCES})
 
-# Подключение GTest к тестам
+
 target_link_libraries(tests PRIVATE
         ${GTEST_LIBRARIES}
         ${GTEST_MAIN_LIBRARIES}
 )
 
-# Дополнительные настройки (если нужны)
+
 target_include_directories(main PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
         ${CMAKE_CURRENT_SOURCE_DIR}/src/characters
