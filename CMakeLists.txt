@@ -33,7 +33,9 @@ add_executable(main ${MAIN_SOURCES}
         src/characters/opponent.cpp
         src/characters/main_char.cpp
         src/characters/character.cpp
-        src/characters/character.h)
+        src/characters/character.h
+        src/location/location.cpp
+        src/location/location.h)
 
 #add_executable(tests ${TEST_SOURCES})
 

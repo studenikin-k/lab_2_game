@@ -21,32 +21,32 @@ public:
 
     ~main_char() = default;
 
-    std::unordered_map<slotOfEquipment, std::unique_ptr<equipment> > Equipment;
-    std::unordered_map<slotOfPotion, std::unique_ptr<potion> > Potions;
+    std::unordered_map<slotOfEquipment, equipment* > Equipment;
+    std::unordered_map<slotOfPotion, potion*> Potions;
 
    static  bag Bag;
 
-    std::unique_ptr<weapon> gun;
+    weapon* gun;
 
     static coins balance;
 
-    void equip(std::unique_ptr<equipment> item);
+    void equip(equipment* item);
 
-    void takeOff(const std::unique_ptr<equipment> &);
+    void takeOff(equipment* item);
 
-    void equip(std::unique_ptr<weapon> item);
+    void equip(weapon* item);
 
     void takeOffWeapon();
 
-    void equip(std::unique_ptr<potion> item);
+    void equip(potion* item);
 
-    void takeOff(const std::unique_ptr<potion> &);
+    void takeOff(potion*);
 
-    static void buyEquipment(std::unique_ptr<equipment> _item);
+    static void buyEquipment(equipment* _item);
 
-    static void buyWeapon(std::unique_ptr<weapon> _weapon);
+    static void buyWeapon(weapon* _weapon);
 
-    static void buyPotion(std::unique_ptr<potion> _potion);
+    static void buyPotion(potion* _potion);
 
     [[nodiscard]] const std::string &getName() const;
 

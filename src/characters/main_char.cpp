@@ -54,7 +54,7 @@ void main_char::setLevel(unsigned int _level) {
 
 
 
-void main_char::equip(std::unique_ptr<equipment> item) {
+void main_char::equip(equipment* item) {
     slotOfEquipment slot = item->slot;
 
     if (main_char::getLevel() < item->getLevel()) {
@@ -62,7 +62,7 @@ void main_char::equip(std::unique_ptr<equipment> item) {
         return;
     }
 
-    if (Equipment[slot]) {
+    if (Equipment.contains(slot) && Equipment[slot] != nullptr) {
 
         main_char::setHealth(main_char::getHealth() - Equipment[slot]->getHealth());
         main_char::setArmor(main_char::getArmor() - Equipment[slot]->getArmor());
@@ -71,12 +71,12 @@ void main_char::equip(std::unique_ptr<equipment> item) {
 
         std::cout << "Снято: " << Equipment[slot]->getName() << std::endl;
 
-        Bag.inputIntoBag(std::move(Equipment[slot]));
+        Bag.inputIntoBag(Equipment[slot]);
     }
 
 
 
-    Equipment[slot] = std::move(item);
+    Equipment[slot] = item;
 
     main_char::setHealth(main_char::getHealth() + Equipment[slot]->getHealth());
     main_char::setArmor(main_char::getArmor() + Equipment[slot]->getArmor());
@@ -87,7 +87,7 @@ void main_char::equip(std::unique_ptr<equipment> item) {
     std::cout << "Надето: " << Equipment[slot]->getName() << std::endl;
 }
 
-void main_char::takeOff(const std::unique_ptr<equipment> &item) {
+void main_char::takeOff(equipment* item) {
     const slotOfEquipment slot = item->slot;
     if (Equipment[slot] != nullptr) {
 
@@ -97,7 +97,7 @@ void main_char::takeOff(const std::unique_ptr<equipment> &item) {
 
         std::cout << "Снято:" << Equipment[slot]->getName() << std::endl;
 
-        Bag.inputIntoBag(std::move(Equipment[slot]));
+        Bag.inputIntoBag(Equipment[slot]);
 
         Equipment[slot] = nullptr;
 
@@ -106,7 +106,7 @@ void main_char::takeOff(const std::unique_ptr<equipment> &item) {
     std::cout << "Ничего не надето. \n";
 }
 
-void main_char::equip(std::unique_ptr<weapon> item) {
+void main_char::equip(weapon* item) {
     slotOfWeapon slot = item->slot;
 
     if (main_char::getLevel() < item->getLevel()) {
@@ -124,7 +124,7 @@ void main_char::equip(std::unique_ptr<weapon> item) {
 
         std::cout << "Снято: " << gun->getName() << std::endl;
 
-        Bag.inputIntoBag(std::move(main_char::gun));
+        Bag.inputIntoBag(main_char::gun);
     }
 
 
@@ -132,7 +132,7 @@ void main_char::equip(std::unique_ptr<weapon> item) {
     main_char::setAccuracy(main_char::getAccuracy() + item->getAccuracy());
     main_char::setStun(main_char::getStun() + item->getStun());
 
-    gun = std::move(item);
+    gun = item;
 
     Bag.outputWeaponFromBag(item->getName());
 
@@ -150,7 +150,7 @@ void main_char::takeOffWeapon() {
 
         std::cout << "Снято:" << main_char::gun->getName() << std::endl;
 
-        Bag.inputIntoBag(std::move(main_char::gun));
+        Bag.inputIntoBag(main_char::gun);
 
         return;
     }
@@ -159,7 +159,7 @@ void main_char::takeOffWeapon() {
 
 }
 
-void main_char::equip(std::unique_ptr<potion> item) {
+void main_char::equip(potion* item) {
 
     if (main_char::getLevel()< item->getLevel()) {
         std::cout << "Невозможно надеть, ваш уровень ниже уровня зелья: " << item->getName() << std::endl;
@@ -172,22 +172,22 @@ void main_char::equip(std::unique_ptr<potion> item) {
     if (Potions[slot]) {
         std::cout << "Снято: " << Potions[slot]->getName() << std::endl;
 
-        Bag.inputIntoBag(std::move(Potions[slot]));
+        Bag.inputIntoBag(Potions[slot]);
     }
 
-    Potions[slot] = std::move(item);
+    Potions[slot] = item;
 
     std::cout << "Надето: " << Potions[slot]->getName() << std::endl;
 }
 
-void main_char::takeOff(const std::unique_ptr<potion> &item) {
+void main_char::takeOff(potion* item) {
     slotOfPotion slot = item->slot;
 
     if (Potions[slot] != nullptr) {
 
         std::cout << "Снято: " << Potions[slot]->getName() << std::endl;
 
-        Bag.inputIntoBag(std::move(Potions[slot]));
+        Bag.inputIntoBag(Potions[slot]);
 
         Potions[slot] = nullptr;
 
@@ -197,17 +197,17 @@ void main_char::takeOff(const std::unique_ptr<potion> &item) {
     std::cout<< "Ничего не надето. \n";
 }
 
-void main_char::buyEquipment(std::unique_ptr<equipment> _item) {
-    Bag.inputIntoBag(std::move(_item));
+void main_char::buyEquipment(equipment* _item) {
+    Bag.inputIntoBag(_item);
     main_char::balance.setCopper(main_char::balance.copper - _item->price.getCopper());
 }
 
-void main_char::buyWeapon(std::unique_ptr<weapon> _weapon) {
-    Bag.inputIntoBag(std::move(_weapon));
+void main_char::buyWeapon(weapon* _weapon) {
+    Bag.inputIntoBag(_weapon);
     main_char::balance.setCopper(main_char::balance.copper - _weapon->price.getCopper());
 }
 
-void main_char::buyPotion(std::unique_ptr<potion> _potion) {
-    Bag.inputIntoBag(std::move(_potion));
+void main_char::buyPotion(potion* _potion) {
+    Bag.inputIntoBag(_potion);
     main_char::balance.setCopper(main_char::balance.copper - _potion->price.getCopper());
 }

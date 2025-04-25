@@ -16,11 +16,16 @@ int main (){
 
     equipment helmet("Shlem",1,11,1,2,slotOfEquipment::Helmet,warStyle::Damage,{123});
 
+
     std::unique_ptr<equipment> shlem = std::make_unique<equipment>(helmet);
+
+    character.equip(shlem.get());
 
     weapon gun("Gun",11,2,2,3,slotOfWeapon::Blade,warStyle::Damage,{123123});
 
     std::unique_ptr<weapon> oruzhie = std::make_unique<weapon>(gun);
+
+
 
     shop magaz;
 

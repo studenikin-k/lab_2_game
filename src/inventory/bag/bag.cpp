@@ -4,22 +4,22 @@
 
 
 
-void bag::inputIntoBag(std::unique_ptr<equipment> item) {
+void bag::inputIntoBag(equipment* item) {
 
 
-    bagEquipment.push_back(std::move(item));
-
-}
-
-void bag::inputIntoBag(std::unique_ptr<weapon> Gun) {
-
-    bagWeapon.push_back(std::move(Gun));
+    bagEquipment.push_back(item);
 
 }
 
-void bag::inputIntoBag(std::unique_ptr<potion> Potion) {
+void bag::inputIntoBag(weapon* Gun) {
 
-    bagPotion.push_back(std::move(Potion));
+    bagWeapon.push_back(Gun);
+
+}
+
+void bag::inputIntoBag(potion* Potion) {
+
+    bagPotion.push_back(Potion);
 
 }
 
