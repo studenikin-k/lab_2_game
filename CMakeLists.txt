@@ -18,6 +18,10 @@ file(GLOB MAIN_SOURCES
         "src/shop/*.cpp"
         "src/utils/*.cpp"
         "src/main.cpp"
+        "src/location/*.cpp"
+        "src/location/map/*.cpp"
+        "src/location/battle_location/*.cpp"
+        "src/location/shop_location/*.cpp"
 )
 
 
@@ -35,7 +39,10 @@ add_executable(main ${MAIN_SOURCES}
         src/characters/character.cpp
         src/characters/character.h
         src/location/location.cpp
-        src/location/location.h)
+        src/location/location.h
+        src/location/map/map.cpp
+        src/location/map/map.h
+        src/location/shop_location/shop_location.cpp)
 
 #add_executable(tests ${TEST_SOURCES})
 
@@ -53,6 +60,10 @@ target_include_directories(main PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/shop
         ${CMAKE_CURRENT_SOURCE_DIR}/src/utils
         ${CMAKE_CURRENT_SOURCE_DIR}/src/inventory/coins
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/location
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/location/battle_location
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/location/map
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/location/shop_location
 )
 
 #target_include_directories(tests PRIVATE

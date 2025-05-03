@@ -5,7 +5,8 @@
 #include "shop/shop.h"
 #include "bag/bag.h"
 #include "potion/potion.h"
-
+#include "characters/opponent.h"
+#include "location/map/map.h"
 
 
 int main (){
@@ -34,4 +35,13 @@ int main (){
 
     magaz.showContents();
 
+    character.Bag.showBag();
+
+    opponent Vrag("Vrag",1,2,3,4,5,6,7);
+
+    Vrag.showInfo();
+
+    map Road{};
+
+    Road.startTravel(0);
 }

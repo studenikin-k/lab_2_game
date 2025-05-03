@@ -1,0 +1,18 @@
+#ifndef SHOP_LOCATION_H
+#define SHOP_LOCATION_H
+#include "../location.h"
+#include "../shop/shop.h"
+
+class shop_location : public location {
+public:
+    explicit shop_location(const std::string &name);
+
+
+
+    ~shop_location() = default;
+
+    shop Shop() const;
+};
+
+
+#endif //SHOP_LOCATION_H
