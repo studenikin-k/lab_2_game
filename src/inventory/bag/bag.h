@@ -24,26 +24,12 @@ public:
 
     void outputPotionFromBag(const std::string &name);
 
-    void showBag() const;
+    void showBag() ;
 
     std::vector<equipment *> bagEquipment;
     std::vector<weapon *> bagWeapon;
     std::vector<potion *> bagPotion;
-private:
 
-    template<typename T>
-    void printCategory(const std::vector<T*>& vec, const std::string& title) const {
-        std::cout << "\n=== " << title << " ===\n";
-        if (vec.empty()) {
-            std::cout << "  (пусто)\n\n";
-            return;
-        }
-        for (size_t i = 0; i < vec.size(); ++i) {
-            std::cout << "  " << (i + 1) << ") ";
-            vec[i]->showInInventory();
-        }
-        std::cout << "\n";
-    }
 };
 
 
