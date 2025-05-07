@@ -11,11 +11,11 @@ public:
     map();
     ~map() = default;
 
-    void startTravel(const int currentLocationIndex) const;
+    void startTravel(int currentLocationIndex) const;
 
 private:
     std::array<std::unique_ptr<location>, 10> locationMap;
-    std::array<std::array<int, 4>, 10> locationConnections;
+    std::array<std::array<int, 4>, 10> locationConnections{};
 
     void displayTravelOptions(int currentLocationIndex) const;
 };

@@ -1,7 +1,7 @@
 #ifndef BATTLE_LOCATION_H
 #define BATTLE_LOCATION_H
 #include "../location.h"
-#include "../../characters/opponent.h"
+#include "../../characters/opponent/opponent.h"
 #include "array"
 
 class battle_location : public location {

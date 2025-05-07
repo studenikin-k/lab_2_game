@@ -1,11 +1,7 @@
-//
-// Created by basybemoog on 25.04.2025.
-//
-
 #ifndef LOCATION_H
 #define LOCATION_H
 
-#include "opponent.h"
+#include "../characters/opponent/opponent.h"
 
 
 class location{

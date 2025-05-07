@@ -32,10 +32,10 @@ file(GLOB MAIN_SOURCES
 
 add_executable(main ${MAIN_SOURCES}
         src/characters/character.cpp
-        src/characters/opponent.h
-        src/characters/main_char.h
-        src/characters/opponent.cpp
-        src/characters/main_char.cpp
+        src/characters/opponent/opponent.h
+        src/characters/main_char/main_char.h
+        src/characters/opponent/opponent.cpp
+        src/characters/main_char/main_char.cpp
         src/characters/character.cpp
         src/characters/character.h
         src/location/location.cpp
