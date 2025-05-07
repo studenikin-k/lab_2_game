@@ -32,7 +32,7 @@ public:
 
     void equip(equipment* item);
 
-    void takeOff(equipment* item);
+    void takeOff(const equipment* item);
 
     void equip(weapon* item);
 
@@ -48,6 +48,8 @@ public:
 
     static void buyPotion(potion* _potion);
 
+    void showBag();
+
     [[nodiscard]] const std::string &getName() const;
 
     void setName(const std::string &name);
@@ -55,6 +57,8 @@ public:
     static unsigned int getLevel();
 
     static void setLevel(unsigned int level);
+
+
 
 private:
     static unsigned int level;
