@@ -15,7 +15,7 @@ inline std::string slotOfEquipmentToString(slotOfEquipment slot) {
         case slotOfEquipment::Chestplate: return "Нагрудник";
         case slotOfEquipment::Gloves: return "Перчатки";
         case slotOfEquipment::Pants: return "Штаны";
-        case slotOfEquipment::Boots: return "Обувь";
+        case slotOfEquipment::Boots: return "Ботинкит";
         default: return "Шубы не продаём.";
     }
 }
