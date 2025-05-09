@@ -12,6 +12,7 @@
 #include "../inventory/bag/bag.h"
 #include "../inventory/inventory.h"
 
+constexpr int BELT_SIZE = 6;
 
 class main_char : public character {
 public:
@@ -21,34 +22,39 @@ public:
 
     ~main_char() = default;
 
-    std::unordered_map<slotOfEquipment, equipment* > Equipment;
-    std::unordered_map<slotOfPotion, potion*> Potions;
+    std::unordered_map<slotOfEquipment, equipment *> Equipment;
+    std::array<potion *, BELT_SIZE> Belt{};
 
-   static  bag Bag;
+    static bag Bag;
 
-    weapon* gun;
+    weapon *gun;
 
     static coins balance;
 
-    void equip(equipment* item);
+    void equip(equipment *item);
 
-    void takeOff(const equipment* item);
+    void takeOff(const equipment *item);
 
-    void equip(weapon* item);
+    void equip(weapon *item);
 
     void takeOffWeapon();
 
-    void equip(potion* item);
+    bool isBeltFull() const;
 
-    void takeOff(potion*);
+    void displayBelt() const;
 
-    static void buyEquipment(equipment* _item);
+    void equip(potion *item);
 
-    static void buyWeapon(weapon* _weapon);
+    void takeOff();
 
-    static void buyPotion(potion* _potion);
+    static void buyEquipment(equipment *_item);
+
+    static void buyWeapon(weapon *_weapon);
+
+    static void buyPotion(potion *_potion);
 
     void showBag();
+    void showGear();
 
     [[nodiscard]] const std::string &getName() const;
 
@@ -57,8 +63,6 @@ public:
     static unsigned int getLevel();
 
     static void setLevel(unsigned int level);
-
-
 
 private:
     static unsigned int level;
