@@ -243,7 +243,7 @@ void main_char::buyEquipment(equipment *_item) {
 
 void main_char::buyWeapon(weapon *_weapon) {
     Bag.inputIntoBag(_weapon);
-   balance.setCopper(balance.copper - _weapon->price.getCopper());
+    balance.setCopper(balance.copper - _weapon->price.getCopper());
 }
 
 void main_char::buyPotion(potion *_potion) {
@@ -470,6 +470,83 @@ void main_char::showBag() {
 }
 
 void main_char::showGear() {
+    std::cout << "Выберите часть экипировки, которую хотели бы посмотреть:\n";
+    std::cout << "1. Снаряжение.\n" <<
+            "2. Оружие.\n" <<
+            "3. Пояс Зелий.\n\n" <<
+            "4. Окончить осмотр экипировки. \n\n";
+    std::cout << "Выберите действие: ";
 
+    int choiceInGear;
+
+    std::cin >> choiceInGear;
+
+    if (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Ошибка: введите число!" << std::endl;
+        return;
+    }
+
+    if (choiceInGear == 1) {
+        int counter = 1;
+        for (const auto &it: Equipment) {
+            std::cout << "[" << counter << "]\n";
+            if (it.second != nullptr) {
+                it.second->showInInventory();
+            } else {
+                std::cout << "Пусто." << std::endl;
+            }
+            counter++;
+        }
+        std::cout << std::endl;
+        std::cout << "Выберите Действие: \n";
+        std::cout << "1. Снять часть экипировки.\n";
+        std::cout << "2. Выйти из раздела\n";
+        std::cout << "3. Окончить осмотр экипировки \n";
+
+        int choiceInEquipment;
+
+        std::cin >> choiceInEquipment;
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Ошибка: введите число!" << std::endl;
+            return;
+        }
+
+        if (choiceInEquipment == 1) {
+            std::cout << "Введите порядковый номер экипировки: ";
+
+            int choiceToTakeOff;
+
+            std::cin >> choiceToTakeOff;
+            if (std::cin.fail()) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Ошибка: введите число!" << std::endl;
+                return;
+            } else if (choiceToTakeOff <= 0 || choiceToTakeOff >= counter) {
+                std::cout << "Ошибка: Введите корректный номер!\n";
+                return;
+            }
+
+            std::cout<<std::endl;
+
+            counter = 0;
+
+            for (int i = 0; i <= level; i++) {
+                for (auto &it: Equipment) {
+                    if (counter + 1 == choiceToTakeOff) {
+                        takeOff(it.second);
+                        std::cout << "Вы убрали в портфель: " << it.second->getName() << std::endl;
+                        std::cout << std::endl;
+                        it.second = nullptr;
+                        break;
+                        }
+                    counter++;
+                }
+            }
+        }
+    }
 }
-

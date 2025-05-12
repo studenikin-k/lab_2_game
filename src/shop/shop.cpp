@@ -1,6 +1,7 @@
 #include "shop.h"
 #include <limits>
 
+
 void shop::showContents() {
     bool exit = false;
 

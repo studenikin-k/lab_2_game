@@ -10,8 +10,6 @@ public:
 
 
     ~shop_location() = default;
-
-    shop Shop() const;
 };
 
 

@@ -54,6 +54,7 @@ public:
     static void buyPotion(potion *_potion);
 
     void showBag();
+
     void showGear();
 
     [[nodiscard]] const std::string &getName() const;
