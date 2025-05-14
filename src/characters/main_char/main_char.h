@@ -33,7 +33,7 @@ public:
 
     void equip(equipment *item);
 
-    void takeOff(const equipment *item);
+    void takeOffEquipment(const equipment *item);
 
     void equip(weapon *item);
 
@@ -45,7 +45,7 @@ public:
 
     void equip(potion *item);
 
-    void takeOff();
+    void takeOffPotion();
 
     static void buyEquipment(equipment *_item);
 

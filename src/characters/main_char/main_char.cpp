@@ -79,7 +79,7 @@ void main_char::equip(equipment *item) {
     std::cout << "Надето: " << Equipment[slot]->getName() << std::endl;
 }
 
-void main_char::takeOff(const equipment *item) {
+void main_char::takeOffEquipment(const equipment *item) {
     const slotOfEquipment slot = item->slot;
     if (Equipment[slot] != nullptr) {
         setHealth(main_char::getHealth() - Equipment[slot]->getHealth());
@@ -206,7 +206,7 @@ void main_char::equip(potion *item) {
     }
 }
 
-void main_char::takeOff() {
+void main_char::takeOffPotion() {
     std::cout << "Введите номер ячейки (1-10) или 0 для отмены: ";
     int slot;
     std::cin >> slot;
@@ -470,83 +470,166 @@ void main_char::showBag() {
 }
 
 void main_char::showGear() {
-    std::cout << "Выберите часть экипировки, которую хотели бы посмотреть:\n";
-    std::cout << "1. Снаряжение.\n" <<
-            "2. Оружие.\n" <<
-            "3. Пояс Зелий.\n\n" <<
-            "4. Окончить осмотр экипировки. \n\n";
-    std::cout << "Выберите действие: ";
+    while (true) {
+        std::cout << "\nВыберите часть экипировки, которую хотели бы посмотреть:\n";
+        std::cout << "1. Снаряжение\n"
+                << "2. Оружие\n"
+                << "3. Пояс Зелий\n"
+                << "4. Окончить осмотр экипировки\n\n"
+                << "Выберите действие: ";
 
-    int choiceInGear;
+        int choiceInGear;
+        std::cin >> choiceInGear;
 
-    std::cin >> choiceInGear;
-
-    if (std::cin.fail()) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Ошибка: введите число!" << std::endl;
-        return;
-    }
-
-    if (choiceInGear == 1) {
-        int counter = 1;
-        for (const auto &it: Equipment) {
-            std::cout << "[" << counter << "]\n";
-            if (it.second != nullptr) {
-                it.second->showInInventory();
-            } else {
-                std::cout << "Пусто." << std::endl;
-            }
-            counter++;
-        }
-        std::cout << std::endl;
-        std::cout << "Выберите Действие: \n";
-        std::cout << "1. Снять часть экипировки.\n";
-        std::cout << "2. Выйти из раздела\n";
-        std::cout << "3. Окончить осмотр экипировки \n";
-
-        int choiceInEquipment;
-
-        std::cin >> choiceInEquipment;
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Ошибка: введите число!" << std::endl;
-            return;
+            std::cout << "Ошибка: введите число!\n";
+            continue;
         }
 
-        if (choiceInEquipment == 1) {
-            std::cout << "Введите порядковый номер экипировки: ";
-
-            int choiceToTakeOff;
-
-            std::cin >> choiceToTakeOff;
-            if (std::cin.fail()) {
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "Ошибка: введите число!" << std::endl;
-                return;
-            } else if (choiceToTakeOff <= 0 || choiceToTakeOff >= counter) {
-                std::cout << "Ошибка: Введите корректный номер!\n";
-                return;
-            }
-
-            std::cout<<std::endl;
-
-            counter = 0;
-
-            for (int i = 0; i <= level; i++) {
-                for (auto &it: Equipment) {
-                    if (counter + 1 == choiceToTakeOff) {
-                        takeOff(it.second);
-                        std::cout << "Вы убрали в портфель: " << it.second->getName() << std::endl;
-                        std::cout << std::endl;
-                        it.second = nullptr;
-                        break;
-                        }
+        if (choiceInGear == 1) {
+            // Снаряжение
+            while (true) {
+                std::cout << "\nТекущее снаряжение:\n";
+                int counter = 1;
+                for (const auto &it: Equipment) {
+                    std::cout << "[" << counter << "]\n";
+                    if (it.second != nullptr) {
+                        it.second->showInInventory();
+                    } else {
+                        std::cout << "Пусто.\n";
+                    }
                     counter++;
                 }
+
+                std::cout << "\nВыберите действие:\n"
+                        << "1. Снять часть экипировки\n"
+                        << "2. Вернуться в предыдущее меню\n"
+                        << "3. Окончить осмотр экипировки\n"
+                        << "Ввод: ";
+
+                int choiceInEquipment;
+                std::cin >> choiceInEquipment;
+
+                if (std::cin.fail()) {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Ошибка: введите число!\n";
+                    continue;
+                }
+
+                if (choiceInEquipment == 1) {
+                    // Снять экипировку
+                    std::cout << "Введите порядковый номер экипировки: ";
+                    int choiceToTakeOff;
+                    std::cin >> choiceToTakeOff;
+
+                    if (std::cin.fail()) {
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        std::cout << "Ошибка: введите число!\n";
+                        continue;
+                    }
+
+                    if (choiceToTakeOff <= 0 || choiceToTakeOff >= counter) {
+                        std::cout << "Ошибка: Введите корректный номер!\n";
+                        continue;
+                    }
+
+                    int currentCounter = 0;
+                    for (auto &it: Equipment) {
+                        if (currentCounter + 1 == choiceToTakeOff) {
+                            takeOffEquipment(it.second);
+                            break;
+                        }
+                        currentCounter++;
+                    }
+                    break;
+                } else if (choiceInEquipment == 2) {
+                    break;
+                } else if (choiceInEquipment == 3) {
+
+                    return;
+                } else {
+                    std::cout << "Введено неверное число!\n";
+                }
             }
+        } else if (choiceInGear == 2) {
+
+            while (true) {
+                if (gun != nullptr) {
+                    std::cout << "\nТекущее оружие:\n";
+                    gun->showInInventory();
+
+                    std::cout << "\nВыберите действие:\n"
+                            << "1. Снять " << gun->getName() << "\n"
+                            << "2. Вернуться в предыдущее меню\n"
+                            << "3. Окончить осмотр экипировки\n"
+                            << "Ввод: ";
+
+                    int choiceToTakeOff;
+                    std::cin >> choiceToTakeOff;
+
+                    if (std::cin.fail()) {
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        std::cout << "Ошибка: введите число!\n";
+                        continue;
+                    }
+
+                    if (choiceToTakeOff == 1) {
+                        takeOffWeapon();
+                        break;
+                    } else if (choiceToTakeOff == 2) {
+                        break;
+                    } else if (choiceToTakeOff == 3) {
+                        return;
+                    } else {
+                        std::cout << "Введено неверное число!\n";
+                    }
+                } else {
+                    std::cout << "\nОружие не экипировано!\n";
+                    break;
+                }
+            }
+        } else if (choiceInGear == 3) {
+
+            while (true) {
+                std::cout << "\nПояс зелий:\n";
+                displayBelt();
+
+                std::cout << "\nВыберите действие:\n"
+                        << "1. Снять зелье с пояса\n"
+                        << "2. Вернуться в предыдущее меню\n"
+                        << "3. Окончить осмотр экипировки\n"
+                        << "Ввод: ";
+
+                int choiceToTakeOff;
+                std::cin >> choiceToTakeOff;
+
+                if (std::cin.fail()) {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Ошибка: введите число!\n";
+                    continue;
+                }
+
+                if (choiceToTakeOff == 1) {
+                    takeOffPotion();
+                    break;
+                } else if (choiceToTakeOff == 2) {
+                    break;
+                } else if (choiceToTakeOff == 3) {
+                    return;
+                } else {
+                    std::cout << "Введено неверное число!\n";
+                }
+            }
+        } else if (choiceInGear == 4) {
+            return;
+        } else {
+            std::cout << "Введено неверное число!\n";
         }
     }
 }
