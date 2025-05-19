@@ -217,3 +217,27 @@ void dodgePotion::showInInventory() {
             "Бонус к увороту: " << dodgePotion::getDodge() << std::endl <<
             "Цена продажи: " << dodgePotion::price.showSellPrice();
 }
+
+std::shared_ptr<potion> healthPotion::clone() const {
+    return std::make_shared<healthPotion>(*this);
+}
+
+std::shared_ptr<potion> damagePotion::clone() const {
+    return std::make_shared<damagePotion>(*this);
+}
+
+std::shared_ptr<potion> armorPotion::clone() const {
+    return std::make_shared<armorPotion>(*this);
+}
+
+std::shared_ptr<potion> accuracyPotion::clone() const {
+    return std::make_shared<accuracyPotion>(*this);
+}
+
+std::shared_ptr<potion> stunPotion::clone() const {
+    return std::make_shared<stunPotion>(*this);
+}
+
+std::shared_ptr<potion> dodgePotion::clone() const {
+    return std::make_shared<dodgePotion>(*this);
+}

@@ -2,15 +2,15 @@
 #define LAB_2_GAME_POTION_H
 
 #include <iostream>
+#include <memory>
 #include "../../utils/slot_of_potion.h"
 #include "../coins/coins.h"
 
 class potion {
 public:
-
     potion() = default;
 
-   virtual ~potion() = default;
+    virtual ~potion() = default;
 
     [[nodiscard]] const std::string &getName() const;
 
@@ -32,10 +32,11 @@ public:
 
     coins price{};
 
+    virtual std::shared_ptr<potion> clone() const = 0;
+
 private:
     std::string name{};
     unsigned int level{};
-
 };
 
 class healthPotion : public potion {
@@ -50,6 +51,7 @@ public:
 
     void showInInventory() override;
 
+    std::shared_ptr<potion> clone() const override;
 
 private:
     unsigned int health{};
@@ -66,6 +68,9 @@ public:
     void showInShop() override;
 
     void showInInventory() override;
+
+    std::shared_ptr<potion> clone() const override;
+
 private:
     unsigned int damage{};
 };
@@ -81,6 +86,8 @@ public:
     void showInShop() override;
 
     void showInInventory() override;
+
+    std::shared_ptr<potion> clone() const override;
 
 private:
     unsigned int armor{};
@@ -98,6 +105,8 @@ public:
 
     void showInInventory() override;
 
+    std::shared_ptr<potion> clone() const override;
+
 private:
     unsigned int accuracy{};
 };
@@ -114,8 +123,9 @@ public:
 
     void showInInventory() override;
 
-private:
+    std::shared_ptr<potion> clone() const override;
 
+private:
     unsigned int stun{};
 };
 
@@ -131,10 +141,10 @@ public:
 
     void showInInventory() override;
 
+    std::shared_ptr<potion> clone() const override;
+
 private:
     unsigned int dodge{};
-
 };
-
 
 #endif //LAB_2_GAME_POTION_H

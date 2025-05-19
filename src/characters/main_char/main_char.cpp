@@ -1,15 +1,11 @@
 #include "main_char.h"
 #include <limits>
-unsigned int main_char::level = 0;
 
-
-coins main_char::balance{};
-bag main_char::Bag{};
 
 main_char::main_char(const std::string &_name, const unsigned int _level, const unsigned int _health,
                      const unsigned int _damage,
                      const unsigned int _armor, const unsigned int _accuracy, const unsigned int _stun,
-                     const unsigned int _dodge, const coins &cash) : character() {
+                     const unsigned int _dodge, const coins &cash) : level(_level), balance(cash) {
     setName(_name);
     setLevel(_level);
     setHealth(_health);
@@ -19,16 +15,17 @@ main_char::main_char(const std::string &_name, const unsigned int _level, const 
     setStun(_stun);
     setDodge(_dodge);
 
-    balance.copper = cash.copper;
 
     gun = nullptr;
 
 
-    Equipment.emplace(slotOfEquipment::Helmet, nullptr);
-    Equipment.emplace(slotOfEquipment::Chestplate, nullptr);
-    Equipment.emplace(slotOfEquipment::Gloves, nullptr);
-    Equipment.emplace(slotOfEquipment::Pants, nullptr);
-    Equipment.emplace(slotOfEquipment::Boots, nullptr);
+    Equipment = {
+        {slotOfEquipment::Helmet, nullptr},
+        {slotOfEquipment::Chestplate, nullptr},
+        {slotOfEquipment::Gloves, nullptr},
+        {slotOfEquipment::Pants, nullptr},
+        {slotOfEquipment::Boots, nullptr}
+    };
 }
 
 const std::string &main_char::getName() const {
@@ -48,7 +45,9 @@ void main_char::setLevel(unsigned int _level) {
 }
 
 
-void main_char::equip(equipment *item) {
+void main_char::equip(std::shared_ptr<equipment> item) {
+    if (!item) return;
+
     slotOfEquipment slot = item->slot;
 
     if (getLevel() < item->getLevel()) {
@@ -56,97 +55,103 @@ void main_char::equip(equipment *item) {
         return;
     }
 
-    if (Equipment.contains(slot) && Equipment[slot] != nullptr) {
+
+    if (Equipment[slot] != nullptr) {
         setHealth(getHealth() - Equipment[slot]->getHealth());
         setArmor(getArmor() - Equipment[slot]->getArmor());
         setDodge(getDodge() - Equipment[slot]->getDodge());
 
-
         std::cout << "Снято: " << Equipment[slot]->getName() << std::endl;
 
-        Bag.inputIntoBag(Equipment[slot]);
+
+        Bag.inputIntoBag(std::move(Equipment[slot]));
     }
 
 
-    Equipment[slot] = item;
+    Equipment[slot] = std::move(item);
 
     setHealth(getHealth() + Equipment[slot]->getHealth());
     setArmor(getArmor() + Equipment[slot]->getArmor());
     setDodge(getDodge() + Equipment[slot]->getDodge());
 
-    Bag.outputEquipmentFromBag(item->getName());
-
     std::cout << "Надето: " << Equipment[slot]->getName() << std::endl;
 }
 
-void main_char::takeOffEquipment(const equipment *item) {
-    const slotOfEquipment slot = item->slot;
-    if (Equipment[slot] != nullptr) {
-        setHealth(main_char::getHealth() - Equipment[slot]->getHealth());
-        setArmor(main_char::getArmor() - Equipment[slot]->getArmor());
-        setDodge(main_char::getDodge() - Equipment[slot]->getDodge());
 
-        std::cout << "Снято:" << Equipment[slot]->getName() << std::endl;
-
-        Bag.inputIntoBag(Equipment[slot]);
-
-        Equipment[slot] = nullptr;
-
+void main_char::takeOffEquipment(std::shared_ptr<equipment> item) {
+    if (!item) {
+        std::cout << "Ошибка: передан пустой предмет!" << std::endl;
         return;
     }
-    std::cout << "Ничего не надето. \n";
+
+    slotOfEquipment slot = item->slot;
+
+    if (Equipment[slot]) {
+        setHealth(getHealth() - Equipment[slot]->getHealth());
+        setArmor(getArmor() - Equipment[slot]->getArmor());
+        setDodge(getDodge() - Equipment[slot]->getDodge());
+
+        std::cout << "Снято: " << Equipment[slot]->getName() << std::endl;
+
+
+        Bag.inputIntoBag(std::move(Equipment[slot]));
+
+        Equipment[slot] = nullptr;
+    } else {
+        std::cout << "В этом слоте ничего не надето.\n";
+    }
 }
 
-void main_char::equip(weapon *item) {
-    slotOfWeapon slot = item->slot;
+
+void main_char::equip(std::shared_ptr<weapon> item) {
+    if (!item) return;
 
     if (getLevel() < item->getLevel()) {
         std::cout << "Невозможно надеть, ваш уровень ниже уровня предмета: " << item->getName() << std::endl;
-
         return;
     }
 
-    if (gun->slot == slot) {
+
+    if (gun != nullptr) {
         setDamage(getDamage() - gun->getDamage());
         setAccuracy(getAccuracy() - gun->getAccuracy());
         setStun(getStun() - gun->getStun());
 
         std::cout << "Снято: " << gun->getName() << std::endl;
 
-        Bag.inputIntoBag(gun);
+
+        Bag.inputIntoBag(std::move(gun));
     }
 
 
-    setDamage(getDamage() + item->getDamage());
-    setAccuracy(getAccuracy() + item->getAccuracy());
-    setStun(getStun() + item->getStun());
+    gun = std::move(item);
 
-    gun = item;
-
-    Bag.outputWeaponFromBag(item->getName());
+    setDamage(getDamage() + gun->getDamage());
+    setAccuracy(getAccuracy() + gun->getAccuracy());
+    setStun(getStun() + gun->getStun());
 
     std::cout << "Надето: " << gun->getName() << std::endl;
 }
 
+
 void main_char::takeOffWeapon() {
-    if (!gun) {
-        setHealth(getDamage() - gun->getDamage());
-        setArmor(getAccuracy() - gun->getAccuracy());
-        setDodge(getStun() - gun->getStun());
+    if (gun) {
+        setDamage(getDamage() - gun->getDamage());
+        setAccuracy(getAccuracy() - gun->getAccuracy());
+        setStun(getStun() - gun->getStun());
 
-        std::cout << "Снято:" << gun->getName() << std::endl;
+        std::cout << "Снято: " << gun->getName() << std::endl;
 
-        Bag.inputIntoBag(gun);
 
-        return;
+        Bag.inputIntoBag(std::move(gun));
+    } else {
+        std::cout << "Оружие не экипировано.\n";
     }
-
-    std::cout << "Ничего не надето. \n";
 }
 
 
 bool main_char::isBeltFull() const {
-    return std::none_of(Belt.begin(), Belt.end(), [](potion *p) { return p == nullptr; });
+    return std::none_of(Belt.begin(), Belt.end(), [](const std::shared_ptr<potion> &p) { return p == nullptr; });
 }
 
 
@@ -164,23 +169,25 @@ void main_char::displayBelt() const {
     std::cout << "=======================" << std::endl;
 }
 
-void main_char::equip(potion *item) {
+void main_char::equip(std::shared_ptr<potion> item) {
+    if (!item) return;
+
     if (getLevel() < item->getLevel()) {
         std::cout << "Недостаточный уровень для зелья, невозможно надеть: " << item->getName() << std::endl;
         return;
     }
 
-    if (!isBeltFull()) {
-        for (size_t i = 0; i < Belt.size(); ++i) {
-            if (Belt[i] == nullptr) {
-                Belt[i] = item;
-                std::cout << "Зелье " << item->getName() << " добавлено в ячейку " << i + 1 << std::endl;
-                return;
-            }
+
+    for (size_t i = 0; i < Belt.size(); ++i) {
+        if (Belt[i] == nullptr) {
+            Belt[i] = std::move(item);
+            std::cout << "Зелье добавлено в ячейку " << i + 1 << ": " << Belt[i]->getName() << std::endl;
+            return;
         }
     }
 
-    std::cout << " Пояс переполнен! Выберите зелье для замены (1-10) или 0 для отмены:" << std::endl;
+
+    std::cout << "Пояс переполнен! Выберите зелье для замены (1-" << BELT_SIZE << ") или 0 для отмены:" << std::endl;
     displayBelt();
 
     int choice;
@@ -193,12 +200,13 @@ void main_char::equip(potion *item) {
         return;
     }
 
-
     if (choice >= 1 && choice <= BELT_SIZE) {
         size_t slot = choice - 1;
-        std::cout << Belt[slot]->getName() << " заменено на " << item->getName() << std::endl;
-        Bag.inputIntoBag(Belt[slot]);
-        Belt[slot] = item;
+        if (Belt[slot]) {
+            std::cout << Belt[slot]->getName() << " заменено на " << item->getName() << std::endl;
+            Bag.inputIntoBag(std::move(Belt[slot]));
+        }
+        Belt[slot] = std::move(item);
     } else if (choice == 0) {
         std::cout << "Действие отменено." << std::endl;
     } else {
@@ -211,7 +219,6 @@ void main_char::takeOffPotion() {
     int slot;
     std::cin >> slot;
 
-
     if (std::cin.fail()) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -219,12 +226,12 @@ void main_char::takeOffPotion() {
         return;
     }
 
-
     if (slot >= 1 && slot <= BELT_SIZE) {
         size_t index = slot - 1;
-        if (Belt[index] != nullptr) {
+        if (Belt[index]) {
             std::cout << "Зелье " << Belt[index]->getName() << " снято с пояса." << std::endl;
-            Bag.inputIntoBag(Belt[index]);
+
+            Bag.inputIntoBag(std::move(Belt[index]));
             Belt[index] = nullptr;
         } else {
             std::cout << "Ячейка " << slot << " уже пуста!" << std::endl;
@@ -236,19 +243,27 @@ void main_char::takeOffPotion() {
     }
 }
 
-void main_char::buyEquipment(equipment *_item) {
-    Bag.inputIntoBag(_item);
-    balance.setCopper(balance.copper - _item->price.getCopper());
+void main_char::buyEquipment(const std::shared_ptr<equipment> &original) {
+    if (!original) return;
+
+    std::shared_ptr<equipment> copyEquipment(original->clone());
+
+    Bag.inputIntoBag(std::move(copyEquipment));
 }
 
-void main_char::buyWeapon(weapon *_weapon) {
-    Bag.inputIntoBag(_weapon);
-    balance.setCopper(balance.copper - _weapon->price.getCopper());
+void main_char::buyWeapon(const std::shared_ptr<weapon> &original) {
+    if (!original) return;
+    std::shared_ptr<weapon> copyWeapon = std::make_shared<weapon>(*original);
+
+    Bag.inputIntoBag(std::move(copyWeapon));
 }
 
-void main_char::buyPotion(potion *_potion) {
-    Bag.inputIntoBag(_potion);
-    balance.setCopper(balance.copper - _potion->price.getCopper());
+void main_char::buyPotion(const std::shared_ptr<potion> &original) {
+    if (!original) return;
+
+    std::shared_ptr<potion> copyPotion(original->clone());
+
+    Bag.inputIntoBag(std::move(copyPotion));
 }
 
 void main_char::showBag() {
@@ -273,6 +288,7 @@ void main_char::showBag() {
 
         switch (choice) {
             case 1:
+
                 for (const auto &item: Bag.bagEquipment) {
                     std::cout << "-------------------" << std::endl;
                     std::cout << "Предмет номер:" << counter << std::endl;
@@ -315,6 +331,7 @@ void main_char::showBag() {
                         if (counter + 1 == equipLotNum) {
                             equip(*it);
                             it = Bag.bagEquipment.erase(it);
+                            break;
                         } else {
                             ++it;
                             ++counter;
@@ -336,7 +353,7 @@ void main_char::showBag() {
 
             case 2:
 
-                for (const auto &item: Bag.bagEquipment) {
+                for (const auto &item: Bag.bagWeapon) {
                     std::cout << "-------------------" << std::endl;
                     std::cout << "Предмет номер:" << counter << std::endl;
                     item->showInInventory();
@@ -378,6 +395,7 @@ void main_char::showBag() {
                         if (counter + 1 == equipLotNum) {
                             equip(*it);
                             it = Bag.bagWeapon.erase(it);
+                            break;
                         } else {
                             ++it;
                             ++counter;
@@ -441,6 +459,7 @@ void main_char::showBag() {
                         if (counter + 1 == equipLotNum) {
                             equip(*it);
                             it = Bag.bagPotion.erase(it);
+                            break;
                         } else {
                             ++it;
                             ++counter;
@@ -489,7 +508,6 @@ void main_char::showGear() {
         }
 
         if (choiceInGear == 1) {
-            // Снаряжение
             while (true) {
                 std::cout << "\nТекущее снаряжение:\n";
                 int counter = 1;
@@ -520,7 +538,6 @@ void main_char::showGear() {
                 }
 
                 if (choiceInEquipment == 1) {
-                    // Снять экипировку
                     std::cout << "Введите порядковый номер экипировки: ";
                     int choiceToTakeOff;
                     std::cin >> choiceToTakeOff;
@@ -549,14 +566,12 @@ void main_char::showGear() {
                 } else if (choiceInEquipment == 2) {
                     break;
                 } else if (choiceInEquipment == 3) {
-
                     return;
                 } else {
                     std::cout << "Введено неверное число!\n";
                 }
             }
         } else if (choiceInGear == 2) {
-
             while (true) {
                 if (gun != nullptr) {
                     std::cout << "\nТекущее оружие:\n";
@@ -594,7 +609,6 @@ void main_char::showGear() {
                 }
             }
         } else if (choiceInGear == 3) {
-
             while (true) {
                 std::cout << "\nПояс зелий:\n";
                 displayBelt();

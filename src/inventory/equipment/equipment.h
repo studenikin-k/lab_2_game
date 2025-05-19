@@ -5,6 +5,7 @@
 #include "../../utils/slot_of_equipment.h"
 #include "../../utils/war_style.h"
 #include "../coins/coins.h"
+#include "memory"
 
 class equipment : public inventory {
 public:
@@ -23,9 +24,12 @@ public:
 
     [[nodiscard]] unsigned int getDodge() const;
 
+    [[nodiscard]] virtual std::shared_ptr<equipment> clone() const = 0;
+
     void setDodge(unsigned int dodge);
 
     void showInShop() const;
+
     void showInInventory() const;
 
     coins price;
@@ -54,38 +58,41 @@ private:
 class Helmet : public equipment {
 public:
     Helmet(const std::string &_name, unsigned int _level, unsigned int _health,
-           unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price) :
-            equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Helmet, _style, _price) {};
+           unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price);
+
+    std::shared_ptr<equipment> clone() const override;
 };
 
 class Chestplate : public equipment {
 public:
     Chestplate(const std::string &_name, unsigned int _level, unsigned int _health,
-               unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price) :
-            equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Chestplate, _style, _price) {};
+               unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price);
+
+    std::shared_ptr<equipment> clone() const override;
 };
 
 class Gloves : public equipment {
 public:
-    Gloves(const std::string &_name, const unsigned int _level, const unsigned int _health,
-           unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price) :
-            equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Gloves, _style, _price) {};
-};
+    Gloves(const std::string &_name, unsigned int _level, unsigned int _health,
+           unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price);
 
+    std::shared_ptr<equipment> clone() const override;
+};
 
 class Pants : public equipment {
 public:
-    Pants(const std::string &_name, const unsigned int _level, const unsigned int _health,
-          const unsigned int _armor, const unsigned int _dodge, const warStyle _style, const coins _price) :
-            equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Pants, _style, _price) {};
-};
+    Pants(const std::string &_name, unsigned int _level, unsigned int _health,
+          unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price);
 
+    std::shared_ptr<equipment> clone() const override;
+};
 
 class Boots : public equipment {
 public:
-    Boots(const std::string &_name, const unsigned int _level, const unsigned int _health,
-          const unsigned int _armor, const unsigned int _dodge, slotOfEquipment _slot, const warStyle _style, const coins _price) :
-            equipment(_name, _level, _health, _armor, _dodge, slotOfEquipment::Boots, _style, _price) {};
+    Boots(const std::string &_name, unsigned int _level, unsigned int _health,
+          unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price);
+
+    std::shared_ptr<equipment> clone() const override;
 };
 
 #endif

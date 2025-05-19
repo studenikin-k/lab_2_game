@@ -82,3 +82,48 @@ void equipment::showInInventory() const {
 
 }
 
+Helmet::Helmet(const std::string &_name, unsigned int _level, unsigned int _health,
+       unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price)
+    : equipment(_name, _level, _health, _armor, _dodge,
+                slotOfEquipment::Helmet, _style, _price) {}
+
+std::shared_ptr<equipment> Helmet::clone() const {
+    return std::make_shared<Helmet>(*this);
+}
+
+Chestplate::Chestplate(const std::string &_name, unsigned int _level, unsigned int _health,
+           unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price)
+    : equipment(_name, _level, _health, _armor, _dodge,
+                slotOfEquipment::Chestplate, _style, _price) {}
+
+std::shared_ptr<equipment> Chestplate::clone() const {
+    return std::make_shared<Chestplate>(*this);
+}
+
+Gloves::Gloves(const std::string &_name, unsigned int _level, unsigned int _health,
+       unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price)
+    : equipment(_name, _level, _health, _armor, _dodge,
+                slotOfEquipment::Gloves, _style, _price) {}
+
+std::shared_ptr<equipment> Gloves::clone() const {
+    return std::make_shared<Gloves>(*this);
+}
+
+Pants::Pants(const std::string &_name, unsigned int _level, unsigned int _health,
+      unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price)
+    : equipment(_name, _level, _health, _armor, _dodge,
+                slotOfEquipment::Pants, _style, _price) {}
+
+std::shared_ptr<equipment> Pants::clone() const {
+    return std::make_shared<Pants>(*this);
+}
+
+Boots::Boots(const std::string &_name, unsigned int _level, unsigned int _health,
+      unsigned int _armor, unsigned int _dodge, warStyle _style, coins _price)
+    : equipment(_name, _level, _health, _armor, _dodge,
+                slotOfEquipment::Boots, _style, _price) {}
+
+std::shared_ptr<equipment> Boots::clone() const {
+    return std::make_shared<Boots>(*this);
+}
+

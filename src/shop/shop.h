@@ -21,15 +21,15 @@ public:
     shop()=default;
     ~shop() = default;
 
-    std::array<std::unordered_map<slotOfEquipment,std::unordered_map<warStyle,std::unique_ptr<equipment>>>,5> equipmentShop{};
+    std::array<std::unordered_map<slotOfEquipment,std::unordered_map<warStyle,std::shared_ptr<equipment>>>,5> equipmentShop{};
 
-    std::array<std::unordered_map<slotOfWeapon,std::unordered_map<warStyle,std::unique_ptr<weapon>>>,5>  weaponShop{};
+    std::array<std::unordered_map<slotOfWeapon,std::unordered_map<warStyle,std::shared_ptr<weapon>>>,5>  weaponShop{};
 
-    std::array<std::unordered_map<slotOfPotion, std::unique_ptr<potion>>,5>  potionShop{};
+    std::array<std::unordered_map<slotOfPotion, std::shared_ptr<potion>>,5>  potionShop{};
 
 
 
-    void showContents();
+    void showContents(main_char& hero);
 };
 
 

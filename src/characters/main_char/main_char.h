@@ -22,20 +22,20 @@ public:
 
     ~main_char() = default;
 
-    std::unordered_map<slotOfEquipment, equipment *> Equipment;
-    std::array<potion *, BELT_SIZE> Belt{};
+    std::unordered_map<slotOfEquipment, std::shared_ptr<equipment> > Equipment;
+    std::array<std::shared_ptr<potion>, BELT_SIZE> Belt{};
 
-    static bag Bag;
+    bag Bag{};
 
-    weapon *gun;
+    std::shared_ptr<weapon> gun;
 
-    static coins balance;
+    coins balance{};
 
-    void equip(equipment *item);
+    void equip(std::shared_ptr<equipment> item);
 
-    void takeOffEquipment(const equipment *item);
+    void takeOffEquipment(std::shared_ptr<equipment> item);
 
-    void equip(weapon *item);
+    void equip(std::shared_ptr<weapon>);
 
     void takeOffWeapon();
 
@@ -43,15 +43,15 @@ public:
 
     void displayBelt() const;
 
-    void equip(potion *item);
+    void equip(std::shared_ptr<potion> item);
 
     void takeOffPotion();
 
-    static void buyEquipment(equipment *_item);
+    void buyEquipment(const std::shared_ptr<equipment> &_item);
 
-    static void buyWeapon(weapon *_weapon);
+    void buyWeapon(const std::shared_ptr<weapon> &);
 
-    static void buyPotion(potion *_potion);
+    void buyPotion(const std::shared_ptr<potion> &);
 
     void showBag();
 
@@ -61,12 +61,12 @@ public:
 
     void setName(const std::string &name);
 
-    static unsigned int getLevel();
+    unsigned int getLevel();
 
-    static void setLevel(unsigned int level);
+    void setLevel(unsigned int level);
 
 private:
-    static unsigned int level;
+     unsigned int level{};
 
 private:
     std::string name{};

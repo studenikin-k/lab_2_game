@@ -2,7 +2,7 @@
 #include <limits>
 
 
-void shop::showContents() {
+void shop::showContents(main_char& hero) {
     bool exit = false;
 
     while (!exit) {
@@ -23,7 +23,7 @@ void shop::showContents() {
         }
         std::cout << std::endl << std::endl;
 
-        static auto level = main_char::getLevel();
+        unsigned  level = hero.getLevel();
 
         unsigned int counter = 1;
 
@@ -131,7 +131,7 @@ void shop::showContents() {
                     std::cin >> equipLotNum;
                     std::cout << std::endl << std::endl;
 
-                    if (equipLotNum >= counter) {
+                    if (equipLotNum >= counter || equipLotNum < 1) {
                         std::cout << "Такого лота нет." << std::endl;
                         break;
                     }
@@ -140,13 +140,13 @@ void shop::showContents() {
 
                     for (int i = 0; i <= level; i++) {
                         for (auto &it: equipmentShop[i][slot]) {
-                            if (counter + 1 == equipLotNum && main_char::balance.copper >= it.second->price.
+                            if (counter + 1 == equipLotNum && hero.balance.copper >= it.second->price.
                                 copper) {
-                                main_char::buyEquipment(it.second.get());
+                                hero.buyEquipment(it.second);
                                 std::cout << "Вы купили: " << it.second->getName() << std::endl;
                                 std::cout << std::endl;
                                 break;
-                            } else if (main_char::balance.copper < it.second->price.copper) {
+                            } else if (hero.balance.copper < it.second->price.copper) {
                                 std::cout << "Недостаточно денег для покупки предмета.";
                                 break;
                             }
@@ -284,7 +284,7 @@ void shop::showContents() {
                     std::cin >> weaponLotNum;
                     std::cout << std::endl << std::endl;
 
-                    if (weaponLotNum >= counter) {
+                    if (weaponLotNum >= counter || weaponLotNum < 1) {
                         std::cout << "Такого лота нет." << std::endl;
                         break;
                     }
@@ -293,12 +293,12 @@ void shop::showContents() {
 
                     for (int i = 0; i <= level; i++) {
                         for (auto &it: weaponShop[i][weapon]) {
-                            if (counter + 1 == weaponLotNum && main_char::balance.copper >= it.second->price.copper) {
-                                main_char::buyWeapon(it.second.get());
+                            if (counter + 1 == weaponLotNum && hero.balance.copper >= it.second->price.copper) {
+                                hero.buyWeapon(it.second);
                                 std::cout << "Вы купили: " << it.second->getName() << std::endl;
                                 std::cout << std::endl;
                                 break;
-                            } else if (main_char::balance.copper < it.second->price.copper) {
+                            } else if (hero.balance.copper < it.second->price.copper) {
                                 std::cout << "Недостаточно денег для покупки предмета.";
                                 break;
                             }
@@ -433,7 +433,7 @@ void shop::showContents() {
                     std::cin >> potionLotNum;
                     std::cout << std::endl << std::endl;
 
-                    if (potionLotNum >= counter) {
+                    if (potionLotNum >= counter || potionLotNum < 1) {
                         std::cout << "Такого лота нет." << std::endl;
                         break;
                     }
@@ -442,12 +442,12 @@ void shop::showContents() {
 
                     for (int i = 0; i <= level; i++) {
                         for (auto &it: potionShop[i]) {
-                            if (counter + 1 == potionLotNum && main_char::balance.copper >= it.second->price.copper) {
-                                main_char::buyPotion(it.second.get());
+                            if (counter + 1 == potionLotNum && hero.balance.copper >= it.second->price.copper) {
+                                hero.buyPotion(it.second);
                                 std::cout << "Вы купили: " << it.second->getName() << std::endl;
                                 std::cout << std::endl;
                                 break;
-                            } else if (main_char::balance.copper < it.second->price.copper) {
+                            } else if (hero.balance.copper < it.second->price.copper) {
                                 std::cout << "Недостаточно денег для покупки предмета.";
                                 break;
                             }
