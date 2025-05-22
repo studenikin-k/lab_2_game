@@ -5,7 +5,8 @@
 main_char::main_char(const std::string &_name, const unsigned int _level, const unsigned int _health,
                      const unsigned int _damage,
                      const unsigned int _armor, const unsigned int _accuracy, const unsigned int _stun,
-                     const unsigned int _dodge, const coins &cash) : level(_level), balance(cash) {
+                     const unsigned int _dodge, const coins &cash,
+                     const unsigned int position) : level(_level), balance(cash) {
     setName(_name);
     setLevel(_level);
     setHealth(_health);
@@ -14,7 +15,7 @@ main_char::main_char(const std::string &_name, const unsigned int _level, const 
     setAccuracy(_accuracy);
     setStun(_stun);
     setDodge(_dodge);
-
+    setCurrentPosition(position);
 
     gun = nullptr;
 
@@ -44,6 +45,30 @@ void main_char::setLevel(unsigned int _level) {
     level = _level;
 }
 
+
+unsigned int main_char::getExperience() const {
+    return experience;
+}
+
+void main_char::setExperience(const unsigned int experience) {
+    this->experience = experience;
+}
+
+unsigned int main_char::getExperienceToLevelUp() const {
+    return experienceToLevelUp;
+}
+
+void main_char::setExperienceToLevelUp(const unsigned int experience_to_level_up) {
+    experienceToLevelUp = experience_to_level_up;
+}
+
+unsigned int main_char::getCurrentPosition() const {
+    return currentPosition;
+}
+
+void main_char::setCurrentPosition(unsigned int current_position) {
+    currentPosition = current_position;
+}
 
 void main_char::equip(std::shared_ptr<equipment> item) {
     if (!item) return;
@@ -215,7 +240,7 @@ void main_char::equip(std::shared_ptr<potion> item) {
 }
 
 void main_char::takeOffPotion() {
-    std::cout << "Введите номер ячейки (1-10) или 0 для отмены: ";
+    std::cout << "Введите номер ячейки (1-6) или 0 для отмены: ";
     int slot;
     std::cin >> slot;
 
@@ -646,4 +671,70 @@ void main_char::showGear() {
             std::cout << "Введено неверное число!\n";
         }
     }
+}
+
+void main_char::usePotion() {
+    std::cout << "Выберите зелье, которое хотите использовать: \n";
+
+
+    displayBelt();
+
+    std::cout << "Введите номер ячейки (1-6) или 0 для отмены: ";
+    int slot;
+    std::cin >> slot;
+
+
+    if (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Ошибка: введите число!" << std::endl;
+        return;
+    }
+
+    if (slot == 0) {
+        std::cout << "Действие отменено." << std::endl;
+        return;
+    }
+
+    if (slot < 1 || slot > BELT_SIZE) {
+        std::cout << "Неверный номер ячейки!" << std::endl;
+        return;
+    }
+
+    size_t index = static_cast<size_t>(slot - 1);
+
+    if (!Belt[index]) {
+        std::cout << "Ячейка " << slot << " пуста!" << std::endl;
+        return;
+    }
+
+    std::shared_ptr<potion> p = Belt[index];
+
+
+    if (auto hp = std::dynamic_pointer_cast<healthPotion>(p)) {
+        std::cout << "Вы использовали: " << hp->getName() << std::endl;
+        health += hp->getHealth();
+    } else if (auto dp = std::dynamic_pointer_cast<damagePotion>(p)) {
+        std::cout << "Вы использовали: " << hp->getName() << std::endl;
+        damage += dp->getDamage();
+    } else if (auto ap = std::dynamic_pointer_cast<armorPotion>(p)) {
+        std::cout << "Вы использовали: " << hp->getName() << std::endl;
+        armor += ap->getArmor();
+    } else if (auto acp = std::dynamic_pointer_cast<accuracyPotion>(p)) {
+        std::cout << "Вы использовали: " << hp->getName() << std::endl;
+        accuracy += acp->getAccuracy();
+    } else if (auto sp = std::dynamic_pointer_cast<stunPotion>(p)) {
+        std::cout << "Вы использовали: " << hp->getName() << std::endl;
+        stun += sp->getStun();
+    } else if (auto dpd = std::dynamic_pointer_cast<dodgePotion>(p)) {
+        std::cout << "Вы использовали: " << hp->getName() << std::endl;
+        dodge += dpd->getDodge();
+    } else {
+        std::cout << "Неизвестное зелье. Эффект не применён.\n";
+        return;
+    }
+
+    Belt[index] = nullptr;
+
+    std::cout << "Зелье было использовано и удалено из пояса.\n";
 }

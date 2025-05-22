@@ -16,20 +16,33 @@ constexpr int BELT_SIZE = 6;
 
 class main_char : public character {
 public:
+    [[nodiscard]] unsigned int getExperience() const;
+
+    void setExperience(const unsigned int experience);
+
+    [[nodiscard]] unsigned int getExperienceToLevelUp() const;
+
+    void setExperienceToLevelUp(const unsigned int experience_to_level_up);
+
+    [[nodiscard]] unsigned int getCurrentPosition() const;
+
+    void setCurrentPosition(unsigned int current_position);
+
     main_char(const std::string &_name, unsigned int _level, unsigned int _health, unsigned int _damage,
               unsigned int _armor, unsigned int _accuracy, unsigned int _stun,
-              unsigned int _dodge, const coins &cash);
+              unsigned int _dodge, const coins &cash,const unsigned int position);
 
     ~main_char() = default;
 
-    std::unordered_map<slotOfEquipment, std::shared_ptr<equipment> > Equipment;
-    std::array<std::shared_ptr<potion>, BELT_SIZE> Belt{};
+    std::unordered_map<slotOfEquipment, std::shared_ptr<equipment> > Equipment; // снаряжение персонажа
+    std::array<std::shared_ptr<potion>, BELT_SIZE> Belt{}; // пояс зелий персонажа
 
-    bag Bag{};
+    bag Bag{}; // портфель персонажа, содержит в себе векторы оружия, снаряжения и зелий
 
-    std::shared_ptr<weapon> gun;
+    std::shared_ptr<weapon> gun; // оружие персонажа
 
-    coins balance{};
+    coins balance{}; // баланс персонажа, содержит в себе медяки, перерасчитываемое алгортимом: 1 золото 100 серебра
+    // 1 серебро, 100 медяков
 
     void equip(std::shared_ptr<equipment> item);
 
@@ -53,9 +66,11 @@ public:
 
     void buyPotion(const std::shared_ptr<potion> &);
 
-    void showBag();
+    void showBag();  //метод осмотра портфеля, проходим по векторам снаряжения, оружия, зелий, позволяет
+    // надевать нужные предметы в экипировку
 
-    void showGear();
+    void showGear(); // метод осмотра экипировки, позволяет снять предметы с экипировки, снять оружие,
+    // снять элемент пояса зелий
 
     [[nodiscard]] const std::string &getName() const;
 
@@ -65,10 +80,13 @@ public:
 
     void setLevel(unsigned int level);
 
-private:
-     unsigned int level{};
+    void usePotion();
 
 private:
+    unsigned int experience = 0;
+    unsigned int experienceToLevelUp = 100;
+    unsigned int currentPosition;
+    unsigned int level{};
     std::string name{};
 };
 

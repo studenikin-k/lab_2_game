@@ -7,12 +7,13 @@
 #include "potion/potion.h"
 #include "characters/opponent/opponent.h"
 #include "location/map/map.h"
+#include "game_mechanics/game_mechanics.h"
 
 
 int main() {
     coins cash(2323213321222);
 
-    main_char character("Hero", 1, 10, 15, 12, 11, 2, 3, cash);
+    main_char character("Hero", 1, 10, 15, 12, 11, 2, 3, cash, 0);
 
     Helmet elmet("Shlem", 1, 11, 1, 2, warStyle::Damage, {123});
 
@@ -31,16 +32,11 @@ int main() {
     magaz.equipmentShop[1][slotOfEquipment::Helmet][warStyle::Damage] = shlem;
     magaz.weaponShop[1][slotOfWeapon::Blade][warStyle::Damage] = oruzhie;
 
-
-    magaz.showContents(character);
-
-    character.showBag();
-
-    character.showGear();
-
     map Road{};
 
-    Road.startTravel(0);
+    gameLoop(character,Road);
+
+
 
     /* character.Bag.showBag();
 
@@ -48,7 +44,7 @@ int main() {
 
      Vrag.showInfo();
 
-     map Road{};
+
 
      Road.startTravel(0); */
 }

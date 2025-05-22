@@ -2,7 +2,7 @@
 #include <limits>
 
 
-void shop::showContents(main_char& hero) {
+void shop::showContents(main_char &hero) {
     bool exit = false;
 
     while (!exit) {
@@ -23,7 +23,7 @@ void shop::showContents(main_char& hero) {
         }
         std::cout << std::endl << std::endl;
 
-        unsigned  level = hero.getLevel();
+        unsigned level = hero.getLevel();
 
         unsigned int counter = 1;
 
@@ -84,7 +84,7 @@ void shop::showContents(main_char& hero) {
 
                     default:
                         std::cout << "Пошли вон с моего магазина!" << std::endl;
-                        std::cout << "*Вас выгнали с магазина за недостойное поведение*" << std::endl;
+                        std::cout << "*Вас выгнали с магазина за недостойное поведение* \n" << std::endl;
 
                         exit = true;
                         break;
@@ -126,13 +126,14 @@ void shop::showContents(main_char& hero) {
                 if (choiceInEquipment == 1) {
                     int equipLotNum;
 
+                    std::cout << "Ваш баланс: " << hero.balance.showMoney() << "\n";
                     std::cout << "Выберите лот, который вы хотите купить. \n\n";
                     std::cout << "Введите номер лота: ";
                     std::cin >> equipLotNum;
                     std::cout << std::endl << std::endl;
 
                     if (equipLotNum >= counter || equipLotNum < 1) {
-                        std::cout << "Такого лота нет." << std::endl;
+                        std::cout << "Такого лота нет. \n" << std::endl;
                         break;
                     }
 
@@ -147,7 +148,7 @@ void shop::showContents(main_char& hero) {
                                 std::cout << std::endl;
                                 break;
                             } else if (hero.balance.copper < it.second->price.copper) {
-                                std::cout << "Недостаточно денег для покупки предмета.";
+                                std::cout << "Недостаточно денег для покупки предмета. \n\n";
                                 break;
                             }
                             counter++;
@@ -165,7 +166,7 @@ void shop::showContents(main_char& hero) {
                     break;
                 } else {
                     std::cout << "Пошли вон с моего магазина!" << std::endl;
-                    std::cout << "*Вас выгнали с магазина за недостойное поведение*" << std::endl;
+                    std::cout << "*Вас выгнали с магазина за недостойное поведение* \n" << std::endl;
 
                     exit = true;
                     break;
@@ -240,7 +241,7 @@ void shop::showContents(main_char& hero) {
                     default:
                         std::cout << "Пошли вон с моего магазина!" << std::endl << std::endl;
 
-                        std::cout << "*Вас выгнали с магазина за недостойное поведение*" << std::endl;
+                        std::cout << "*Вас выгнали с магазина за недостойное поведение* \n" << std::endl;
                         exit = true;
                         break;
                 }
@@ -279,13 +280,14 @@ void shop::showContents(main_char& hero) {
                 if (choiceInWeapon == 1) {
                     int weaponLotNum;
 
+                    std::cout << "Ваш баланс: " << hero.balance.showMoney() << "\n";
                     std::cout << "Выберите лот, который вы хотите купить.\n\n";
                     std::cout << "Введите номер лота: ";
                     std::cin >> weaponLotNum;
                     std::cout << std::endl << std::endl;
 
                     if (weaponLotNum >= counter || weaponLotNum < 1) {
-                        std::cout << "Такого лота нет." << std::endl;
+                        std::cout << "Такого лота нет.\n" << std::endl;
                         break;
                     }
 
@@ -299,7 +301,7 @@ void shop::showContents(main_char& hero) {
                                 std::cout << std::endl;
                                 break;
                             } else if (hero.balance.copper < it.second->price.copper) {
-                                std::cout << "Недостаточно денег для покупки предмета.";
+                                std::cout << "Недостаточно денег для покупки предмета. \n\n";
                                 break;
                             }
                             counter++;
@@ -316,8 +318,8 @@ void shop::showContents(main_char& hero) {
                     exit = true;
                     break;
                 } else {
-                    std::cout << "Пошли вон с моего магазина!" << std::endl;
-                    std::cout << "*Вас выгнали с магазина за недостойное поведение*" << std::endl;
+                    std::cout << "Пошли вон с моего магазина!\n" << std::endl;
+                    std::cout << "*Вас выгнали с магазина за недостойное поведение* \n" << std::endl;
 
                     exit = true;
                     break;
@@ -386,7 +388,7 @@ void shop::showContents(main_char& hero) {
                     default:
                         std::cout << "Пошли вон с моего магазина!" << std::endl << std::endl;
 
-                        std::cout << "*Вас выгнали с магазина за недостойное поведение.*" << std::endl;
+                        std::cout << "*Вас выгнали с магазина за недостойное поведение.* \n" << std::endl;
                         exit = true;
                         break;
                 }
@@ -428,13 +430,14 @@ void shop::showContents(main_char& hero) {
                 if (choiceInPotion == 1) {
                     int potionLotNum;
 
+                    std::cout << "Ваш баланс: " << hero.balance.showMoney() << "\n";
                     std::cout << "Выберите лот, который вы хотите купить. \n\n";
                     std::cout << "Введите номер лота: ";
                     std::cin >> potionLotNum;
                     std::cout << std::endl << std::endl;
 
                     if (potionLotNum >= counter || potionLotNum < 1) {
-                        std::cout << "Такого лота нет." << std::endl;
+                        std::cout << "Такого лота нет. \n" << std::endl;
                         break;
                     }
 
@@ -448,7 +451,7 @@ void shop::showContents(main_char& hero) {
                                 std::cout << std::endl;
                                 break;
                             } else if (hero.balance.copper < it.second->price.copper) {
-                                std::cout << "Недостаточно денег для покупки предмета.";
+                                std::cout << "Недостаточно денег для покупки предмета. \n\n";
                                 break;
                             }
                             counter++;
@@ -464,8 +467,8 @@ void shop::showContents(main_char& hero) {
                     exit = true;
                     break;
                 } else {
-                    std::cout << "Пошли вон с моего магазина!" << std::endl;
-                    std::cout << "*Вас выгнали с магазина за недостойное поведение*" << std::endl;
+                    std::cout << "Пошли вон с моего магазина! \n" << std::endl;
+                    std::cout << "*Вас выгнали с магазина за недостойное поведение* \n" << std::endl;
 
                     exit = true;
                     break;
@@ -479,7 +482,7 @@ void shop::showContents(main_char& hero) {
                 break;
             default:
                 std::cout << "Пошли вон с моего магазина! \n\n";
-                std::cout << "*Вас выгнали с магазина за недостойное поведение.*" << std::endl;
+                std::cout << "*Вас выгнали с магазина за недостойное поведение.* \n" << std::endl;
                 exit = true;
                 break;
         }

@@ -4,7 +4,7 @@
 #include "../characters/opponent/opponent.h"
 
 
-class location{
+class location {
 public:
     [[nodiscard]] std::string getName() const;
 
@@ -13,14 +13,11 @@ public:
     explicit location(const std::string &name);
 
 
+    virtual ~location() = default;
 
-    ~location() = default;
 private:
     std::string _name;
-
-
 };
-
 
 
 #endif //LOCATION_H

@@ -16,15 +16,15 @@ map::map() {
     locationConnections = {
         {
             {1, -1, -1, -1}, // Школа воинов -> Вирастоль
-            {2, 3, -1, -1},  // Вирастоль -> Ярмарка, Просёлок
-            {1, 8, 7, 5},    // Ярмарка -> Вирастоль, Мавкина роща, Зябкое ущелье, Ящеркин хутор
-            {8, 1, 9, 4},    // Просёлок -> Мавкина роща, Вирастоль, Лес Духов, Чернолесье
-            {3, 9, 6, 5},    // Чернолесье -> Просёлок, Лес духов, Стагород, Ящеркин хутор
-            {6, 4, 7, 2},    // Хутор -> Стагород, Чернолесье, ущелье, ярмарка
-            {4, 5, -1, -1},  // Стагород -> Чернолесье, хутор
-            {2, 5, -1, -1},  // Ущелье -> ярмарка, хутор
-            {2, 3, -1, -1},  // Роща -> ярмарка, просёлок
-            {3, 4, -1, -1}   // Лес духов -> просёлок, Чернолесье
+            {2, 3, -1, -1}, // Вирастоль -> Ярмарка, Просёлок
+            {1, 8, 7, 5}, // Ярмарка -> Вирастоль, Мавкина роща, Зябкое ущелье, Ящеркин хутор
+            {8, 1, 9, 4}, // Просёлок -> Мавкина роща, Вирастоль, Лес Духов, Чернолесье
+            {3, 9, 6, 5}, // Чернолесье -> Просёлок, Лес духов, Стагород, Ящеркин хутор
+            {6, 4, 7, 2}, // Хутор -> Стагород, Чернолесье, ущелье, ярмарка
+            {4, 5, -1, -1}, // Стагород -> Чернолесье, хутор
+            {2, 5, -1, -1}, // Ущелье -> ярмарка, хутор
+            {2, 3, -1, -1}, // Роща -> ярмарка, просёлок
+            {3, 4, -1, -1} // Лес духов -> просёлок, Чернолесье
         }
     };
 }
@@ -40,16 +40,14 @@ void map::displayTravelOptions(const int currentLocationIndex) const {
     std::cout << optionNumber << ". Завершить перемещение\n";
 }
 
-void map::startTravel(int currentLocationIndex) const {
-
-
+void map::startTravel(main_char &hero) const {
     while (true) {
         std::cout << "\nВы находитесь в локации: "
-                << locationMap[currentLocationIndex]->getName() << "\n";
+                << locationMap[hero.getCurrentPosition()]->getName() << "\n";
         std::cout << "Перейти на: \n";
-        displayTravelOptions(currentLocationIndex);
+        displayTravelOptions(hero.getCurrentPosition());
 
-        std::cout << "Введите число: " ;
+        std::cout << "Введите число: ";
         int userChoice;
         std::cin >> userChoice;
 
@@ -57,23 +55,23 @@ void map::startTravel(int currentLocationIndex) const {
 
         int availableOptions = 0;
         for (int i = 0; i < 4; ++i) {
-            if (locationConnections[currentLocationIndex][i] != -1) {
+            if (locationConnections[hero.getCurrentPosition()][i] != -1) {
                 ++availableOptions;
             }
         }
 
         if (userChoice == availableOptions + 1) {
             std::cout << "Перемещение завершено.\n";
-            break;
+            return;
         }
 
         if (userChoice >= 1 && userChoice <= availableOptions) {
             int counter = 0;
             for (int i = 0; i < 4; ++i) {
-                if (locationConnections[currentLocationIndex][i] != -1) {
+                if (locationConnections[hero.getCurrentPosition()][i] != -1) {
                     ++counter;
                     if (counter == userChoice) {
-                        currentLocationIndex = locationConnections[currentLocationIndex][i];
+                        hero.setCurrentPosition(locationConnections[hero.getCurrentPosition()][i]);
                         break;
                     }
                 }
@@ -82,4 +80,50 @@ void map::startTravel(int currentLocationIndex) const {
             std::cout << "Некорректный выбор. Попробуйте снова.\n";
         }
     }
+}
+
+bool map::isShopLocation(const main_char &hero) const {
+    unsigned int pos = hero.getCurrentPosition();
+    if (pos >= locationMap.size() || !locationMap[pos])
+        return false;
+
+    return dynamic_cast<shop_location *>(locationMap[pos].get()) != nullptr;
+}
+
+bool map::isBattleLocation(const main_char &hero) const {
+    unsigned int pos = hero.getCurrentPosition();
+    if (pos >= locationMap.size() || !locationMap[pos])
+        return false;
+    return dynamic_cast<battle_location *>(locationMap[pos].get()) != nullptr;
+}
+
+
+std::vector<opponent *> map::getOpponents(const main_char &hero) const {
+    std::vector<opponent *> result;
+    unsigned int pos = hero.getCurrentPosition();
+    if (pos >= locationMap.size() || !locationMap[pos])
+        return result;
+
+    if (auto *bLoc = dynamic_cast<battle_location *>(locationMap[pos].get())) {
+        for (auto *opp: bLoc->_opponents) {
+            if (opp)
+                result.push_back(opp);
+        }
+    }
+    return result;
+}
+
+shop map::getShop(const main_char &hero) const {
+    shop result;
+    unsigned int pos = hero.getCurrentPosition();
+
+    if (pos >= locationMap.size() || !locationMap[pos]) {
+        return result;
+    }
+
+    if (auto *bLoc = dynamic_cast<shop_location *>(locationMap[pos].get())) {
+        result = bLoc->Market;
+    }
+
+    return result;
 }

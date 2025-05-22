@@ -42,7 +42,11 @@ add_executable(main ${MAIN_SOURCES}
         src/location/location.h
         src/location/map/map.cpp
         src/location/map/map.h
-        src/location/shop_location/shop_location.cpp)
+        src/location/shop_location/shop_location.cpp
+        src/upload_system/upload_system.cpp
+        src/game_mechanics/game_mechanics.h
+        src/game_mechanics/game_mechanics.cpp
+        src/download_system/save_game.cpp)
 
 #add_executable(tests ${TEST_SOURCES})
 

@@ -7,9 +7,9 @@ class shop_location : public location {
 public:
     explicit shop_location(const std::string &name);
 
+    shop Market;
 
-
-    ~shop_location() = default;
+    ~shop_location() override = default;
 };
 
 

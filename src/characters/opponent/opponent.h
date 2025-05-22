@@ -3,7 +3,7 @@
 #include <iostream>
 #include "character.h"
 
-class opponent : character {
+class opponent : public character {
 public:
     opponent(const std::string &, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int,
              unsigned int, unsigned int);
