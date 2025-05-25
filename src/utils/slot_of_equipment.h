@@ -20,4 +20,14 @@ inline std::string slotOfEquipmentToString(slotOfEquipment slot) {
     }
 }
 
+inline slotOfEquipment stringToSlotOfEquipment(const std::string& str) {
+    if (str == "Шлем") return slotOfEquipment::Helmet;
+    if (str == "Нагрудник") return slotOfEquipment::Chestplate;
+    if (str == "Перчатки") return slotOfEquipment::Gloves;
+    if (str == "Штаны") return slotOfEquipment::Pants;
+    if (str == "Ботинкит") return slotOfEquipment::Boots;
+    throw std::invalid_argument("Неизвестный слот экипировки: " + str);
+}
+
+
 #endif //LAB_2_GAME_SLOT_OF_EQUIPMENT_H

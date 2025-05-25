@@ -4,8 +4,7 @@ project(lab_2_game)
 set(CMAKE_CXX_STANDARD 20)
 
 
-#find_package(GTest REQUIRED)
-#include_directories(${GTEST_INCLUDE_DIRS})
+find_package(SQLite3 REQUIRED)
 
 file(GLOB MAIN_SOURCES
         "src/characters/*.cpp"
@@ -24,12 +23,6 @@ file(GLOB MAIN_SOURCES
         "src/location/shop_location/*.cpp"
 )
 
-
-#file(GLOB TEST_SOURCES
- #       "tests/*.cpp"
-#)
-
-
 add_executable(main ${MAIN_SOURCES}
         src/characters/character.cpp
         src/characters/opponent/opponent.h
@@ -46,16 +39,15 @@ add_executable(main ${MAIN_SOURCES}
         src/upload_system/upload_system.cpp
         src/game_mechanics/game_mechanics.h
         src/game_mechanics/game_mechanics.cpp
-        src/download_system/save_game.cpp)
+        src/save_system/save_game.cpp
+        src/upload_system/upload_system.h
+        src/start_game/start_game.h
+        src/start_game/start_game.cpp
+        src/features/clear_screen.cpp
+)
 
-#add_executable(tests ${TEST_SOURCES})
 
-
-#target_link_libraries(tests PRIVATE
- #       ${GTEST_LIBRARIES}
-  #      ${GTEST_MAIN_LIBRARIES}
-#)
-
+target_link_libraries(main PRIVATE SQLite::SQLite3)
 
 target_include_directories(main PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
@@ -70,7 +62,4 @@ target_include_directories(main PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/location/shop_location
 )
 
-#target_include_directories(tests PRIVATE
- #       ${CMAKE_CURRENT_SOURCE_DIR}/src
-  #      ${CMAKE_CURRENT_SOURCE_DIR}/tests
-#)
+add_definitions(-DPROJECT_ROOT_PATH_DEF="${CMAKE_SOURCE_DIR}")

@@ -37,7 +37,7 @@ void main_char::setName(const std::string &_name) {
     name = _name;
 }
 
-unsigned int main_char::getLevel() {
+unsigned int main_char::getLevel() const {
     return level;
 }
 
@@ -68,6 +68,14 @@ unsigned int main_char::getCurrentPosition() const {
 
 void main_char::setCurrentPosition(unsigned int current_position) {
     currentPosition = current_position;
+}
+
+unsigned int main_char::id1() const {
+    return id;
+}
+
+void main_char::set_id(unsigned int id) {
+    this->id = id;
 }
 
 void main_char::equip(std::shared_ptr<equipment> item) {
@@ -293,6 +301,9 @@ void main_char::buyPotion(const std::shared_ptr<potion> &original) {
 
 void main_char::showBag() {
     bool exit = false;
+
+    clearScreen();
+
     while (!exit) {
         std::cout << "Вы открыли свою сумку, выберите действие:\n"
                 << "  1. Просмотреть Снаряжение.\n"
@@ -311,8 +322,11 @@ void main_char::showBag() {
 
         unsigned int counter = 1;
 
+        clearScreen();
+
         switch (choice) {
             case 1:
+                clearScreen();
 
                 for (const auto &item: Bag.bagEquipment) {
                     std::cout << "-------------------" << std::endl;
@@ -378,6 +392,8 @@ void main_char::showBag() {
 
             case 2:
 
+                clearScreen();
+
                 for (const auto &item: Bag.bagWeapon) {
                     std::cout << "-------------------" << std::endl;
                     std::cout << "Предмет номер:" << counter << std::endl;
@@ -441,6 +457,8 @@ void main_char::showBag() {
                 }
 
             case 3:
+
+                clearScreen();
 
                 for (const auto &item: Bag.bagPotion) {
                     std::cout << "-------------------" << std::endl;
@@ -514,6 +532,7 @@ void main_char::showBag() {
 }
 
 void main_char::showGear() {
+    clearScreen();
     while (true) {
         std::cout << "\nВыберите часть экипировки, которую хотели бы посмотреть:\n";
         std::cout << "1. Снаряжение\n"
@@ -533,6 +552,7 @@ void main_char::showGear() {
         }
 
         if (choiceInGear == 1) {
+            clearScreen();
             while (true) {
                 std::cout << "\nТекущее снаряжение:\n";
                 int counter = 1;
@@ -597,6 +617,8 @@ void main_char::showGear() {
                 }
             }
         } else if (choiceInGear == 2) {
+            clearScreen();
+
             while (true) {
                 if (gun != nullptr) {
                     std::cout << "\nТекущее оружие:\n";
@@ -634,6 +656,8 @@ void main_char::showGear() {
                 }
             }
         } else if (choiceInGear == 3) {
+            clearScreen();
+
             while (true) {
                 std::cout << "\nПояс зелий:\n";
                 displayBelt();
@@ -674,6 +698,7 @@ void main_char::showGear() {
 }
 
 void main_char::usePotion() {
+
     std::cout << "Выберите зелье, которое хотите использовать: \n";
 
 

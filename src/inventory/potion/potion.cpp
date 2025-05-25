@@ -7,6 +7,7 @@ const std::string &potion::getName() const {
 
 void potion::setName(const std::string &_name) {
     potion::name = _name;
+    price.setCopper(100);
 }
 
 unsigned int potion::getLevel() const {
@@ -26,11 +27,13 @@ void potion::setSlot(slotOfPotion _slot) {
 }
 
 
-healthPotion::healthPotion(const std::string &_name, unsigned int _level, unsigned int _health) : potion() {
+healthPotion::healthPotion(const std::string &_name, unsigned int _level, unsigned int _health,
+                           coins _price) : potion() {
     setName(_name);
     setLevel(_level);
     setSlot(slotOfPotion::Health);
     setHealth(_health);
+    price = _price;
 }
 
 unsigned int healthPotion::getHealth() const {
@@ -58,11 +61,13 @@ void healthPotion::showInInventory() {
             "Цена продажи: " << healthPotion::price.showSellPrice();
 }
 
-damagePotion::damagePotion(const std::string &_name, unsigned int _level, unsigned int _damage) : potion() {
+damagePotion::damagePotion(const std::string &_name, unsigned int _level, unsigned int _damage,
+                           coins _price) : potion() {
     setName(_name);
     setLevel(_level);
     setSlot(slotOfPotion::Damage);
     setDamage(_damage);
+    price = _price;
 }
 
 unsigned int damagePotion::getDamage() const {
@@ -90,11 +95,12 @@ void damagePotion::showInInventory() {
             "Цена продажи: " << damagePotion::price.showSellPrice();
 }
 
-armorPotion::armorPotion(const std::string &_name, unsigned int _level, unsigned int _armor) : potion() {
+armorPotion::armorPotion(const std::string &_name, unsigned int _level, unsigned int _armor, coins _price) : potion() {
     setName(_name);
     setLevel(_level);
     setSlot(slotOfPotion::Armor);
     setArmor(_armor);
+    price = _price;
 }
 
 unsigned int armorPotion::getArmor() const {
@@ -122,11 +128,13 @@ void armorPotion::showInInventory() {
             "Цена продажи: " << armorPotion::price.showSellPrice();
 }
 
-accuracyPotion::accuracyPotion(const std::string &_name, const unsigned int _level, const unsigned int _accuracy) : potion() {
+accuracyPotion::accuracyPotion(const std::string &_name, const unsigned int _level,
+                               const unsigned int _accuracy, coins _price) : potion() {
     setName(_name);
     setLevel(_level);
     setSlot(slotOfPotion::Accuracy);
     setAccuracy(_accuracy);
+    price = _price;
 }
 
 unsigned int accuracyPotion::getAccuracy() const {
@@ -154,11 +162,12 @@ void accuracyPotion::showInInventory() {
             "Цена продажи: " << accuracyPotion::price.showSellPrice();
 }
 
-stunPotion::stunPotion(const std::string &_name, unsigned int _level, unsigned int _stun) : potion() {
+stunPotion::stunPotion(const std::string &_name, unsigned int _level, unsigned int _stun, coins _price) : potion() {
     setName(_name);
     setLevel(_level);
     setSlot(slotOfPotion::Stun);
     setStun(_stun);
+    price = _price;
 }
 
 unsigned int stunPotion::getStun() const {
@@ -186,11 +195,12 @@ void stunPotion::showInInventory() {
             "Цена продажи: " << stunPotion::price.showSellPrice();
 }
 
-dodgePotion::dodgePotion(const std::string &_name, unsigned int _level,unsigned int _dodge) : potion() {
+dodgePotion::dodgePotion(const std::string &_name, unsigned int _level, unsigned int _dodge, coins _price) : potion() {
     setName(_name);
     setLevel(_level);
     setSlot(slotOfPotion::Dodge);
     setDodge(_dodge);
+    price = _price;
 }
 
 unsigned int dodgePotion::getDodge() const {

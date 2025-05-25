@@ -23,4 +23,15 @@ inline std::string slotOfPotionToString(slotOfPotion slot) {
         default: return "Водки здесь не будет, не ждите";
     }
 }
+
+inline slotOfPotion stringToSlotOfPotion(const std::string& str) {
+    if (str == "Здоровье") return slotOfPotion::Health;
+    if (str == "Урон") return slotOfPotion::Damage;
+    if (str == "Броня") return slotOfPotion::Armor;
+    if (str == "Точность") return slotOfPotion::Accuracy;
+    if (str == "Оглушение") return slotOfPotion::Stun;
+    if (str == "Уворот") return slotOfPotion::Dodge;
+    throw std::invalid_argument("Неизвестный слот зелья: " + str);
+}
+
 #endif //LAB_2_GAME_SLOT_OF_POTION_H

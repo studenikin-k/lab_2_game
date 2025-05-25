@@ -5,7 +5,8 @@ enum class warStyle{
     Damage,
     Dodge,
     Armor,
-    Elite
+    Elite,
+    Non_style
 };
 
 inline std::string warStyleToString(warStyle style) {
@@ -16,6 +17,14 @@ inline std::string warStyleToString(warStyle style) {
         case warStyle::Elite: return "Элита";
         default: return "Если вы собрались играть за орду, вы ошиблись игрой, тут уже победил альянс \n";
     }
+}
+
+inline warStyle stringToWarStyle(const std::string& str) {
+    if (str == "Урон") return warStyle::Damage;
+    if (str == "Броня") return warStyle::Armor;
+    if (str == "Уворот") return warStyle::Dodge;
+    if (str == "Элита") return warStyle::Elite;
+    throw std::invalid_argument("Неизвестный боевой стиль: " + str);
 }
 
 

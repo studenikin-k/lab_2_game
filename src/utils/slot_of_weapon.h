@@ -1,16 +1,16 @@
 #ifndef LAB_2_GAME_SLOT_OF_WEAPON_H
 #define LAB_2_GAME_SLOT_OF_WEAPON_H
 
-enum class slotOfWeapon{
-    Axe,
-    Mace,
-    Sword,
-    Blade,
-    Epee,
-    Fork,
-    Glaive,
-    Spear
-};
+    enum class slotOfWeapon{
+        Axe,
+        Mace,
+        Sword,
+        Blade,
+        Epee,
+        Fork,
+        Glaive,
+        Spear,
+    };
 
 inline std::string slotOfWeaponToString(slotOfWeapon slot) {
     switch (slot) {
@@ -26,5 +26,18 @@ inline std::string slotOfWeaponToString(slotOfWeapon slot) {
                         "Тут игра про воинов, настоящих мужиков. \n";
     }
 }
+
+inline slotOfWeapon stringToSlotOfWeapon(const std::string& str) {
+    if (str == "Топор") return slotOfWeapon::Axe;
+    if (str == "Булава") return slotOfWeapon::Mace;
+    if (str == "Меч") return slotOfWeapon::Sword;
+    if (str == "Клинок") return slotOfWeapon::Blade;
+    if (str == "Шпага") return slotOfWeapon::Epee;
+    if (str == "Вилы") return slotOfWeapon::Fork;
+    if (str == "Глефа") return slotOfWeapon::Glaive;
+    if (str == "Копьё") return slotOfWeapon::Spear;
+    throw std::invalid_argument("Неизвестный тип оружия: " + str);
+}
+
 
 #endif //LAB_2_GAME_SLOT_OF_WEAPON_H

@@ -11,6 +11,7 @@
 #include "../inventory/weapon/weapon.h"
 #include "../inventory/bag/bag.h"
 #include "../inventory/inventory.h"
+#include "../../features/clear_screen.h"
 
 constexpr int BELT_SIZE = 6;
 
@@ -30,7 +31,7 @@ public:
 
     main_char(const std::string &_name, unsigned int _level, unsigned int _health, unsigned int _damage,
               unsigned int _armor, unsigned int _accuracy, unsigned int _stun,
-              unsigned int _dodge, const coins &cash,const unsigned int position);
+              unsigned int _dodge, const coins &cash, const unsigned int position);
 
     ~main_char() = default;
 
@@ -66,7 +67,7 @@ public:
 
     void buyPotion(const std::shared_ptr<potion> &);
 
-    void showBag();  //метод осмотра портфеля, проходим по векторам снаряжения, оружия, зелий, позволяет
+    void showBag(); //метод осмотра портфеля, проходим по векторам снаряжения, оружия, зелий, позволяет
     // надевать нужные предметы в экипировку
 
     void showGear(); // метод осмотра экипировки, позволяет снять предметы с экипировки, снять оружие,
@@ -76,11 +77,19 @@ public:
 
     void setName(const std::string &name);
 
-    unsigned int getLevel();
+    unsigned int getLevel() const;
 
     void setLevel(unsigned int level);
 
     void usePotion();
+
+private:
+    unsigned int id{};
+
+public:
+    [[nodiscard]] unsigned int id1() const;
+
+    void set_id(unsigned int id);
 
 private:
     unsigned int experience = 0;

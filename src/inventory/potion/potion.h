@@ -41,7 +41,8 @@ private:
 
 class healthPotion : public potion {
 public:
-    healthPotion(const std::string &_name, unsigned int _level, unsigned int _health);
+
+    healthPotion(const std::string &_name, unsigned int _level, unsigned int _health, coins _price);
 
     [[nodiscard]] unsigned int getHealth() const;
 
@@ -59,7 +60,8 @@ private:
 
 class damagePotion : public potion {
 public:
-    damagePotion(const std::string &_name, unsigned int _level, unsigned int _damage);
+
+    damagePotion(const std::string &_name, unsigned int _level, unsigned int _damage, coins _price);
 
     [[nodiscard]] unsigned int getDamage() const;
 
@@ -77,7 +79,8 @@ private:
 
 class armorPotion : public potion {
 public:
-    armorPotion(const std::string &_name, unsigned int _level, unsigned int _armor);
+
+    armorPotion(const std::string &_name, unsigned int _level, unsigned int _armor, coins _price);
 
     [[nodiscard]] unsigned int getArmor() const;
 
@@ -97,6 +100,8 @@ class accuracyPotion : public potion {
 public:
     accuracyPotion(const std::string &_name, unsigned int _level, unsigned int _accuracy);
 
+    accuracyPotion(const std::string &_name, unsigned int _level, unsigned int _accuracy, coins _price);
+
     [[nodiscard]] unsigned int getAccuracy() const;
 
     void setAccuracy(unsigned int accuracy);
@@ -113,7 +118,8 @@ private:
 
 class stunPotion : public potion {
 public:
-    stunPotion(const std::string &_name, unsigned int _level, unsigned int _stun);
+
+    stunPotion(const std::string &_name, unsigned int _level, unsigned int _stun, coins _price);
 
     [[nodiscard]] unsigned int getStun() const;
 
@@ -131,7 +137,8 @@ private:
 
 class dodgePotion : public potion {
 public:
-    dodgePotion(const std::string &_name, unsigned int _level, unsigned int _dodge);
+
+    dodgePotion(const std::string &_name, unsigned int _level, unsigned int _dodge, coins price);
 
     [[nodiscard]] unsigned int getDodge() const;
 

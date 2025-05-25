@@ -8,43 +8,14 @@
 #include "characters/opponent/opponent.h"
 #include "location/map/map.h"
 #include "game_mechanics/game_mechanics.h"
+#include "save_system/save_game.h"
+#include "start_game/start_game.h"
+#include "upload_system/upload_system.h"
 
 
 int main() {
-    coins cash(2323213321222);
 
-    main_char character("Hero", 1, 10, 15, 12, 11, 2, 3, cash, 0);
-
-    Helmet elmet("Shlem", 1, 11, 1, 2, warStyle::Damage, {123});
+    startGameMenu();
 
 
-    std::shared_ptr<Helmet> shlem = std::make_shared<Helmet>(elmet);
-
-    character.equip(shlem);
-
-    weapon gun("Gun", 11, 2, 2, 3, slotOfWeapon::Blade, warStyle::Damage, {123123});
-
-    std::shared_ptr<weapon> oruzhie = std::make_shared<weapon>(gun);
-
-
-    shop magaz;
-
-    magaz.equipmentShop[1][slotOfEquipment::Helmet][warStyle::Damage] = shlem;
-    magaz.weaponShop[1][slotOfWeapon::Blade][warStyle::Damage] = oruzhie;
-
-    map Road{};
-
-    gameLoop(character,Road);
-
-
-
-    /* character.Bag.showBag();
-
-     opponent Vrag("Vrag",1,2,3,4,5,6,7);
-
-     Vrag.showInfo();
-
-
-
-     Road.startTravel(0); */
 }

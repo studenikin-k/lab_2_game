@@ -5,6 +5,8 @@
 void shop::showContents(main_char &hero) {
     bool exit = false;
 
+    clearScreen();
+
     while (!exit) {
         int action;
         std::cout << "Добро пожаловать в магазин, Воин! А ты как всегда свеж и бодр, чего желаете купить сегодня?\n";
@@ -26,6 +28,8 @@ void shop::showContents(main_char &hero) {
         unsigned level = hero.getLevel();
 
         unsigned int counter = 1;
+
+        clearScreen();
 
         switch (action) {
             case 1:
@@ -90,6 +94,7 @@ void shop::showContents(main_char &hero) {
                         break;
                 }
 
+                clearScreen();
 
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: equipmentShop[i][slot]) {
@@ -245,6 +250,9 @@ void shop::showContents(main_char &hero) {
                         exit = true;
                         break;
                 }
+
+                clearScreen();
+
                 std::cout << "-------------------" << std::endl;
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: weaponShop[i][weapon]) {
@@ -392,6 +400,8 @@ void shop::showContents(main_char &hero) {
                         exit = true;
                         break;
                 }
+
+                clearScreen();
                 std::cout << "-------------------" << std::endl;
                 for (int i = 0; i <= level; i++) {
                     for (auto &it: potionShop[i]) {

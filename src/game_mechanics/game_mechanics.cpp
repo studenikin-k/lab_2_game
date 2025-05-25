@@ -5,9 +5,8 @@
 #include <chrono>
 #include <cstdlib>
 #include <ctime>
-#include "../characters/main_char/main_char.h"
-#include "../map/map.h"
-#include "../characters/opponent/opponent.h"
+
+
 
 
 void gameLoop(main_char &hero, map &gameMap) {
@@ -15,6 +14,7 @@ void gameLoop(main_char &hero, map &gameMap) {
 
     bool exitGame = false;
     while (!exitGame) {
+
         // Вывод главного меню
         std::cout << "\n=== Главное меню ===\n";
         std::cout << "1. Путешествовать по карте\n";
@@ -28,6 +28,8 @@ void gameLoop(main_char &hero, map &gameMap) {
         int choice;
         std::cin >> choice;
 
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
         switch (choice) {
             case 1:
                 gameMap.startTravel(hero);
@@ -39,6 +41,8 @@ void gameLoop(main_char &hero, map &gameMap) {
                 hero.showBag();
                 break;
             case 4: {
+                clearScreen();
+
                 if (!gameMap.isBattleLocation(hero)) {
                     std::cout << "Сейчас здесь нельзя начать бой (торговая локация).\n";
                     break;
@@ -67,8 +71,10 @@ void gameLoop(main_char &hero, map &gameMap) {
                     break;
                 }
 
+                clearScreen();
+
                 opponents[oppChoice - 1]->showInfo();
-                // Предлагаем начать бой или вернуться
+
                 std::cout << "Начать бой с " << opponents[oppChoice - 1]->getName() <<
                         "? \n\n(1 - согласиться, 2 - уйти): ";
                 int fightConfirm;
@@ -79,35 +85,41 @@ void gameLoop(main_char &hero, map &gameMap) {
                     break;
                 }
 
-                unsigned int heroHealthBefore = hero.getHealth();
-                unsigned int oppHealthBefore = opponents[oppChoice - 1]->getHealth();
-                // Флаги пропуска хода из-за оглушения
+                int heroHealthBefore = hero.getHealth();
+                int oppHealthBefore = opponents[oppChoice - 1]->getHealth();
+
                 bool heroStunned = false;
                 bool oppStunned = false;
+
+                clearScreen();
+
                 std::cout << "\n=== Бой с " << opponents[oppChoice - 1]->getName() << " начался ===\n";
-                // Основной цикл боя
+
                 int turn = 1;
+
                 bool battleOver = false;
-                // За один ход герой может использовать одно зелье с пояса
+
                 bool potionUsedThisTurn = false;
                 while (!battleOver) {
                     std::cout << "\n-- Ход " << turn << " --\n";
-                    // Ход героя
+                    std::cout << "Здоровье " << opponents[oppChoice - 1]->getName() << ": "
+                            << opponents[oppChoice - 1]->getHealth() << " \n";
+                    std::cout << "Ваше здоровье: " << hero.getHealth() << " \n\n";
+
                     if (heroStunned) {
-                        std::cout << "Герой оглушен и пропускает свой ход.\n";
-                        heroStunned = false; // снимаем оглушение
+                        std::cout << "Вы оглушены и пропускаете свой ход.\n";
+                        heroStunned = false;
                     } else {
-                        // Предложение использовать зелье (если еще не использовано в этом ходу)
                         if (!potionUsedThisTurn) {
                             std::cout << "Выпить зелье с пояса? (1 - да, 2 - нет): ";
                             int usePotionChoice;
                             std::cin >> usePotionChoice;
                             if (usePotionChoice == 1) {
-                                hero.usePotion(); // метод применения зелья
+                                hero.usePotion();
                                 potionUsedThisTurn = true;
                             }
                         }
-                        // Выбор типа удара
+
                         std::cout << "Выберите тип удара:\n";
                         std::cout << "1. Удар сверху\n";
                         std::cout << "2. Удар прямо\n";
@@ -126,14 +138,13 @@ void gameLoop(main_char &hero, map &gameMap) {
                             default: std::cout << "удар.\n";
                                 break;
                         }
-                        // Логика попадания
+
                         int heroAcc = hero.getAccuracy();
                         int oppDodge = opponents[oppChoice - 1]->getDodge();
                         bool hit = false;
                         if (heroAcc >= oppDodge) {
-                            hit = true; // стопроцентное попадание
+                            hit = true;
                         } else {
-                            // вероятность попадания зависит от разницы
                             int diff = oppDodge - heroAcc;
                             int hitChance = std::max(0, 100 - diff);
                             int roll = std::rand() % 100;
@@ -143,27 +154,25 @@ void gameLoop(main_char &hero, map &gameMap) {
                         }
                         if (hit) {
                             std::cout << "Попадание!\n";
-                            // Шанс оглушения (например, 20%)
+
                             int stunRoll = std::rand() % 100;
                             if (stunRoll < 20) {
                                 oppStunned = true;
                                 std::cout << "Оппонент оглушен!\n";
                             }
-                            // Расчет урона
+
                             int baseDmg = hero.getDamage();
                             int damage = 0;
                             if (oppStunned) {
-                                // Усиленный урон при оглушении (на 25-35%)
-                                int extraPercent = std::rand() % 11 + 25; // 25..35
+                                int extraPercent = std::rand() % 11 + 25;
                                 damage = baseDmg + baseDmg * extraPercent / 100;
                                 std::cout << "Усиленный удар: ";
                             } else {
-                                // Урон варьируется от -10% до +10%
-                                int variation = std::rand() % 21 - 10; // -10..10
+                                int variation = std::rand() % 21 - 10;
                                 damage = baseDmg + baseDmg * variation / 100;
                                 std::cout << "Нанесено ";
                             }
-                            // Наносим урон оппоненту
+
                             int oppHP = opponents[oppChoice - 1]->getHealth();
                             opponents[oppChoice - 1]->setHealth(oppHP - damage);
                             std::cout << damage << " урона " << opponents[oppChoice - 1]->getName() << " ("
@@ -172,24 +181,24 @@ void gameLoop(main_char &hero, map &gameMap) {
                         } else {
                             std::cout << hero.getName() << " промахивается.\n";
                         }
-                        // Задержка между действиями
+
                         std::this_thread::sleep_for(std::chrono::seconds(1));
                     }
-                    // Проверяем окончание боя после хода героя
+
                     if (opponents[oppChoice - 1]->getHealth() <= 0) {
                         std::cout << opponents[oppChoice - 1]->getName() << " повержен!\n";
-                        gainExperience(hero, opponents[oppChoice - 1]->getLevel() * 4);
-                        hero.balance.copper += opponents[oppChoice - 1]->getLevel() * 1232;
+                        gainExperience(hero, (opponents[oppChoice - 1]->getLevel() + 1) * 4);
+                        hero.balance.copper += opponents[oppChoice - 1]->getLevel() * 78;
                         battleOver = true;
                         break;
                     }
-                    // Ход оппонента
+
                     if (oppStunned) {
                         std::cout << "Оппонент оглушен и пропускает свой ход.\n";
                         oppStunned = false;
                     } else {
                         std::cout << "Оппонент наносит удар по герою.\n";
-                        // Аналогичная логика для оппонента
+
                         unsigned int oppAcc = opponents[oppChoice - 1]->getAccuracy();
                         unsigned int heroDodge = hero.getDodge();
                         bool hitOpp = false;
@@ -205,7 +214,7 @@ void gameLoop(main_char &hero, map &gameMap) {
                         }
                         if (hitOpp) {
                             std::cout << "Попадание по герою!\n";
-                            // Шанс оглушения героя (например, 10%)
+
                             int stunRoll = std::rand() % 100;
                             if (stunRoll < 10) {
                                 heroStunned = true;
@@ -231,18 +240,17 @@ void gameLoop(main_char &hero, map &gameMap) {
                         }
                         std::this_thread::sleep_for(std::chrono::seconds(1));
                     }
-                    // Проверяем окончание боя после хода оппонента
+
                     if (hero.getHealth() <= 0) {
                         std::cout << "Вас победил" << opponents[oppChoice - 1]->getName() << "\n";
                         battleOver = true;
                         break;
                     }
-                    // Подготовка к следующему ходу
+
                     turn++;
-                    potionUsedThisTurn = false; // в новом ходу можно снова использовать зелье
+                    potionUsedThisTurn = false;
                 }
                 std::cout << "=== Бой окончен ===\n";
-                // Восстановление здоровья после боя
                 hero.setHealth(heroHealthBefore);
                 opponents[oppChoice - 1]->setHealth(oppHealthBefore);
 
@@ -250,6 +258,7 @@ void gameLoop(main_char &hero, map &gameMap) {
                 break;
             }
             case 5:
+                clearScreen();
 
                 if (!gameMap.isShopLocation(hero)) {
                     std::cout << "В этой локации нет магазина.\n";
@@ -259,12 +268,14 @@ void gameLoop(main_char &hero, map &gameMap) {
                 }
                 break;
             case 6:
-                // Выход из игры
+                saveCharacterToDatabase(hero);
+                clearScreen();
                 std::cout << "Выход из игры. До новых встреч!\n";
                 exitGame = true;
                 break;
             default:
-                std::cout << "Неверный выбор. Попробуйте снова.\n";
+                clearScreen();
+                std::cout << "Неверный выбор. Попробуйте снова.\n\n";
         }
     }
 }
@@ -298,6 +309,7 @@ void gainExperience(main_char &hero, unsigned int expGained) {
 }
 
 void notifyLevelUp(main_char &hero) {
+    clearScreen();
     std::cout << "\n===== ПОЗДРАВЛЯЕМ! =====\n";
     std::cout << hero.getName() << " достиг уровня " << hero.getLevel() << "!\n";
 
@@ -325,3 +337,5 @@ void notifyLevelUp(main_char &hero) {
     std::cout << "Уклонение:" << oldDodge << " → " << hero.getDodge() << "\n";
     std::cout << "=========================\n";
 }
+
+
