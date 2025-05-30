@@ -1,0 +1,3 @@
+/mnt/c/Users/basybemoog/CLionProjects/lab_2_game/cmake-build-debug/CMakeFiles/main.dir
+/mnt/c/Users/basybemoog/CLionProjects/lab_2_game/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/basybemoog/CLionProjects/lab_2_game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
