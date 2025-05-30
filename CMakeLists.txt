@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(SQLite3 REQUIRED)
 
+
 file(GLOB MAIN_SOURCES
         "src/characters/*.cpp"
         "src/inventory/*.cpp"
@@ -47,7 +48,6 @@ add_executable(main ${MAIN_SOURCES}
 )
 
 
-target_link_libraries(main PRIVATE SQLite::SQLite3)
 
 target_include_directories(main PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
@@ -63,3 +63,4 @@ target_include_directories(main PRIVATE
 )
 
 add_definitions(-DPROJECT_ROOT_PATH_DEF="${CMAKE_SOURCE_DIR}")
+
