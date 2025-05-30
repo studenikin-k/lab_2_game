@@ -13,12 +13,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake libgtest-dev build-essential
-          
-      - name: make
-        run: make
-      - name: run_test
-        run: ./test
+          sudo apt-get install -y cmake libsqlite3-dev build-essential
+
+      - name: Configure CMake
+        run: cmake -S . -B build
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Run Main Executable
+        run: ./build/main
