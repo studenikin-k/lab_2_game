@@ -19,6 +19,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake libsqlite3-dev build-essential
 
+      - name: Clean build directory
+        run: rm -rf build
+
       - name: Configure CMake
         run: cmake -S . -B build
 
