@@ -1,5 +1,5 @@
 #include "equipment.h"
-
+#include <memory>
 equipment::equipment(const std::string &_name, const unsigned int _level, const unsigned int _health,
                      const unsigned int _armor, const unsigned int _dodge,
                      const slotOfEquipment _slot, const warStyle _style, const coins _price)

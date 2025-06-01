@@ -435,7 +435,6 @@ void main_char::showBag() {
                     for (auto it = Bag.bagWeapon.begin(); it != Bag.bagWeapon.end();) {
                         if (counter + 1 == equipLotNum) {
                             equip(*it);
-                            it = Bag.bagWeapon.erase(it);
                             break;
                         } else {
                             ++it;
@@ -501,7 +500,6 @@ void main_char::showBag() {
                     for (auto it = Bag.bagPotion.begin(); it != Bag.bagPotion.end();) {
                         if (counter + 1 == equipLotNum) {
                             equip(*it);
-                            it = Bag.bagPotion.erase(it);
                             break;
                         } else {
                             ++it;

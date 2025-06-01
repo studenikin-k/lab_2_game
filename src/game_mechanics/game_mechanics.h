@@ -2,7 +2,7 @@
 #define GAME_MECHANICS_H
 
 #include "../characters/main_char/main_char.h"
-#include "../map/map.h"
+#include "../location/map/map.h"
 #include "../characters/opponent/opponent.h"
 #include "../save_system/save_game.h"
 

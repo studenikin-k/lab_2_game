@@ -12,11 +12,11 @@ class bag {
 public:
     bag() = default;
 
-     void inputIntoBag(std::unique_ptr<equipment> item);
+     void inputIntoBag(std::shared_ptr<equipment> item);
 
-     void inputIntoBag(std::unique_ptr<weapon> gun);
+     void inputIntoBag(std::shared_ptr<weapon> gun);
 
-     void inputIntoBag(std::unique_ptr<potion> potion);
+     void inputIntoBag(std::shared_ptr<potion> potion);
 
     void outputEquipmentFromBag(const std::string &name);
 
@@ -24,9 +24,9 @@ public:
 
     void outputPotionFromBag(const std::string &name);
 
-    std::vector<std::unique_ptr<equipment> > bagEquipment;
-    std::vector<std::unique_ptr<weapon> > bagWeapon;
-    std::vector<std::unique_ptr<potion> > bagPotion;
+    std::vector<std::shared_ptr<equipment> > bagEquipment;
+    std::vector<std::shared_ptr<weapon> > bagWeapon;
+    std::vector<std::shared_ptr<potion> > bagPotion;
 };
 
 

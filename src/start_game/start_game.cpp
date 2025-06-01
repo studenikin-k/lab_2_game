@@ -43,15 +43,14 @@ void startGameMenu() {
                 hero = main_char("Boss_of_game", 0, 15, 5, 3, 5, 1, 4, coins{100}, 0);
 
                 hero.equip(std::make_shared<Helmet>(
-                    "Шлем Школы Воинов", 0, 15, 8, 0, warStyle::Damage, coins{50}));
+                    "Шлем Школы Воинов", 0, 15, 8, 0, warStyle::Non_style, coins{50}));
                 hero.equip(std::make_shared<Chestplate>(
-                    "Нагрудник Школы Воинов", 0, 20, 12, 0, warStyle::Armor, coins{70}));
+                    "Нагрудник Школы Воинов", 0, 20, 12, 0, warStyle::Non_style, coins{70}));
                 hero.equip(std::make_shared<Gloves>(
-                    "Перчатки Школы Воинов", 0, 8, 4, 0, warStyle::Dodge, coins{30}));
+                    "Перчатки Школы Воинов", 0, 8, 4, 0, warStyle::Non_style, coins{30}));
                 hero.equip(std::make_shared<Pants>(
-                    "Штаны школы воинов", 0, 18, 10, 0, warStyle::Elite, coins{60}));
-                hero.equip(std::make_shared<Boots>(
-                    "Ботинки школы воинов", 0, 12, 6, 0, warStyle::Elite, coins{40}));
+                    "Штаны школы воинов", 0, 13, 10, 0, warStyle::Non_style, coins{60}));
+                hero.equip(std::make_shared<Boots>("Ботинки школы воинов", 0, 5, 12, 6, warStyle::Non_style, coins {40}));
                 gameStarted = true;
                 hero.equip(std::make_shared<weapon>(
                     "Меч Школы воинов", 0, 10, 7, 0, slotOfWeapon::Sword, warStyle::Elite, coins{80}));
