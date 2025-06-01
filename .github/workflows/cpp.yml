@@ -29,4 +29,5 @@ jobs:
         run: cmake --build build
 
       - name: Run Main Executable
-        run: ./build/main
+        run: |
+          echo "3" | ./build/main 
