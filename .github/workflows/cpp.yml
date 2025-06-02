@@ -7,11 +7,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
-
-    outputs:
-      build-cache-hit: ${{ steps.cache.outputs.cache-hit }}
 
     steps:
       - name: Checkout repository
@@ -21,7 +18,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake libsqlite3-dev build-essential libgtest-dev
-          # Build and install GTest
+          # Build Google Test (libgtest-dev installs source only)
           cd /usr/src/gtest
           sudo cmake .
           sudo make
@@ -33,41 +30,14 @@ jobs:
       - name: Configure CMake
         run: cmake -S . -B build
 
-      - name: Build all targets
-        run: cmake --build build --parallel
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: game-build
-          path: build
-
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install runtime dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libsqlite3-dev
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: game-build
-          path: build
+      - name: Build all
+        run: cmake --build build
 
       - name: Run Main Executable
         run: |
-          chmod +x ./build/main
           echo "3" | ./build/main
-        
-        
-          - name: Run Tests
-            run: |
-              cd build
-              ctest --output-on-failure
+
+      - name: Run Tests
+        run: |
+          cd build
+          ctest --output-on-failure
