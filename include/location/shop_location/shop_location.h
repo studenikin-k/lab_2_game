@@ -1,0 +1,17 @@
+#ifndef SHOP_LOCATION_H
+#define SHOP_LOCATION_H
+
+#include "../../all_headers.h"
+
+
+class shop_location : public location {
+public:
+    explicit shop_location(const std::string &name);
+
+    shop Market;
+
+    ~shop_location() override = default;
+};
+
+
+#endif //SHOP_LOCATION_H

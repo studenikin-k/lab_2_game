@@ -1,0 +1,28 @@
+#ifndef LAB_2_GAME_OPPONENT_H
+#define LAB_2_GAME_OPPONENT_H
+#include <iostream>
+#include "../../all_headers.h"
+
+class opponent : public character {
+public:
+    opponent(const std::string &, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int,
+             unsigned int, unsigned int);
+
+    ~opponent() = default;
+
+    [[nodiscard]] const std::string &getName() const;
+
+    void setName(const std::string &name);
+
+    [[nodiscard]] unsigned int getLevel() const;
+
+    void setLevel(unsigned int level);
+    void showInfo() const;
+
+private:
+    std::string name;
+    unsigned int level{};
+};
+
+
+#endif //LAB_2_GAME_OPPONENT_H
