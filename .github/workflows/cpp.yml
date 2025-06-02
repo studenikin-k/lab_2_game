@@ -8,16 +8,24 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    outputs:
+      build-cache-hit: ${{ steps.cache.outputs.cache-hit }}
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake libsqlite3-dev build-essential
+          sudo apt-get install -y cmake libsqlite3-dev build-essential libgtest-dev
+          # Build and install GTest
+          cd /usr/src/gtest
+          sudo cmake .
+          sudo make
+          sudo cp lib/*.a /usr/lib
 
       - name: Clean build directory
         run: rm -rf build
@@ -25,9 +33,39 @@ jobs:
       - name: Configure CMake
         run: cmake -S . -B build
 
-      - name: Build
-        run: cmake --build build
+      - name: Build all targets
+        run: cmake --build build --parallel
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: game-build
+          path: build
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install runtime dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsqlite3-dev
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: game-build
+          path: build
 
       - name: Run Main Executable
         run: |
-          echo "3" | ./build/main 
+          echo "3" | ./build/main
+
+      - name: Run Tests
+        run: |
+          cd build
+          ctest --output-on-failure
