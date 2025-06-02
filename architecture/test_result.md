@@ -1,84 +1,84 @@
-# Отчёт по Проведённым Тестам 
+# Test Report 
 
-## Общие Сведения
+## General Information
 
-Данный отчёт описывает специфические тестовые сценарии, направленные на проверку механик инвентаря (экипировка зелий), системы покупки (экипировка) и прогрессии опыта (получение опыта без повышения уровня и с множественным повышением уровня). Тесты написаны с использованием фреймворка **Google Test**.
-
----
-
-## Тест: Экипировка Зелий на Пояс и Снятие (`EquipAndUnequipPotion`)
-
-* **Цель теста**: Проверить функциональность экипировки зелий на пояс персонажа (`Belt`) и их последующего снятия, включая сценарии заполнения пояса и замены зелий.
-* **Сценарий проверки**:
-    1.  Инициализация `main_char` и создание набора различных зелий.
-    2.  Добавление всех созданных зелий в сумку персонажа (`hero->Bag.bagPotion`).
-    3.  Проверка начального количества зелий в сумке.
-    4.  Циклическая экипировка зелий из сумки на пояс (`hero->Belt`) до его полного заполнения (`BELT_SIZE`). Каждое экипированное зелье удаляется из сумки.
-    5.  Проверка:
-        * Что все 6 слотов пояса заполнены ожидаемыми зельями в правильном порядке.
-        * Что в сумке осталось только одно "лишнее" зелье (`extraPot`).
-    6.  Имитация пользовательского ввода (`"1\n"`) для замены зелья в первом слоте пояса на "лишнее" зелье из сумки.
-    7.  Проверка:
-        * Что "Дополнительное Зелье Здоровья" теперь находится в первом слоте пояса.
-        * Что "Малое Зелье Здоровья" (которое было заменено) вернулось в сумку.
-        * Проверка корректного размера сумки.
-    8.  Имитация пользовательского ввода (`"2\n"`) для снятия зелья из второго слота пояса.
-    9.  Проверка:
-        * Что второй слот пояса стал `nullptr` (пустым).
-        * Что снятое "Малое Зелье Урона" вернулось в сумку.
-        * Проверка корректного размера сумки.
-    10. Имитация пользовательского ввода (`"2\n"`) для попытки снять зелье из уже пустого второго слота пояса.
-    11. Проверка:
-        * Что слот остался пустым.
-        * Что количество зелий в сумке не изменилось.
-* **Ожидаемый результат**: Механика экипировки и снятия зелий должна корректно управлять содержимым пояса и сумки, а также адекватно обрабатывать сценарии заполнения/замены и снятия из пустых слотов, включая имитацию пользовательского ввода.
+This report describes specific test scenarios aimed at verifying inventory mechanics (potion equipping), purchase system (equipment), and experience progression (gaining experience without leveling up and with multiple level-ups). The tests are written using the **Google Test** framework.
 
 ---
 
-## Тест: Покупка Экипировки (`BuyEquipment`)
+## Test: Equipping and Unequipping Potions (`EquipAndUnequipPotion`)
 
-* **Цель теста**: Проверить базовую логику покупки экипировки, включая добавление предмета в инвентарь и списание средств, без учёта проверок недостатка денег (так как этот аспект был удалён из предоставленного фрагмента).
-* **Сценарий проверки**:
-    1.  Инициализация `main_char` с начальным балансом и `shop`.
-    2.  Создание предмета экипировки ("Продажный Шлем") с определённой ценой.
-    3.  Добавление этого шлема в предполагаемый инвентарь магазина (`testShop->equipmentShop`).
-    4.  Сохранение начального количества меди у героя.
-    5.  Ручное добавление шлема в сумку героя (`hero->Bag.inputIntoBag`) и ручное списание стоимости из баланса героя. (***Примечание:*** *В оригинальном тесте эта логика должна была быть инкапсулирована в метод покупки магазина `testShop->buyItem_Equipment(*hero, 0)`, который сам бы выполнял эти действия и возвращал `true`/`false`. Текущая реализация теста обходит эту инкапсуляцию, напрямую манипулируя состоянием героя.*)
-    6.  Установка `purchaseSuccess = true` вручную.
-    7.  Проверка:
-        * Что `purchaseSuccess` равно `true`.
-        * Что "Продажный Шлем" присутствует в сумке героя (`hero->Bag.bagEquipment`).
-        * Что количество предметов в сумке равно 1.
-        * Что баланс меди героя уменьшился ровно на стоимость шлема.
-* **Ожидаемый результат**: Предмет должен быть добавлен в сумку, а стоимость корректно списана с баланса героя. (Ограничения этого теста заключаются в том, что он не проверяет логику принятия решений методом покупки в магазине, а лишь финальное состояние после "успешной" покупки).
-
----
-
-## Тест: Получение Опыта без Повышения Уровня (`GainExperienceNoLevelUp`)
-
-* **Цель теста**: Убедиться, что функция `gainExperience` корректно обрабатывает получение опыта, когда его недостаточно для достижения следующего уровня.
-* **Сценарий проверки**:
-    1.  Инициализация `main_char` с начальным уровнем 1, 0 опыта и порогом `experienceToLevelUp = 100`.
-    2.  Вызов `gainExperience(*hero, 50)` для добавления 50 опыта.
-    3.  Проверка:
-        * Что уровень персонажа остался прежним (1).
-        * Что текущий опыт персонажа увеличился до 50.
-        * Что порог `experienceToLevelUp` остался 100.
-* **Ожидаемый результат**: Только текущий опыт персонажа должен быть обновлён; уровень и порог следующего уровня должны остаться неизменными.
+* **Test Goal**: To verify the functionality of equipping potions to the character's belt (`Belt`) and their subsequent un-equipping, including scenarios of belt filling and potion replacement.
+* **Test Scenario**:
+    1.  Initialize a `main_char` and create a set of various potions.
+    2.  Add all created potions to the character's bag (`hero->Bag.bagPotion`).
+    3.  Verify the initial number of potions in the bag.
+    4.  Equip potions from the bag to the belt (`hero->Belt`) in a loop until it's full (`BELT_SIZE`). Each equipped potion is removed from the bag.
+    5.  Verification:
+        * That all 6 belt slots are filled with the expected potions in the correct order.
+        * That only one "extra" potion (`extraPot`) remains in the bag.
+    6.  Simulate user input (`"1\n"`) to replace the potion in the first belt slot with the "extra" potion from the bag.
+    7.  Verification:
+        * That "Дополнительное Зелье Здоровья" (Extra Health Potion) is now in the first belt slot.
+        * That "Малое Зелье Здоровья" (Small Health Potion, which was replaced) returned to the bag.
+        * Verify the correct bag size.
+    8.  Simulate user input (`"2\n"`) to unequip a potion from the second belt slot.
+    9.  Verification:
+        * That the second belt slot became `nullptr` (empty).
+        * That the unequipped "Малое Зелье Урона" (Small Damage Potion) returned to the bag.
+        * Verify the correct bag size.
+    10. Simulate user input (`"2\n"`) to attempt unequipping a potion from the now empty second belt slot.
+    11. Verification:
+        * That the slot remained empty.
+        * That the number of potions in the bag did not change.
+* **Expected Result**: The potion equipping and unequipping mechanics should correctly manage the belt and bag contents, and adequately handle scenarios of filling/replacement and unequipping from empty slots, including simulated user input.
 
 ---
 
-## Тест: Получение Опыта с Несколькими Повышениями Уровня (`GainExperienceMultipleLevelUps`)
+## Test: Equipment Purchase (`BuyEquipment`)
 
-* **Цель теста**: Проверить функцию `gainExperience` в сценарии, когда полученное количество опыта достаточно для повышения уровня более одного раза.
-* **Сценарий проверки**:
-    1.  Инициализация `main_char` с начальным уровнем 1, 0 опыта и порогом `experienceToLevelUp = 100`.
-    2.  Вызов `gainExperience(*hero, 350)` для добавления большого количества опыта.
-        * *Ожидаемый процесс*:
-            * 100 опыта для 1->2 уровень (остаток 250). `expToLevelUp` станет 200.
-            * 200 опыта для 2->3 уровень (остаток 50). `expToLevelUp` станет 400.
-    3.  Проверка:
-        * Что уровень персонажа увеличился на 2 (стал 3).
-        * Что оставшийся опыт персонажа равен 50.
-        * Что порог `experienceToLevelUp` обновился дважды (стал 400).
-* **Ожидаемый результат**: Функция должна корректно обрабатывать множественные повышения уровня, обновлять уровень персонажа, сбрасывать опыт и соответствующим образом увеличивать порог опыта для следующего уровня.
+* **Test Goal**: To verify the basic logic of equipment purchase, including adding the item to inventory and deducting funds, without considering insufficient funds checks (as this aspect was removed from the provided snippet).
+* **Test Scenario**:
+    1.  Initialize a `main_char` with sufficient balance and a `shop`.
+    2.  Create an equipment item ("Продажный Шлем" - Sellable Helmet) with a specific price.
+    3.  Add this helmet to the shop's presumed inventory (`testShop->equipmentShop`).
+    4.  Record the hero's initial copper balance.
+    5.  Manually add the helmet to the hero's bag (`hero->Bag.inputIntoBag`) and manually deduct the cost from the hero's balance. (***Note:*** *In the original test, this logic should have been encapsulated within the shop's purchase method `testShop->buyItem_Equipment(*hero, 0)`, which would itself perform these actions and return `true`/`false`. The current test implementation bypasses this encapsulation by directly manipulating the hero's state.*)
+    6.  Manually set `purchaseSuccess = true`.
+    7.  Verification:
+        * That `purchaseSuccess` is `true`.
+        * That "Продажный Шлем" (Sellable Helmet) is present in the hero's bag (`hero->Bag.bagEquipment`).
+        * That the number of items in the bag is 1.
+        * That the hero's copper balance decreased exactly by the helmet's price.
+* **Expected Result**: The item should be added to the bag, and the cost correctly deducted from the hero's balance. (The limitations of this test are that it does not verify the decision-making logic of the shop's purchase method, but only the final state after a "successful" purchase).
+
+---
+
+## Test: Gaining Experience without Leveling Up (`GainExperienceNoLevelUp`)
+
+* **Test Goal**: To ensure that the `gainExperience` function correctly processes experience gain when the amount is insufficient to reach the next level.
+* **Test Scenario**:
+    1.  Initialize a `main_char` with an initial level of 1, 0 experience, and an `experienceToLevelUp` threshold of 100.
+    2.  Call `gainExperience(*hero, 50)` to add 50 experience.
+    3.  Verification:
+        * That the character's level remained the same (1).
+        * That the character's current experience increased to 50.
+        * That the `experienceToLevelUp` threshold remained 100.
+* **Expected Result**: Only the character's current experience should be updated; the level and next level threshold should remain unchanged.
+
+---
+
+## Test: Gaining Experience with Multiple Level Ups (`GainExperienceMultipleLevelUps`)
+
+* **Test Goal**: To verify the `gainExperience` function in a scenario where the gained experience is sufficient to level up more than once.
+* **Test Scenario**:
+    1.  Initialize a `main_char` with an initial level of 1, 0 experience, and an `experienceToLevelUp` threshold of 100.
+    2.  Call `gainExperience(*hero, 350)` to add a large amount of experience.
+        * *Expected Process*:
+            * 100 experience for level 1->2 (remaining 250). `expToLevelUp` will become 200.
+            * 200 experience for level 2->3 (remaining 50). `expToLevelUp` will become 400.
+    3.  Verification:
+        * That the character's level increased by 2 (became 3).
+        * That the character's remaining experience is 50.
+        * That the `experienceToLevelUp` threshold updated twice (became 400).
+* **Expected Result**: The function should correctly handle multiple level-ups, update the character's level, reset current experience, and appropriately increase the experience threshold for the next level.
