@@ -63,9 +63,11 @@ jobs:
 
       - name: Run Main Executable
         run: |
+          chmod +x ./build/main
           echo "3" | ./build/main
-
-      - name: Run Tests
-        run: |
-          cd build
-          ctest --output-on-failure
+        
+        
+          - name: Run Tests
+            run: |
+              cd build
+              ctest --output-on-failure
