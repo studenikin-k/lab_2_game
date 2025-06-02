@@ -3,7 +3,7 @@
 
 
 #include "memory"
-#include "../all_headers.h"
+#include "../../all_headers.h"
 
 class equipment : public inventory {
 public:

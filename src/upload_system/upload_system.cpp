@@ -1,4 +1,4 @@
-#include "../include/all_headers.h"
+#include "../../include/all_headers.h"
 #include <sqlite3.h>
 #include <iostream>
 #include <memory>    // Хотя shared_ptr не используется для character, он может быть нужен для членов Bag

@@ -6,26 +6,26 @@
 #include <unordered_map>
 #include "../../all_headers.h"
 
-class bag {
-public:
-    bag() = default;
+    class bag {
+    public:
+        bag() = default;
 
-     void inputIntoBag(std::shared_ptr<equipment> item);
+         void inputIntoBag(std::shared_ptr<equipment> item);
 
-     void inputIntoBag(std::shared_ptr<weapon> gun);
+         void inputIntoBag(std::shared_ptr<weapon> gun);
 
-     void inputIntoBag(std::shared_ptr<potion> potion);
+         void inputIntoBag(std::shared_ptr<potion> potion);
 
-    void outputEquipmentFromBag(const std::string &name);
+        void outputEquipmentFromBag(const std::string &name);
 
-    void outputWeaponFromBag(const std::string &name);
+        void outputWeaponFromBag(const std::string &name);
 
-    void outputPotionFromBag(const std::string &name);
+        void outputPotionFromBag(const std::string &name);
 
-    std::vector<std::shared_ptr<equipment> > bagEquipment;
-    std::vector<std::shared_ptr<weapon> > bagWeapon;
-    std::vector<std::shared_ptr<potion> > bagPotion;
-};
+        std::vector<std::shared_ptr<equipment> > bagEquipment;
+        std::vector<std::shared_ptr<weapon> > bagWeapon;
+        std::vector<std::shared_ptr<potion> > bagPotion;
+    };
 
 
 #endif //LAB_2_GAME_BAG_H

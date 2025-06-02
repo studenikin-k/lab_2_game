@@ -3,64 +3,87 @@ project(lab_2_game)
 
 set(CMAKE_CXX_STANDARD 20)
 
-
+# ====================
+# Find required packages
+# ====================
 find_package(SQLite3 REQUIRED)
+find_package(GTest REQUIRED)
 
-file(GLOB MAIN_SOURCES
-        "src/characters/*.cpp"
-        "src/inventory/*.cpp"
-        "src/inventory/bag/*.cpp"
-        "src/inventory/coins/*.cpp"
-        "src/inventory/equipment/*.cpp"
-        "src/inventory/potion/*.cpp"
-        "src/inventory/weapon/*.cpp"
-        "src/shop/*.cpp"
-        "include/utils/*.cpp"
-        "src/main.cpp"
-        "src/location/*.cpp"
-        "src/location/map/*.cpp"
-        "src/location/battle_location/*.cpp"
-        "src/location/shop_location/*.cpp"
+# ====================
+# Include directories (рекурсивно по include/)
+# ====================
+include_directories(
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/characters
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/characters/main_char
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/characters/opponent
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/features
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/game_mechanics
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/inventory
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/inventory/bag
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/inventory/coins
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/inventory/equipment
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/inventory/potion
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/inventory/weapon
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/location
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/location/battle_location
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/location/map
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/location/shop_location
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/save_system
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/shop
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/start_game
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/upload_system
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/utils
 )
 
-add_executable(main ${MAIN_SOURCES}
-        src/characters/character.cpp
-        include/characters/opponent/opponent.h
-        include/characters/main_char/main_char.h
-        src/characters/opponent/opponent.cpp
-        src/characters/main_char/main_char.cpp
-        src/characters/character.cpp
-        include/characters/character.h
-        src/location/location.cpp
-        include/location/location.h
-        src/location/map/map.cpp
-        include/location/map/map.h
-        src/location/shop_location/shop_location.cpp
-        src/upload_system/upload_system.cpp
-        include/game_mechanics/game_mechanics.h
-        src/game_mechanics/game_mechanics.cpp
-        src/save_system/save_game.cpp
-        include/upload_system/upload_system.h
-        include/start_game/start_game.h
-        src/start_game/start_game.cpp
-        src/features/clear_screen.cpp
-        include/all_headers.h
+# ====================
+# Source files for shared game library
+# ====================
+file(GLOB_RECURSE GAME_SOURCES CONFIGURE_DEPENDS
+        src/characters/*.cpp
+        src/features/*.cpp
+        src/game_mechanics/*.cpp
+        src/inventory/*.cpp
+        src/inventory/bag/*.cpp
+        src/inventory/coins/*.cpp
+        src/inventory/equipment/*.cpp
+        src/inventory/potion/*.cpp
+        src/inventory/weapon/*.cpp
+        src/location/*.cpp
+        src/location/battle_location/*.cpp
+        src/location/map/*.cpp
+        src/location/shop_location/*.cpp
+        src/save_system/*.cpp
+        src/shop/*.cpp
+        src/start_game/*.cpp
+        src/upload_system/*.cpp
+        include/utils/*.cpp
 )
 
+add_library(game_lib ${GAME_SOURCES})
 
-target_link_libraries(main PRIVATE SQLite::SQLite3)
-
-target_include_directories(main PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/src
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/characters
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/inventory
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/shop
-        include/utils
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/inventory/coins
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/location
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/location/battle_location
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/location/map
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/location/shop_location
-)
+target_include_directories(game_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(game_lib PUBLIC SQLite::SQLite3)
 
 add_definitions(-DPROJECT_ROOT_PATH_DEF="${CMAKE_SOURCE_DIR}")
+
+# ====================
+# Executable for the game
+# ====================
+add_executable(main src/main.cpp)
+target_link_libraries(main PRIVATE game_lib)
+
+# ====================
+# Tests
+# ====================
+enable_testing()
+
+file(GLOB_RECURSE TEST_SOURCES CONFIGURE_DEPENDS
+        tests/*.cpp
+)
+
+add_executable(run_tests ${TEST_SOURCES})
+target_link_libraries(run_tests PRIVATE game_lib GTest::GTest GTest::Main)
+
+include(GoogleTest)
+gtest_discover_tests(run_tests)

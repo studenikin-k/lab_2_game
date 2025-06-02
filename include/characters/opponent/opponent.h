@@ -1,7 +1,7 @@
 #ifndef LAB_2_GAME_OPPONENT_H
 #define LAB_2_GAME_OPPONENT_H
 #include <iostream>
-#include "../all_headers.h"
+#include "../../all_headers.h"
 
 class opponent : public character {
 public:

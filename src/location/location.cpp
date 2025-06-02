@@ -1,4 +1,4 @@
-#include "../include/all_headers.h"
+#include "../../include/all_headers.h"
 
 location::location(const std::string &name)
         : _name(name) {

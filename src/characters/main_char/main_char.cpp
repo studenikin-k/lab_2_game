@@ -1,4 +1,4 @@
-#include "../../include/all_headers.h"
+#include "../../../include/all_headers.h"
 #include <limits>
 
 
@@ -369,7 +369,6 @@ void main_char::showBag() {
                     for (auto it = Bag.bagEquipment.begin(); it != Bag.bagEquipment.end();) {
                         if (counter + 1 == equipLotNum) {
                             equip(*it);
-                            it = Bag.bagEquipment.erase(it);
                             break;
                         } else {
                             ++it;

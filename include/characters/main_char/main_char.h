@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <unordered_map>
-#include "../all_headers.h"
+#include "../../all_headers.h"
 
 constexpr int BELT_SIZE = 6;
 

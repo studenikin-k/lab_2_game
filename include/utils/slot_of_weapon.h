@@ -1,16 +1,16 @@
 #ifndef LAB_2_GAME_SLOT_OF_WEAPON_H
 #define LAB_2_GAME_SLOT_OF_WEAPON_H
 
-    enum class slotOfWeapon{
-        Axe,
-        Mace,
-        Sword,
-        Blade,
-        Epee,
-        Fork,
-        Glaive,
-        Spear,
-    };
+enum class slotOfWeapon {
+    Axe,
+    Mace,
+    Sword,
+    Blade,
+    Epee,
+    Fork,
+    Glaive,
+    Spear,
+};
 
 inline std::string slotOfWeaponToString(slotOfWeapon slot) {
     switch (slot) {
@@ -19,15 +19,15 @@ inline std::string slotOfWeaponToString(slotOfWeapon slot) {
         case slotOfWeapon::Axe: return "Топор";
         case slotOfWeapon::Glaive: return "Глефа";
         case slotOfWeapon::Mace: return "Булава";
-        case slotOfWeapon::Epee:return "Шпага";
+        case slotOfWeapon::Epee: return "Шпага";
         case slotOfWeapon::Fork: return "Вилы";
         case slotOfWeapon::Spear: return "Копьё";
         default: return "Палками в другой игре махай, а луком в арбузы стреляй. "
-                        "Тут игра про воинов, настоящих мужиков. \n";
+                    "Тут игра про воинов, настоящих мужиков. \n";
     }
 }
 
-inline slotOfWeapon stringToSlotOfWeapon(const std::string& str) {
+inline slotOfWeapon stringToSlotOfWeapon(const std::string &str) {
     if (str == "Топор") return slotOfWeapon::Axe;
     if (str == "Булава") return slotOfWeapon::Mace;
     if (str == "Меч") return slotOfWeapon::Sword;
