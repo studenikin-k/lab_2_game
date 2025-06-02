@@ -1,4 +1,4 @@
-#include "shop.h"
+#include "include/all_headers.h"
 #include <limits>
 
 
@@ -19,7 +19,7 @@ void shop::showContents(main_char &hero) {
 
         if (!(std::cin >> action)) {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // очистка ввода
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Некорректный ввод. Попробуйте снова.\n\n";
             continue;
         }

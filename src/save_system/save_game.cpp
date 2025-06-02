@@ -1,8 +1,8 @@
-#include "save_game.h"
+#include "include/all_headers.h"
 #include <sqlite3.h>
 #include <filesystem>
 #include <iostream>
-#include <typeinfo> // Для typeid
+#include <typeinfo>
 #include <string>
 
 #define PROJECT_ROOT_PATH PROJECT_ROOT_PATH_DEF
@@ -42,7 +42,6 @@ void saveCharacterToDatabase(const main_char& character) {
         return;
     }
 
-    // Удаляем старую базу данных перед сохранением новой
     if (std::filesystem::exists(dbPath)) {
         try {
             std::filesystem::remove(dbPath);
@@ -61,7 +60,7 @@ void saveCharacterToDatabase(const main_char& character) {
         return;
     }
 
-    // Создание таблиц (с обновленной схемой)
+
     const char* createTablesSQL = R"(
         CREATE TABLE IF NOT EXISTS Characters (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -141,10 +140,9 @@ void saveCharacterToDatabase(const main_char& character) {
         return;
     }
 
-    // Начало транзакции
     execSQL(db, "BEGIN TRANSACTION;");
 
-    // Сохраняем персонажа с использованием подготовленных запросов
+
     sqlite3_stmt* stmt_char;
     const char* insertCharSQL = "INSERT INTO Characters (name, level, experience, experienceToLevelUp, currentPosition, health, damage, armor, accuracy, stun, dodge, copper) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     if (sqlite3_prepare_v2(db, insertCharSQL, -1, &stmt_char, nullptr) != SQLITE_OK) {
@@ -169,7 +167,7 @@ void saveCharacterToDatabase(const main_char& character) {
     if (sqlite3_step(stmt_char) != SQLITE_DONE) {
         std::cerr << "Ошибка при выполнении запроса Characters: " << sqlite3_errmsg(db) << std::endl;
         sqlite3_finalize(stmt_char);
-        execSQL(db, "ROLLBACK;"); // Откатываем транзакцию при ошибке
+        execSQL(db, "ROLLBACK;");
         sqlite3_close(db);
         return;
     }
@@ -177,7 +175,7 @@ void saveCharacterToDatabase(const main_char& character) {
 
     int char_id = sqlite3_last_insert_rowid(db);
 
-    // Оружие
+
     if (character.gun) {
         sqlite3_stmt* stmt_weapon;
         const char* insertWeaponSQL = "INSERT INTO Weapons (character_id, name, level, damage, accuracy, stun, weapon_slot, weapon_style) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
@@ -207,7 +205,7 @@ void saveCharacterToDatabase(const main_char& character) {
         sqlite3_finalize(stmt_weapon);
     }
 
-    // Экипировка
+
     sqlite3_stmt* stmt_equip;
     const char* insertEquipSQL = "INSERT INTO Equipment (character_id, slot, name, level, health, armor, dodge, style, copper) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
     if (sqlite3_prepare_v2(db, insertEquipSQL, -1, &stmt_equip, nullptr) != SQLITE_OK) {
@@ -230,17 +228,17 @@ void saveCharacterToDatabase(const main_char& character) {
 
         if (sqlite3_step(stmt_equip) != SQLITE_DONE) {
             std::cerr << "Ошибка при выполнении запроса Equipment: " << sqlite3_errmsg(db) << std::endl;
-            sqlite3_reset(stmt_equip); // Сбрасываем для следующей итерации или выхода
+            sqlite3_reset(stmt_equip);
             execSQL(db, "ROLLBACK;");
             sqlite3_close(db);
             return;
         }
-        sqlite3_reset(stmt_equip); // Сбрасываем стейтмент для повторного использования
+        sqlite3_reset(stmt_equip);
     }
     sqlite3_finalize(stmt_equip);
 
 
-    // Пояс
+
     sqlite3_stmt* stmt_potion;
     const char* insertPotionSQL = "INSERT INTO Potions (character_id, belt_index, type, name, level, value, copper) VALUES (?, ?, ?, ?, ?, ?, ?);";
     if (sqlite3_prepare_v2(db, insertPotionSQL, -1, &stmt_potion, nullptr) != SQLITE_OK) {
@@ -281,7 +279,7 @@ void saveCharacterToDatabase(const main_char& character) {
     sqlite3_finalize(stmt_potion);
 
 
-    // Портфель (единый подготовленный запрос для всех типов, но с условной привязкой)
+
     sqlite3_stmt* stmt_bag;
     const char* insertBagSQL = "INSERT INTO Bag (character_id, item_type, name, level, attribute1, attribute2, attribute3, slot, style, copper, weapon_slot, potion_type_str) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     if (sqlite3_prepare_v2(db, insertBagSQL, -1, &stmt_bag, nullptr) != SQLITE_OK) {
@@ -302,8 +300,8 @@ void saveCharacterToDatabase(const main_char& character) {
         sqlite3_bind_text(stmt_bag, 8, slotOfEquipmentToString(e->getSlot()).c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_bind_int(stmt_bag, 9, static_cast<int>(e->getStyle()));
         sqlite3_bind_int(stmt_bag, 10, e->price.getCopper());
-        sqlite3_bind_null(stmt_bag, 11); // weapon_slot - NULL для экипировки
-        sqlite3_bind_null(stmt_bag, 12); // potion_type_str - NULL для экипировки
+        sqlite3_bind_null(stmt_bag, 11);
+        sqlite3_bind_null(stmt_bag, 12);
 
         if (sqlite3_step(stmt_bag) != SQLITE_DONE) {
             std::cerr << "Ошибка при выполнении запроса Bag (equipment): " << sqlite3_errmsg(db) << std::endl;
@@ -323,11 +321,11 @@ void saveCharacterToDatabase(const main_char& character) {
         sqlite3_bind_int(stmt_bag, 5, w->getDamage());
         sqlite3_bind_int(stmt_bag, 6, w->getAccuracy());
         sqlite3_bind_int(stmt_bag, 7, w->getStun());
-        sqlite3_bind_null(stmt_bag, 8); // slot - NULL для оружия
+        sqlite3_bind_null(stmt_bag, 8);
         sqlite3_bind_int(stmt_bag, 9, static_cast<int>(w->style));
         sqlite3_bind_int(stmt_bag, 10, w->price.getCopper());
-        sqlite3_bind_text(stmt_bag, 11, slotOfWeaponToString(w->getSlot()).c_str(), -1, SQLITE_TRANSIENT); // НОВОЕ
-        sqlite3_bind_null(stmt_bag, 12); // potion_type_str - NULL для оружия
+        sqlite3_bind_text(stmt_bag, 11, slotOfWeaponToString(w->getSlot()).c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_null(stmt_bag, 12);
 
         if (sqlite3_step(stmt_bag) != SQLITE_DONE) {
             std::cerr << "Ошибка при выполнении запроса Bag (weapon): " << sqlite3_errmsg(db) << std::endl;
@@ -341,7 +339,7 @@ void saveCharacterToDatabase(const main_char& character) {
 
     for (auto& p : character.Bag.bagPotion) {
         int value = 0;
-        // Здесь используем более надежный способ получения строкового имени типа зелья для Bag
+
         std::string potionTypeStr;
         if (auto hp = dynamic_cast<healthPotion*>(p.get())) { value = hp->getHealth(); potionTypeStr = "healthPotion"; }
         else if (auto dp = dynamic_cast<damagePotion*>(p.get())) { value = dp->getDamage(); potionTypeStr = "damagePotion"; }

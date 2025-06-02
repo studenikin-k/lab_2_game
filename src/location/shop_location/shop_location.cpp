@@ -1,4 +1,4 @@
-#include "shop_location.h"
+#include "include/all_headers.h"
 
 shop_location::shop_location(const std::string &name)
     : location(name) {

@@ -1,4 +1,4 @@
-#include "game_mechanics.h"
+#include "include/all_headers.h"
 #include <iostream>
 #include <vector>
 #include <thread>

@@ -1,4 +1,4 @@
-#include "character.h"
+#include "../include/all_headers.h"
 
 character::character(){
     setHealth(20);

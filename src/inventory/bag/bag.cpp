@@ -1,4 +1,4 @@
-#include "bag.h"
+#include "include/all_headers.h"
 #include <algorithm>
 #include <vector>
 

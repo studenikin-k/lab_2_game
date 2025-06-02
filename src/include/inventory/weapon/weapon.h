@@ -3,11 +3,7 @@
 
 #include <iostream>
 #include <array>
-#include "../inventory.h"
-#include "weapon.h"
-#include "../../utils/slot_of_weapon.h"
-#include "../../utils/war_style.h"
-#include "../coins/coins.h"
+#include "../../all_headers.h"
 
 class weapon : public inventory{
 public:

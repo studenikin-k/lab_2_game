@@ -1,9 +1,8 @@
 #ifndef BATTLE_LOCATION_H
 #define BATTLE_LOCATION_H
-#include "../location.h"
-#include "../../characters/opponent/opponent.h"
-#include "array"
 
+#include "array"
+#include "../../all_headers.h"
 class battle_location : public location {
 public:
     battle_location(const std::string &name, const std::array<opponent*, 3> &opponents);

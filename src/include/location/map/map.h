@@ -1,12 +1,9 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include "location/location.h"
-#include "../battle_location/battle_location.h"
-#include "../shop_location/shop_location.h"
-#include "../characters/main_char/main_char.h"
-#include <array>
 
+#include <array>
+#include "../../all_headers.h"
     class map {
     public:
         map();

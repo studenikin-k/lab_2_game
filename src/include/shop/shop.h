@@ -6,14 +6,7 @@
 #include <algorithm>
 #include <unordered_map>
 #include <iostream>
-#include "../inventory/equipment/equipment.h"
-#include "../inventory/weapon/weapon.h"
-#include "../inventory/potion/potion.h"
-#include "../utils/war_style.h"
-#include "../utils/slot_of_potion.h"
-#include "../utils/slot_of_equipment.h"
-#include "../utils/slot_of_weapon.h"
-#include "../characters/main_char/main_char.h"
+#include "../all_headers.h"
 
 
 class shop {

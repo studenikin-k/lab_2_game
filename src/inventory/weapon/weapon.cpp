@@ -1,4 +1,4 @@
-#include "weapon.h"
+#include "include/all_headers.h"
 
 weapon::weapon(const std::string &_name, unsigned int _level, unsigned int _damage,
                       unsigned int _accuracy,unsigned int _stun,

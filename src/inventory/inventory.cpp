@@ -1,4 +1,4 @@
-#include "inventory.h"
+#include "include/all_headers.h"
 
 
 const std::string & inventory::getName() const {

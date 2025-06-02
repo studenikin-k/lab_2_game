@@ -1,7 +1,7 @@
 #ifndef LOCATION_H
 #define LOCATION_H
 
-#include "../characters/opponent/opponent.h"
+#include "../all_headers.h"
 
 
 class location {

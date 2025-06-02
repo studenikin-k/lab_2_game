@@ -3,15 +3,7 @@
 
 #include <memory>
 #include <unordered_map>
-#include <iostream>
-#include "character.h"
-#include "../inventory/coins/coins.h"
-#include "../utils/slot_of_equipment.h"
-#include "../utils/slot_of_potion.h"
-#include "../inventory/weapon/weapon.h"
-#include "../inventory/bag/bag.h"
-#include "../inventory/inventory.h"
-#include "../../features/clear_screen.h"
+#include "../all_headers.h"
 
 constexpr int BELT_SIZE = 6;
 

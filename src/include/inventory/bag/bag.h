@@ -1,12 +1,10 @@
 #ifndef LAB_2_GAME_BAG_H
 #define LAB_2_GAME_BAG_H
-#include "../equipment/equipment.h"
-#include "../weapon/weapon.h"
 #include <vector>
 #include <memory>
 #include <algorithm>
-#include "../potion/potion.h"
 #include <unordered_map>
+#include "../../all_headers.h"
 
 class bag {
 public:

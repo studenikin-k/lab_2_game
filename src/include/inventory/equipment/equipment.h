@@ -1,11 +1,9 @@
 #ifndef LAB_2_GAME_EQUIPMENT_H
 #define LAB_2_GAME_EQUIPMENT_H
 
-#include "../inventory.h"
-#include "../../utils/slot_of_equipment.h"
-#include "../../utils/war_style.h"
-#include "../coins/coins.h"
+
 #include "memory"
+#include "../all_headers.h"
 
 class equipment : public inventory {
 public:

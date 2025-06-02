@@ -1,4 +1,4 @@
-#include "potion.h"
+#include "include/all_headers.h"
 
 
 const std::string &potion::getName() const {

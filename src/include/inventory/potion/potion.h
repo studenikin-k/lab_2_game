@@ -3,8 +3,7 @@
 
 #include <iostream>
 #include <memory>
-#include "../../utils/slot_of_potion.h"
-#include "../coins/coins.h"
+#include "../../all_headers.h"
 
 class potion {
 public:

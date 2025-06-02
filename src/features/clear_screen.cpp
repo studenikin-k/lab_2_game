@@ -1,4 +1,4 @@
-#include "clear_screen.h"
+#include "include/all_headers.h"
 #include <cstdlib>
 
 void clearScreen() {

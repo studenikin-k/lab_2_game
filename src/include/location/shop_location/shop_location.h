@@ -1,12 +1,7 @@
 #ifndef SHOP_LOCATION_H
 #define SHOP_LOCATION_H
-#include "../location.h"
-#include "../shop/shop.h"
-#include "../potion/potion.h"
-#include "../utils/slot_of_equipment.h"
-#include "../utils/slot_of_weapon.h"
-#include "../utils/slot_of_potion.h"
-#include "../utils/war_style.h"
+
+#include "../../all_headers.h"
 
 
 class shop_location : public location {
