@@ -1,4 +1,4 @@
-#include "include/all_headers.h"
+#include "../../include/all_headers.h"
 #include <iomanip>
 
 opponent::opponent(const std::string &_name, const unsigned int _level,
