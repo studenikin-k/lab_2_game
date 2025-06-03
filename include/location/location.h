@@ -3,7 +3,7 @@
 
 #include "../all_headers.h"
 
-
+// класс абстракция для карт
 class location {
 public:
     [[nodiscard]] std::string getName() const;

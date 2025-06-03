@@ -3,6 +3,8 @@
 
 #include "../all_headers.h"
 
+
+// метод для запуска игры с сохранения, или для начала новой игры
 void startGameMenu();
 
 

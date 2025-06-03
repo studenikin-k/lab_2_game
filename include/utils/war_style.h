@@ -1,6 +1,7 @@
 #ifndef LAB_2_GAME_WAR_STYLE_H
 #define LAB_2_GAME_WAR_STYLE_H
 
+// данный enum необходим для определения стиля боя
 enum class warStyle{
     Damage,
     Dodge,
@@ -18,7 +19,8 @@ inline std::string warStyleToString(warStyle style) {
         default: return "Если вы собрались играть за орду, вы ошиблись игрой, тут уже победил альянс \n";
     }
 }
-
+// данный метод разыменовывания строки как enum необходим для того, чтобы загружать из БД предметы персонажа
+// с нужным стилем боя
 inline warStyle stringToWarStyle(const std::string& str) {
     if (str == "Урон") return warStyle::Damage;
     if (str == "Броня") return warStyle::Armor;

@@ -5,6 +5,7 @@
 #include <array>
 #include "../../all_headers.h"
 
+// класс для создания объектов оружия
 class weapon : public inventory{
 public:
     weapon(const std::string &_name, unsigned int _level, unsigned int _damage,

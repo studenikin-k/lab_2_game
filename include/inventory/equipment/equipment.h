@@ -5,6 +5,7 @@
 #include "memory"
 #include "../../all_headers.h"
 
+// класс абстракция для элементов снаряжения
 class equipment : public inventory {
 public:
     equipment(const std::string &_name, unsigned int _level, unsigned int _health,
@@ -53,6 +54,7 @@ private:
     unsigned int dodge{};
 };
 
+// класс шлем
 class Helmet : public equipment {
 public:
     Helmet(const std::string &_name, unsigned int _level, unsigned int _health,
@@ -61,6 +63,7 @@ public:
     std::shared_ptr<equipment> clone() const override;
 };
 
+// класс нагрудник
 class Chestplate : public equipment {
 public:
     Chestplate(const std::string &_name, unsigned int _level, unsigned int _health,
@@ -69,6 +72,7 @@ public:
     std::shared_ptr<equipment> clone() const override;
 };
 
+// класс перчатки
 class Gloves : public equipment {
 public:
     Gloves(const std::string &_name, unsigned int _level, unsigned int _health,
@@ -77,6 +81,7 @@ public:
     std::shared_ptr<equipment> clone() const override;
 };
 
+// класс штаны
 class Pants : public equipment {
 public:
     Pants(const std::string &_name, unsigned int _level, unsigned int _health,
@@ -85,6 +90,7 @@ public:
     std::shared_ptr<equipment> clone() const override;
 };
 
+// класс ботинки
 class Boots : public equipment {
 public:
     Boots(const std::string &_name, unsigned int _level, unsigned int _health,

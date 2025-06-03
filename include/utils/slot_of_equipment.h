@@ -1,6 +1,8 @@
 #ifndef LAB_2_GAME_SLOT_OF_EQUIPMENT_H
 #define LAB_2_GAME_SLOT_OF_EQUIPMENT_H
 
+
+// данный enum определяет различие между разными типами экипировки
 enum class slotOfEquipment {
     Helmet,
     Chestplate,
@@ -9,6 +11,7 @@ enum class slotOfEquipment {
     Boots,
 };
 
+// данный метод нужен для разыменовывания enum и для метода сохранения
 inline std::string slotOfEquipmentToString(slotOfEquipment slot) {
     switch (slot) {
         case slotOfEquipment::Helmet: return "Шлем";
@@ -19,7 +22,7 @@ inline std::string slotOfEquipmentToString(slotOfEquipment slot) {
         default: return "Шубы не продаём.";
     }
 }
-
+// данный метод разыменовывания строки как enum необходим для того, чтобы загружать из БД предметы персонажа
 inline slotOfEquipment stringToSlotOfEquipment(const std::string& str) {
     if (str == "Шлем") return slotOfEquipment::Helmet;
     if (str == "Нагрудник") return slotOfEquipment::Chestplate;

@@ -1,6 +1,7 @@
 #ifndef LAB_2_GAME_SLOT_OF_WEAPON_H
 #define LAB_2_GAME_SLOT_OF_WEAPON_H
 
+// данный enum определяет различие между разными типами оружия
 enum class slotOfWeapon {
     Axe,
     Mace,
@@ -12,6 +13,7 @@ enum class slotOfWeapon {
     Spear,
 };
 
+// данный метод нужен для разыменовывания enum и для метода сохранения
 inline std::string slotOfWeaponToString(slotOfWeapon slot) {
     switch (slot) {
         case slotOfWeapon::Sword: return "Меч";
@@ -27,6 +29,7 @@ inline std::string slotOfWeaponToString(slotOfWeapon slot) {
     }
 }
 
+// данный метод разыменовывания строки как enum необходим для того, чтобы загружать из БД предметы персонажа
 inline slotOfWeapon stringToSlotOfWeapon(const std::string &str) {
     if (str == "Топор") return slotOfWeapon::Axe;
     if (str == "Булава") return slotOfWeapon::Mace;

@@ -1,7 +1,7 @@
 #ifndef ALL_HEADERS_H
 #define ALL_HEADERS_H
 
-
+// Заголовочный файл содержит в себе все другие и позволяет использовать один общий для всех
 #include "characters/character.h"
 
 #include "utils/slot_of_equipment.h"

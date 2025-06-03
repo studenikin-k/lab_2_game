@@ -2,6 +2,7 @@
 #define LAB_2_GAME_INVENTORY_H
 #include <iostream>
 
+// класс абстракция для всего, что связано с предметами
 class inventory {
 
 public:

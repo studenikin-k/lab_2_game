@@ -4,6 +4,8 @@
 
 #include <array>
 #include "../../all_headers.h"
+
+// класс карты, собранная из battle_location и shop_location
     class map {
     public:
         map();

@@ -6,6 +6,7 @@
 #include "../../all_headers.h"
 
 class potion {
+    // класс абстракция для всех зелий
 public:
     potion() = default;
 
@@ -38,6 +39,7 @@ private:
     unsigned int level{};
 };
 
+// зелье здоровья
 class healthPotion : public potion {
 public:
 
@@ -57,6 +59,7 @@ private:
     unsigned int health{};
 };
 
+//класс для зелий урона
 class damagePotion : public potion {
 public:
 
@@ -76,6 +79,7 @@ private:
     unsigned int damage{};
 };
 
+// класс зелий для брони
 class armorPotion : public potion {
 public:
 
@@ -95,6 +99,7 @@ private:
     unsigned int armor{};
 };
 
+//класс зелий точности
 class accuracyPotion : public potion {
 public:
     accuracyPotion(const std::string &_name, unsigned int _level, unsigned int _accuracy);
@@ -115,6 +120,7 @@ private:
     unsigned int accuracy{};
 };
 
+// класс для зелий повышения шанса оглушения
 class stunPotion : public potion {
 public:
 
@@ -134,6 +140,7 @@ private:
     unsigned int stun{};
 };
 
+// класс для повышения зелий уворота
 class dodgePotion : public potion {
 public:
 

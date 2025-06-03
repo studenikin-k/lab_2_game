@@ -3,6 +3,7 @@
 #include "iostream"
 #include "unordered_map"
 
+// данный enum определяет различие между разными типами зелий
 enum class slotOfPotion{
     Health,
     Damage,
@@ -12,6 +13,7 @@ enum class slotOfPotion{
     Dodge
 };
 
+// данный метод нужен для разыменовывания enum и для метода сохранения
 inline std::string slotOfPotionToString(slotOfPotion slot) {
     switch (slot) {
         case slotOfPotion::Health: return "Здоровье";
@@ -23,7 +25,7 @@ inline std::string slotOfPotionToString(slotOfPotion slot) {
         default: return "Водки здесь не будет, не ждите";
     }
 }
-
+// данный метод разыменовывания строки как enum необходим для того, чтобы загружать из БД предметы персонажа
 inline slotOfPotion stringToSlotOfPotion(const std::string& str) {
     if (str == "Здоровье") return slotOfPotion::Health;
     if (str == "Урон") return slotOfPotion::Damage;

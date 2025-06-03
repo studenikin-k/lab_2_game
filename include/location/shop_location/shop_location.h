@@ -3,12 +3,12 @@
 
 #include "../../all_headers.h"
 
-
+// класс торговый локации как шаблон для объектов
 class shop_location : public location {
 public:
     explicit shop_location(const std::string &name);
 
-    shop Market;
+    shop Market; // магазин для каждой подобной торговой локации
 
     ~shop_location() override = default;
 };

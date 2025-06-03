@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include "../../all_headers.h"
 
-constexpr int BELT_SIZE = 6;
+constexpr int BELT_SIZE = 6; // максимальный объём пояса у персонажа
 
 class main_char : public character {
 public:
@@ -37,21 +37,21 @@ public:
     coins balance{}; // баланс персонажа, содержит в себе медяки, перерасчитываемое алгортимом: 1 золото 100 серебра
     // 1 серебро, 100 медяков
 
-    void equip(std::shared_ptr<equipment> item);
+    void equip(std::shared_ptr<equipment> item); // позволяет надеть предмет
 
-    void takeOffEquipment(std::shared_ptr<equipment> item);
+    void takeOffEquipment(std::shared_ptr<equipment> item); // позволяет снять часть экипировки
 
-    void equip(std::shared_ptr<weapon>);
+    void equip(std::shared_ptr<weapon>); // позволяет надеть оружие
 
-    void takeOffWeapon();
+    void takeOffWeapon(); // позволяет снять оружие
 
-    bool isBeltFull() const;
+    bool isBeltFull() const; // проверка на наличие места в поясе
 
-    void displayBelt() const;
+    void displayBelt() const; // метод показывающий содержимое пояса
 
-    void equip(std::shared_ptr<potion> item);
+    void equip(std::shared_ptr<potion> item); // метод, кладём в пояс зелье
 
-    void takeOffPotion();
+    void takeOffPotion(); // метод напрямую работает с поясом и интерактивно позволяет снять зелье
 
     void buyEquipment(const std::shared_ptr<equipment> &_item);
 
@@ -73,7 +73,7 @@ public:
 
     void setLevel(unsigned int level);
 
-    void usePotion();
+    void usePotion(); // метод позволяет использовать зелья
 
 private:
     unsigned int id{};

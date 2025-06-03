@@ -12,6 +12,7 @@ public:
 
     void setCopper(unsigned int copper);
 
-    unsigned int copper;
+    unsigned int copper; // валюта, которая будет иметь перерасчёт
+    // 1 золото = 100 серебра , 1 серебра = 100 меди
 };
 #endif //LAB_2_GAME_COINS_H

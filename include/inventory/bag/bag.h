@@ -22,9 +22,9 @@
 
         void outputPotionFromBag(const std::string &name);
 
-        std::vector<std::shared_ptr<equipment> > bagEquipment;
-        std::vector<std::shared_ptr<weapon> > bagWeapon;
-        std::vector<std::shared_ptr<potion> > bagPotion;
+        std::vector<std::shared_ptr<equipment> > bagEquipment; // контейнер снаряжения
+        std::vector<std::shared_ptr<weapon> > bagWeapon; // контейнер оружия
+        std::vector<std::shared_ptr<potion> > bagPotion; // контейнер зелья
     };
 
 

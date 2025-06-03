@@ -3,6 +3,7 @@
 #include <sqlite3.h>
 #include "../all_headers.h"
 
+// метод загрузки персонажа
 bool loadCharacterFromDatabase(main_char& character);
 
 #endif //UPLOAD_SYSTEM_H
