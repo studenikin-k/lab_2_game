@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Файл src/upload_system/upload_system.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b819709e6390148d84d085840da44148.html">upload_system</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл upload_system.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="all__headers_8h_source.html">../../include/all_headers.h</a>&quot;</code><br />
+<code>#include &lt;sqlite3.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для upload_system.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="upload__system_8cpp__incl.png" border="0" usemap="#asrc_2upload__system_2upload__system_8cpp" alt=""/></div>
+<map name="asrc_2upload__system_2upload__system_8cpp" id="asrc_2upload__system_2upload__system_8cpp">
+<area shape="rect" title=" " alt="" coords="2390,5,2582,45"/>
+<area shape="rect" href="all__headers_8h.html" title=" " alt="" coords="2394,93,2578,119"/>
+<area shape="poly" title=" " alt="" coords="2489,46,2489,79,2484,79,2484,46"/>
+<area shape="rect" title=" " alt="" coords="1232,255,1312,280"/>
+<area shape="poly" title=" " alt="" coords="2390,29,1973,32,1695,39,1404,50,1125,67,882,92,782,107,700,125,640,146,619,157,604,168,598,178,596,187,598,196,604,205,616,212,635,219,695,232,869,249,1064,259,1218,263,1218,268,1063,264,869,255,694,237,634,225,613,217,600,209,593,198,591,187,593,176,600,165,616,152,637,141,698,120,781,102,881,86,1125,62,1404,44,1695,33,1973,27,2390,24"/>
+<area shape="rect" title=" " alt="" coords="412,255,489,280"/>
+<area shape="poly" title=" " alt="" coords="2390,31,1560,51,1078,70,877,82,725,96,667,100,615,98,523,93,482,96,443,107,405,130,367,168,362,177,360,186,367,205,386,229,411,246,408,250,382,233,363,208,355,186,357,176,363,165,402,126,441,102,481,90,523,87,615,93,667,94,725,91,877,77,1078,65,1560,46,2390,26"/>
+<area shape="rect" title=" " alt="" coords="58,255,144,280"/>
+<area shape="poly" title=" " alt="" coords="2390,31,1986,37,1415,49,837,69,596,81,413,96,349,99,291,96,189,88,143,90,100,102,58,127,15,168,9,177,8,186,15,205,35,229,60,246,57,250,31,233,11,208,3,186,4,176,11,165,54,122,98,97,143,85,189,82,291,91,349,94,413,91,595,76,837,63,1415,44,1986,32,2390,25"/>
+<area shape="rect" title=" " alt="" coords="4344,255,4423,280"/>
+<area shape="poly" title=" " alt="" coords="2583,23,3021,25,3316,30,3626,40,3923,57,4183,83,4290,99,4378,118,4443,140,4467,152,4483,165,4490,175,4491,186,4483,208,4461,234,4433,251,4430,247,4457,230,4479,205,4486,185,4485,177,4479,168,4464,156,4441,144,4377,123,4289,104,4182,88,3923,63,3625,46,3316,35,3021,30,2583,29"/>
+<area shape="rect" title=" " alt="" coords="4544,93,4631,119"/>
+<area shape="poly" title=" " alt="" coords="2582,25,2980,32,3541,45,4109,64,4346,76,4525,91,4531,91,4531,97,4525,96,4345,82,4109,69,3541,50,2980,37,2582,31"/>
+<area shape="rect" title=" " alt="" coords="4656,93,4746,119"/>
+<area shape="poly" title=" " alt="" coords="2583,25,2996,30,3585,42,4188,61,4444,75,4642,91,4641,96,4443,80,4188,67,3585,47,2996,35,2583,30"/>
+<area shape="rect" href="character_8h.html" title=" " alt="" coords="3068,174,3235,199"/>
+<area shape="poly" title=" " alt="" coords="2579,112,2797,132,3056,164,3084,169,3083,174,3055,169,2796,137,2578,117"/>
+<area shape="rect" href="slot__of__equipment_8h.html" title=" " alt="" coords="1752,174,1938,199"/>
+<area shape="poly" title=" " alt="" coords="2394,118,2191,139,1951,169,1919,174,1918,169,1950,164,2190,134,2394,113"/>
+<area shape="rect" href="slot__of__potion_8h.html" title=" " alt="" coords="798,174,956,199"/>
+<area shape="poly" title=" " alt="" coords="2394,112,1679,130,1269,147,1099,157,969,169,939,174,938,169,969,164,1098,152,1269,142,1679,125,2394,106"/>
+<area shape="rect" href="slot__of__weapon_8h.html" title=" " alt="" coords="1962,174,2130,199"/>
+<area shape="poly" title=" " alt="" coords="2418,121,2143,169,2117,174,2116,169,2142,164,2417,116"/>
+<area shape="rect" href="war__style_8h.html" title=" " alt="" coords="2155,174,2284,199"/>
+<area shape="poly" title=" " alt="" coords="2448,121,2272,173,2271,168,2447,116"/>
+<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="1192,174,1352,199"/>
+<area shape="poly" title=" " alt="" coords="2394,110,2206,113,1950,122,1658,140,1364,169,1335,174,1334,169,1363,164,1658,135,1949,117,2205,108,2394,105"/>
+<area shape="rect" href="coins_8h.html" title=" " alt="" coords="1376,174,1548,199"/>
+<area shape="poly" title=" " alt="" coords="2394,112,2029,128,1796,145,1561,169,1529,174,1529,169,1561,164,1795,140,2029,123,2394,107"/>
+<area shape="rect" href="clear__screen_8h.html" title=" " alt="" coords="2308,174,2483,199"/>
+<area shape="poly" title=" " alt="" coords="2475,121,2421,167,2418,163,2471,117"/>
+<area shape="rect" href="weapon_8h.html" title=" " alt="" coords="3259,174,3466,199"/>
+<area shape="poly" title=" " alt="" coords="2579,110,2871,129,3053,145,3235,164,3273,169,3272,175,3234,169,3052,150,2871,135,2579,115"/>
+<area shape="rect" href="equipment_8h.html" title=" " alt="" coords="615,167,774,207"/>
+<area shape="poly" title=" " alt="" coords="2394,111,1600,127,1134,144,938,155,786,168,786,163,937,150,1134,139,1600,122,2394,106"/>
+<area shape="rect" href="potion_8h.html" title=" " alt="" coords="981,174,1168,199"/>
+<area shape="poly" title=" " alt="" coords="2394,110,2176,113,1872,121,1522,139,1343,152,1168,169,1133,174,1132,169,1167,164,1343,147,1522,133,1871,116,2176,107,2394,105"/>
+<area shape="rect" href="bag_8h.html" title=" " alt="" coords="25,174,177,199"/>
+<area shape="poly" title=" " alt="" coords="2394,110,1952,112,1310,121,656,138,383,152,177,169,149,174,148,169,177,164,383,147,656,133,1310,115,1951,107,2394,105"/>
+<area shape="rect" href="opponent_8h.html" title=" " alt="" coords="1573,167,1728,207"/>
+<area shape="poly" title=" " alt="" coords="2394,113,2103,130,1923,146,1741,167,1740,162,1922,141,2103,125,2394,108"/>
+<area shape="rect" href="main__char_8h.html" title=" " alt="" coords="377,167,540,207"/>
+<area shape="poly" title=" " alt="" coords="2394,110,2093,111,1648,119,1125,137,855,151,590,169,553,173,553,168,590,164,855,145,1125,131,1648,113,2093,106,2394,104"/>
+<area shape="rect" href="shop_8h.html" title=" " alt="" coords="202,174,302,199"/>
+<area shape="poly" title=" " alt="" coords="2394,111,1392,127,793,144,542,156,353,169,314,174,313,169,353,164,542,151,792,139,1392,122,2394,106"/>
+<area shape="rect" href="location_8h.html" title=" " alt="" coords="2507,174,2650,199"/>
+<area shape="poly" title=" " alt="" coords="2495,117,2549,164,2545,168,2491,121"/>
+<area shape="rect" href="battle__location_8h.html" title=" " alt="" coords="3878,167,4052,207"/>
+<area shape="poly" title=" " alt="" coords="2579,104,2804,106,3120,114,3484,132,3670,146,3853,164,3864,165,3863,171,3853,169,3670,151,3483,137,3119,119,2804,111,2579,109"/>
+<area shape="rect" href="shop__location_8h.html" title=" " alt="" coords="2674,167,2842,207"/>
+<area shape="poly" title=" " alt="" coords="2520,116,2673,160,2671,166,2518,121"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="3701,174,3853,199"/>
+<area shape="poly" title=" " alt="" coords="2578,104,2777,106,3050,114,3362,132,3521,146,3677,164,3705,169,3704,174,3677,169,3521,152,3361,138,3050,120,2777,112,2578,110"/>
+<area shape="rect" href="game__mechanics_8h.html" title=" " alt="" coords="2867,167,3044,207"/>
+<area shape="poly" title=" " alt="" coords="2551,116,2843,164,2854,166,2853,171,2842,169,2550,121"/>
+<area shape="rect" href="save__game_8h.html" title=" " alt="" coords="4076,174,4275,199"/>
+<area shape="poly" title=" " alt="" coords="2579,104,2832,105,3197,112,3620,131,3838,145,4052,164,4091,169,4090,174,4051,169,3838,150,3620,136,3197,118,2832,110,2578,109"/>
+<area shape="rect" href="start__game_8h.html" title=" " alt="" coords="3490,174,3677,199"/>
+<area shape="poly" title=" " alt="" coords="2578,107,2965,123,3214,140,3465,164,3501,169,3500,174,3465,169,3214,145,2965,128,2578,112"/>
+<area shape="rect" href="upload__system_8h.html" title=" " alt="" coords="4299,167,4468,207"/>
+<area shape="poly" title=" " alt="" coords="2578,106,3421,122,3914,140,4120,151,4276,164,4285,165,4285,171,4275,169,4119,156,3914,145,3420,128,2578,111"/>
+<area shape="poly" title=" " alt="" coords="3101,202,3056,209,2892,223,2675,235,2157,252,1325,268,1325,263,2157,247,2675,229,2892,218,3055,204,3101,197"/>
+<area shape="poly" title=" " alt="" coords="933,197,969,204,1219,253,1218,258,968,209,932,202"/>
+<area shape="rect" title=" " alt="" coords="262,255,386,280"/>
+<area shape="poly" title=" " alt="" coords="825,202,785,209,593,235,400,257,400,257,399,252,399,252,592,230,785,204,824,197"/>
+<area shape="poly" title=" " alt="" coords="1274,200,1274,241,1269,241,1269,200"/>
+<area shape="poly" title=" " alt="" coords="1436,202,1313,252,1311,247,1434,197"/>
+<area shape="poly" title=" " alt="" coords="3309,177,3258,169,3075,150,2892,135,2592,115,2593,110,2893,129,3076,145,3259,164,3309,171"/>
+<area shape="poly" title=" " alt="" coords="3301,202,3247,209,3064,222,2821,234,2244,251,1325,268,1325,263,2244,246,2821,228,3063,217,3246,204,3301,197"/>
+<area shape="rect" title=" " alt="" coords="3749,255,3805,280"/>
+<area shape="poly" title=" " alt="" coords="3423,197,3736,256,3735,261,3422,202"/>
+<area shape="poly" title=" " alt="" coords="773,167,797,164,941,151,1130,140,1585,123,2381,106,2381,111,1585,128,1130,145,941,156,797,169,774,173"/>
+<area shape="poly" title=" " alt="" coords="637,209,500,253,498,248,635,204"/>
+<area shape="poly" title=" " alt="" coords="1142,171,1191,164,1532,134,1868,117,2163,108,2380,105,2380,110,2163,113,1868,122,1532,140,1192,169,1142,177"/>
+<area shape="poly" title=" " alt="" coords="1104,197,1231,247,1229,252,1102,202"/>
+<area shape="poly" title=" " alt="" coords="1013,202,968,209,707,242,503,264,503,258,707,237,967,204,1012,197"/>
+<area shape="poly" title=" " alt="" coords="158,171,201,164,402,147,669,133,1306,116,1936,107,2381,105,2381,110,1936,113,1306,121,669,139,403,152,201,169,159,177"/>
+<area shape="poly" title=" " alt="" coords="134,197,279,248,278,253,132,202"/>
+<area shape="poly" title=" " alt="" coords="152,197,399,252,398,257,151,202"/>
+<area shape="rect" title=" " alt="" coords="171,255,234,280"/>
+<area shape="poly" title=" " alt="" coords="117,197,178,244,175,248,114,202"/>
+<area shape="poly" title=" " alt="" coords="104,200,104,241,98,241,98,200"/>
+<area shape="poly" title=" " alt="" coords="1727,168,1751,164,1923,143,2096,127,2380,109,2381,115,2096,133,1924,148,1752,169,1728,173"/>
+<area shape="poly" title=" " alt="" coords="1573,207,1325,258,1324,252,1572,201"/>
+<area shape="poly" title=" " alt="" coords="539,172,614,164,871,146,1133,132,1642,114,2078,106,2380,104,2380,110,2078,111,1642,119,1133,137,871,151,614,169,540,177"/>
+<area shape="poly" title=" " alt="" coords="427,209,356,250,354,245,425,204"/>
+<area shape="poly" title=" " alt="" coords="459,207,455,241,450,240,454,207"/>
+<area shape="poly" title=" " alt="" coords="302,175,377,164,561,151,805,139,1388,122,2380,106,2380,111,1388,128,805,145,562,156,377,169,302,180"/>
+<area shape="poly" title=" " alt="" coords="302,195,365,204,615,228,860,245,1218,262,1218,267,859,250,614,233,365,209,301,200"/>
+<area shape="poly" title=" " alt="" coords="264,198,306,242,302,246,260,201"/>
+<area shape="poly" title=" " alt="" coords="281,197,410,247,408,252,280,202"/>
+<area shape="poly" title=" " alt="" coords="247,201,219,244,215,242,242,198"/>
+<area shape="poly" title=" " alt="" coords="231,202,136,251,134,246,228,197"/>
+<area shape="poly" title=" " alt="" coords="2569,176,2515,129,2519,125,2573,172"/>
+<area shape="poly" title=" " alt="" coords="3877,169,3877,169,3694,151,3508,137,3143,119,2824,111,2592,109,2592,104,2824,106,3143,114,3508,132,3695,146,3877,164,3878,164"/>
+<area shape="poly" title=" " alt="" coords="3921,209,3818,252,3816,247,3919,204"/>
+<area shape="poly" title=" " alt="" coords="2700,169,2545,125,2546,120,2701,164"/>
+<area shape="poly" title=" " alt="" coords="3741,177,3701,169,3545,152,3386,138,3073,120,2797,112,2592,110,2592,104,2798,106,3073,114,3386,132,3545,146,3701,164,3742,171"/>
+<area shape="poly" title=" " alt="" coords="3780,200,3780,241,3774,241,3774,200"/>
+<area shape="poly" title=" " alt="" coords="2866,169,2866,169,2582,123,2583,118,2867,164,2867,164"/>
+<area shape="poly" title=" " alt="" coords="4127,177,4075,169,3862,150,3645,136,3221,118,2854,110,2592,109,2592,104,2854,105,3221,113,3645,131,3863,145,4076,164,4128,171"/>
+<area shape="poly" title=" " alt="" coords="4207,197,4341,247,4340,252,4205,202"/>
+<area shape="poly" title=" " alt="" coords="3537,177,3489,169,3237,145,2987,128,2592,112,2592,107,2987,123,3237,140,3489,164,3538,171"/>
+<area shape="poly" title=" " alt="" coords="4300,169,4299,169,4144,156,3939,145,3447,128,2592,111,2592,106,3447,122,3939,140,4144,151,4300,164,4300,164"/>
+<area shape="poly" title=" " alt="" coords="4386,207,4386,241,4381,241,4381,207"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a24db0544877dc0d2b9c154774d9fbe05" id="r_a24db0544877dc0d2b9c154774d9fbe05"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="upload__system_8cpp.html#a24db0544877dc0d2b9c154774d9fbe05">createPotionByType</a> (const std::string &amp;type_str, const std::string &amp;name, unsigned int level, unsigned int value, unsigned int copper)</td></tr>
+<tr class="separator:a24db0544877dc0d2b9c154774d9fbe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88f2da386431c32a45e7ff4a0295086" id="r_ab88f2da386431c32a45e7ff4a0295086"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="upload__system_8cpp.html#ab88f2da386431c32a45e7ff4a0295086">createEquipmentBySlot</a> (const std::string &amp;slotStr, const std::string &amp;name, unsigned int level, unsigned int health, unsigned int armor, unsigned int dodge, <a class="el" href="war__style_8h.html#a7076aca7f6e08ff21b3f99f9a27af777">warStyle</a> style, unsigned int copper)</td></tr>
+<tr class="separator:ab88f2da386431c32a45e7ff4a0295086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80991aa817374b217d30a94714a35717" id="r_a80991aa817374b217d30a94714a35717"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="upload__system_8cpp.html#a80991aa817374b217d30a94714a35717">loadCharacterFromDatabase</a> (<a class="el" href="classmain__char.html">main_char</a> &amp;<a class="el" href="classcharacter.html">character</a>)</td></tr>
+<tr class="separator:a80991aa817374b217d30a94714a35717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ab88f2da386431c32a45e7ff4a0295086" name="ab88f2da386431c32a45e7ff4a0295086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab88f2da386431c32a45e7ff4a0295086">&#9670;&#160;</a></span>createEquipmentBySlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt; createEquipmentBySlot </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>slotStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>health</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>armor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>dodge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="war__style_8h.html#a7076aca7f6e08ff21b3f99f9a27af777">warStyle</a>&#160;</td>
+          <td class="paramname"><em>style</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>copper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24db0544877dc0d2b9c154774d9fbe05" name="a24db0544877dc0d2b9c154774d9fbe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24db0544877dc0d2b9c154774d9fbe05">&#9670;&#160;</a></span>createPotionByType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt; createPotionByType </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>copper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80991aa817374b217d30a94714a35717" name="a80991aa817374b217d30a94714a35717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80991aa817374b217d30a94714a35717">&#9670;&#160;</a></span>loadCharacterFromDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loadCharacterFromDatabase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmain__char.html">main_char</a> &amp;&#160;</td>
+          <td class="paramname"><em>character</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

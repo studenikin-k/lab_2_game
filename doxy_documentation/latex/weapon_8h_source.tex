@@ -1,0 +1,55 @@
+\doxysection{weapon.\+h}
+\hypertarget{weapon_8h_source}{}\label{weapon_8h_source}\index{include/inventory/weapon/weapon.h@{include/inventory/weapon/weapon.h}}
+\mbox{\hyperlink{weapon_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_WEAPON\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_WEAPON\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../../all\_headers.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ класс\ для\ создания\ объектов\ оружия}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classweapon}{weapon}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classinventory}{inventory}}\{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classweapon_a593a9b07d314cda48a73619fd31ea364}{weapon}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_damage,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_accuracy,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_stun,\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ \_weapon,\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{warStyle}}\ \_style,\ \mbox{\hyperlink{classcoins}{coins}}\ \_price);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classweapon_a593a9b07d314cda48a73619fd31ea364}{weapon}}()=\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classweapon_aeffabc55d6813cd0d3d5db22e5fc2f3a}{\string~weapon}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ \mbox{\hyperlink{classweapon_a4d2058643eb7b7263629675c17c1638b}{slot}}\ =\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ \mbox{\hyperlink{classweapon_a74664634bd7bc709c954a8723abea4c3}{getSlot}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweapon_adf8a584e016e3ecb69044712e6e45e33}{setSlot}}(\mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ \mbox{\hyperlink{classweapon_a4d2058643eb7b7263629675c17c1638b}{slot}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{warStyle}}\ \mbox{\hyperlink{classweapon_a87b8d65433cfd9d394e3f3e7b743428e}{style}}\{\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_aeb84080cfe018ebcd795db05f6b0cfc6}{getStun}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweapon_a4294f27215a78fcde5f143b2c3d56d17}{setStun}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a2f8c9a013d4aa590db177ecd3081310e}{stun}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a4416ef521f62d9274ed494c18c900d5f}{getAccuracy}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweapon_a0102ad54f17f006e11daf3d7812f37d7}{setAccuracy}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a2b69c08f3f72d9deabf5e1a8a24da63f}{accuracy}});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a9b9156895ce926bdc776263578243c4f}{getDamage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweapon_afeaab698560db7e7dea4f8a7009b3199}{showInShop}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweapon_a5967dffde1617c1331624165c58daf0b}{showInInventory}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classcoins}{coins}}\ \mbox{\hyperlink{classweapon_a99413939ab75b1768aa8814621a82cbc}{price}}\{\};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweapon_a2bfb95013911108e1fac619a3cf75cab}{setDamage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a9895068790c419982a5cd8ece6ddcfb2}{damage}});}
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a9895068790c419982a5cd8ece6ddcfb2}{damage}}\{\};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a2b69c08f3f72d9deabf5e1a8a24da63f}{accuracy}}\{\};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classweapon_a2f8c9a013d4aa590db177ecd3081310e}{stun}}\{\};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

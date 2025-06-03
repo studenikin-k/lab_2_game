@@ -1,0 +1,50 @@
+\doxysection{Файл include/save\+\_\+system/save\+\_\+game.h}
+\hypertarget{save__game_8h}{}\label{save__game_8h}\index{include/save\_system/save\_game.h@{include/save\_system/save\_game.h}}
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include "{}../all\+\_\+headers.\+h"{}}\newline
+Граф включаемых заголовочных файлов для save\+\_\+game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{save__game_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{save__game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{save__game_8h_acc785a3493ef3d9a1fffa31a2fbfb7b6}{save\+Character\+To\+Database}} (const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&\mbox{\hyperlink{classcharacter}{character}})
+\item 
+std\+::string \mbox{\hyperlink{save__game_8h_a32e42e9d87b29a63950fd5cb38ae9a48}{get\+Save\+Path}} ()
+\item 
+bool \mbox{\hyperlink{save__game_8h_a01c5162c414a467a5689ddaa340b0c21}{exec\+SQL}} (sqlite3 \texorpdfstring{$\ast$}{*}db, const std\+::string \&sql)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\Hypertarget{save__game_8h_a01c5162c414a467a5689ddaa340b0c21}\label{save__game_8h_a01c5162c414a467a5689ddaa340b0c21} 
+\index{save\_game.h@{save\_game.h}!execSQL@{execSQL}}
+\index{execSQL@{execSQL}!save\_game.h@{save\_game.h}}
+\doxysubsubsection{\texorpdfstring{execSQL()}{execSQL()}}
+{\footnotesize\ttfamily bool exec\+SQL (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
+
+\Hypertarget{save__game_8h_a32e42e9d87b29a63950fd5cb38ae9a48}\label{save__game_8h_a32e42e9d87b29a63950fd5cb38ae9a48} 
+\index{save\_game.h@{save\_game.h}!getSavePath@{getSavePath}}
+\index{getSavePath@{getSavePath}!save\_game.h@{save\_game.h}}
+\doxysubsubsection{\texorpdfstring{getSavePath()}{getSavePath()}}
+{\footnotesize\ttfamily std\+::string get\+Save\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{save__game_8h_acc785a3493ef3d9a1fffa31a2fbfb7b6}\label{save__game_8h_acc785a3493ef3d9a1fffa31a2fbfb7b6} 
+\index{save\_game.h@{save\_game.h}!saveCharacterToDatabase@{saveCharacterToDatabase}}
+\index{saveCharacterToDatabase@{saveCharacterToDatabase}!save\_game.h@{save\_game.h}}
+\doxysubsubsection{\texorpdfstring{saveCharacterToDatabase()}{saveCharacterToDatabase()}}
+{\footnotesize\ttfamily void save\+Character\+To\+Database (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{character }\end{DoxyParamCaption})}
+

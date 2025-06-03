@@ -1,0 +1,44 @@
+\doxysection{map.\+h}
+\hypertarget{map_8h_source}{}\label{map_8h_source}\index{include/location/map/map.h@{include/location/map/map.h}}
+\mbox{\hyperlink{map_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../../all\_headers.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ класс\ карты,\ собранная\ из\ battle\_location\ и\ shop\_location}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmap}{map}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmap_abedfe6722ad83929739afd899c88fea4}{map}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmap_a658e36b25f9cf1a1505f087f449c5bfd}{\string~map}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<opponent>>\ \mbox{\hyperlink{classmap_a1dd8cb045400499d9a2948e0d61189db}{allOpponents}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmap_a09c52f729579e807cf411a2060782a3f}{startTravel}}(\mbox{\hyperlink{classmain__char}{main\_char}}\ \&hero)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ важный\ метод,\ принимает\ персонажа\ как\ входной\ аргумент}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ позволяет\ путешествовать\ по\ карте.}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmap_af66fb60029626fefc2451b9c9b6c9118}{isShopLocation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmain__char}{main\_char}}\ \&hero)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmap_aef213bc3074a873ac83e881fa7e262ab}{isBattleLocation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmain__char}{main\_char}}\ \&hero)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::vector<opponent\ *>\ \mbox{\hyperlink{classmap_a43a7f896aad55780f68dff706ec3f424}{getOpponents}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmain__char}{main\_char}}\ \&hero)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::array<std::unique\_ptr<location>,\ 10>\ \mbox{\hyperlink{classmap_a874517cdb8fb80d69388ec66176ab380}{locationMap}};\ \textcolor{comment}{//\ карта}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classshop}{shop}}\ \mbox{\hyperlink{classmap_a1ef7dac3d1306b5804ed77d6157743bc}{getShop}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmain__char}{main\_char}}\ \&hero)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::array<std::array<int,\ 4>,\ 10>\ \mbox{\hyperlink{classmap_a3d954dc092435b5da4256a4a3ebe086b}{locationConnections}}\{\};\ \textcolor{comment}{//\ точки\ передвижения}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmap_a6fffc11160a053e83b713f9cd06b0b55}{displayTravelOptions}}(\textcolor{keywordtype}{int}\ currentLocationIndex)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ метод,\ при\ помощи\ которого\ можно\ понять\ куда}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ персонаж\ может\ передвинуться,\ вшит\ в\ startTravel.}}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MAP\_H}}
+
+\end{DoxyCode}

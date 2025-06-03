@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Файл include/characters/main_char/main_char.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3a500453c6cd85a8ba6317c04bfc9f7d.html">characters</a></li><li class="navelem"><a class="el" href="dir_c79c7097b328fa3bd4e0d2f0e16a4b7c.html">main_char</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл main_char.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &quot;<a class="el" href="all__headers_8h_source.html">../../all_headers.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для main_char.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="main__char_8h__incl.png" border="0" usemap="#ainclude_2characters_2main__char_2main__char_8h" alt=""/></div>
+<map name="ainclude_2characters_2main__char_2main__char_8h" id="ainclude_2characters_2main__char_2main__char_8h">
+<area shape="rect" title=" " alt="" coords="1034,5,1212,45"/>
+<area shape="rect" title=" " alt="" coords="390,255,467,280"/>
+<area shape="poly" title=" " alt="" coords="1034,29,839,36,721,43,600,56,483,73,379,98,335,112,297,129,265,148,242,168,236,178,235,186,242,205,259,214,293,226,377,250,376,256,291,231,257,219,238,208,229,187,232,176,238,165,262,143,294,124,333,107,378,92,482,68,599,50,720,38,839,30,1034,24"/>
+<area shape="rect" title=" " alt="" coords="241,255,365,280"/>
+<area shape="poly" title=" " alt="" coords="1034,34,777,49,453,76,298,95,165,116,66,141,34,154,16,168,8,187,16,205,39,213,92,225,228,250,227,256,91,230,37,218,12,209,3,187,12,165,31,150,64,136,164,111,297,89,453,71,777,44,1034,28"/>
+<area shape="rect" href="all__headers_8h.html" title=" " alt="" coords="2064,93,2198,119"/>
+<area shape="poly" title=" " alt="" coords="1212,31,2051,96,2051,102,1212,37"/>
+<area shape="poly" title=" " alt="" coords="2064,102,1226,37,1226,32,2064,96"/>
+<area shape="rect" href="character_8h.html" title=" " alt="" coords="954,174,1121,199"/>
+<area shape="poly" title=" " alt="" coords="2064,111,1900,115,1669,125,1404,142,1134,169,1103,174,1102,169,1133,164,1403,137,1669,119,1900,110,2064,106"/>
+<area shape="rect" href="slot__of__equipment_8h.html" title=" " alt="" coords="1938,174,2124,199"/>
+<area shape="poly" title=" " alt="" coords="2118,121,2058,167,2055,163,2115,117"/>
+<area shape="rect" href="slot__of__potion_8h.html" title=" " alt="" coords="377,174,536,199"/>
+<area shape="poly" title=" " alt="" coords="2064,111,1320,128,874,145,688,157,547,169,518,174,517,169,547,164,688,151,874,140,1320,123,2064,106"/>
+<area shape="rect" href="slot__of__weapon_8h.html" title=" " alt="" coords="2148,174,2316,199"/>
+<area shape="poly" title=" " alt="" coords="2148,117,2208,163,2205,167,2144,121"/>
+<area shape="rect" href="war__style_8h.html" title=" " alt="" coords="2341,174,2470,199"/>
+<area shape="poly" title=" " alt="" coords="2172,116,2354,168,2352,173,2170,121"/>
+<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="1146,174,1306,199"/>
+<area shape="poly" title=" " alt="" coords="2064,112,1742,128,1531,145,1318,169,1290,174,1289,169,1317,164,1531,140,1742,123,2064,107"/>
+<area shape="rect" href="coins_8h.html" title=" " alt="" coords="1330,174,1502,199"/>
+<area shape="poly" title=" " alt="" coords="2064,114,1822,134,1669,150,1515,169,1485,174,1484,169,1515,164,1669,145,1821,129,2064,109"/>
+<area shape="rect" href="clear__screen_8h.html" title=" " alt="" coords="2494,174,2669,199"/>
+<area shape="poly" title=" " alt="" coords="2199,116,2482,164,2508,169,2507,174,2481,169,2198,121"/>
+<area shape="rect" href="weapon_8h.html" title=" " alt="" coords="1706,174,1913,199"/>
+<area shape="poly" title=" " alt="" coords="2078,121,1864,173,1863,168,2077,116"/>
+<area shape="rect" href="equipment_8h.html" title=" " alt="" coords="560,167,718,207"/>
+<area shape="poly" title=" " alt="" coords="2064,111,1413,130,1024,146,859,157,732,168,732,163,859,151,1024,141,1413,124,2064,106"/>
+<area shape="rect" href="potion_8h.html" title=" " alt="" coords="743,174,930,199"/>
+<area shape="poly" title=" " alt="" coords="2064,110,1870,113,1590,122,1263,140,930,169,895,174,894,169,929,164,1262,135,1589,117,1870,108,2064,105"/>
+<area shape="rect" href="bag_8h.html" title=" " alt="" coords="26,174,178,199"/>
+<area shape="poly" title=" " alt="" coords="2064,110,1774,110,1323,117,783,135,503,150,229,169,177,175,177,170,228,164,503,144,783,130,1323,112,1774,105,2064,104"/>
+<area shape="rect" href="opponent_8h.html" title=" " alt="" coords="1527,167,1682,207"/>
+<area shape="poly" title=" " alt="" coords="2065,117,1897,137,1695,167,1694,162,1897,132,2064,111"/>
+<area shape="rect" href="shop_8h.html" title=" " alt="" coords="253,174,353,199"/>
+<area shape="poly" title=" " alt="" coords="2064,110,1725,111,1229,119,968,126,723,136,512,151,353,169,337,173,336,167,352,164,511,145,723,131,968,121,1229,113,1725,106,2064,105"/>
+<area shape="rect" href="location_8h.html" title=" " alt="" coords="2693,174,2836,199"/>
+<area shape="poly" title=" " alt="" coords="2198,110,2409,130,2539,145,2669,164,2693,168,2692,174,2668,169,2538,150,2408,135,2198,115"/>
+<area shape="rect" href="battle__location_8h.html" title=" " alt="" coords="3254,167,3429,207"/>
+<area shape="poly" title=" " alt="" coords="2198,105,2377,109,2633,118,2929,136,3230,164,3241,165,3240,171,3229,169,2928,141,2632,123,2377,114,2198,111"/>
+<area shape="rect" href="shop__location_8h.html" title=" " alt="" coords="2860,167,3028,207"/>
+<area shape="poly" title=" " alt="" coords="2198,108,2476,127,2655,143,2835,164,2848,166,2847,171,2835,169,2654,148,2476,132,2198,114"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="3454,174,3606,199"/>
+<area shape="poly" title=" " alt="" coords="2198,104,2405,104,2709,111,3066,129,3249,144,3429,164,3458,169,3457,174,3428,169,3249,150,3065,135,2709,117,2405,110,2198,109"/>
+<area shape="rect" href="game__mechanics_8h.html" title=" " alt="" coords="3053,167,3230,207"/>
+<area shape="poly" title=" " alt="" coords="2198,107,2553,123,2789,139,3029,164,3040,166,3039,171,3028,169,2789,145,2553,128,2198,112"/>
+<area shape="rect" href="save__game_8h.html" title=" " alt="" coords="3841,174,4040,199"/>
+<area shape="poly" title=" " alt="" coords="2198,106,2988,125,3466,142,3665,152,3817,164,3856,169,3855,174,3816,169,3665,158,3465,147,2988,130,2198,111"/>
+<area shape="rect" href="start__game_8h.html" title=" " alt="" coords="3630,174,3816,199"/>
+<area shape="poly" title=" " alt="" coords="2198,104,2430,105,2777,112,3187,130,3399,145,3606,164,3643,169,3642,174,3605,169,3398,150,3187,135,2777,117,2430,110,2198,109"/>
+<area shape="rect" href="upload__system_8h.html" title=" " alt="" coords="4064,167,4233,207"/>
+<area shape="poly" title=" " alt="" coords="2198,105,2558,110,3091,121,3637,138,3866,150,4039,164,4050,165,4050,171,4039,169,3866,155,3637,143,3090,126,2558,115,2198,111"/>
+<area shape="rect" title=" " alt="" coords="1091,255,1171,280"/>
+<area shape="poly" title=" " alt="" coords="1053,197,1108,244,1105,248,1050,202"/>
+<area shape="poly" title=" " alt="" coords="435,202,339,251,337,246,433,197"/>
+<area shape="poly" title=" " alt="" coords="508,197,547,204,698,224,846,240,1077,260,1077,265,846,246,697,230,547,209,507,202"/>
+<area shape="poly" title=" " alt="" coords="1213,202,1158,248,1154,244,1210,197"/>
+<area shape="poly" title=" " alt="" coords="1376,202,1185,254,1183,249,1374,197"/>
+<area shape="poly" title=" " alt="" coords="1862,171,2077,119,2078,125,1864,177"/>
+<area shape="poly" title=" " alt="" coords="1743,202,1694,209,1407,243,1185,264,1184,259,1407,237,1693,204,1743,197"/>
+<area shape="rect" title=" " alt="" coords="3314,255,3370,280"/>
+<area shape="poly" title=" " alt="" coords="1872,197,1926,204,2133,222,2345,236,2752,254,3089,262,3300,263,3300,269,3089,267,2752,259,2345,242,2133,228,1925,209,1872,202"/>
+<area shape="poly" title=" " alt="" coords="589,209,473,252,471,247,588,204"/>
+<area shape="poly" title=" " alt="" coords="718,168,743,164,862,153,1019,143,1397,126,2051,107,2051,112,1397,131,1020,148,863,158,743,169,719,173"/>
+<area shape="poly" title=" " alt="" coords="778,202,481,259,480,253,777,197"/>
+<area shape="poly" title=" " alt="" coords="904,171,953,164,1271,136,1584,118,1856,109,2050,105,2050,111,1856,114,1585,123,1272,141,954,169,905,177"/>
+<area shape="poly" title=" " alt="" coords="880,197,1079,249,1077,255,879,202"/>
+<area shape="poly" title=" " alt="" coords="150,197,377,251,376,256,149,202"/>
+<area shape="poly" title=" " alt="" coords="132,197,262,247,260,252,130,202"/>
+<area shape="poly" title=" " alt="" coords="177,173,252,164,518,145,790,130,1314,112,1757,105,2051,104,2051,110,1757,111,1314,118,790,136,519,150,253,169,178,178"/>
+<area shape="rect" title=" " alt="" coords="44,255,106,280"/>
+<area shape="poly" title=" " alt="" coords="100,200,86,243,81,241,95,199"/>
+<area shape="rect" title=" " alt="" coords="131,255,216,280"/>
+<area shape="poly" title=" " alt="" coords="114,198,156,242,152,246,110,201"/>
+<area shape="poly" title=" " alt="" coords="1682,168,1705,164,1891,136,2051,115,2051,120,1892,141,1706,169,1683,174"/>
+<area shape="poly" title=" " alt="" coords="1527,207,1514,209,1185,261,1184,256,1513,204,1526,202"/>
+<area shape="poly" title=" " alt="" coords="323,197,400,245,397,249,320,202"/>
+<area shape="poly" title=" " alt="" coords="306,200,306,241,300,241,300,200"/>
+<area shape="poly" title=" " alt="" coords="346,171,376,164,530,146,735,132,972,121,1225,114,1709,106,2050,105,2050,110,1709,112,1225,119,972,127,735,137,531,151,377,169,347,176"/>
+<area shape="poly" title=" " alt="" coords="336,197,365,204,466,221,570,234,773,252,950,260,1077,263,1077,269,950,266,772,257,569,239,465,226,364,209,335,202"/>
+<area shape="poly" title=" " alt="" coords="271,202,120,253,118,248,269,197"/>
+<area shape="poly" title=" " alt="" coords="285,202,206,250,203,245,283,197"/>
+<area shape="poly" title=" " alt="" coords="2729,177,2692,169,2561,150,2429,135,2211,115,2212,110,2430,130,2561,145,2693,164,2730,171"/>
+<area shape="poly" title=" " alt="" coords="3254,169,3253,169,2953,141,2656,123,2398,114,2212,111,2212,105,2398,109,2657,118,2953,136,3254,164,3255,164"/>
+<area shape="poly" title=" " alt="" coords="3344,207,3344,241,3339,241,3339,207"/>
+<area shape="poly" title=" " alt="" coords="2860,169,2859,169,2678,148,2498,132,2211,113,2211,108,2498,127,2678,143,2859,164,2860,164"/>
+<area shape="poly" title=" " alt="" coords="3493,177,3452,169,3273,150,3091,135,2735,117,2427,110,2212,109,2212,104,2427,104,2735,111,3091,130,3274,144,3453,164,3494,171"/>
+<area shape="poly" title=" " alt="" coords="3503,202,3383,252,3381,247,3501,197"/>
+<area shape="poly" title=" " alt="" coords="3053,169,3052,169,2813,145,2576,128,2211,112,2212,107,2577,123,2813,139,3053,164,3053,164"/>
+<area shape="poly" title=" " alt="" coords="3892,177,3840,169,3690,158,3491,147,3015,130,2211,111,2211,106,3016,125,3492,142,3690,152,3841,164,3893,171"/>
+<area shape="rect" title=" " alt="" coords="4005,255,4084,280"/>
+<area shape="poly" title=" " alt="" coords="3957,197,4020,244,4017,249,3954,202"/>
+<area shape="poly" title=" " alt="" coords="3678,177,3629,169,3423,150,3212,135,2803,117,2452,110,2211,109,2211,104,2452,105,2803,112,3213,130,3423,145,3630,164,3679,171"/>
+<area shape="poly" title=" " alt="" coords="4063,169,4063,169,3891,155,3664,144,3119,126,2584,116,2212,111,2212,105,2584,110,3119,121,3664,138,3891,150,4063,164,4064,164"/>
+<area shape="poly" title=" " alt="" coords="4125,209,4072,248,4069,244,4122,205"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="main__char_8h__dep__incl.png" border="0" usemap="#ainclude_2characters_2main__char_2main__char_8hdep" alt=""/></div>
+<map name="ainclude_2characters_2main__char_2main__char_8hdep" id="ainclude_2characters_2main__char_2main__char_8hdep">
+<area shape="rect" title=" " alt="" coords="2245,5,2423,45"/>
+<area shape="rect" href="all__headers_8h.html" title=" " alt="" coords="2254,93,2414,119"/>
+<area shape="poly" title=" " alt="" coords="2328,59,2330,93,2325,93,2322,59"/>
+<area shape="poly" title=" " alt="" coords="2340,79,2339,46,2345,45,2345,79"/>
+<area shape="rect" href="opponent_8h.html" title=" " alt="" coords="5,167,169,207"/>
+<area shape="poly" title=" " alt="" coords="2240,110,1822,114,1223,124,615,141,362,154,170,169,170,169,169,164,170,164,362,148,615,136,1223,118,1822,109,2240,105"/>
+<area shape="rect" href="game__mechanics_8h.html" title=" " alt="" coords="194,167,381,207"/>
+<area shape="poly" title=" " alt="" coords="2240,111,1321,127,778,145,552,156,381,169,380,169,380,164,380,164,552,151,778,139,1321,122,2240,106"/>
+<area shape="rect" href="bag_8h.html" title=" " alt="" coords="405,167,567,207"/>
+<area shape="poly" title=" " alt="" coords="2240,111,1408,127,922,145,720,156,568,169,567,169,567,164,567,164,720,151,922,139,1407,122,2240,106"/>
+<area shape="rect" href="equipment_8h.html" title=" " alt="" coords="592,167,801,207"/>
+<area shape="poly" title=" " alt="" coords="2240,110,1990,111,1634,119,1221,137,1009,151,801,169,800,169,800,164,800,164,1008,146,1221,132,1634,114,1990,106,2240,104"/>
+<area shape="rect" href="potion_8h.html" title=" " alt="" coords="825,167,1005,207"/>
+<area shape="poly" title=" " alt="" coords="2240,110,2020,112,1713,120,1362,138,1181,152,1005,169,1004,169,1004,164,1004,164,1181,146,1361,133,1713,115,2020,107,2240,104"/>
+<area shape="rect" href="weapon_8h.html" title=" " alt="" coords="1029,167,1220,207"/>
+<area shape="poly" title=" " alt="" coords="2241,111,2053,116,1800,126,1512,143,1221,169,1220,169,1220,164,1220,164,1511,137,1799,120,2053,110,2240,106"/>
+<area shape="rect" href="battle__location_8h.html" title=" " alt="" coords="1245,167,1439,207"/>
+<area shape="poly" title=" " alt="" coords="2241,113,1888,130,1664,147,1440,169,1439,169,1438,164,1439,164,1664,141,1888,125,2240,108"/>
+<area shape="rect" href="location_8h.html" title=" " alt="" coords="1464,174,1657,199"/>
+<area shape="poly" title=" " alt="" coords="2240,115,1977,135,1657,169,1610,177,1609,171,1656,164,1977,130,2240,110"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="1681,167,1840,207"/>
+<area shape="poly" title=" " alt="" coords="2240,118,2055,139,1841,169,1841,169,1840,164,1840,164,2054,134,2240,113"/>
+<area shape="rect" href="shop__location_8h.html" title=" " alt="" coords="1865,167,2051,207"/>
+<area shape="poly" title=" " alt="" coords="2260,124,2041,169,2040,164,2259,119"/>
+<area shape="rect" href="save__game_8h.html" title=" " alt="" coords="2076,167,2235,207"/>
+<area shape="poly" title=" " alt="" coords="2290,126,2192,169,2190,164,2288,121"/>
+<area shape="rect" href="shop_8h.html" title=" " alt="" coords="2259,174,2409,199"/>
+<area shape="poly" title=" " alt="" coords="2328,132,2330,174,2325,174,2323,133"/>
+<area shape="rect" href="start__game_8h.html" title=" " alt="" coords="2434,167,2581,207"/>
+<area shape="poly" title=" " alt="" coords="2366,122,2459,164,2457,169,2364,127"/>
+<area shape="rect" href="upload__system_8h.html" title=" " alt="" coords="2605,167,2777,207"/>
+<area shape="poly" title=" " alt="" coords="2393,119,2606,166,2605,171,2392,124"/>
+<area shape="rect" href="character_8cpp.html" title=" " alt="" coords="2801,174,3005,199"/>
+<area shape="poly" title=" " alt="" coords="2428,116,2790,164,2837,171,2836,177,2790,169,2427,121"/>
+<area shape="rect" href="main__char_8cpp.html" title=" " alt="" coords="3030,167,3185,207"/>
+<area shape="poly" title=" " alt="" coords="2428,109,2694,128,2856,143,3018,164,3030,166,3030,171,3018,169,2856,149,2694,133,2428,115"/>
+<area shape="rect" href="opponent_8cpp.html" title=" " alt="" coords="3209,167,3387,207"/>
+<area shape="poly" title=" " alt="" coords="2428,108,2768,125,2982,141,3197,164,3209,166,3208,171,3196,169,2981,147,2767,130,2428,113"/>
+<area shape="rect" href="clear__screen_8cpp.html" title=" " alt="" coords="3412,167,3547,207"/>
+<area shape="poly" title=" " alt="" coords="2428,104,2608,107,2850,115,3124,133,3263,147,3400,164,3412,166,3411,171,3399,169,3263,152,3123,139,2850,121,2608,112,2428,110"/>
+<area shape="rect" href="game__mechanics_8cpp.html" title=" " alt="" coords="3571,167,3737,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,2633,107,2914,115,3235,133,3399,147,3560,164,3571,166,3570,171,3559,169,3398,152,3234,139,2913,121,2632,112,2428,110"/>
+<area shape="rect" href="bag_8cpp.html" title=" " alt="" coords="3761,174,3952,199"/>
+<area shape="poly" title=" " alt="" coords="2428,104,2660,106,2988,114,3366,132,3560,146,3750,164,3800,171,3799,177,3750,169,3560,151,3366,137,2988,119,2660,112,2428,110"/>
+<area shape="rect" href="coins_8cpp.html" title=" " alt="" coords="3976,167,4121,207"/>
+<area shape="poly" title=" " alt="" coords="2428,106,2752,111,3196,122,3640,139,3825,151,3965,164,3976,166,3976,171,3964,169,3824,156,3640,145,3196,127,2752,117,2428,111"/>
+<area shape="rect" href="equipment_8cpp.html" title=" " alt="" coords="4146,167,4327,207"/>
+<area shape="poly" title=" " alt="" coords="2427,106,3275,123,3771,140,3978,151,4134,164,4146,165,4145,171,4134,169,3977,157,3771,146,3275,129,2427,111"/>
+<area shape="rect" href="inventory_8cpp.html" title=" " alt="" coords="4352,174,4551,199"/>
+<area shape="poly" title=" " alt="" coords="2428,106,3371,123,3930,140,4163,151,4340,164,4393,171,4392,177,4339,169,4163,156,3929,145,3371,128,2428,111"/>
+<area shape="rect" href="potion_8cpp.html" title=" " alt="" coords="4575,167,4727,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,2857,108,3475,116,4103,134,4365,147,4564,164,4576,166,4575,171,4563,169,4365,152,4103,139,3475,121,2857,113,2428,110"/>
+<area shape="rect" href="weapon_8cpp.html" title=" " alt="" coords="4751,167,4914,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,2888,107,3556,116,4239,133,4524,147,4740,164,4751,165,4751,171,4739,169,4524,152,4238,139,3556,121,2888,113,2428,110"/>
+<area shape="rect" href="battle__location_8cpp.html" title=" " alt="" coords="4939,167,5148,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,2919,109,3641,118,4382,136,4692,149,4926,164,4939,165,4938,171,4926,169,4692,154,4382,141,3641,124,2919,114,2428,110"/>
+<area shape="rect" href="location_8cpp.html" title=" " alt="" coords="5172,174,5352,199"/>
+<area shape="poly" title=" " alt="" coords="2428,105,2958,106,3749,113,4168,121,4563,131,4904,145,5161,164,5210,171,5209,177,5160,169,4903,151,4563,137,4168,126,3749,119,2958,111,2428,110"/>
+<area shape="rect" href="map_8cpp.html" title=" " alt="" coords="5376,174,5567,199"/>
+<area shape="poly" title=" " alt="" coords="2427,105,2991,106,3841,113,4293,120,4719,131,5087,145,5365,164,5416,171,5415,177,5364,169,5087,150,4719,136,4293,125,3841,118,2991,111,2427,110"/>
+<area shape="rect" href="shop__location_8cpp.html" title=" " alt="" coords="5591,167,5781,207"/>
+<area shape="poly" title=" " alt="" coords="2428,104,3027,105,3939,111,4425,118,4884,129,5281,144,5580,164,5590,165,5590,170,5579,169,5280,149,4884,134,4425,123,3939,116,3027,110,2428,110"/>
+<area shape="rect" href="save__game_8cpp.html" title=" " alt="" coords="5805,167,5972,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,4177,122,5197,140,5572,151,5794,164,5805,165,5805,171,5794,169,5572,156,5197,145,4177,128,2428,111"/>
+<area shape="rect" href="shop_8cpp.html" title=" " alt="" coords="5997,174,6135,199"/>
+<area shape="poly" title=" " alt="" coords="2428,105,3158,109,4271,119,5351,137,5750,149,5985,164,6025,171,6024,177,5984,169,5750,154,5351,142,4271,124,3158,114,2428,110"/>
+<area shape="rect" href="start__game_8cpp.html" title=" " alt="" coords="6160,167,6313,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,3187,109,4351,120,5483,137,5901,149,6148,164,6160,166,6159,171,6147,169,5901,155,5483,143,4351,125,3187,115,2428,110"/>
+<area shape="rect" href="upload__system_8cpp.html" title=" " alt="" coords="6338,167,6530,207"/>
+<area shape="poly" title=" " alt="" coords="2428,105,4439,122,5628,140,6067,151,6326,164,6338,165,6337,171,6326,169,6067,156,5628,145,4439,127,2428,111"/>
+<area shape="poly" title=" " alt="" coords="182,165,194,164,387,148,642,136,1251,118,1847,109,2254,105,2254,110,1847,114,1252,123,642,141,387,154,194,169,183,171"/>
+<area shape="poly" title=" " alt="" coords="394,165,404,164,577,151,804,139,1348,122,2254,106,2254,111,1348,127,804,145,577,156,405,169,395,170"/>
+<area shape="poly" title=" " alt="" coords="581,165,591,164,745,151,948,139,1435,122,2254,106,2254,111,1435,127,948,145,745,156,592,169,581,171"/>
+<area shape="poly" title=" " alt="" coords="815,165,824,164,1033,146,1246,132,1659,114,2012,106,2254,104,2254,110,2012,111,1659,119,1246,137,1033,151,825,169,815,170"/>
+<area shape="poly" title=" " alt="" coords="1019,165,1028,164,1205,146,1386,133,1738,115,2041,107,2254,104,2254,110,2041,112,1738,120,1386,138,1206,152,1029,169,1019,171"/>
+<area shape="poly" title=" " alt="" coords="1233,165,1244,164,1535,137,1822,120,2073,110,2254,106,2254,111,2073,116,1823,126,1536,143,1245,169,1234,171"/>
+<area shape="poly" title=" " alt="" coords="1453,165,1463,164,1687,142,1909,125,2254,108,2254,113,1910,130,1688,147,1464,169,1453,171"/>
+<area shape="poly" title=" " alt="" coords="1646,169,1680,164,1998,130,2254,110,2254,116,1999,136,1681,169,1647,174"/>
+<area shape="poly" title=" " alt="" coords="1853,166,1864,164,2075,134,2254,114,2254,119,2076,140,1865,169,1854,171"/>
+<area shape="poly" title=" " alt="" coords="2064,162,2285,116,2286,121,2065,167"/>
+<area shape="poly" title=" " alt="" coords="2218,159,2314,116,2316,121,2220,164"/>
+<area shape="poly" title=" " alt="" coords="2340,160,2338,119,2343,119,2345,160"/>
+<area shape="poly" title=" " alt="" coords="2460,163,2365,121,2367,116,2462,158"/>
+<area shape="poly" title=" " alt="" coords="2600,166,2392,121,2393,116,2601,161"/>
+</map>
+</div>
+</div>
+<p><a href="main__char_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html">main_char</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a33d61d533f10439575903970c769d766" id="r_a33d61d533f10439575903970c769d766"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__char_8h.html#a33d61d533f10439575903970c769d766">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classmain__char.html">main_char</a> &amp;pers)</td></tr>
+<tr class="separator:a33d61d533f10439575903970c769d766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a0f8d5e6722f630f88f7794862005af25" id="r_a0f8d5e6722f630f88f7794862005af25"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">BELT_SIZE</a> = 6</td></tr>
+<tr class="separator:a0f8d5e6722f630f88f7794862005af25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a33d61d533f10439575903970c769d766" name="a33d61d533f10439575903970c769d766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d61d533f10439575903970c769d766">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmain__char.html">main_char</a> &amp;&#160;</td>
+          <td class="paramname"><em>pers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a0f8d5e6722f630f88f7794862005af25" name="a0f8d5e6722f630f88f7794862005af25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8d5e6722f630f88f7794862005af25">&#9670;&#160;</a></span>BELT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int BELT_SIZE = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

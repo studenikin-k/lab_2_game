@@ -1,0 +1,142 @@
+\doxysection{Класс health\+Potion}
+\hypertarget{classhealthPotion}{}\label{classhealthPotion}\index{healthPotion@{healthPotion}}
+
+
+{\ttfamily \#include $<$potion.\+h$>$}
+
+
+
+Граф наследования\+:health\+Potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classhealthPotion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса health\+Potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classhealthPotion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhealthPotion_a19c4aecd50ce48d6a838481660eff666}{health\+Potion}} (const std\+::string \&\+\_\+name, unsigned int \+\_\+level, unsigned int \+\_\+health, \mbox{\hyperlink{classcoins}{coins}} \+\_\+price)
+\item 
+unsigned int \mbox{\hyperlink{classhealthPotion_a8743424c83fa2bc806c822024890e23e}{get\+Health}} () const
+\item 
+void \mbox{\hyperlink{classhealthPotion_a6422392a430eaebd76a15ced72c8c10f}{set\+Health}} (unsigned int \+\_\+health)
+\item 
+void \mbox{\hyperlink{classhealthPotion_a470bdd177b45d63e845c5218a85edb0d}{show\+In\+Shop}} () override
+\item 
+void \mbox{\hyperlink{classhealthPotion_a5f1cf335fb5629cc98c3a280094c40ff}{show\+In\+Inventory}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \mbox{\hyperlink{classhealthPotion_af6d47ad7f060fa037e99132b1dad7259}{clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classpotion}{potion}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpotion_a48c3d5c030b0f4980e8b416691ed81f3}{potion}} ()=default
+\item 
+virtual \mbox{\hyperlink{classpotion_aefd230ed198ff1d35d24992a76345b1a}{\texorpdfstring{$\sim$}{\string~}potion}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classpotion_a334f810a0b41d066415400248ceb59d0}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classpotion_aea5e109d9f63a27680404c6def2f15c3}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}})
+\item 
+unsigned int \mbox{\hyperlink{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classpotion_a518a86310d4d71405754ef6684ba5b70}{set\+Level}} (unsigned int \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}})
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a46efdaf3140eae8b90f07dc0c8f03258}{get\+Slot}} () const
+\item 
+void \mbox{\hyperlink{classpotion_acc7c4595ff3db611b68c85821fbcacfc}{set\+Slot}} (\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classhealthPotion_a74da7b0216785c942db62960332239c5}{health}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classpotion}{potion}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}} \{\}
+\item 
+\mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classhealthPotion_a19c4aecd50ce48d6a838481660eff666}\label{classhealthPotion_a19c4aecd50ce48d6a838481660eff666} 
+\index{healthPotion@{healthPotion}!healthPotion@{healthPotion}}
+\index{healthPotion@{healthPotion}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{healthPotion()}{healthPotion()}}
+{\footnotesize\ttfamily health\+Potion\+::health\+Potion (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{unsigned int}]{\+\_\+level,  }\item[{unsigned int}]{\+\_\+health,  }\item[{\mbox{\hyperlink{classcoins}{coins}}}]{\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classhealthPotion_af6d47ad7f060fa037e99132b1dad7259}\label{classhealthPotion_af6d47ad7f060fa037e99132b1dad7259} 
+\index{healthPotion@{healthPotion}!clone@{clone}}
+\index{clone@{clone}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ health\+Potion\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a30980bb75bf2f090a36e73efc08eb9d7}{potion}}.
+
+\Hypertarget{classhealthPotion_a8743424c83fa2bc806c822024890e23e}\label{classhealthPotion_a8743424c83fa2bc806c822024890e23e} 
+\index{healthPotion@{healthPotion}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily unsigned int health\+Potion\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classhealthPotion_a6422392a430eaebd76a15ced72c8c10f}\label{classhealthPotion_a6422392a430eaebd76a15ced72c8c10f} 
+\index{healthPotion@{healthPotion}!setHealth@{setHealth}}
+\index{setHealth@{setHealth}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{setHealth()}{setHealth()}}
+{\footnotesize\ttfamily void health\+Potion\+::set\+Health (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+health }\end{DoxyParamCaption})}
+
+\Hypertarget{classhealthPotion_a5f1cf335fb5629cc98c3a280094c40ff}\label{classhealthPotion_a5f1cf335fb5629cc98c3a280094c40ff} 
+\index{healthPotion@{healthPotion}!showInInventory@{showInInventory}}
+\index{showInInventory@{showInInventory}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{showInInventory()}{showInInventory()}}
+{\footnotesize\ttfamily void health\+Potion\+::show\+In\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a2735769ed144c3f58dca5f8199cc2e09}{potion}}.
+
+\Hypertarget{classhealthPotion_a470bdd177b45d63e845c5218a85edb0d}\label{classhealthPotion_a470bdd177b45d63e845c5218a85edb0d} 
+\index{healthPotion@{healthPotion}!showInShop@{showInShop}}
+\index{showInShop@{showInShop}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{showInShop()}{showInShop()}}
+{\footnotesize\ttfamily void health\+Potion\+::show\+In\+Shop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68}{potion}}.
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classhealthPotion_a74da7b0216785c942db62960332239c5}\label{classhealthPotion_a74da7b0216785c942db62960332239c5} 
+\index{healthPotion@{healthPotion}!health@{health}}
+\index{health@{health}!healthPotion@{healthPotion}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily unsigned int health\+Potion\+::health \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/inventory/potion/\mbox{\hyperlink{potion_8h}{potion.\+h}}\item 
+src/inventory/potion/\mbox{\hyperlink{potion_8cpp}{potion.\+cpp}}\end{DoxyCompactItemize}

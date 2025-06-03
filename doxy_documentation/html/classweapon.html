@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Класс weapon</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classweapon-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс weapon</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="weapon_8h_source.html">weapon.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:weapon:</div>
+<div class="dyncontent">
+<div class="center"><img src="classweapon__inherit__graph.png" border="0" usemap="#aweapon_inherit__map" alt="Inheritance graph"/></div>
+<map name="aweapon_inherit__map" id="aweapon_inherit__map">
+<area shape="rect" title=" " alt="" coords="11,79,84,104"/>
+<area shape="rect" href="classinventory.html" title=" " alt="" coords="5,5,89,31"/>
+<area shape="poly" title=" " alt="" coords="50,44,50,79,45,79,45,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса weapon:</div>
+<div class="dyncontent">
+<div class="center"><img src="classweapon__coll__graph.png" border="0" usemap="#aweapon_coll__map" alt="Collaboration graph"/></div>
+<map name="aweapon_coll__map" id="aweapon_coll__map">
+<area shape="rect" title=" " alt="" coords="57,93,131,119"/>
+<area shape="rect" href="classinventory.html" title=" " alt="" coords="5,5,89,31"/>
+<area shape="poly" title=" " alt="" coords="62,41,90,92,85,94,58,44"/>
+<area shape="rect" href="classcoins.html" title=" " alt="" coords="114,5,170,31"/>
+<area shape="poly" title=" " alt="" coords="131,44,103,94,98,91,127,41"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a449d2ed617956bb5d5726f3299b60164" id="r_a449d2ed617956bb5d5726f3299b60164"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a449d2ed617956bb5d5726f3299b60164">weapon</a> (const std::string &amp;_name, unsigned int _level, unsigned int _damage, unsigned int _accuracy, unsigned int _stun, <a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a> _weapon, <a class="el" href="war__style_8h.html#a7076aca7f6e08ff21b3f99f9a27af777">warStyle</a> _style, <a class="el" href="classcoins.html">coins</a> _price)</td></tr>
+<tr class="separator:a449d2ed617956bb5d5726f3299b60164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593a9b07d314cda48a73619fd31ea364" id="r_a593a9b07d314cda48a73619fd31ea364"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a593a9b07d314cda48a73619fd31ea364">weapon</a> ()=default</td></tr>
+<tr class="separator:a593a9b07d314cda48a73619fd31ea364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffabc55d6813cd0d3d5db22e5fc2f3a" id="r_aeffabc55d6813cd0d3d5db22e5fc2f3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#aeffabc55d6813cd0d3d5db22e5fc2f3a">~weapon</a> ()=default</td></tr>
+<tr class="separator:aeffabc55d6813cd0d3d5db22e5fc2f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74664634bd7bc709c954a8723abea4c3" id="r_a74664634bd7bc709c954a8723abea4c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a74664634bd7bc709c954a8723abea4c3">getSlot</a> () const</td></tr>
+<tr class="separator:a74664634bd7bc709c954a8723abea4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8a584e016e3ecb69044712e6e45e33" id="r_adf8a584e016e3ecb69044712e6e45e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#adf8a584e016e3ecb69044712e6e45e33">setSlot</a> (<a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a> <a class="el" href="classweapon.html#a4d2058643eb7b7263629675c17c1638b">slot</a>)</td></tr>
+<tr class="separator:adf8a584e016e3ecb69044712e6e45e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb84080cfe018ebcd795db05f6b0cfc6" id="r_aeb84080cfe018ebcd795db05f6b0cfc6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#aeb84080cfe018ebcd795db05f6b0cfc6">getStun</a> () const</td></tr>
+<tr class="separator:aeb84080cfe018ebcd795db05f6b0cfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4294f27215a78fcde5f143b2c3d56d17" id="r_a4294f27215a78fcde5f143b2c3d56d17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a4294f27215a78fcde5f143b2c3d56d17">setStun</a> (unsigned int <a class="el" href="classweapon.html#a2f8c9a013d4aa590db177ecd3081310e">stun</a>)</td></tr>
+<tr class="separator:a4294f27215a78fcde5f143b2c3d56d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4416ef521f62d9274ed494c18c900d5f" id="r_a4416ef521f62d9274ed494c18c900d5f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a4416ef521f62d9274ed494c18c900d5f">getAccuracy</a> () const</td></tr>
+<tr class="separator:a4416ef521f62d9274ed494c18c900d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0102ad54f17f006e11daf3d7812f37d7" id="r_a0102ad54f17f006e11daf3d7812f37d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a0102ad54f17f006e11daf3d7812f37d7">setAccuracy</a> (unsigned int <a class="el" href="classweapon.html#a2b69c08f3f72d9deabf5e1a8a24da63f">accuracy</a>)</td></tr>
+<tr class="separator:a0102ad54f17f006e11daf3d7812f37d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9156895ce926bdc776263578243c4f" id="r_a9b9156895ce926bdc776263578243c4f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a9b9156895ce926bdc776263578243c4f">getDamage</a> () const</td></tr>
+<tr class="separator:a9b9156895ce926bdc776263578243c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeaab698560db7e7dea4f8a7009b3199" id="r_afeaab698560db7e7dea4f8a7009b3199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#afeaab698560db7e7dea4f8a7009b3199">showInShop</a> ()</td></tr>
+<tr class="separator:afeaab698560db7e7dea4f8a7009b3199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5967dffde1617c1331624165c58daf0b" id="r_a5967dffde1617c1331624165c58daf0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a5967dffde1617c1331624165c58daf0b">showInInventory</a> ()</td></tr>
+<tr class="separator:a5967dffde1617c1331624165c58daf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfb95013911108e1fac619a3cf75cab" id="r_a2bfb95013911108e1fac619a3cf75cab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a2bfb95013911108e1fac619a3cf75cab">setDamage</a> (unsigned int <a class="el" href="classweapon.html#a9895068790c419982a5cd8ece6ddcfb2">damage</a>)</td></tr>
+<tr class="separator:a2bfb95013911108e1fac619a3cf75cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classinventory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classinventory')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classinventory.html">inventory</a></td></tr>
+<tr class="memitem:a809be078023c90addbc38762007b2568 inherit pub_methods_classinventory" id="r_a809be078023c90addbc38762007b2568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a809be078023c90addbc38762007b2568">inventory</a> ()=default</td></tr>
+<tr class="separator:a809be078023c90addbc38762007b2568 inherit pub_methods_classinventory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e22b10ae740908ebc1a1a6e1a6bc0fd inherit pub_methods_classinventory" id="r_a3e22b10ae740908ebc1a1a6e1a6bc0fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a3e22b10ae740908ebc1a1a6e1a6bc0fd">~inventory</a> ()=default</td></tr>
+<tr class="separator:a3e22b10ae740908ebc1a1a6e1a6bc0fd inherit pub_methods_classinventory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818de77acf2aba7a3f5cc34108ebf063 inherit pub_methods_classinventory" id="r_a818de77acf2aba7a3f5cc34108ebf063"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a818de77acf2aba7a3f5cc34108ebf063">getName</a> () const</td></tr>
+<tr class="separator:a818de77acf2aba7a3f5cc34108ebf063 inherit pub_methods_classinventory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2692929ab6f198d2dd88da4707ebfdad inherit pub_methods_classinventory" id="r_a2692929ab6f198d2dd88da4707ebfdad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a2692929ab6f198d2dd88da4707ebfdad">setName</a> (const std::string &amp;<a class="el" href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">name</a>)</td></tr>
+<tr class="separator:a2692929ab6f198d2dd88da4707ebfdad inherit pub_methods_classinventory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3644dce3a212a4d963dee29146fe8b14 inherit pub_methods_classinventory" id="r_a3644dce3a212a4d963dee29146fe8b14"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a3644dce3a212a4d963dee29146fe8b14">getLevel</a> () const</td></tr>
+<tr class="separator:a3644dce3a212a4d963dee29146fe8b14 inherit pub_methods_classinventory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6aa2286c23e64049f7494d0a66a82a inherit pub_methods_classinventory" id="r_a8d6aa2286c23e64049f7494d0a66a82a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a8d6aa2286c23e64049f7494d0a66a82a">setLevel</a> (unsigned int <a class="el" href="classinventory.html#a821576df38ac9853f0635672f68f898c">level</a>)</td></tr>
+<tr class="separator:a8d6aa2286c23e64049f7494d0a66a82a inherit pub_methods_classinventory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a4d2058643eb7b7263629675c17c1638b" id="r_a4d2058643eb7b7263629675c17c1638b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a4d2058643eb7b7263629675c17c1638b">slot</a> = {}</td></tr>
+<tr class="separator:a4d2058643eb7b7263629675c17c1638b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b8d65433cfd9d394e3f3e7b743428e" id="r_a87b8d65433cfd9d394e3f3e7b743428e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="war__style_8h.html#a7076aca7f6e08ff21b3f99f9a27af777">warStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a87b8d65433cfd9d394e3f3e7b743428e">style</a> {}</td></tr>
+<tr class="separator:a87b8d65433cfd9d394e3f3e7b743428e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99413939ab75b1768aa8814621a82cbc" id="r_a99413939ab75b1768aa8814621a82cbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcoins.html">coins</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a99413939ab75b1768aa8814621a82cbc">price</a> {}</td></tr>
+<tr class="separator:a99413939ab75b1768aa8814621a82cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a9895068790c419982a5cd8ece6ddcfb2" id="r_a9895068790c419982a5cd8ece6ddcfb2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a9895068790c419982a5cd8ece6ddcfb2">damage</a> {}</td></tr>
+<tr class="separator:a9895068790c419982a5cd8ece6ddcfb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b69c08f3f72d9deabf5e1a8a24da63f" id="r_a2b69c08f3f72d9deabf5e1a8a24da63f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a2b69c08f3f72d9deabf5e1a8a24da63f">accuracy</a> {}</td></tr>
+<tr class="separator:a2b69c08f3f72d9deabf5e1a8a24da63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8c9a013d4aa590db177ecd3081310e" id="r_a2f8c9a013d4aa590db177ecd3081310e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweapon.html#a2f8c9a013d4aa590db177ecd3081310e">stun</a> {}</td></tr>
+<tr class="separator:a2f8c9a013d4aa590db177ecd3081310e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a449d2ed617956bb5d5726f3299b60164" name="a449d2ed617956bb5d5726f3299b60164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449d2ed617956bb5d5726f3299b60164">&#9670;&#160;</a></span>weapon() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">weapon::weapon </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_accuracy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_stun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a>&#160;</td>
+          <td class="paramname"><em>_weapon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="war__style_8h.html#a7076aca7f6e08ff21b3f99f9a27af777">warStyle</a>&#160;</td>
+          <td class="paramname"><em>_style</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcoins.html">coins</a>&#160;</td>
+          <td class="paramname"><em>_price</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a593a9b07d314cda48a73619fd31ea364" name="a593a9b07d314cda48a73619fd31ea364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593a9b07d314cda48a73619fd31ea364">&#9670;&#160;</a></span>weapon() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">weapon::weapon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeffabc55d6813cd0d3d5db22e5fc2f3a" name="aeffabc55d6813cd0d3d5db22e5fc2f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeffabc55d6813cd0d3d5db22e5fc2f3a">&#9670;&#160;</a></span>~weapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">weapon::~weapon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a4416ef521f62d9274ed494c18c900d5f" name="a4416ef521f62d9274ed494c18c900d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4416ef521f62d9274ed494c18c900d5f">&#9670;&#160;</a></span>getAccuracy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int weapon::getAccuracy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b9156895ce926bdc776263578243c4f" name="a9b9156895ce926bdc776263578243c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9156895ce926bdc776263578243c4f">&#9670;&#160;</a></span>getDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int weapon::getDamage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74664634bd7bc709c954a8723abea4c3" name="a74664634bd7bc709c954a8723abea4c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74664634bd7bc709c954a8723abea4c3">&#9670;&#160;</a></span>getSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a> weapon::getSlot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb84080cfe018ebcd795db05f6b0cfc6" name="aeb84080cfe018ebcd795db05f6b0cfc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb84080cfe018ebcd795db05f6b0cfc6">&#9670;&#160;</a></span>getStun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int weapon::getStun </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0102ad54f17f006e11daf3d7812f37d7" name="a0102ad54f17f006e11daf3d7812f37d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0102ad54f17f006e11daf3d7812f37d7">&#9670;&#160;</a></span>setAccuracy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weapon::setAccuracy </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>accuracy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bfb95013911108e1fac619a3cf75cab" name="a2bfb95013911108e1fac619a3cf75cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfb95013911108e1fac619a3cf75cab">&#9670;&#160;</a></span>setDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weapon::setDamage </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>damage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf8a584e016e3ecb69044712e6e45e33" name="adf8a584e016e3ecb69044712e6e45e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8a584e016e3ecb69044712e6e45e33">&#9670;&#160;</a></span>setSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weapon::setSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a>&#160;</td>
+          <td class="paramname"><em>slot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4294f27215a78fcde5f143b2c3d56d17" name="a4294f27215a78fcde5f143b2c3d56d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4294f27215a78fcde5f143b2c3d56d17">&#9670;&#160;</a></span>setStun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weapon::setStun </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5967dffde1617c1331624165c58daf0b" name="a5967dffde1617c1331624165c58daf0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5967dffde1617c1331624165c58daf0b">&#9670;&#160;</a></span>showInInventory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weapon::showInInventory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afeaab698560db7e7dea4f8a7009b3199" name="afeaab698560db7e7dea4f8a7009b3199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeaab698560db7e7dea4f8a7009b3199">&#9670;&#160;</a></span>showInShop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weapon::showInShop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a2b69c08f3f72d9deabf5e1a8a24da63f" name="a2b69c08f3f72d9deabf5e1a8a24da63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b69c08f3f72d9deabf5e1a8a24da63f">&#9670;&#160;</a></span>accuracy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int weapon::accuracy {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9895068790c419982a5cd8ece6ddcfb2" name="a9895068790c419982a5cd8ece6ddcfb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9895068790c419982a5cd8ece6ddcfb2">&#9670;&#160;</a></span>damage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int weapon::damage {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99413939ab75b1768aa8814621a82cbc" name="a99413939ab75b1768aa8814621a82cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99413939ab75b1768aa8814621a82cbc">&#9670;&#160;</a></span>price</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcoins.html">coins</a> weapon::price {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d2058643eb7b7263629675c17c1638b" name="a4d2058643eb7b7263629675c17c1638b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2058643eb7b7263629675c17c1638b">&#9670;&#160;</a></span>slot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="slot__of__weapon_8h.html#a682675de967a7bdf5dfcf5cde1f63181">slotOfWeapon</a> weapon::slot = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f8c9a013d4aa590db177ecd3081310e" name="a2f8c9a013d4aa590db177ecd3081310e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8c9a013d4aa590db177ecd3081310e">&#9670;&#160;</a></span>stun</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int weapon::stun {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87b8d65433cfd9d394e3f3e7b743428e" name="a87b8d65433cfd9d394e3f3e7b743428e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b8d65433cfd9d394e3f3e7b743428e">&#9670;&#160;</a></span>style</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="war__style_8h.html#a7076aca7f6e08ff21b3f99f9a27af777">warStyle</a> weapon::style {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/inventory/weapon/<a class="el" href="weapon_8h_source.html">weapon.h</a></li>
+<li>src/inventory/weapon/<a class="el" href="weapon_8cpp.html">weapon.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

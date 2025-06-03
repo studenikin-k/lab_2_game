@@ -1,0 +1,52 @@
+\doxysection{slot\+\_\+of\+\_\+weapon.\+h}
+\hypertarget{slot__of__weapon_8h_source}{}\label{slot__of__weapon_8h_source}\index{include/utils/slot\_of\_weapon.h@{include/utils/slot\_of\_weapon.h}}
+\mbox{\hyperlink{slot__of__weapon_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_SLOT\_OF\_WEAPON\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_SLOT\_OF\_WEAPON\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ данный\ enum\ определяет\ различие\ между\ разными\ типами\ оружия}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181aed4dd6cc118ab2500715cbd23b054573}{Axe}},}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a17d2c299e4d02f7b375eec3f057a5b50}{Mace}},}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a6c198603789a4928477eccd5d550b6b2}{Sword}},}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a1ea52f26e7e0ce08e462f87f5e35096c}{Blade}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a6a7b8cc34c5f1860cad8fa447ed6733c}{Epee}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a36c81967df3424f919e89b09ed34c90d}{Fork}},}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181ad0b1a354e37c87e67c6e1a12c2f7a746}{Glaive}},}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a1b84a9aa056c2d10119875c2508983ec}{Spear}},}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ данный\ метод\ нужен\ для\ разыменовывания\ enum\ и\ для\ метода\ сохранения}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{slot__of__weapon_8h_ae928b650d45f63e4174a9616245c26da}{slotOfWeaponToString}}(\mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ slot)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{switch}\ (slot)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a6c198603789a4928477eccd5d550b6b2}{slotOfWeapon::Sword}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Меч"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a1ea52f26e7e0ce08e462f87f5e35096c}{slotOfWeapon::Blade}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Клинок"{}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181aed4dd6cc118ab2500715cbd23b054573}{slotOfWeapon::Axe}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Топор"{}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181ad0b1a354e37c87e67c6e1a12c2f7a746}{slotOfWeapon::Glaive}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Глефа"{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a17d2c299e4d02f7b375eec3f057a5b50}{slotOfWeapon::Mace}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Булава"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a6a7b8cc34c5f1860cad8fa447ed6733c}{slotOfWeapon::Epee}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Шпага"{}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a36c81967df3424f919e89b09ed34c90d}{slotOfWeapon::Fork}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Вилы"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a1b84a9aa056c2d10119875c2508983ec}{slotOfWeapon::Spear}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Копьё"{}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Палками\ в\ другой\ игре\ махай,\ а\ луком\ в\ арбузы\ стреляй.\ "{}}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Тут\ игра\ про\ воинов,\ настоящих\ мужиков.\ \(\backslash\)n"{}};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ данный\ метод\ разыменовывания\ строки\ как\ enum\ необходим\ для\ того,\ чтобы\ загружать\ из\ БД\ предметы\ персонажа}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181}{slotOfWeapon}}\ \mbox{\hyperlink{slot__of__weapon_8h_a9a3cb5ff25892445a6cf646cbcf541a7}{stringToSlotOfWeapon}}(\textcolor{keyword}{const}\ std::string\ \&str)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Топор"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181aed4dd6cc118ab2500715cbd23b054573}{slotOfWeapon::Axe}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Булава"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a17d2c299e4d02f7b375eec3f057a5b50}{slotOfWeapon::Mace}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Меч"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a6c198603789a4928477eccd5d550b6b2}{slotOfWeapon::Sword}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Клинок"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a1ea52f26e7e0ce08e462f87f5e35096c}{slotOfWeapon::Blade}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Шпага"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a6a7b8cc34c5f1860cad8fa447ed6733c}{slotOfWeapon::Epee}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Вилы"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a36c81967df3424f919e89b09ed34c90d}{slotOfWeapon::Fork}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Глефа"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181ad0b1a354e37c87e67c6e1a12c2f7a746}{slotOfWeapon::Glaive}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Копьё"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__weapon_8h_a682675de967a7bdf5dfcf5cde1f63181a1b84a9aa056c2d10119875c2508983ec}{slotOfWeapon::Spear}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Неизвестный\ тип\ оружия:\ "{}}\ +\ str);}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_SLOT\_OF\_WEAPON\_H}}
+
+\end{DoxyCode}

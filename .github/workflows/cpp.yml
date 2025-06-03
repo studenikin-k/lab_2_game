@@ -7,28 +7,37 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake libgtest-dev build-essential
+          sudo apt-get install -y cmake libsqlite3-dev build-essential libgtest-dev
+          # Build Google Test (libgtest-dev installs source only)
+          cd /usr/src/gtest
+          sudo cmake .
+          sudo make
+          sudo cp lib/*.a /usr/lib
 
-      - name: Clean Build
-        run: |
-          rm -rf build/*
-          cmake -B build -S .
+      - name: Clean build directory
+        run: rm -rf build
 
-      - name: Build
+      - name: Configure CMake
+        run: cmake -S . -B build
+
+      - name: Build all
+        run: cmake --build build
+
+      - name: Run Main Executable
         run: |
-          cd build
-          make
+          echo "3" | ./build/main
 
       - name: Run Tests
         run: |
           cd build
-          ./tests
+          ctest --output-on-failure

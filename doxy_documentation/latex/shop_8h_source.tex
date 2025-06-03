@@ -1,0 +1,39 @@
+\doxysection{shop.\+h}
+\hypertarget{shop_8h_source}{}\label{shop_8h_source}\index{include/shop/shop.h@{include/shop/shop.h}}
+\mbox{\hyperlink{shop_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_SHOP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_SHOP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../all\_headers.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ класс\ магазин,\ который\ содержит\ в\ себе\ три\ раздела}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshop}{shop}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classshop_a512f73bf2369ed42bab646b9c5d7f7ae}{shop}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classshop_a3d37be18e23070bc35cc528f5dad2317}{\string~shop}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ сложная\ структура,\ которая\ позволяет\ взять\ в\ себя\ снаряжение\ разного\ уровня,\ разного\ стиля\ боя,\ и\ разного\ типа}}
+\DoxyCodeLine{00018\ \ \ \ \ std::array<std::unordered\_map<slotOfEquipment,std::unordered\_map<warStyle,std::shared\_ptr<equipment>>>,5>\ \mbox{\hyperlink{classshop_a2a3fd28e91026690f25c2d59f37c51f6}{equipmentShop}}\{\};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ сложная\ структура,\ которая\ позволяет\ хранить\ в\ себе\ оружие\ разного\ уровня,\ разного\ стиля\ боя\ и\ разного\ типа}}
+\DoxyCodeLine{00021\ \ \ \ \ std::array<std::unordered\_map<slotOfWeapon,std::unordered\_map<warStyle,std::shared\_ptr<weapon>>>,5>\ \ \mbox{\hyperlink{classshop_a60d355d30aea72a5804e3a8bfc091369}{weaponShop}}\{\};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ сложная\ структура,\ которая\ позволяет\ храниить\ в\ себе\ зелья\ разного\ уровня\ и\ разного\ назначения}}
+\DoxyCodeLine{00024\ \ \ \ \ std::array<std::unordered\_map<slotOfPotion,\ std::shared\_ptr<potion>>,5>\ \ \mbox{\hyperlink{classshop_a46d46747fe0b83311f85e1f7fbdd890f}{potionShop}}\{\};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ метод\ для\ интерактивного\ взаимодействия\ с\ магазином}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classshop_aa3b0f8832c126580f9526105d1da1c33}{showContents}}(\mbox{\hyperlink{classmain__char}{main\_char}}\&\ hero);}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_SHOP\_H}}
+
+\end{DoxyCode}

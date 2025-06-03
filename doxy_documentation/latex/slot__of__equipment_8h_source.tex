@@ -1,0 +1,42 @@
+\doxysection{slot\+\_\+of\+\_\+equipment.\+h}
+\hypertarget{slot__of__equipment_8h_source}{}\label{slot__of__equipment_8h_source}\index{include/utils/slot\_of\_equipment.h@{include/utils/slot\_of\_equipment.h}}
+\mbox{\hyperlink{slot__of__equipment_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_SLOT\_OF\_EQUIPMENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_SLOT\_OF\_EQUIPMENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ данный\ enum\ определяет\ различие\ между\ разными\ типами\ экипировки}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slotOfEquipment}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea5633f0c2ef79566f47e39491600497ff}{Helmet}},}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea4b3ab7f68eadb13df98bcd32926aa5ed}{Chestplate}},}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea643fdaf1fef54e8def751f54b706cd60}{Gloves}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea6ecd23b29cb618188451cdf0f35d4704}{Pants}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea797e65b9c5cd0da25a932f2b0947b94b}{Boots}},}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ данный\ метод\ нужен\ для\ разыменовывания\ enum\ и\ для\ метода\ сохранения}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{slot__of__equipment_8h_a01ddc1c11be6afecd12fec6c6c563da5}{slotOfEquipmentToString}}(\mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slotOfEquipment}}\ slot)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{switch}\ (slot)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea5633f0c2ef79566f47e39491600497ff}{slotOfEquipment::Helmet}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Шлем"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea4b3ab7f68eadb13df98bcd32926aa5ed}{slotOfEquipment::Chestplate}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Нагрудник"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea643fdaf1fef54e8def751f54b706cd60}{slotOfEquipment::Gloves}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Перчатки"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea6ecd23b29cb618188451cdf0f35d4704}{slotOfEquipment::Pants}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Штаны"{}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea797e65b9c5cd0da25a932f2b0947b94b}{slotOfEquipment::Boots}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Ботинкит"{}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Шубы\ не\ продаём."{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ данный\ метод\ разыменовывания\ строки\ как\ enum\ необходим\ для\ того,\ чтобы\ загружать\ из\ БД\ предметы\ персонажа}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slotOfEquipment}}\ \mbox{\hyperlink{slot__of__equipment_8h_a483a4dd57926b83b95ba5401c528a247}{stringToSlotOfEquipment}}(\textcolor{keyword}{const}\ std::string\&\ str)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Шлем"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea5633f0c2ef79566f47e39491600497ff}{slotOfEquipment::Helmet}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Нагрудник"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea4b3ab7f68eadb13df98bcd32926aa5ed}{slotOfEquipment::Chestplate}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Перчатки"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea643fdaf1fef54e8def751f54b706cd60}{slotOfEquipment::Gloves}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Штаны"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea6ecd23b29cb618188451cdf0f35d4704}{slotOfEquipment::Pants}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Ботинкит"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4aea797e65b9c5cd0da25a932f2b0947b94b}{slotOfEquipment::Boots}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Неизвестный\ слот\ экипировки:\ "{}}\ +\ str);}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_SLOT\_OF\_EQUIPMENT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,31 @@
+\doxysection{inventory.\+h}
+\hypertarget{inventory_8h_source}{}\label{inventory_8h_source}\index{include/inventory/inventory.h@{include/inventory/inventory.h}}
+\mbox{\hyperlink{inventory_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_INVENTORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_INVENTORY\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ класс\ абстракция\ для\ всего,\ что\ связано\ с\ предметами}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinventory}{inventory}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classinventory_a809be078023c90addbc38762007b2568}{inventory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classinventory_a3e22b10ae740908ebc1a1a6e1a6bc0fd}{\string~inventory}}()=\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classinventory_a818de77acf2aba7a3f5cc34108ebf063}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinventory_a2692929ab6f198d2dd88da4707ebfdad}{setName}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classinventory_a16b20eaa2df8345e98ceeff328595dc0}{name}});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classinventory_a3644dce3a212a4d963dee29146fe8b14}{getLevel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinventory_a8d6aa2286c23e64049f7494d0a66a82a}{setLevel}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classinventory_a821576df38ac9853f0635672f68f898c}{level}});}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ \mbox{\hyperlink{classinventory_a16b20eaa2df8345e98ceeff328595dc0}{name}}\{\};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classinventory_a821576df38ac9853f0635672f68f898c}{level}}\{\};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

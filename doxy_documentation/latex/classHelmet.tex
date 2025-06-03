@@ -1,0 +1,121 @@
+\doxysection{Класс Helmet}
+\hypertarget{classHelmet}{}\label{classHelmet}\index{Helmet@{Helmet}}
+
+
+{\ttfamily \#include $<$equipment.\+h$>$}
+
+
+
+Граф наследования\+:Helmet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classHelmet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Helmet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classHelmet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHelmet_aec10ba50d84e21db5e8fe8f37284e2dc}{Helmet}} (const std\+::string \&\+\_\+name, unsigned int \+\_\+level, unsigned int \+\_\+health, unsigned int \+\_\+armor, unsigned int \+\_\+dodge, \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}} \+\_\+style, \mbox{\hyperlink{classcoins}{coins}} \+\_\+price)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ \mbox{\hyperlink{classHelmet_aaa5a01fb18345d3e0b4b971906229a70}{clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classequipment}{equipment}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classequipment_a98e507649b17e3699e40b7c2bc003bf5}{equipment}} (const std\+::string \&\+\_\+name, unsigned int \+\_\+level, unsigned int \+\_\+health, unsigned int \+\_\+armor, unsigned int \+\_\+dodge, \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slot\+Of\+Equipment}} \+\_\+slot, \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}} \+\_\+style, \mbox{\hyperlink{classcoins}{coins}} \+\_\+price)
+\item 
+\mbox{\hyperlink{classequipment_a6d197e049bf6294c35e4efd2a7f0f315}{\texorpdfstring{$\sim$}{\string~}equipment}} ()=default
+\item 
+unsigned int \mbox{\hyperlink{classequipment_a63435c8f1771523c83a369a32aaf75e8}{get\+Health}} () const
+\item 
+void \mbox{\hyperlink{classequipment_ae0ea9869b3a8da5d0c139c9cd54b9cb4}{set\+Health}} (unsigned int \mbox{\hyperlink{classequipment_adc195ae4a7ae82f3c85a026a22ca5ab9}{health}})
+\item 
+unsigned int \mbox{\hyperlink{classequipment_ab01cc05e0a08595b0d2af57d83c27fa6}{get\+Armor}} () const
+\item 
+void \mbox{\hyperlink{classequipment_a5db4503319720700b798e38be4a8c6f5}{set\+Armor}} (unsigned int \mbox{\hyperlink{classequipment_af0467293c36527a4b27804e6ebb24313}{armor}})
+\item 
+unsigned int \mbox{\hyperlink{classequipment_a114bf19a4060415f2e1521e7ab74c634}{get\+Dodge}} () const
+\item 
+void \mbox{\hyperlink{classequipment_a4c868434a79638457e93743f27d1f86d}{set\+Dodge}} (unsigned int \mbox{\hyperlink{classequipment_ac89a92dc6b73a7a2d3ba8bd9cfa2e588}{dodge}})
+\item 
+void \mbox{\hyperlink{classequipment_a8f4b9ff2e2416bb0a2b355b512ccdebf}{show\+In\+Shop}} () const
+\item 
+void \mbox{\hyperlink{classequipment_a60174e22849fc262ddf0d6521ad9b40c}{show\+In\+Inventory}} () const
+\item 
+\mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slot\+Of\+Equipment}} \mbox{\hyperlink{classequipment_adc2991ca171e5ed5dcda207a1b092559}{get\+Slot}} () const
+\item 
+void \mbox{\hyperlink{classequipment_a6391291b10e93a668a754cb77ba392f3}{set\+Slot}} (\mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slot\+Of\+Equipment}} \mbox{\hyperlink{classequipment_a3bcfb4a1a4950c83177f1960bad0fcbe}{slot}})
+\item 
+\mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}} \mbox{\hyperlink{classequipment_af82d4fb7bd3e642969433644d91f8c4b}{get\+Style}} () const
+\item 
+void \mbox{\hyperlink{classequipment_adabc3bd12eb253dac08df6a64af57ae7}{set\+Style}} (\mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}} \mbox{\hyperlink{classequipment_a2900479aa57a64d7cc259780429ab2b6}{style}})
+\item 
+void \mbox{\hyperlink{classequipment_ab6a508419d043802c3f27bb2dd26a69d}{set\+Price}} (const \mbox{\hyperlink{classcoins}{coins}} \&\mbox{\hyperlink{classequipment_a09b539e3018f41903732681e7e4d86f4}{price}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classinventory}{inventory}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classinventory_a809be078023c90addbc38762007b2568}{inventory}} ()=default
+\item 
+\mbox{\hyperlink{classinventory_a3e22b10ae740908ebc1a1a6e1a6bc0fd}{\texorpdfstring{$\sim$}{\string~}inventory}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classinventory_a818de77acf2aba7a3f5cc34108ebf063}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classinventory_a2692929ab6f198d2dd88da4707ebfdad}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classinventory_a16b20eaa2df8345e98ceeff328595dc0}{name}})
+\item 
+unsigned int \mbox{\hyperlink{classinventory_a3644dce3a212a4d963dee29146fe8b14}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classinventory_a8d6aa2286c23e64049f7494d0a66a82a}{set\+Level}} (unsigned int \mbox{\hyperlink{classinventory_a821576df38ac9853f0635672f68f898c}{level}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classequipment}{equipment}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classequipment_a09b539e3018f41903732681e7e4d86f4}{price}}
+\item 
+\mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slot\+Of\+Equipment}} \mbox{\hyperlink{classequipment_a3bcfb4a1a4950c83177f1960bad0fcbe}{slot}}
+\item 
+unsigned int \mbox{\hyperlink{classequipment_a1c7d1dffae7843f3b07123baa8ffaf05}{armor\+\_\+}}
+\item 
+\mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}} \mbox{\hyperlink{classequipment_a2900479aa57a64d7cc259780429ab2b6}{style}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classHelmet_aec10ba50d84e21db5e8fe8f37284e2dc}\label{classHelmet_aec10ba50d84e21db5e8fe8f37284e2dc} 
+\index{Helmet@{Helmet}!Helmet@{Helmet}}
+\index{Helmet@{Helmet}!Helmet@{Helmet}}
+\doxysubsubsection{\texorpdfstring{Helmet()}{Helmet()}}
+{\footnotesize\ttfamily Helmet\+::\+Helmet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{unsigned int}]{\+\_\+level,  }\item[{unsigned int}]{\+\_\+health,  }\item[{unsigned int}]{\+\_\+armor,  }\item[{unsigned int}]{\+\_\+dodge,  }\item[{\mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}}}]{\+\_\+style,  }\item[{\mbox{\hyperlink{classcoins}{coins}}}]{\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classHelmet_aaa5a01fb18345d3e0b4b971906229a70}\label{classHelmet_aaa5a01fb18345d3e0b4b971906229a70} 
+\index{Helmet@{Helmet}!clone@{clone}}
+\index{clone@{clone}!Helmet@{Helmet}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ Helmet\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classequipment_a7f2c15b91bc63d15f686d0f2329feb50}{equipment}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/inventory/equipment/\mbox{\hyperlink{equipment_8h}{equipment.\+h}}\item 
+src/inventory/equipment/\mbox{\hyperlink{equipment_8cpp}{equipment.\+cpp}}\end{DoxyCompactItemize}

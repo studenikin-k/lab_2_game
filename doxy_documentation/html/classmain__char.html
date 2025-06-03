@@ -1,0 +1,1011 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Класс main_char</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classmain__char-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс main_char</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="main__char_8h_source.html">main_char.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:main_char:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmain__char__inherit__graph.png" border="0" usemap="#amain__char_inherit__map" alt="Inheritance graph"/></div>
+<map name="amain__char_inherit__map" id="amain__char_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,96,104"/>
+<area shape="rect" href="classcharacter.html" title=" " alt="" coords="9,5,92,31"/>
+<area shape="poly" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса main_char:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmain__char__coll__graph.png" border="0" usemap="#amain__char_coll__map" alt="Collaboration graph"/></div>
+<map name="amain__char_coll__map" id="amain__char_coll__map">
+<area shape="rect" title=" " alt="" coords="91,93,181,119"/>
+<area shape="rect" href="classcharacter.html" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" title=" " alt="" coords="70,38,125,91,122,95,67,42"/>
+<area shape="rect" href="classbag.html" title=" " alt="" coords="113,5,159,31"/>
+<area shape="poly" title=" " alt="" coords="139,45,139,93,133,93,133,45"/>
+<area shape="rect" href="classcoins.html" title=" " alt="" coords="184,5,240,31"/>
+<area shape="poly" title=" " alt="" coords="196,43,173,71,150,95,146,91,169,68,192,40"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9c2b81e4399fc94a3906f7705ade11d9" id="r_a9c2b81e4399fc94a3906f7705ade11d9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a9c2b81e4399fc94a3906f7705ade11d9">getExperience</a> () const</td></tr>
+<tr class="separator:a9c2b81e4399fc94a3906f7705ade11d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25078875b9d47495ccbf8c36b439cca" id="r_af25078875b9d47495ccbf8c36b439cca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#af25078875b9d47495ccbf8c36b439cca">setExperience</a> (const unsigned int <a class="el" href="classmain__char.html#a0095a3f0f04cc94a182d4935a509a2da">experience</a>)</td></tr>
+<tr class="separator:af25078875b9d47495ccbf8c36b439cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4815067ec6df2ab6413aa29aced5d26f" id="r_a4815067ec6df2ab6413aa29aced5d26f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a4815067ec6df2ab6413aa29aced5d26f">getExperienceToLevelUp</a> () const</td></tr>
+<tr class="separator:a4815067ec6df2ab6413aa29aced5d26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba7462db0c8f15ba2dc39fb18f2abd7" id="r_a9ba7462db0c8f15ba2dc39fb18f2abd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a9ba7462db0c8f15ba2dc39fb18f2abd7">setExperienceToLevelUp</a> (const unsigned int experience_to_level_up)</td></tr>
+<tr class="separator:a9ba7462db0c8f15ba2dc39fb18f2abd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f64ed3f32a722425fda3b99c7214d31" id="r_a1f64ed3f32a722425fda3b99c7214d31"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a1f64ed3f32a722425fda3b99c7214d31">getCurrentPosition</a> () const</td></tr>
+<tr class="separator:a1f64ed3f32a722425fda3b99c7214d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d6d28202794560ea78ba2c1149a4be" id="r_a99d6d28202794560ea78ba2c1149a4be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a99d6d28202794560ea78ba2c1149a4be">setCurrentPosition</a> (unsigned int current_position)</td></tr>
+<tr class="separator:a99d6d28202794560ea78ba2c1149a4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582d0f96561432ed1877a1649d1048fc" id="r_a582d0f96561432ed1877a1649d1048fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a582d0f96561432ed1877a1649d1048fc">main_char</a> (const std::string &amp;_name, unsigned int _level, unsigned int _health, unsigned int _damage, unsigned int _armor, unsigned int _accuracy, unsigned int _stun, unsigned int _dodge, const <a class="el" href="classcoins.html">coins</a> &amp;cash, const unsigned int position)</td></tr>
+<tr class="separator:a582d0f96561432ed1877a1649d1048fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fad025242d8ad194f65fc4816969e21" id="r_a3fad025242d8ad194f65fc4816969e21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a3fad025242d8ad194f65fc4816969e21">~main_char</a> ()=default</td></tr>
+<tr class="separator:a3fad025242d8ad194f65fc4816969e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af52517b1474691d87ca8f179280cef9a" id="r_af52517b1474691d87ca8f179280cef9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#af52517b1474691d87ca8f179280cef9a">equip</a> (std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt; item)</td></tr>
+<tr class="separator:af52517b1474691d87ca8f179280cef9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6061401c77e1967f520667072f28471b" id="r_a6061401c77e1967f520667072f28471b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a6061401c77e1967f520667072f28471b">takeOffEquipment</a> (std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt; item)</td></tr>
+<tr class="separator:a6061401c77e1967f520667072f28471b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae535a58b9ea0d6d456be0c6a6ee31c44" id="r_ae535a58b9ea0d6d456be0c6a6ee31c44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ae535a58b9ea0d6d456be0c6a6ee31c44">equip</a> (std::shared_ptr&lt; <a class="el" href="classweapon.html">weapon</a> &gt;)</td></tr>
+<tr class="separator:ae535a58b9ea0d6d456be0c6a6ee31c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d78a869458e21b44cc4d46b884c6ec" id="r_ac8d78a869458e21b44cc4d46b884c6ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ac8d78a869458e21b44cc4d46b884c6ec">takeOffWeapon</a> ()</td></tr>
+<tr class="separator:ac8d78a869458e21b44cc4d46b884c6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad347b8bead5553e551a2c346ef7902f1" id="r_ad347b8bead5553e551a2c346ef7902f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ad347b8bead5553e551a2c346ef7902f1">isBeltFull</a> () const</td></tr>
+<tr class="separator:ad347b8bead5553e551a2c346ef7902f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03dc50f47d7a7c8d5a2665a481215497" id="r_a03dc50f47d7a7c8d5a2665a481215497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a03dc50f47d7a7c8d5a2665a481215497">displayBelt</a> () const</td></tr>
+<tr class="separator:a03dc50f47d7a7c8d5a2665a481215497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8098d3155b63b13af60ecb0e3df9c959" id="r_a8098d3155b63b13af60ecb0e3df9c959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a8098d3155b63b13af60ecb0e3df9c959">equip</a> (std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt; item)</td></tr>
+<tr class="separator:a8098d3155b63b13af60ecb0e3df9c959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400f1fa282fdd09ea59c6142068f2d2e" id="r_a400f1fa282fdd09ea59c6142068f2d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a400f1fa282fdd09ea59c6142068f2d2e">takeOffPotion</a> ()</td></tr>
+<tr class="separator:a400f1fa282fdd09ea59c6142068f2d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad1057668f27e12c5234047bcf1ffc2" id="r_adad1057668f27e12c5234047bcf1ffc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#adad1057668f27e12c5234047bcf1ffc2">buyEquipment</a> (const std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt; &amp;_item)</td></tr>
+<tr class="separator:adad1057668f27e12c5234047bcf1ffc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acff57d80c6a3da4156eaddd54696b2" id="r_a7acff57d80c6a3da4156eaddd54696b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a7acff57d80c6a3da4156eaddd54696b2">buyWeapon</a> (const std::shared_ptr&lt; <a class="el" href="classweapon.html">weapon</a> &gt; &amp;)</td></tr>
+<tr class="separator:a7acff57d80c6a3da4156eaddd54696b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c91b1a0868c2785dfe23d57ea4fca8f" id="r_a8c91b1a0868c2785dfe23d57ea4fca8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a8c91b1a0868c2785dfe23d57ea4fca8f">buyPotion</a> (const std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt; &amp;)</td></tr>
+<tr class="separator:a8c91b1a0868c2785dfe23d57ea4fca8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5584489e8b230cb735e33b745b7da30" id="r_ac5584489e8b230cb735e33b745b7da30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ac5584489e8b230cb735e33b745b7da30">showBag</a> ()</td></tr>
+<tr class="separator:ac5584489e8b230cb735e33b745b7da30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c0abeb6ca631fd13a923f54f6a9b6f" id="r_a73c0abeb6ca631fd13a923f54f6a9b6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a73c0abeb6ca631fd13a923f54f6a9b6f">showGear</a> ()</td></tr>
+<tr class="separator:a73c0abeb6ca631fd13a923f54f6a9b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6530fe2d5ce540fc1c3c9d5f61d0c45" id="r_aa6530fe2d5ce540fc1c3c9d5f61d0c45"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#aa6530fe2d5ce540fc1c3c9d5f61d0c45">getName</a> () const</td></tr>
+<tr class="separator:aa6530fe2d5ce540fc1c3c9d5f61d0c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeba9349081f412c1efdb52eddcc988d" id="r_adeba9349081f412c1efdb52eddcc988d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#adeba9349081f412c1efdb52eddcc988d">setName</a> (const std::string &amp;<a class="el" href="classmain__char.html#aef69405a9d99e9478303bb46eaac9f41">name</a>)</td></tr>
+<tr class="separator:adeba9349081f412c1efdb52eddcc988d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08b49a96dc2c59becfdad74a2b6bb77" id="r_af08b49a96dc2c59becfdad74a2b6bb77"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#af08b49a96dc2c59becfdad74a2b6bb77">getLevel</a> () const</td></tr>
+<tr class="separator:af08b49a96dc2c59becfdad74a2b6bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68aa1b5f0e5082158638996ce5e1beab" id="r_a68aa1b5f0e5082158638996ce5e1beab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a68aa1b5f0e5082158638996ce5e1beab">setLevel</a> (unsigned int <a class="el" href="classmain__char.html#acc7437923ca2f1098bc91e9d9f3cf560">level</a>)</td></tr>
+<tr class="separator:a68aa1b5f0e5082158638996ce5e1beab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f31e92e80c50d7266a7f2ccc586733" id="r_a89f31e92e80c50d7266a7f2ccc586733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a89f31e92e80c50d7266a7f2ccc586733">usePotion</a> ()</td></tr>
+<tr class="separator:a89f31e92e80c50d7266a7f2ccc586733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c83b725251f2d4f7e42e445adeabae" id="r_a72c83b725251f2d4f7e42e445adeabae"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a72c83b725251f2d4f7e42e445adeabae">id1</a> () const</td></tr>
+<tr class="separator:a72c83b725251f2d4f7e42e445adeabae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7d63f4da98eab53de5794e2b8fdc17" id="r_a0b7d63f4da98eab53de5794e2b8fdc17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a0b7d63f4da98eab53de5794e2b8fdc17">set_id</a> (unsigned int <a class="el" href="classmain__char.html#a7b9f03f3fe8c0f56368a8f25b464e508">id</a>)</td></tr>
+<tr class="separator:a0b7d63f4da98eab53de5794e2b8fdc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcharacter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcharacter')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcharacter.html">character</a></td></tr>
+<tr class="memitem:aad29ae0a639f4f0b624222296df4534c inherit pub_methods_classcharacter" id="r_aad29ae0a639f4f0b624222296df4534c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#aad29ae0a639f4f0b624222296df4534c">character</a> ()</td></tr>
+<tr class="separator:aad29ae0a639f4f0b624222296df4534c inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02aa5c6c5ca52aee988002e87b97ee31 inherit pub_methods_classcharacter" id="r_a02aa5c6c5ca52aee988002e87b97ee31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a02aa5c6c5ca52aee988002e87b97ee31">~character</a> ()=default</td></tr>
+<tr class="separator:a02aa5c6c5ca52aee988002e87b97ee31 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d9bd6a4eb457f61343ead09c2c75c9 inherit pub_methods_classcharacter" id="r_af4d9bd6a4eb457f61343ead09c2c75c9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#af4d9bd6a4eb457f61343ead09c2c75c9">getHealth</a> () const</td></tr>
+<tr class="separator:af4d9bd6a4eb457f61343ead09c2c75c9 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b0a0290c3036d716534fb7e555f73b inherit pub_methods_classcharacter" id="r_ae0b0a0290c3036d716534fb7e555f73b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#ae0b0a0290c3036d716534fb7e555f73b">setHealth</a> (unsigned int <a class="el" href="classcharacter.html#ad00a3295813ff2742260a16af9428266">health</a>)</td></tr>
+<tr class="separator:ae0b0a0290c3036d716534fb7e555f73b inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38edfaf346a717bee44173d60a67c732 inherit pub_methods_classcharacter" id="r_a38edfaf346a717bee44173d60a67c732"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a38edfaf346a717bee44173d60a67c732">getDamage</a> () const</td></tr>
+<tr class="separator:a38edfaf346a717bee44173d60a67c732 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcf4ce7e79ee420c17cf89d4d48f4e0 inherit pub_methods_classcharacter" id="r_a9dcf4ce7e79ee420c17cf89d4d48f4e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a9dcf4ce7e79ee420c17cf89d4d48f4e0">setDamage</a> (unsigned int <a class="el" href="classcharacter.html#ac6e02d432676c6ffaae4a4a590b66346">damage</a>)</td></tr>
+<tr class="separator:a9dcf4ce7e79ee420c17cf89d4d48f4e0 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327f9c4373eb43193cbf635b11bf7fe5 inherit pub_methods_classcharacter" id="r_a327f9c4373eb43193cbf635b11bf7fe5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a327f9c4373eb43193cbf635b11bf7fe5">getArmor</a> () const</td></tr>
+<tr class="separator:a327f9c4373eb43193cbf635b11bf7fe5 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70cbdddc0479b12ffd55092367fc41c5 inherit pub_methods_classcharacter" id="r_a70cbdddc0479b12ffd55092367fc41c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a70cbdddc0479b12ffd55092367fc41c5">setArmor</a> (unsigned int <a class="el" href="classcharacter.html#aea1eea6a25192915a5f10ab596379f00">armor</a>)</td></tr>
+<tr class="separator:a70cbdddc0479b12ffd55092367fc41c5 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab875ead8115bba830e8105c770eca429 inherit pub_methods_classcharacter" id="r_ab875ead8115bba830e8105c770eca429"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#ab875ead8115bba830e8105c770eca429">getAccuracy</a> () const</td></tr>
+<tr class="separator:ab875ead8115bba830e8105c770eca429 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634a19fcf131251294ed9e4bd4561292 inherit pub_methods_classcharacter" id="r_a634a19fcf131251294ed9e4bd4561292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a634a19fcf131251294ed9e4bd4561292">setAccuracy</a> (unsigned int <a class="el" href="classcharacter.html#a5db88cffe4104ab2a390838717f19944">accuracy</a>)</td></tr>
+<tr class="separator:a634a19fcf131251294ed9e4bd4561292 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b92b53509a773c287ed2b7a4016f9e inherit pub_methods_classcharacter" id="r_ad4b92b53509a773c287ed2b7a4016f9e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#ad4b92b53509a773c287ed2b7a4016f9e">getStun</a> () const</td></tr>
+<tr class="separator:ad4b92b53509a773c287ed2b7a4016f9e inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a80cb32483bee7f3f968cb96968b49e inherit pub_methods_classcharacter" id="r_a8a80cb32483bee7f3f968cb96968b49e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a8a80cb32483bee7f3f968cb96968b49e">setStun</a> (unsigned int <a class="el" href="classcharacter.html#a2ee2716b97e1353dbc5eaa2bce56c417">stun</a>)</td></tr>
+<tr class="separator:a8a80cb32483bee7f3f968cb96968b49e inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c591ec92414668628f52b22e559a8a9 inherit pub_methods_classcharacter" id="r_a5c591ec92414668628f52b22e559a8a9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a5c591ec92414668628f52b22e559a8a9">getDodge</a> () const</td></tr>
+<tr class="separator:a5c591ec92414668628f52b22e559a8a9 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5906ffa7972122ee04df23dd6c399a4 inherit pub_methods_classcharacter" id="r_af5906ffa7972122ee04df23dd6c399a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#af5906ffa7972122ee04df23dd6c399a4">setDodge</a> (unsigned int <a class="el" href="classcharacter.html#a5fedfaef12b5fbfd25cebb6a249cffe4">dodge</a>)</td></tr>
+<tr class="separator:af5906ffa7972122ee04df23dd6c399a4 inherit pub_methods_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a6eecf5e63ad4cd3d5acc968a229b4e5e" id="r_a6eecf5e63ad4cd3d5acc968a229b4e5e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="slot__of__equipment_8h.html#ad7d5d54cac1cebaefb608c6e37efd4ae">slotOfEquipment</a>, std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a6eecf5e63ad4cd3d5acc968a229b4e5e">Equipment</a></td></tr>
+<tr class="separator:a6eecf5e63ad4cd3d5acc968a229b4e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6096723441eb5f04f799abbc056874cb" id="r_a6096723441eb5f04f799abbc056874cb"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt;, <a class="el" href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">BELT_SIZE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a6096723441eb5f04f799abbc056874cb">Belt</a> {}</td></tr>
+<tr class="separator:a6096723441eb5f04f799abbc056874cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac98fd33055906677f40fc1d632028ccc" id="r_ac98fd33055906677f40fc1d632028ccc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbag.html">bag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ac98fd33055906677f40fc1d632028ccc">Bag</a> {}</td></tr>
+<tr class="separator:ac98fd33055906677f40fc1d632028ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76ce77872c0c269c856291e8183bdc3" id="r_ab76ce77872c0c269c856291e8183bdc3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classweapon.html">weapon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ab76ce77872c0c269c856291e8183bdc3">gun</a></td></tr>
+<tr class="separator:ab76ce77872c0c269c856291e8183bdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37855cfa52e55ad61a3de06d2fa8762" id="r_ac37855cfa52e55ad61a3de06d2fa8762"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcoins.html">coins</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#ac37855cfa52e55ad61a3de06d2fa8762">balance</a> {}</td></tr>
+<tr class="separator:ac37855cfa52e55ad61a3de06d2fa8762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a7b9f03f3fe8c0f56368a8f25b464e508" id="r_a7b9f03f3fe8c0f56368a8f25b464e508"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a7b9f03f3fe8c0f56368a8f25b464e508">id</a> {}</td></tr>
+<tr class="separator:a7b9f03f3fe8c0f56368a8f25b464e508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0095a3f0f04cc94a182d4935a509a2da" id="r_a0095a3f0f04cc94a182d4935a509a2da"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a0095a3f0f04cc94a182d4935a509a2da">experience</a> = 0</td></tr>
+<tr class="separator:a0095a3f0f04cc94a182d4935a509a2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd717740d045623d31c876c159356043" id="r_abd717740d045623d31c876c159356043"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#abd717740d045623d31c876c159356043">experienceToLevelUp</a> = 100</td></tr>
+<tr class="separator:abd717740d045623d31c876c159356043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354fd4da4ba571a81498a5581011bb78" id="r_a354fd4da4ba571a81498a5581011bb78"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#a354fd4da4ba571a81498a5581011bb78">currentPosition</a></td></tr>
+<tr class="separator:a354fd4da4ba571a81498a5581011bb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7437923ca2f1098bc91e9d9f3cf560" id="r_acc7437923ca2f1098bc91e9d9f3cf560"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#acc7437923ca2f1098bc91e9d9f3cf560">level</a> {}</td></tr>
+<tr class="separator:acc7437923ca2f1098bc91e9d9f3cf560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef69405a9d99e9478303bb46eaac9f41" id="r_aef69405a9d99e9478303bb46eaac9f41"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmain__char.html#aef69405a9d99e9478303bb46eaac9f41">name</a> {}</td></tr>
+<tr class="separator:aef69405a9d99e9478303bb46eaac9f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_classcharacter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcharacter')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="classcharacter.html">character</a></td></tr>
+<tr class="memitem:ad00a3295813ff2742260a16af9428266 inherit pro_attribs_classcharacter" id="r_ad00a3295813ff2742260a16af9428266"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#ad00a3295813ff2742260a16af9428266">health</a> {}</td></tr>
+<tr class="separator:ad00a3295813ff2742260a16af9428266 inherit pro_attribs_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e02d432676c6ffaae4a4a590b66346 inherit pro_attribs_classcharacter" id="r_ac6e02d432676c6ffaae4a4a590b66346"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#ac6e02d432676c6ffaae4a4a590b66346">damage</a> {}</td></tr>
+<tr class="separator:ac6e02d432676c6ffaae4a4a590b66346 inherit pro_attribs_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1eea6a25192915a5f10ab596379f00 inherit pro_attribs_classcharacter" id="r_aea1eea6a25192915a5f10ab596379f00"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#aea1eea6a25192915a5f10ab596379f00">armor</a> {}</td></tr>
+<tr class="separator:aea1eea6a25192915a5f10ab596379f00 inherit pro_attribs_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db88cffe4104ab2a390838717f19944 inherit pro_attribs_classcharacter" id="r_a5db88cffe4104ab2a390838717f19944"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a5db88cffe4104ab2a390838717f19944">accuracy</a> {}</td></tr>
+<tr class="separator:a5db88cffe4104ab2a390838717f19944 inherit pro_attribs_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee2716b97e1353dbc5eaa2bce56c417 inherit pro_attribs_classcharacter" id="r_a2ee2716b97e1353dbc5eaa2bce56c417"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a2ee2716b97e1353dbc5eaa2bce56c417">stun</a> {}</td></tr>
+<tr class="separator:a2ee2716b97e1353dbc5eaa2bce56c417 inherit pro_attribs_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fedfaef12b5fbfd25cebb6a249cffe4 inherit pro_attribs_classcharacter" id="r_a5fedfaef12b5fbfd25cebb6a249cffe4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcharacter.html#a5fedfaef12b5fbfd25cebb6a249cffe4">dodge</a> {}</td></tr>
+<tr class="separator:a5fedfaef12b5fbfd25cebb6a249cffe4 inherit pro_attribs_classcharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a582d0f96561432ed1877a1649d1048fc" name="a582d0f96561432ed1877a1649d1048fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a582d0f96561432ed1877a1649d1048fc">&#9670;&#160;</a></span>main_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">main_char::main_char </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_health</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_armor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_accuracy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_stun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_dodge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcoins.html">coins</a> &amp;&#160;</td>
+          <td class="paramname"><em>cash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fad025242d8ad194f65fc4816969e21" name="a3fad025242d8ad194f65fc4816969e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fad025242d8ad194f65fc4816969e21">&#9670;&#160;</a></span>~main_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">main_char::~main_char </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="adad1057668f27e12c5234047bcf1ffc2" name="adad1057668f27e12c5234047bcf1ffc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad1057668f27e12c5234047bcf1ffc2">&#9670;&#160;</a></span>buyEquipment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::buyEquipment </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>_item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c91b1a0868c2785dfe23d57ea4fca8f" name="a8c91b1a0868c2785dfe23d57ea4fca8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c91b1a0868c2785dfe23d57ea4fca8f">&#9670;&#160;</a></span>buyPotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::buyPotion </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>original</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7acff57d80c6a3da4156eaddd54696b2" name="a7acff57d80c6a3da4156eaddd54696b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acff57d80c6a3da4156eaddd54696b2">&#9670;&#160;</a></span>buyWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::buyWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classweapon.html">weapon</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>original</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03dc50f47d7a7c8d5a2665a481215497" name="a03dc50f47d7a7c8d5a2665a481215497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03dc50f47d7a7c8d5a2665a481215497">&#9670;&#160;</a></span>displayBelt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::displayBelt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af52517b1474691d87ca8f179280cef9a" name="af52517b1474691d87ca8f179280cef9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af52517b1474691d87ca8f179280cef9a">&#9670;&#160;</a></span>equip() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::equip </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8098d3155b63b13af60ecb0e3df9c959" name="a8098d3155b63b13af60ecb0e3df9c959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8098d3155b63b13af60ecb0e3df9c959">&#9670;&#160;</a></span>equip() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::equip </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae535a58b9ea0d6d456be0c6a6ee31c44" name="ae535a58b9ea0d6d456be0c6a6ee31c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae535a58b9ea0d6d456be0c6a6ee31c44">&#9670;&#160;</a></span>equip() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::equip </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classweapon.html">weapon</a> &gt;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f64ed3f32a722425fda3b99c7214d31" name="a1f64ed3f32a722425fda3b99c7214d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f64ed3f32a722425fda3b99c7214d31">&#9670;&#160;</a></span>getCurrentPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::getCurrentPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c2b81e4399fc94a3906f7705ade11d9" name="a9c2b81e4399fc94a3906f7705ade11d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2b81e4399fc94a3906f7705ade11d9">&#9670;&#160;</a></span>getExperience()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::getExperience </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4815067ec6df2ab6413aa29aced5d26f" name="a4815067ec6df2ab6413aa29aced5d26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4815067ec6df2ab6413aa29aced5d26f">&#9670;&#160;</a></span>getExperienceToLevelUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::getExperienceToLevelUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af08b49a96dc2c59becfdad74a2b6bb77" name="af08b49a96dc2c59becfdad74a2b6bb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08b49a96dc2c59becfdad74a2b6bb77">&#9670;&#160;</a></span>getLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::getLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6530fe2d5ce540fc1c3c9d5f61d0c45" name="aa6530fe2d5ce540fc1c3c9d5f61d0c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6530fe2d5ce540fc1c3c9d5f61d0c45">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; main_char::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72c83b725251f2d4f7e42e445adeabae" name="a72c83b725251f2d4f7e42e445adeabae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c83b725251f2d4f7e42e445adeabae">&#9670;&#160;</a></span>id1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::id1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad347b8bead5553e551a2c346ef7902f1" name="ad347b8bead5553e551a2c346ef7902f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad347b8bead5553e551a2c346ef7902f1">&#9670;&#160;</a></span>isBeltFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool main_char::isBeltFull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b7d63f4da98eab53de5794e2b8fdc17" name="a0b7d63f4da98eab53de5794e2b8fdc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7d63f4da98eab53de5794e2b8fdc17">&#9670;&#160;</a></span>set_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::set_id </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99d6d28202794560ea78ba2c1149a4be" name="a99d6d28202794560ea78ba2c1149a4be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d6d28202794560ea78ba2c1149a4be">&#9670;&#160;</a></span>setCurrentPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::setCurrentPosition </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>current_position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af25078875b9d47495ccbf8c36b439cca" name="af25078875b9d47495ccbf8c36b439cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25078875b9d47495ccbf8c36b439cca">&#9670;&#160;</a></span>setExperience()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::setExperience </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>experience</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ba7462db0c8f15ba2dc39fb18f2abd7" name="a9ba7462db0c8f15ba2dc39fb18f2abd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba7462db0c8f15ba2dc39fb18f2abd7">&#9670;&#160;</a></span>setExperienceToLevelUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::setExperienceToLevelUp </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>experience_to_level_up</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68aa1b5f0e5082158638996ce5e1beab" name="a68aa1b5f0e5082158638996ce5e1beab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68aa1b5f0e5082158638996ce5e1beab">&#9670;&#160;</a></span>setLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::setLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeba9349081f412c1efdb52eddcc988d" name="adeba9349081f412c1efdb52eddcc988d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeba9349081f412c1efdb52eddcc988d">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5584489e8b230cb735e33b745b7da30" name="ac5584489e8b230cb735e33b745b7da30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5584489e8b230cb735e33b745b7da30">&#9670;&#160;</a></span>showBag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::showBag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73c0abeb6ca631fd13a923f54f6a9b6f" name="a73c0abeb6ca631fd13a923f54f6a9b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c0abeb6ca631fd13a923f54f6a9b6f">&#9670;&#160;</a></span>showGear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::showGear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6061401c77e1967f520667072f28471b" name="a6061401c77e1967f520667072f28471b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6061401c77e1967f520667072f28471b">&#9670;&#160;</a></span>takeOffEquipment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::takeOffEquipment </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classequipment.html">equipment</a> &gt;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a400f1fa282fdd09ea59c6142068f2d2e" name="a400f1fa282fdd09ea59c6142068f2d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400f1fa282fdd09ea59c6142068f2d2e">&#9670;&#160;</a></span>takeOffPotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::takeOffPotion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8d78a869458e21b44cc4d46b884c6ec" name="ac8d78a869458e21b44cc4d46b884c6ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d78a869458e21b44cc4d46b884c6ec">&#9670;&#160;</a></span>takeOffWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::takeOffWeapon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f31e92e80c50d7266a7f2ccc586733" name="a89f31e92e80c50d7266a7f2ccc586733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f31e92e80c50d7266a7f2ccc586733">&#9670;&#160;</a></span>usePotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_char::usePotion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ac98fd33055906677f40fc1d632028ccc" name="ac98fd33055906677f40fc1d632028ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98fd33055906677f40fc1d632028ccc">&#9670;&#160;</a></span>Bag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbag.html">bag</a> main_char::Bag {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac37855cfa52e55ad61a3de06d2fa8762" name="ac37855cfa52e55ad61a3de06d2fa8762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37855cfa52e55ad61a3de06d2fa8762">&#9670;&#160;</a></span>balance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcoins.html">coins</a> main_char::balance {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6096723441eb5f04f799abbc056874cb" name="a6096723441eb5f04f799abbc056874cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6096723441eb5f04f799abbc056874cb">&#9670;&#160;</a></span>Belt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::shared_ptr&lt;<a class="el" href="classpotion.html">potion</a>&gt;, <a class="el" href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">BELT_SIZE</a>&gt; main_char::Belt {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a354fd4da4ba571a81498a5581011bb78" name="a354fd4da4ba571a81498a5581011bb78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354fd4da4ba571a81498a5581011bb78">&#9670;&#160;</a></span>currentPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::currentPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6eecf5e63ad4cd3d5acc968a229b4e5e" name="a6eecf5e63ad4cd3d5acc968a229b4e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eecf5e63ad4cd3d5acc968a229b4e5e">&#9670;&#160;</a></span>Equipment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;<a class="el" href="slot__of__equipment_8h.html#ad7d5d54cac1cebaefb608c6e37efd4ae">slotOfEquipment</a>, std::shared_ptr&lt;<a class="el" href="classequipment.html">equipment</a>&gt; &gt; main_char::Equipment</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0095a3f0f04cc94a182d4935a509a2da" name="a0095a3f0f04cc94a182d4935a509a2da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0095a3f0f04cc94a182d4935a509a2da">&#9670;&#160;</a></span>experience</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::experience = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd717740d045623d31c876c159356043" name="abd717740d045623d31c876c159356043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd717740d045623d31c876c159356043">&#9670;&#160;</a></span>experienceToLevelUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::experienceToLevelUp = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab76ce77872c0c269c856291e8183bdc3" name="ab76ce77872c0c269c856291e8183bdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76ce77872c0c269c856291e8183bdc3">&#9670;&#160;</a></span>gun</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classweapon.html">weapon</a>&gt; main_char::gun</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b9f03f3fe8c0f56368a8f25b464e508" name="a7b9f03f3fe8c0f56368a8f25b464e508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9f03f3fe8c0f56368a8f25b464e508">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::id {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc7437923ca2f1098bc91e9d9f3cf560" name="acc7437923ca2f1098bc91e9d9f3cf560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7437923ca2f1098bc91e9d9f3cf560">&#9670;&#160;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int main_char::level {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef69405a9d99e9478303bb46eaac9f41" name="aef69405a9d99e9478303bb46eaac9f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef69405a9d99e9478303bb46eaac9f41">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string main_char::name {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/characters/main_char/<a class="el" href="main__char_8h_source.html">main_char.h</a></li>
+<li>src/characters/main_char/<a class="el" href="main__char_8cpp.html">main_char.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

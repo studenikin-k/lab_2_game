@@ -1,0 +1,115 @@
+\doxysection{Класс map}
+\hypertarget{classmap}{}\label{classmap}\index{map@{map}}
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmap_abedfe6722ad83929739afd899c88fea4}{map}} ()
+\item 
+\mbox{\hyperlink{classmap_a658e36b25f9cf1a1505f087f449c5bfd}{\texorpdfstring{$\sim$}{\string~}map}} ()=default
+\item 
+void \mbox{\hyperlink{classmap_a09c52f729579e807cf411a2060782a3f}{start\+Travel}} (\mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&hero) const
+\item 
+bool \mbox{\hyperlink{classmap_af66fb60029626fefc2451b9c9b6c9118}{is\+Shop\+Location}} (const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&hero) const
+\item 
+bool \mbox{\hyperlink{classmap_aef213bc3074a873ac83e881fa7e262ab}{is\+Battle\+Location}} (const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&hero) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classopponent}{opponent}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classmap_a43a7f896aad55780f68dff706ec3f424}{get\+Opponents}} (const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&hero) const
+\item 
+\mbox{\hyperlink{classshop}{shop}} \mbox{\hyperlink{classmap_a1ef7dac3d1306b5804ed77d6157743bc}{get\+Shop}} (const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&hero) const
+\item 
+void \mbox{\hyperlink{classmap_a6fffc11160a053e83b713f9cd06b0b55}{display\+Travel\+Options}} (int current\+Location\+Index) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classopponent}{opponent}} $>$ $>$ \mbox{\hyperlink{classmap_a1dd8cb045400499d9a2948e0d61189db}{all\+Opponents}}
+\item 
+std\+::array$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlocation}{location}} $>$, 10 $>$ \mbox{\hyperlink{classmap_a874517cdb8fb80d69388ec66176ab380}{location\+Map}}
+\item 
+std\+::array$<$ std\+::array$<$ int, 4 $>$, 10 $>$ \mbox{\hyperlink{classmap_a3d954dc092435b5da4256a4a3ebe086b}{location\+Connections}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classmap_abedfe6722ad83929739afd899c88fea4}\label{classmap_abedfe6722ad83929739afd899c88fea4} 
+\index{map@{map}!map@{map}}
+\index{map@{map}!map@{map}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily map\+::map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classmap_a658e36b25f9cf1a1505f087f449c5bfd}\label{classmap_a658e36b25f9cf1a1505f087f449c5bfd} 
+\index{map@{map}!````~map@{\texorpdfstring{$\sim$}{\string~}map}}
+\index{````~map@{\texorpdfstring{$\sim$}{\string~}map}!map@{map}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}map()}{\string~map()}}
+{\footnotesize\ttfamily map\+::\texorpdfstring{$\sim$}{\string~}map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classmap_a6fffc11160a053e83b713f9cd06b0b55}\label{classmap_a6fffc11160a053e83b713f9cd06b0b55} 
+\index{map@{map}!displayTravelOptions@{displayTravelOptions}}
+\index{displayTravelOptions@{displayTravelOptions}!map@{map}}
+\doxysubsubsection{\texorpdfstring{displayTravelOptions()}{displayTravelOptions()}}
+{\footnotesize\ttfamily void map\+::display\+Travel\+Options (\begin{DoxyParamCaption}\item[{int}]{current\+Location\+Index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmap_a43a7f896aad55780f68dff706ec3f424}\label{classmap_a43a7f896aad55780f68dff706ec3f424} 
+\index{map@{map}!getOpponents@{getOpponents}}
+\index{getOpponents@{getOpponents}!map@{map}}
+\doxysubsubsection{\texorpdfstring{getOpponents()}{getOpponents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classopponent}{opponent}} \texorpdfstring{$\ast$}{*} $>$ map\+::get\+Opponents (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{hero }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmap_a1ef7dac3d1306b5804ed77d6157743bc}\label{classmap_a1ef7dac3d1306b5804ed77d6157743bc} 
+\index{map@{map}!getShop@{getShop}}
+\index{getShop@{getShop}!map@{map}}
+\doxysubsubsection{\texorpdfstring{getShop()}{getShop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshop}{shop}} map\+::get\+Shop (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{hero }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmap_aef213bc3074a873ac83e881fa7e262ab}\label{classmap_aef213bc3074a873ac83e881fa7e262ab} 
+\index{map@{map}!isBattleLocation@{isBattleLocation}}
+\index{isBattleLocation@{isBattleLocation}!map@{map}}
+\doxysubsubsection{\texorpdfstring{isBattleLocation()}{isBattleLocation()}}
+{\footnotesize\ttfamily bool map\+::is\+Battle\+Location (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{hero }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmap_af66fb60029626fefc2451b9c9b6c9118}\label{classmap_af66fb60029626fefc2451b9c9b6c9118} 
+\index{map@{map}!isShopLocation@{isShopLocation}}
+\index{isShopLocation@{isShopLocation}!map@{map}}
+\doxysubsubsection{\texorpdfstring{isShopLocation()}{isShopLocation()}}
+{\footnotesize\ttfamily bool map\+::is\+Shop\+Location (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{hero }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmap_a09c52f729579e807cf411a2060782a3f}\label{classmap_a09c52f729579e807cf411a2060782a3f} 
+\index{map@{map}!startTravel@{startTravel}}
+\index{startTravel@{startTravel}!map@{map}}
+\doxysubsubsection{\texorpdfstring{startTravel()}{startTravel()}}
+{\footnotesize\ttfamily void map\+::start\+Travel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{hero }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classmap_a1dd8cb045400499d9a2948e0d61189db}\label{classmap_a1dd8cb045400499d9a2948e0d61189db} 
+\index{map@{map}!allOpponents@{allOpponents}}
+\index{allOpponents@{allOpponents}!map@{map}}
+\doxysubsubsection{\texorpdfstring{allOpponents}{allOpponents}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classopponent}{opponent}}$>$ $>$ map\+::all\+Opponents}
+
+\Hypertarget{classmap_a3d954dc092435b5da4256a4a3ebe086b}\label{classmap_a3d954dc092435b5da4256a4a3ebe086b} 
+\index{map@{map}!locationConnections@{locationConnections}}
+\index{locationConnections@{locationConnections}!map@{map}}
+\doxysubsubsection{\texorpdfstring{locationConnections}{locationConnections}}
+{\footnotesize\ttfamily std\+::array$<$std\+::array$<$int, 4$>$, 10$>$ map\+::location\+Connections \{\}}
+
+\Hypertarget{classmap_a874517cdb8fb80d69388ec66176ab380}\label{classmap_a874517cdb8fb80d69388ec66176ab380} 
+\index{map@{map}!locationMap@{locationMap}}
+\index{locationMap@{locationMap}!map@{map}}
+\doxysubsubsection{\texorpdfstring{locationMap}{locationMap}}
+{\footnotesize\ttfamily std\+::array$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classlocation}{location}}$>$, 10$>$ map\+::location\+Map}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/location/map/\mbox{\hyperlink{map_8h}{map.\+h}}\item 
+src/location/map/\mbox{\hyperlink{map_8cpp}{map.\+cpp}}\end{DoxyCompactItemize}

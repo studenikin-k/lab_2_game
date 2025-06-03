@@ -1,0 +1,15 @@
+<map id="potion" name="potion">
+<area shape="rect" id="Node000001" title=" " alt="" coords="371,5,433,31"/>
+<area shape="rect" id="Node000002" href="$classaccuracyPotion.html" title=" " alt="" coords="5,79,127,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,31,121,81,120,76,356,26"/>
+<area shape="rect" id="Node000003" href="$classarmorPotion.html" title=" " alt="" coords="151,79,253,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="358,38,235,81,233,76,356,33"/>
+<area shape="rect" id="Node000004" href="$classdamagePotion.html" title=" " alt="" coords="277,79,393,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="383,43,348,80,344,77,380,39"/>
+<area shape="rect" id="Node000005" href="$classdodgePotion.html" title=" " alt="" coords="417,79,520,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="424,39,460,77,456,80,421,43"/>
+<area shape="rect" id="Node000006" href="$classhealthPotion.html" title=" " alt="" coords="545,79,649,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="447,33,566,76,564,81,445,38"/>
+<area shape="rect" id="Node000007" href="$classstunPotion.html" title=" " alt="" coords="673,79,763,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="447,27,673,77,672,82,446,32"/>
+</map>
