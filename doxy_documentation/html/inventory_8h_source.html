@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Исходный файл include/inventory/inventory.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f7816daf19f7688cd38b24e255f5c4a9.html">inventory</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">inventory.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="inventory_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LAB_2_GAME_INVENTORY_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LAB_2_GAME_INVENTORY_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// класс абстракция для всего, что связано с предметами</span></div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classinventory.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="classinventory.html">inventory</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classinventory.html#a809be078023c90addbc38762007b2568">    9</a></span>    <a class="code hl_function" href="classinventory.html#a809be078023c90addbc38762007b2568">inventory</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classinventory.html#a3e22b10ae740908ebc1a1a6e1a6bc0fd">   10</a></span>    <a class="code hl_function" href="classinventory.html#a3e22b10ae740908ebc1a1a6e1a6bc0fd">~inventory</a>()= <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [[nodiscard]] <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="classinventory.html#a818de77acf2aba7a3f5cc34108ebf063">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classinventory.html#a2692929ab6f198d2dd88da4707ebfdad">setName</a>(<span class="keyword">const</span> std::string &amp;<a class="code hl_variable" href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">name</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classinventory.html#a3644dce3a212a4d963dee29146fe8b14">getLevel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classinventory.html#a8d6aa2286c23e64049f7494d0a66a82a">setLevel</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classinventory.html#a821576df38ac9853f0635672f68f898c">level</a>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">   20</a></span>    std::string <a class="code hl_variable" href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">name</a>{};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classinventory.html#a821576df38ac9853f0635672f68f898c">   21</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classinventory.html#a821576df38ac9853f0635672f68f898c">level</a>{};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassinventory_html"><div class="ttname"><a href="classinventory.html">inventory</a></div><div class="ttdef"><b>Definition</b> inventory.h:6</div></div>
+<div class="ttc" id="aclassinventory_html_a16b20eaa2df8345e98ceeff328595dc0"><div class="ttname"><a href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">inventory::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> inventory.h:20</div></div>
+<div class="ttc" id="aclassinventory_html_a2692929ab6f198d2dd88da4707ebfdad"><div class="ttname"><a href="classinventory.html#a2692929ab6f198d2dd88da4707ebfdad">inventory::setName</a></div><div class="ttdeci">void setName(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> inventory.cpp:8</div></div>
+<div class="ttc" id="aclassinventory_html_a3644dce3a212a4d963dee29146fe8b14"><div class="ttname"><a href="classinventory.html#a3644dce3a212a4d963dee29146fe8b14">inventory::getLevel</a></div><div class="ttdeci">unsigned int getLevel() const</div><div class="ttdef"><b>Definition</b> inventory.cpp:12</div></div>
+<div class="ttc" id="aclassinventory_html_a3e22b10ae740908ebc1a1a6e1a6bc0fd"><div class="ttname"><a href="classinventory.html#a3e22b10ae740908ebc1a1a6e1a6bc0fd">inventory::~inventory</a></div><div class="ttdeci">~inventory()=default</div></div>
+<div class="ttc" id="aclassinventory_html_a809be078023c90addbc38762007b2568"><div class="ttname"><a href="classinventory.html#a809be078023c90addbc38762007b2568">inventory::inventory</a></div><div class="ttdeci">inventory()=default</div></div>
+<div class="ttc" id="aclassinventory_html_a818de77acf2aba7a3f5cc34108ebf063"><div class="ttname"><a href="classinventory.html#a818de77acf2aba7a3f5cc34108ebf063">inventory::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> inventory.cpp:4</div></div>
+<div class="ttc" id="aclassinventory_html_a821576df38ac9853f0635672f68f898c"><div class="ttname"><a href="classinventory.html#a821576df38ac9853f0635672f68f898c">inventory::level</a></div><div class="ttdeci">unsigned int level</div><div class="ttdef"><b>Definition</b> inventory.h:21</div></div>
+<div class="ttc" id="aclassinventory_html_a8d6aa2286c23e64049f7494d0a66a82a"><div class="ttname"><a href="classinventory.html#a8d6aa2286c23e64049f7494d0a66a82a">inventory::setLevel</a></div><div class="ttdeci">void setLevel(unsigned int level)</div><div class="ttdef"><b>Definition</b> inventory.cpp:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

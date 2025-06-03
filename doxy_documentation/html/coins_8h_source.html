@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Исходный файл include/inventory/coins/coins.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f7816daf19f7688cd38b24e255f5c4a9.html">inventory</a></li><li class="navelem"><a class="el" href="dir_5ce1685bdae205eca753986943467592.html">coins</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">coins.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="coins_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LAB_2_GAME_COINS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LAB_2_GAME_COINS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classcoins.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="classcoins.html">coins</a>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    [[nodiscard]] std::string  <a class="code hl_function" href="classcoins.html#afe4b51123bcd76a20d6cdba5c6a589cc">showMoney</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    [[nodiscard]] std::string  <a class="code hl_function" href="classcoins.html#ac3959a3d7527b4da80151e72fe4f12eb">showSellPrice</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classcoins.html#ace7b1a4e26cde4b0855ef989c51d8d87">getCopper</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcoins.html#a4b0e3691e54699f81e6eb1867e6788f8">setCopper</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classcoins.html#a7bef06f9a78118aeeafa51bb84ae58f0">copper</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classcoins.html#a7bef06f9a78118aeeafa51bb84ae58f0">   15</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classcoins.html#a7bef06f9a78118aeeafa51bb84ae58f0">copper</a>; <span class="comment">// валюта, которая будет иметь перерасчёт</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// 1 золото = 100 серебра , 1 серебра = 100 меди</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span><span class="comment">//LAB_2_GAME_COINS_H</span></div>
+<div class="ttc" id="aclasscoins_html"><div class="ttname"><a href="classcoins.html">coins</a></div><div class="ttdef"><b>Definition</b> coins.h:4</div></div>
+<div class="ttc" id="aclasscoins_html_a4b0e3691e54699f81e6eb1867e6788f8"><div class="ttname"><a href="classcoins.html#a4b0e3691e54699f81e6eb1867e6788f8">coins::setCopper</a></div><div class="ttdeci">void setCopper(unsigned int copper)</div><div class="ttdef"><b>Definition</b> coins.cpp:33</div></div>
+<div class="ttc" id="aclasscoins_html_a7bef06f9a78118aeeafa51bb84ae58f0"><div class="ttname"><a href="classcoins.html#a7bef06f9a78118aeeafa51bb84ae58f0">coins::copper</a></div><div class="ttdeci">unsigned int copper</div><div class="ttdef"><b>Definition</b> coins.h:15</div></div>
+<div class="ttc" id="aclasscoins_html_ac3959a3d7527b4da80151e72fe4f12eb"><div class="ttname"><a href="classcoins.html#ac3959a3d7527b4da80151e72fe4f12eb">coins::showSellPrice</a></div><div class="ttdeci">std::string showSellPrice() const</div><div class="ttdef"><b>Definition</b> coins.cpp:16</div></div>
+<div class="ttc" id="aclasscoins_html_ace7b1a4e26cde4b0855ef989c51d8d87"><div class="ttname"><a href="classcoins.html#ace7b1a4e26cde4b0855ef989c51d8d87">coins::getCopper</a></div><div class="ttdeci">unsigned int getCopper() const</div><div class="ttdef"><b>Definition</b> coins.cpp:29</div></div>
+<div class="ttc" id="aclasscoins_html_afe4b51123bcd76a20d6cdba5c6a589cc"><div class="ttname"><a href="classcoins.html#afe4b51123bcd76a20d6cdba5c6a589cc">coins::showMoney</a></div><div class="ttdeci">std::string showMoney() const</div><div class="ttdef"><b>Definition</b> coins.cpp:4</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

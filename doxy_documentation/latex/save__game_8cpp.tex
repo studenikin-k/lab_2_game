@@ -1,0 +1,60 @@
+\doxysection{Файл src/save\+\_\+system/save\+\_\+game.cpp}
+\hypertarget{save__game_8cpp}{}\label{save__game_8cpp}\index{src/save\_system/save\_game.cpp@{src/save\_system/save\_game.cpp}}
+{\ttfamily \#include "{}../../include/all\+\_\+headers.\+h"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Граф включаемых заголовочных файлов для save\+\_\+game.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{save__game_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{save__game_8cpp_a4c5b0aee33a866961f5df8b6cbda53b8}{PROJECT\+\_\+\+ROOT\+\_\+\+PATH}}~PROJECT\+\_\+\+ROOT\+\_\+\+PATH\+\_\+\+DEF
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{save__game_8cpp_a32e42e9d87b29a63950fd5cb38ae9a48}{get\+Save\+Path}} ()
+\item 
+bool \mbox{\hyperlink{save__game_8cpp_a01c5162c414a467a5689ddaa340b0c21}{exec\+SQL}} (sqlite3 \texorpdfstring{$\ast$}{*}db, const std\+::string \&sql)
+\item 
+void \mbox{\hyperlink{save__game_8cpp_acc785a3493ef3d9a1fffa31a2fbfb7b6}{save\+Character\+To\+Database}} (const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&\mbox{\hyperlink{classcharacter}{character}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Макросы}
+\Hypertarget{save__game_8cpp_a4c5b0aee33a866961f5df8b6cbda53b8}\label{save__game_8cpp_a4c5b0aee33a866961f5df8b6cbda53b8} 
+\index{save\_game.cpp@{save\_game.cpp}!PROJECT\_ROOT\_PATH@{PROJECT\_ROOT\_PATH}}
+\index{PROJECT\_ROOT\_PATH@{PROJECT\_ROOT\_PATH}!save\_game.cpp@{save\_game.cpp}}
+\doxysubsubsection{\texorpdfstring{PROJECT\_ROOT\_PATH}{PROJECT\_ROOT\_PATH}}
+{\footnotesize\ttfamily \#define PROJECT\+\_\+\+ROOT\+\_\+\+PATH~PROJECT\+\_\+\+ROOT\+\_\+\+PATH\+\_\+\+DEF}
+
+
+
+\doxysubsection{Функции}
+\Hypertarget{save__game_8cpp_a01c5162c414a467a5689ddaa340b0c21}\label{save__game_8cpp_a01c5162c414a467a5689ddaa340b0c21} 
+\index{save\_game.cpp@{save\_game.cpp}!execSQL@{execSQL}}
+\index{execSQL@{execSQL}!save\_game.cpp@{save\_game.cpp}}
+\doxysubsubsection{\texorpdfstring{execSQL()}{execSQL()}}
+{\footnotesize\ttfamily bool exec\+SQL (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
+
+\Hypertarget{save__game_8cpp_a32e42e9d87b29a63950fd5cb38ae9a48}\label{save__game_8cpp_a32e42e9d87b29a63950fd5cb38ae9a48} 
+\index{save\_game.cpp@{save\_game.cpp}!getSavePath@{getSavePath}}
+\index{getSavePath@{getSavePath}!save\_game.cpp@{save\_game.cpp}}
+\doxysubsubsection{\texorpdfstring{getSavePath()}{getSavePath()}}
+{\footnotesize\ttfamily std\+::string get\+Save\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{save__game_8cpp_acc785a3493ef3d9a1fffa31a2fbfb7b6}\label{save__game_8cpp_acc785a3493ef3d9a1fffa31a2fbfb7b6} 
+\index{save\_game.cpp@{save\_game.cpp}!saveCharacterToDatabase@{saveCharacterToDatabase}}
+\index{saveCharacterToDatabase@{saveCharacterToDatabase}!save\_game.cpp@{save\_game.cpp}}
+\doxysubsubsection{\texorpdfstring{saveCharacterToDatabase()}{saveCharacterToDatabase()}}
+{\footnotesize\ttfamily void save\+Character\+To\+Database (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{character }\end{DoxyParamCaption})}
+

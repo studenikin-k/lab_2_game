@@ -1,0 +1,9 @@
+<map id="main_char" name="main_char">
+<area shape="rect" id="Node000001" title=" " alt="" coords="91,93,181,119"/>
+<area shape="rect" id="Node000002" href="$classcharacter.html" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,38,125,91,122,95,67,42"/>
+<area shape="rect" id="Node000003" href="$classbag.html" title=" " alt="" coords="113,5,159,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,45,139,93,133,93,133,45"/>
+<area shape="rect" id="Node000004" href="$classcoins.html" title=" " alt="" coords="184,5,240,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,43,173,71,150,95,146,91,169,68,192,40"/>
+</map>

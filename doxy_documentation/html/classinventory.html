@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Класс inventory</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classinventory-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс inventory</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="inventory_8h_source.html">inventory.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:inventory:</div>
+<div class="dyncontent">
+<div class="center"><img src="classinventory__inherit__graph.png" border="0" usemap="#ainventory_inherit__map" alt="Inheritance graph"/></div>
+<map name="ainventory_inherit__map" id="ainventory_inherit__map">
+<area shape="rect" title=" " alt="" coords="250,5,334,31"/>
+<area shape="rect" href="classequipment.html" title=" " alt="" coords="193,79,285,104"/>
+<area shape="poly" title=" " alt="" coords="277,43,249,80,245,77,273,40"/>
+<area shape="rect" href="classweapon.html" title=" " alt="" coords="309,79,382,104"/>
+<area shape="poly" title=" " alt="" coords="311,40,339,77,335,80,307,43"/>
+<area shape="rect" href="classBoots.html" title=" " alt="" coords="5,152,64,177"/>
+<area shape="poly" title=" " alt="" coords="194,111,65,156,63,151,192,106"/>
+<area shape="rect" href="classChestplate.html" title=" " alt="" coords="89,152,181,177"/>
+<area shape="poly" title=" " alt="" coords="212,114,153,154,150,150,209,110"/>
+<area shape="rect" href="classGloves.html" title=" " alt="" coords="205,152,272,177"/>
+<area shape="poly" title=" " alt="" coords="241,118,241,152,236,152,236,118"/>
+<area shape="rect" href="classHelmet.html" title=" " alt="" coords="297,152,367,177"/>
+<area shape="poly" title=" " alt="" coords="266,110,318,150,315,154,263,114"/>
+<area shape="rect" href="classPants.html" title=" " alt="" coords="391,152,449,177"/>
+<area shape="poly" title=" " alt="" coords="281,106,392,150,390,154,280,111"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a809be078023c90addbc38762007b2568" id="r_a809be078023c90addbc38762007b2568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a809be078023c90addbc38762007b2568">inventory</a> ()=default</td></tr>
+<tr class="separator:a809be078023c90addbc38762007b2568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e22b10ae740908ebc1a1a6e1a6bc0fd" id="r_a3e22b10ae740908ebc1a1a6e1a6bc0fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a3e22b10ae740908ebc1a1a6e1a6bc0fd">~inventory</a> ()=default</td></tr>
+<tr class="separator:a3e22b10ae740908ebc1a1a6e1a6bc0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818de77acf2aba7a3f5cc34108ebf063" id="r_a818de77acf2aba7a3f5cc34108ebf063"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a818de77acf2aba7a3f5cc34108ebf063">getName</a> () const</td></tr>
+<tr class="separator:a818de77acf2aba7a3f5cc34108ebf063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2692929ab6f198d2dd88da4707ebfdad" id="r_a2692929ab6f198d2dd88da4707ebfdad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a2692929ab6f198d2dd88da4707ebfdad">setName</a> (const std::string &amp;<a class="el" href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">name</a>)</td></tr>
+<tr class="separator:a2692929ab6f198d2dd88da4707ebfdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3644dce3a212a4d963dee29146fe8b14" id="r_a3644dce3a212a4d963dee29146fe8b14"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a3644dce3a212a4d963dee29146fe8b14">getLevel</a> () const</td></tr>
+<tr class="separator:a3644dce3a212a4d963dee29146fe8b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6aa2286c23e64049f7494d0a66a82a" id="r_a8d6aa2286c23e64049f7494d0a66a82a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a8d6aa2286c23e64049f7494d0a66a82a">setLevel</a> (unsigned int <a class="el" href="classinventory.html#a821576df38ac9853f0635672f68f898c">level</a>)</td></tr>
+<tr class="separator:a8d6aa2286c23e64049f7494d0a66a82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a16b20eaa2df8345e98ceeff328595dc0" id="r_a16b20eaa2df8345e98ceeff328595dc0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a16b20eaa2df8345e98ceeff328595dc0">name</a> {}</td></tr>
+<tr class="separator:a16b20eaa2df8345e98ceeff328595dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821576df38ac9853f0635672f68f898c" id="r_a821576df38ac9853f0635672f68f898c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinventory.html#a821576df38ac9853f0635672f68f898c">level</a> {}</td></tr>
+<tr class="separator:a821576df38ac9853f0635672f68f898c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a809be078023c90addbc38762007b2568" name="a809be078023c90addbc38762007b2568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809be078023c90addbc38762007b2568">&#9670;&#160;</a></span>inventory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">inventory::inventory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e22b10ae740908ebc1a1a6e1a6bc0fd" name="a3e22b10ae740908ebc1a1a6e1a6bc0fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e22b10ae740908ebc1a1a6e1a6bc0fd">&#9670;&#160;</a></span>~inventory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">inventory::~inventory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a3644dce3a212a4d963dee29146fe8b14" name="a3644dce3a212a4d963dee29146fe8b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3644dce3a212a4d963dee29146fe8b14">&#9670;&#160;</a></span>getLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int inventory::getLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a818de77acf2aba7a3f5cc34108ebf063" name="a818de77acf2aba7a3f5cc34108ebf063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818de77acf2aba7a3f5cc34108ebf063">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; inventory::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d6aa2286c23e64049f7494d0a66a82a" name="a8d6aa2286c23e64049f7494d0a66a82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6aa2286c23e64049f7494d0a66a82a">&#9670;&#160;</a></span>setLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inventory::setLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2692929ab6f198d2dd88da4707ebfdad" name="a2692929ab6f198d2dd88da4707ebfdad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2692929ab6f198d2dd88da4707ebfdad">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inventory::setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a821576df38ac9853f0635672f68f898c" name="a821576df38ac9853f0635672f68f898c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821576df38ac9853f0635672f68f898c">&#9670;&#160;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int inventory::level {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16b20eaa2df8345e98ceeff328595dc0" name="a16b20eaa2df8345e98ceeff328595dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b20eaa2df8345e98ceeff328595dc0">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string inventory::name {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/inventory/<a class="el" href="inventory_8h_source.html">inventory.h</a></li>
+<li>src/inventory/<a class="el" href="inventory_8cpp.html">inventory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classpotion.html" title=" " alt="" coords="5,129,68,155"/>
+<area shape="rect" id="Node000001" href="$classaccuracyPotion.html" title=" " alt="" coords="116,5,237,31"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="50,116,77,77,114,40,134,28,137,33,118,44,81,81,54,119"/>
+<area shape="rect" id="Node000002" href="$classarmorPotion.html" title=" " alt="" coords="125,55,228,80"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="65,119,115,89,139,78,141,83,117,94,68,124"/>
+<area shape="rect" id="Node000003" href="$classdamagePotion.html" title=" " alt="" coords="119,104,235,129"/>
+<area shape="poly" id="edge14_Node000000_Node000003" title=" " alt="" coords="81,131,118,125,119,130,82,137"/>
+<area shape="rect" id="Node000004" href="$classdodgePotion.html" title=" " alt="" coords="125,153,228,179"/>
+<area shape="poly" id="edge15_Node000000_Node000004" title=" " alt="" coords="82,147,126,155,125,160,81,152"/>
+<area shape="rect" id="Node000005" href="$classhealthPotion.html" title=" " alt="" coords="125,203,229,228"/>
+<area shape="poly" id="edge16_Node000000_Node000005" title=" " alt="" coords="70,160,117,188,144,200,142,205,115,192,68,165"/>
+<area shape="rect" id="Node000006" href="$classstunPotion.html" title=" " alt="" coords="131,252,222,277"/>
+<area shape="poly" id="edge17_Node000000_Node000006" title=" " alt="" coords="55,165,82,202,118,237,139,249,136,254,114,241,78,205,51,168"/>
+</map>

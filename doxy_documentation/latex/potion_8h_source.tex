@@ -1,0 +1,169 @@
+\doxysection{potion.\+h}
+\hypertarget{potion_8h_source}{}\label{potion_8h_source}\index{include/inventory/potion/potion.h@{include/inventory/potion/potion.h}}
+\mbox{\hyperlink{potion_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_POTION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_POTION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../../all\_headers.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ класс\ абстракция\ для\ всех\ зелий}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classpotion_a48c3d5c030b0f4980e8b416691ed81f3}{potion}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classpotion_aefd230ed198ff1d35d24992a76345b1a}{\string~potion}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classpotion_a334f810a0b41d066415400248ceb59d0}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpotion_aea5e109d9f63a27680404c6def2f15c3}{setName}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2}{getLevel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpotion_a518a86310d4d71405754ef6684ba5b70}{setLevel}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slotOfPotion}}\ \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}}\{\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68}{showInShop}}()\ =\ 0;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpotion_a2735769ed144c3f58dca5f8199cc2e09}{showInInventory}}()\ =\ 0;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slotOfPotion}}\ \mbox{\hyperlink{classpotion_a46efdaf3140eae8b90f07dc0c8f03258}{getSlot}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpotion_acc7c4595ff3db611b68c85821fbcacfc}{setSlot}}(\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slotOfPotion}}\ \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classcoins}{coins}}\ \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}}\{\};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<potion>\ \mbox{\hyperlink{classpotion_a30980bb75bf2f090a36e73efc08eb9d7}{clone}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}}\{\};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}}\{\};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ зелье\ здоровья}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhealthPotion}{healthPotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classhealthPotion}{healthPotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_health,\ \mbox{\hyperlink{classcoins}{coins}}\ \_price);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classhealthPotion_a8743424c83fa2bc806c822024890e23e}{getHealth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhealthPotion_a6422392a430eaebd76a15ced72c8c10f}{setHealth}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_health);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhealthPotion_a470bdd177b45d63e845c5218a85edb0d}{showInShop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhealthPotion_a5f1cf335fb5629cc98c3a280094c40ff}{showInInventory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ std::shared\_ptr<potion>\ \mbox{\hyperlink{classhealthPotion_af6d47ad7f060fa037e99132b1dad7259}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classhealthPotion_a74da7b0216785c942db62960332239c5}{health}}\{\};}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//класс\ для\ зелий\ урона}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdamagePotion}{damagePotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classdamagePotion}{damagePotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_damage,\ \mbox{\hyperlink{classcoins}{coins}}\ \_price);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdamagePotion_a08deece97083f8959d2dfa1c7242b4d0}{getDamage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdamagePotion_aed1a816993dd26822cb46c82e676d3bc}{setDamage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdamagePotion_a2ff78fba6455ec0e27a09b9879cf840f}{damage}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdamagePotion_adce291cccc1906a6cb2879bc240a7170}{showInShop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdamagePotion_ab7d9ff88f5567c011381a024138b716f}{showInInventory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ std::shared\_ptr<potion>\ \mbox{\hyperlink{classdamagePotion_a572d9c8929e3bf7c50c933fc33218e8a}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdamagePotion_a2ff78fba6455ec0e27a09b9879cf840f}{damage}}\{\};}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ класс\ зелий\ для\ брони}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classarmorPotion}{armorPotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{classarmorPotion}{armorPotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_armor,\ \mbox{\hyperlink{classcoins}{coins}}\ \_price);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classarmorPotion_a374aed97a53a3a66555c339be14fa5f7}{getArmor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classarmorPotion_ab3c9f885fb2dfaac8d99ad4eede4032e}{setArmor}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classarmorPotion_a4b927d8a75954947917d7840c38f1941}{armor}});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classarmorPotion_a64c9a106f637ff491093e06aa32094e8}{showInShop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classarmorPotion_addb25a45e0b6d7df11335d0367a2009d}{showInInventory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ std::shared\_ptr<potion>\ \mbox{\hyperlink{classarmorPotion_a2cdd113d4d392ba72f7a34c9aa933d11}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classarmorPotion_a4b927d8a75954947917d7840c38f1941}{armor}}\{\};}
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{//класс\ зелий\ точности}}
+\DoxyCodeLine{00103\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classaccuracyPotion}{accuracyPotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00104\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{classaccuracyPotion_a5c95823ace91a17a21213d2771cd47c2}{accuracyPotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_accuracy);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{classaccuracyPotion}{accuracyPotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_accuracy,\ \mbox{\hyperlink{classcoins}{coins}}\ \_price);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classaccuracyPotion_a23d1ec7ed60d45e56dad539811ad7328}{getAccuracy}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaccuracyPotion_a2f9d1de31617f6df10b177b5b5c1a9a6}{setAccuracy}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classaccuracyPotion_af13f87e1b118cc73937b6dd4395d7825}{accuracy}});}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaccuracyPotion_a9baaeb64a3931f9b64c7eb99a76ccf95}{showInShop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaccuracyPotion_a6e39f6f65414ee3fc5383ab8f02645b5}{showInInventory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ std::shared\_ptr<potion>\ \mbox{\hyperlink{classaccuracyPotion_a2aafd093f2d3d7263f617714dbd8bcb9}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classaccuracyPotion_af13f87e1b118cc73937b6dd4395d7825}{accuracy}}\{\};}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ класс\ для\ зелий\ повышения\ шанса\ оглушения}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classstunPotion}{stunPotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00125\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{classstunPotion}{stunPotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_stun,\ \mbox{\hyperlink{classcoins}{coins}}\ \_price);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classstunPotion_a1503824984a42107fa9b4b234abbeec8}{getStun}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classstunPotion_a4fce4adc1d12df8a9d41450869ee544e}{setStun}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_stun);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classstunPotion_a6cd2ffe62fdda94c9f7c645e9d5b2132}{showInShop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classstunPotion_a3e9ff726689c6a19f0e22d027c6618e4}{showInInventory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ std::shared\_ptr<potion>\ \mbox{\hyperlink{classstunPotion_ad4348ef82371635e69949a4937e3b656}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classstunPotion_aa58c25947af89bdfcf23948179f9eaf5}{stun}}\{\};}
+\DoxyCodeLine{00141\ \};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{comment}{//\ класс\ для\ повышения\ зелий\ уворота}}
+\DoxyCodeLine{00144\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdodgePotion}{dodgePotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classpotion}{potion}}\ \{}
+\DoxyCodeLine{00145\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{classdodgePotion}{dodgePotion}}(\textcolor{keyword}{const}\ std::string\ \&\_name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_dodge,\ \mbox{\hyperlink{classcoins}{coins}}\ \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}});}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdodgePotion_a98c6ef565bd3ae7e8ef08cf7a60ea3e4}{getDodge}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdodgePotion_a695e1e0f357c9a8af78613ebf775a2e9}{setDodge}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdodgePotion_a6cca9bc741eea672167be87cbd07f300}{dodge}});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdodgePotion_ab39ef28dfe42592b27194d9048b6ced7}{showInShop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdodgePotion_a7e23907d7cba1dd7b27bdbdb391d588c}{showInInventory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ std::shared\_ptr<potion>\ \mbox{\hyperlink{classdodgePotion_ab6548cc7070db28dd59a9fd309b0039e}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdodgePotion_a6cca9bc741eea672167be87cbd07f300}{dodge}}\{\};}
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_POTION\_H}}
+
+\end{DoxyCode}

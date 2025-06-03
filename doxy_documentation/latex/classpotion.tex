@@ -1,0 +1,182 @@
+\doxysection{Класс potion}
+\hypertarget{classpotion}{}\label{classpotion}\index{potion@{potion}}
+
+
+{\ttfamily \#include $<$potion.\+h$>$}
+
+
+
+Граф наследования\+:potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpotion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{classpotion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpotion_a48c3d5c030b0f4980e8b416691ed81f3}{potion}} ()=default
+\item 
+virtual \mbox{\hyperlink{classpotion_aefd230ed198ff1d35d24992a76345b1a}{\texorpdfstring{$\sim$}{\string~}potion}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classpotion_a334f810a0b41d066415400248ceb59d0}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classpotion_aea5e109d9f63a27680404c6def2f15c3}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}})
+\item 
+unsigned int \mbox{\hyperlink{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classpotion_a518a86310d4d71405754ef6684ba5b70}{set\+Level}} (unsigned int \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}})
+\item 
+virtual void \mbox{\hyperlink{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68}{show\+In\+Shop}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classpotion_a2735769ed144c3f58dca5f8199cc2e09}{show\+In\+Inventory}} ()=0
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a46efdaf3140eae8b90f07dc0c8f03258}{get\+Slot}} () const
+\item 
+void \mbox{\hyperlink{classpotion_acc7c4595ff3db611b68c85821fbcacfc}{set\+Slot}} (\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}})
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \mbox{\hyperlink{classpotion_a30980bb75bf2f090a36e73efc08eb9d7}{clone}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}} \{\}
+\item 
+\mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classpotion_a48c3d5c030b0f4980e8b416691ed81f3}\label{classpotion_a48c3d5c030b0f4980e8b416691ed81f3} 
+\index{potion@{potion}!potion@{potion}}
+\index{potion@{potion}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{potion()}{potion()}}
+{\footnotesize\ttfamily potion\+::potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classpotion_aefd230ed198ff1d35d24992a76345b1a}\label{classpotion_aefd230ed198ff1d35d24992a76345b1a} 
+\index{potion@{potion}!````~potion@{\texorpdfstring{$\sim$}{\string~}potion}}
+\index{````~potion@{\texorpdfstring{$\sim$}{\string~}potion}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}potion()}{\string~potion()}}
+{\footnotesize\ttfamily virtual potion\+::\texorpdfstring{$\sim$}{\string~}potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classpotion_a30980bb75bf2f090a36e73efc08eb9d7}\label{classpotion_a30980bb75bf2f090a36e73efc08eb9d7} 
+\index{potion@{potion}!clone@{clone}}
+\index{clone@{clone}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ potion\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Замещается в \mbox{\hyperlink{classhealthPotion_af6d47ad7f060fa037e99132b1dad7259}{health\+Potion}}, \mbox{\hyperlink{classdamagePotion_a572d9c8929e3bf7c50c933fc33218e8a}{damage\+Potion}}, \mbox{\hyperlink{classarmorPotion_a2cdd113d4d392ba72f7a34c9aa933d11}{armor\+Potion}}, \mbox{\hyperlink{classaccuracyPotion_a2aafd093f2d3d7263f617714dbd8bcb9}{accuracy\+Potion}}, \mbox{\hyperlink{classstunPotion_ad4348ef82371635e69949a4937e3b656}{stun\+Potion}} и \mbox{\hyperlink{classdodgePotion_ab6548cc7070db28dd59a9fd309b0039e}{dodge\+Potion}}.
+
+\Hypertarget{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2}\label{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2} 
+\index{potion@{potion}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily unsigned int potion\+::get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classpotion_a334f810a0b41d066415400248ceb59d0}\label{classpotion_a334f810a0b41d066415400248ceb59d0} 
+\index{potion@{potion}!getName@{getName}}
+\index{getName@{getName}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& potion\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classpotion_a46efdaf3140eae8b90f07dc0c8f03258}\label{classpotion_a46efdaf3140eae8b90f07dc0c8f03258} 
+\index{potion@{potion}!getSlot@{getSlot}}
+\index{getSlot@{getSlot}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{getSlot()}{getSlot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} potion\+::get\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classpotion_a518a86310d4d71405754ef6684ba5b70}\label{classpotion_a518a86310d4d71405754ef6684ba5b70} 
+\index{potion@{potion}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void potion\+::set\+Level (\begin{DoxyParamCaption}\item[{unsigned int}]{level }\end{DoxyParamCaption})}
+
+\Hypertarget{classpotion_aea5e109d9f63a27680404c6def2f15c3}\label{classpotion_aea5e109d9f63a27680404c6def2f15c3} 
+\index{potion@{potion}!setName@{setName}}
+\index{setName@{setName}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void potion\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classpotion_acc7c4595ff3db611b68c85821fbcacfc}\label{classpotion_acc7c4595ff3db611b68c85821fbcacfc} 
+\index{potion@{potion}!setSlot@{setSlot}}
+\index{setSlot@{setSlot}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{setSlot()}{setSlot()}}
+{\footnotesize\ttfamily void potion\+::set\+Slot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}}}]{slot }\end{DoxyParamCaption})}
+
+\Hypertarget{classpotion_a2735769ed144c3f58dca5f8199cc2e09}\label{classpotion_a2735769ed144c3f58dca5f8199cc2e09} 
+\index{potion@{potion}!showInInventory@{showInInventory}}
+\index{showInInventory@{showInInventory}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{showInInventory()}{showInInventory()}}
+{\footnotesize\ttfamily virtual void potion\+::show\+In\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Замещается в \mbox{\hyperlink{classhealthPotion_a5f1cf335fb5629cc98c3a280094c40ff}{health\+Potion}}, \mbox{\hyperlink{classdamagePotion_ab7d9ff88f5567c011381a024138b716f}{damage\+Potion}}, \mbox{\hyperlink{classarmorPotion_addb25a45e0b6d7df11335d0367a2009d}{armor\+Potion}}, \mbox{\hyperlink{classaccuracyPotion_a6e39f6f65414ee3fc5383ab8f02645b5}{accuracy\+Potion}}, \mbox{\hyperlink{classstunPotion_a3e9ff726689c6a19f0e22d027c6618e4}{stun\+Potion}} и \mbox{\hyperlink{classdodgePotion_a7e23907d7cba1dd7b27bdbdb391d588c}{dodge\+Potion}}.
+
+\Hypertarget{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68}\label{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68} 
+\index{potion@{potion}!showInShop@{showInShop}}
+\index{showInShop@{showInShop}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{showInShop()}{showInShop()}}
+{\footnotesize\ttfamily virtual void potion\+::show\+In\+Shop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Замещается в \mbox{\hyperlink{classhealthPotion_a470bdd177b45d63e845c5218a85edb0d}{health\+Potion}}, \mbox{\hyperlink{classdamagePotion_adce291cccc1906a6cb2879bc240a7170}{damage\+Potion}}, \mbox{\hyperlink{classarmorPotion_a64c9a106f637ff491093e06aa32094e8}{armor\+Potion}}, \mbox{\hyperlink{classaccuracyPotion_a9baaeb64a3931f9b64c7eb99a76ccf95}{accuracy\+Potion}}, \mbox{\hyperlink{classstunPotion_a6cd2ffe62fdda94c9f7c645e9d5b2132}{stun\+Potion}} и \mbox{\hyperlink{classdodgePotion_ab39ef28dfe42592b27194d9048b6ced7}{dodge\+Potion}}.
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}\label{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce} 
+\index{potion@{potion}!level@{level}}
+\index{level@{level}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily unsigned int potion\+::level \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classpotion_a24965830c71348aa7a2e146ef83bf6d1}\label{classpotion_a24965830c71348aa7a2e146ef83bf6d1} 
+\index{potion@{potion}!name@{name}}
+\index{name@{name}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string potion\+::name \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classpotion_a323c00c1bffab263c7c164539482390a}\label{classpotion_a323c00c1bffab263c7c164539482390a} 
+\index{potion@{potion}!price@{price}}
+\index{price@{price}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcoins}{coins}} potion\+::price \{\}}
+
+\Hypertarget{classpotion_a34893de4538e1b7cf41f09f91f5f983c}\label{classpotion_a34893de4538e1b7cf41f09f91f5f983c} 
+\index{potion@{potion}!slot@{slot}}
+\index{slot@{slot}!potion@{potion}}
+\doxysubsubsection{\texorpdfstring{slot}{slot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} potion\+::slot \{\}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/inventory/potion/\mbox{\hyperlink{potion_8h}{potion.\+h}}\item 
+src/inventory/potion/\mbox{\hyperlink{potion_8cpp}{potion.\+cpp}}\end{DoxyCompactItemize}

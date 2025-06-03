@@ -1,0 +1,142 @@
+\doxysection{Класс dodge\+Potion}
+\hypertarget{classdodgePotion}{}\label{classdodgePotion}\index{dodgePotion@{dodgePotion}}
+
+
+{\ttfamily \#include $<$potion.\+h$>$}
+
+
+
+Граф наследования\+:dodge\+Potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classdodgePotion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса dodge\+Potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classdodgePotion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdodgePotion_a2d2fa3e76e63a84e446a56bf7a7fa15c}{dodge\+Potion}} (const std\+::string \&\+\_\+name, unsigned int \+\_\+level, unsigned int \+\_\+dodge, \mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}})
+\item 
+unsigned int \mbox{\hyperlink{classdodgePotion_a98c6ef565bd3ae7e8ef08cf7a60ea3e4}{get\+Dodge}} () const
+\item 
+void \mbox{\hyperlink{classdodgePotion_a695e1e0f357c9a8af78613ebf775a2e9}{set\+Dodge}} (unsigned int \mbox{\hyperlink{classdodgePotion_a6cca9bc741eea672167be87cbd07f300}{dodge}})
+\item 
+void \mbox{\hyperlink{classdodgePotion_ab39ef28dfe42592b27194d9048b6ced7}{show\+In\+Shop}} () override
+\item 
+void \mbox{\hyperlink{classdodgePotion_a7e23907d7cba1dd7b27bdbdb391d588c}{show\+In\+Inventory}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \mbox{\hyperlink{classdodgePotion_ab6548cc7070db28dd59a9fd309b0039e}{clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classpotion}{potion}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpotion_a48c3d5c030b0f4980e8b416691ed81f3}{potion}} ()=default
+\item 
+virtual \mbox{\hyperlink{classpotion_aefd230ed198ff1d35d24992a76345b1a}{\texorpdfstring{$\sim$}{\string~}potion}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classpotion_a334f810a0b41d066415400248ceb59d0}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classpotion_aea5e109d9f63a27680404c6def2f15c3}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}})
+\item 
+unsigned int \mbox{\hyperlink{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classpotion_a518a86310d4d71405754ef6684ba5b70}{set\+Level}} (unsigned int \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}})
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a46efdaf3140eae8b90f07dc0c8f03258}{get\+Slot}} () const
+\item 
+void \mbox{\hyperlink{classpotion_acc7c4595ff3db611b68c85821fbcacfc}{set\+Slot}} (\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classdodgePotion_a6cca9bc741eea672167be87cbd07f300}{dodge}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classpotion}{potion}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}} \{\}
+\item 
+\mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classdodgePotion_a2d2fa3e76e63a84e446a56bf7a7fa15c}\label{classdodgePotion_a2d2fa3e76e63a84e446a56bf7a7fa15c} 
+\index{dodgePotion@{dodgePotion}!dodgePotion@{dodgePotion}}
+\index{dodgePotion@{dodgePotion}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{dodgePotion()}{dodgePotion()}}
+{\footnotesize\ttfamily dodge\+Potion\+::dodge\+Potion (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{unsigned int}]{\+\_\+level,  }\item[{unsigned int}]{\+\_\+dodge,  }\item[{\mbox{\hyperlink{classcoins}{coins}}}]{price }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classdodgePotion_ab6548cc7070db28dd59a9fd309b0039e}\label{classdodgePotion_ab6548cc7070db28dd59a9fd309b0039e} 
+\index{dodgePotion@{dodgePotion}!clone@{clone}}
+\index{clone@{clone}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ dodge\+Potion\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a30980bb75bf2f090a36e73efc08eb9d7}{potion}}.
+
+\Hypertarget{classdodgePotion_a98c6ef565bd3ae7e8ef08cf7a60ea3e4}\label{classdodgePotion_a98c6ef565bd3ae7e8ef08cf7a60ea3e4} 
+\index{dodgePotion@{dodgePotion}!getDodge@{getDodge}}
+\index{getDodge@{getDodge}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{getDodge()}{getDodge()}}
+{\footnotesize\ttfamily unsigned int dodge\+Potion\+::get\+Dodge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classdodgePotion_a695e1e0f357c9a8af78613ebf775a2e9}\label{classdodgePotion_a695e1e0f357c9a8af78613ebf775a2e9} 
+\index{dodgePotion@{dodgePotion}!setDodge@{setDodge}}
+\index{setDodge@{setDodge}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{setDodge()}{setDodge()}}
+{\footnotesize\ttfamily void dodge\+Potion\+::set\+Dodge (\begin{DoxyParamCaption}\item[{unsigned int}]{dodge }\end{DoxyParamCaption})}
+
+\Hypertarget{classdodgePotion_a7e23907d7cba1dd7b27bdbdb391d588c}\label{classdodgePotion_a7e23907d7cba1dd7b27bdbdb391d588c} 
+\index{dodgePotion@{dodgePotion}!showInInventory@{showInInventory}}
+\index{showInInventory@{showInInventory}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{showInInventory()}{showInInventory()}}
+{\footnotesize\ttfamily void dodge\+Potion\+::show\+In\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a2735769ed144c3f58dca5f8199cc2e09}{potion}}.
+
+\Hypertarget{classdodgePotion_ab39ef28dfe42592b27194d9048b6ced7}\label{classdodgePotion_ab39ef28dfe42592b27194d9048b6ced7} 
+\index{dodgePotion@{dodgePotion}!showInShop@{showInShop}}
+\index{showInShop@{showInShop}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{showInShop()}{showInShop()}}
+{\footnotesize\ttfamily void dodge\+Potion\+::show\+In\+Shop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68}{potion}}.
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classdodgePotion_a6cca9bc741eea672167be87cbd07f300}\label{classdodgePotion_a6cca9bc741eea672167be87cbd07f300} 
+\index{dodgePotion@{dodgePotion}!dodge@{dodge}}
+\index{dodge@{dodge}!dodgePotion@{dodgePotion}}
+\doxysubsubsection{\texorpdfstring{dodge}{dodge}}
+{\footnotesize\ttfamily unsigned int dodge\+Potion\+::dodge \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/inventory/potion/\mbox{\hyperlink{potion_8h}{potion.\+h}}\item 
+src/inventory/potion/\mbox{\hyperlink{potion_8cpp}{potion.\+cpp}}\end{DoxyCompactItemize}

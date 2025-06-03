@@ -1,0 +1,47 @@
+\doxysection{Файл src/upload\+\_\+system/upload\+\_\+system.cpp}
+\hypertarget{upload__system_8cpp}{}\label{upload__system_8cpp}\index{src/upload\_system/upload\_system.cpp@{src/upload\_system/upload\_system.cpp}}
+{\ttfamily \#include "{}../../include/all\+\_\+headers.\+h"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Граф включаемых заголовочных файлов для upload\+\_\+system.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{upload__system_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \mbox{\hyperlink{upload__system_8cpp_a24db0544877dc0d2b9c154774d9fbe05}{create\+Potion\+By\+Type}} (const std\+::string \&type\+\_\+str, const std\+::string \&name, unsigned int level, unsigned int value, unsigned int copper)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ \mbox{\hyperlink{upload__system_8cpp_ab88f2da386431c32a45e7ff4a0295086}{create\+Equipment\+By\+Slot}} (const std\+::string \&slot\+Str, const std\+::string \&name, unsigned int level, unsigned int health, unsigned int armor, unsigned int dodge, \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}} style, unsigned int copper)
+\item 
+bool \mbox{\hyperlink{upload__system_8cpp_a80991aa817374b217d30a94714a35717}{load\+Character\+From\+Database}} (\mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&\mbox{\hyperlink{classcharacter}{character}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\Hypertarget{upload__system_8cpp_ab88f2da386431c32a45e7ff4a0295086}\label{upload__system_8cpp_ab88f2da386431c32a45e7ff4a0295086} 
+\index{upload\_system.cpp@{upload\_system.cpp}!createEquipmentBySlot@{createEquipmentBySlot}}
+\index{createEquipmentBySlot@{createEquipmentBySlot}!upload\_system.cpp@{upload\_system.cpp}}
+\doxysubsubsection{\texorpdfstring{createEquipmentBySlot()}{createEquipmentBySlot()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ create\+Equipment\+By\+Slot (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{slot\+Str,  }\item[{const std\+::string \&}]{name,  }\item[{unsigned int}]{level,  }\item[{unsigned int}]{health,  }\item[{unsigned int}]{armor,  }\item[{unsigned int}]{dodge,  }\item[{\mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{war\+Style}}}]{style,  }\item[{unsigned int}]{copper }\end{DoxyParamCaption})}
+
+\Hypertarget{upload__system_8cpp_a24db0544877dc0d2b9c154774d9fbe05}\label{upload__system_8cpp_a24db0544877dc0d2b9c154774d9fbe05} 
+\index{upload\_system.cpp@{upload\_system.cpp}!createPotionByType@{createPotionByType}}
+\index{createPotionByType@{createPotionByType}!upload\_system.cpp@{upload\_system.cpp}}
+\doxysubsubsection{\texorpdfstring{createPotionByType()}{createPotionByType()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ create\+Potion\+By\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type\+\_\+str,  }\item[{const std\+::string \&}]{name,  }\item[{unsigned int}]{level,  }\item[{unsigned int}]{value,  }\item[{unsigned int}]{copper }\end{DoxyParamCaption})}
+
+\Hypertarget{upload__system_8cpp_a80991aa817374b217d30a94714a35717}\label{upload__system_8cpp_a80991aa817374b217d30a94714a35717} 
+\index{upload\_system.cpp@{upload\_system.cpp}!loadCharacterFromDatabase@{loadCharacterFromDatabase}}
+\index{loadCharacterFromDatabase@{loadCharacterFromDatabase}!upload\_system.cpp@{upload\_system.cpp}}
+\doxysubsubsection{\texorpdfstring{loadCharacterFromDatabase()}{loadCharacterFromDatabase()}}
+{\footnotesize\ttfamily bool load\+Character\+From\+Database (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmain__char}{main\+\_\+char}} \&}]{character }\end{DoxyParamCaption})}
+

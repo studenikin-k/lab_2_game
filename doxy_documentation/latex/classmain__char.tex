@@ -1,0 +1,409 @@
+\doxysection{Класс main\+\_\+char}
+\hypertarget{classmain__char}{}\label{classmain__char}\index{main\_char@{main\_char}}
+
+
+{\ttfamily \#include $<$main\+\_\+char.\+h$>$}
+
+
+
+Граф наследования\+:main\+\_\+char\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classmain__char__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса main\+\_\+char\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classmain__char__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a9c2b81e4399fc94a3906f7705ade11d9}{get\+Experience}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_af25078875b9d47495ccbf8c36b439cca}{set\+Experience}} (const unsigned int \mbox{\hyperlink{classmain__char_a0095a3f0f04cc94a182d4935a509a2da}{experience}})
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a4815067ec6df2ab6413aa29aced5d26f}{get\+Experience\+To\+Level\+Up}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_a9ba7462db0c8f15ba2dc39fb18f2abd7}{set\+Experience\+To\+Level\+Up}} (const unsigned int experience\+\_\+to\+\_\+level\+\_\+up)
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a1f64ed3f32a722425fda3b99c7214d31}{get\+Current\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_a99d6d28202794560ea78ba2c1149a4be}{set\+Current\+Position}} (unsigned int current\+\_\+position)
+\item 
+\mbox{\hyperlink{classmain__char_a582d0f96561432ed1877a1649d1048fc}{main\+\_\+char}} (const std\+::string \&\+\_\+name, unsigned int \+\_\+level, unsigned int \+\_\+health, unsigned int \+\_\+damage, unsigned int \+\_\+armor, unsigned int \+\_\+accuracy, unsigned int \+\_\+stun, unsigned int \+\_\+dodge, const \mbox{\hyperlink{classcoins}{coins}} \&cash, const unsigned int position)
+\item 
+\mbox{\hyperlink{classmain__char_a3fad025242d8ad194f65fc4816969e21}{\texorpdfstring{$\sim$}{\string~}main\+\_\+char}} ()=default
+\item 
+void \mbox{\hyperlink{classmain__char_af52517b1474691d87ca8f179280cef9a}{equip}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ item)
+\item 
+void \mbox{\hyperlink{classmain__char_a6061401c77e1967f520667072f28471b}{take\+Off\+Equipment}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ item)
+\item 
+void \mbox{\hyperlink{classmain__char_ae535a58b9ea0d6d456be0c6a6ee31c44}{equip}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classweapon}{weapon}} $>$)
+\item 
+void \mbox{\hyperlink{classmain__char_ac8d78a869458e21b44cc4d46b884c6ec}{take\+Off\+Weapon}} ()
+\item 
+bool \mbox{\hyperlink{classmain__char_ad347b8bead5553e551a2c346ef7902f1}{is\+Belt\+Full}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_a03dc50f47d7a7c8d5a2665a481215497}{display\+Belt}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_a8098d3155b63b13af60ecb0e3df9c959}{equip}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ item)
+\item 
+void \mbox{\hyperlink{classmain__char_a400f1fa282fdd09ea59c6142068f2d2e}{take\+Off\+Potion}} ()
+\item 
+void \mbox{\hyperlink{classmain__char_adad1057668f27e12c5234047bcf1ffc2}{buy\+Equipment}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ \&\+\_\+item)
+\item 
+void \mbox{\hyperlink{classmain__char_a7acff57d80c6a3da4156eaddd54696b2}{buy\+Weapon}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classweapon}{weapon}} $>$ \&)
+\item 
+void \mbox{\hyperlink{classmain__char_a8c91b1a0868c2785dfe23d57ea4fca8f}{buy\+Potion}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \&)
+\item 
+void \mbox{\hyperlink{classmain__char_ac5584489e8b230cb735e33b745b7da30}{show\+Bag}} ()
+\item 
+void \mbox{\hyperlink{classmain__char_a73c0abeb6ca631fd13a923f54f6a9b6f}{show\+Gear}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classmain__char_aa6530fe2d5ce540fc1c3c9d5f61d0c45}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_adeba9349081f412c1efdb52eddcc988d}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classmain__char_aef69405a9d99e9478303bb46eaac9f41}{name}})
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_af08b49a96dc2c59becfdad74a2b6bb77}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_a68aa1b5f0e5082158638996ce5e1beab}{set\+Level}} (unsigned int \mbox{\hyperlink{classmain__char_acc7437923ca2f1098bc91e9d9f3cf560}{level}})
+\item 
+void \mbox{\hyperlink{classmain__char_a89f31e92e80c50d7266a7f2ccc586733}{use\+Potion}} ()
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a72c83b725251f2d4f7e42e445adeabae}{id1}} () const
+\item 
+void \mbox{\hyperlink{classmain__char_a0b7d63f4da98eab53de5794e2b8fdc17}{set\+\_\+id}} (unsigned int \mbox{\hyperlink{classmain__char_a7b9f03f3fe8c0f56368a8f25b464e508}{id}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classcharacter}{character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcharacter_aad29ae0a639f4f0b624222296df4534c}{character}} ()
+\item 
+\mbox{\hyperlink{classcharacter_a02aa5c6c5ca52aee988002e87b97ee31}{\texorpdfstring{$\sim$}{\string~}character}} ()=default
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_af4d9bd6a4eb457f61343ead09c2c75c9}{get\+Health}} () const
+\item 
+void \mbox{\hyperlink{classcharacter_ae0b0a0290c3036d716534fb7e555f73b}{set\+Health}} (unsigned int \mbox{\hyperlink{classcharacter_ad00a3295813ff2742260a16af9428266}{health}})
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_a38edfaf346a717bee44173d60a67c732}{get\+Damage}} () const
+\item 
+void \mbox{\hyperlink{classcharacter_a9dcf4ce7e79ee420c17cf89d4d48f4e0}{set\+Damage}} (unsigned int \mbox{\hyperlink{classcharacter_ac6e02d432676c6ffaae4a4a590b66346}{damage}})
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_a327f9c4373eb43193cbf635b11bf7fe5}{get\+Armor}} () const
+\item 
+void \mbox{\hyperlink{classcharacter_a70cbdddc0479b12ffd55092367fc41c5}{set\+Armor}} (unsigned int \mbox{\hyperlink{classcharacter_aea1eea6a25192915a5f10ab596379f00}{armor}})
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_ab875ead8115bba830e8105c770eca429}{get\+Accuracy}} () const
+\item 
+void \mbox{\hyperlink{classcharacter_a634a19fcf131251294ed9e4bd4561292}{set\+Accuracy}} (unsigned int \mbox{\hyperlink{classcharacter_a5db88cffe4104ab2a390838717f19944}{accuracy}})
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_ad4b92b53509a773c287ed2b7a4016f9e}{get\+Stun}} () const
+\item 
+void \mbox{\hyperlink{classcharacter_a8a80cb32483bee7f3f968cb96968b49e}{set\+Stun}} (unsigned int \mbox{\hyperlink{classcharacter_a2ee2716b97e1353dbc5eaa2bce56c417}{stun}})
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_a5c591ec92414668628f52b22e559a8a9}{get\+Dodge}} () const
+\item 
+void \mbox{\hyperlink{classcharacter_af5906ffa7972122ee04df23dd6c399a4}{set\+Dodge}} (unsigned int \mbox{\hyperlink{classcharacter_a5fedfaef12b5fbfd25cebb6a249cffe4}{dodge}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slot\+Of\+Equipment}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ $>$ \mbox{\hyperlink{classmain__char_a6eecf5e63ad4cd3d5acc968a229b4e5e}{Equipment}}
+\item 
+std\+::array$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$, \mbox{\hyperlink{main__char_8h_a0f8d5e6722f630f88f7794862005af25}{BELT\+\_\+\+SIZE}} $>$ \mbox{\hyperlink{classmain__char_a6096723441eb5f04f799abbc056874cb}{Belt}} \{\}
+\item 
+\mbox{\hyperlink{classbag}{bag}} \mbox{\hyperlink{classmain__char_ac98fd33055906677f40fc1d632028ccc}{Bag}} \{\}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classweapon}{weapon}} $>$ \mbox{\hyperlink{classmain__char_ab76ce77872c0c269c856291e8183bdc3}{gun}}
+\item 
+\mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classmain__char_ac37855cfa52e55ad61a3de06d2fa8762}{balance}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a7b9f03f3fe8c0f56368a8f25b464e508}{id}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a0095a3f0f04cc94a182d4935a509a2da}{experience}} = 0
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_abd717740d045623d31c876c159356043}{experience\+To\+Level\+Up}} = 100
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_a354fd4da4ba571a81498a5581011bb78}{current\+Position}}
+\item 
+unsigned int \mbox{\hyperlink{classmain__char_acc7437923ca2f1098bc91e9d9f3cf560}{level}} \{\}
+\item 
+std\+::string \mbox{\hyperlink{classmain__char_aef69405a9d99e9478303bb46eaac9f41}{name}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classcharacter}{character}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_ad00a3295813ff2742260a16af9428266}{health}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_ac6e02d432676c6ffaae4a4a590b66346}{damage}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_aea1eea6a25192915a5f10ab596379f00}{armor}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_a5db88cffe4104ab2a390838717f19944}{accuracy}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_a2ee2716b97e1353dbc5eaa2bce56c417}{stun}} \{\}
+\item 
+unsigned int \mbox{\hyperlink{classcharacter_a5fedfaef12b5fbfd25cebb6a249cffe4}{dodge}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classmain__char_a582d0f96561432ed1877a1649d1048fc}\label{classmain__char_a582d0f96561432ed1877a1649d1048fc} 
+\index{main\_char@{main\_char}!main\_char@{main\_char}}
+\index{main\_char@{main\_char}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{main\_char()}{main\_char()}}
+{\footnotesize\ttfamily main\+\_\+char\+::main\+\_\+char (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{unsigned int}]{\+\_\+level,  }\item[{unsigned int}]{\+\_\+health,  }\item[{unsigned int}]{\+\_\+damage,  }\item[{unsigned int}]{\+\_\+armor,  }\item[{unsigned int}]{\+\_\+accuracy,  }\item[{unsigned int}]{\+\_\+stun,  }\item[{unsigned int}]{\+\_\+dodge,  }\item[{const \mbox{\hyperlink{classcoins}{coins}} \&}]{cash,  }\item[{const unsigned int}]{position }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a3fad025242d8ad194f65fc4816969e21}\label{classmain__char_a3fad025242d8ad194f65fc4816969e21} 
+\index{main\_char@{main\_char}!````~main\_char@{\texorpdfstring{$\sim$}{\string~}main\_char}}
+\index{````~main\_char@{\texorpdfstring{$\sim$}{\string~}main\_char}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}main\_char()}{\string~main\_char()}}
+{\footnotesize\ttfamily main\+\_\+char\+::\texorpdfstring{$\sim$}{\string~}main\+\_\+char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classmain__char_adad1057668f27e12c5234047bcf1ffc2}\label{classmain__char_adad1057668f27e12c5234047bcf1ffc2} 
+\index{main\_char@{main\_char}!buyEquipment@{buyEquipment}}
+\index{buyEquipment@{buyEquipment}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{buyEquipment()}{buyEquipment()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::buy\+Equipment (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$ \&}]{\+\_\+item }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a8c91b1a0868c2785dfe23d57ea4fca8f}\label{classmain__char_a8c91b1a0868c2785dfe23d57ea4fca8f} 
+\index{main\_char@{main\_char}!buyPotion@{buyPotion}}
+\index{buyPotion@{buyPotion}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{buyPotion()}{buyPotion()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::buy\+Potion (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \&}]{original }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a7acff57d80c6a3da4156eaddd54696b2}\label{classmain__char_a7acff57d80c6a3da4156eaddd54696b2} 
+\index{main\_char@{main\_char}!buyWeapon@{buyWeapon}}
+\index{buyWeapon@{buyWeapon}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{buyWeapon()}{buyWeapon()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::buy\+Weapon (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classweapon}{weapon}} $>$ \&}]{original }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a03dc50f47d7a7c8d5a2665a481215497}\label{classmain__char_a03dc50f47d7a7c8d5a2665a481215497} 
+\index{main\_char@{main\_char}!displayBelt@{displayBelt}}
+\index{displayBelt@{displayBelt}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{displayBelt()}{displayBelt()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::display\+Belt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_af52517b1474691d87ca8f179280cef9a}\label{classmain__char_af52517b1474691d87ca8f179280cef9a} 
+\index{main\_char@{main\_char}!equip@{equip}}
+\index{equip@{equip}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{equip()}{equip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void main\+\_\+char\+::equip (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$}]{item }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a8098d3155b63b13af60ecb0e3df9c959}\label{classmain__char_a8098d3155b63b13af60ecb0e3df9c959} 
+\index{main\_char@{main\_char}!equip@{equip}}
+\index{equip@{equip}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{equip()}{equip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void main\+\_\+char\+::equip (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$}]{item }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_ae535a58b9ea0d6d456be0c6a6ee31c44}\label{classmain__char_ae535a58b9ea0d6d456be0c6a6ee31c44} 
+\index{main\_char@{main\_char}!equip@{equip}}
+\index{equip@{equip}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{equip()}{equip()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void main\+\_\+char\+::equip (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classweapon}{weapon}} $>$}]{item }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a1f64ed3f32a722425fda3b99c7214d31}\label{classmain__char_a1f64ed3f32a722425fda3b99c7214d31} 
+\index{main\_char@{main\_char}!getCurrentPosition@{getCurrentPosition}}
+\index{getCurrentPosition@{getCurrentPosition}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{getCurrentPosition()}{getCurrentPosition()}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_a9c2b81e4399fc94a3906f7705ade11d9}\label{classmain__char_a9c2b81e4399fc94a3906f7705ade11d9} 
+\index{main\_char@{main\_char}!getExperience@{getExperience}}
+\index{getExperience@{getExperience}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{getExperience()}{getExperience()}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::get\+Experience (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_a4815067ec6df2ab6413aa29aced5d26f}\label{classmain__char_a4815067ec6df2ab6413aa29aced5d26f} 
+\index{main\_char@{main\_char}!getExperienceToLevelUp@{getExperienceToLevelUp}}
+\index{getExperienceToLevelUp@{getExperienceToLevelUp}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{getExperienceToLevelUp()}{getExperienceToLevelUp()}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::get\+Experience\+To\+Level\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_af08b49a96dc2c59becfdad74a2b6bb77}\label{classmain__char_af08b49a96dc2c59becfdad74a2b6bb77} 
+\index{main\_char@{main\_char}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_aa6530fe2d5ce540fc1c3c9d5f61d0c45}\label{classmain__char_aa6530fe2d5ce540fc1c3c9d5f61d0c45} 
+\index{main\_char@{main\_char}!getName@{getName}}
+\index{getName@{getName}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& main\+\_\+char\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_a72c83b725251f2d4f7e42e445adeabae}\label{classmain__char_a72c83b725251f2d4f7e42e445adeabae} 
+\index{main\_char@{main\_char}!id1@{id1}}
+\index{id1@{id1}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{id1()}{id1()}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::id1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_ad347b8bead5553e551a2c346ef7902f1}\label{classmain__char_ad347b8bead5553e551a2c346ef7902f1} 
+\index{main\_char@{main\_char}!isBeltFull@{isBeltFull}}
+\index{isBeltFull@{isBeltFull}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{isBeltFull()}{isBeltFull()}}
+{\footnotesize\ttfamily bool main\+\_\+char\+::is\+Belt\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classmain__char_a0b7d63f4da98eab53de5794e2b8fdc17}\label{classmain__char_a0b7d63f4da98eab53de5794e2b8fdc17} 
+\index{main\_char@{main\_char}!set\_id@{set\_id}}
+\index{set\_id@{set\_id}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{set\_id()}{set\_id()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::set\+\_\+id (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a99d6d28202794560ea78ba2c1149a4be}\label{classmain__char_a99d6d28202794560ea78ba2c1149a4be} 
+\index{main\_char@{main\_char}!setCurrentPosition@{setCurrentPosition}}
+\index{setCurrentPosition@{setCurrentPosition}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{setCurrentPosition()}{setCurrentPosition()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::set\+Current\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{current\+\_\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_af25078875b9d47495ccbf8c36b439cca}\label{classmain__char_af25078875b9d47495ccbf8c36b439cca} 
+\index{main\_char@{main\_char}!setExperience@{setExperience}}
+\index{setExperience@{setExperience}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{setExperience()}{setExperience()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::set\+Experience (\begin{DoxyParamCaption}\item[{const unsigned int}]{experience }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a9ba7462db0c8f15ba2dc39fb18f2abd7}\label{classmain__char_a9ba7462db0c8f15ba2dc39fb18f2abd7} 
+\index{main\_char@{main\_char}!setExperienceToLevelUp@{setExperienceToLevelUp}}
+\index{setExperienceToLevelUp@{setExperienceToLevelUp}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{setExperienceToLevelUp()}{setExperienceToLevelUp()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::set\+Experience\+To\+Level\+Up (\begin{DoxyParamCaption}\item[{const unsigned int}]{experience\+\_\+to\+\_\+level\+\_\+up }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a68aa1b5f0e5082158638996ce5e1beab}\label{classmain__char_a68aa1b5f0e5082158638996ce5e1beab} 
+\index{main\_char@{main\_char}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::set\+Level (\begin{DoxyParamCaption}\item[{unsigned int}]{level }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_adeba9349081f412c1efdb52eddcc988d}\label{classmain__char_adeba9349081f412c1efdb52eddcc988d} 
+\index{main\_char@{main\_char}!setName@{setName}}
+\index{setName@{setName}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_ac5584489e8b230cb735e33b745b7da30}\label{classmain__char_ac5584489e8b230cb735e33b745b7da30} 
+\index{main\_char@{main\_char}!showBag@{showBag}}
+\index{showBag@{showBag}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{showBag()}{showBag()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::show\+Bag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a73c0abeb6ca631fd13a923f54f6a9b6f}\label{classmain__char_a73c0abeb6ca631fd13a923f54f6a9b6f} 
+\index{main\_char@{main\_char}!showGear@{showGear}}
+\index{showGear@{showGear}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{showGear()}{showGear()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::show\+Gear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a6061401c77e1967f520667072f28471b}\label{classmain__char_a6061401c77e1967f520667072f28471b} 
+\index{main\_char@{main\_char}!takeOffEquipment@{takeOffEquipment}}
+\index{takeOffEquipment@{takeOffEquipment}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{takeOffEquipment()}{takeOffEquipment()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::take\+Off\+Equipment (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classequipment}{equipment}} $>$}]{item }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a400f1fa282fdd09ea59c6142068f2d2e}\label{classmain__char_a400f1fa282fdd09ea59c6142068f2d2e} 
+\index{main\_char@{main\_char}!takeOffPotion@{takeOffPotion}}
+\index{takeOffPotion@{takeOffPotion}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{takeOffPotion()}{takeOffPotion()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::take\+Off\+Potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_ac8d78a869458e21b44cc4d46b884c6ec}\label{classmain__char_ac8d78a869458e21b44cc4d46b884c6ec} 
+\index{main\_char@{main\_char}!takeOffWeapon@{takeOffWeapon}}
+\index{takeOffWeapon@{takeOffWeapon}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{takeOffWeapon()}{takeOffWeapon()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::take\+Off\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classmain__char_a89f31e92e80c50d7266a7f2ccc586733}\label{classmain__char_a89f31e92e80c50d7266a7f2ccc586733} 
+\index{main\_char@{main\_char}!usePotion@{usePotion}}
+\index{usePotion@{usePotion}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{usePotion()}{usePotion()}}
+{\footnotesize\ttfamily void main\+\_\+char\+::use\+Potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classmain__char_ac98fd33055906677f40fc1d632028ccc}\label{classmain__char_ac98fd33055906677f40fc1d632028ccc} 
+\index{main\_char@{main\_char}!Bag@{Bag}}
+\index{Bag@{Bag}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{Bag}{Bag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbag}{bag}} main\+\_\+char\+::\+Bag \{\}}
+
+\Hypertarget{classmain__char_ac37855cfa52e55ad61a3de06d2fa8762}\label{classmain__char_ac37855cfa52e55ad61a3de06d2fa8762} 
+\index{main\_char@{main\_char}!balance@{balance}}
+\index{balance@{balance}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{balance}{balance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcoins}{coins}} main\+\_\+char\+::balance \{\}}
+
+\Hypertarget{classmain__char_a6096723441eb5f04f799abbc056874cb}\label{classmain__char_a6096723441eb5f04f799abbc056874cb} 
+\index{main\_char@{main\_char}!Belt@{Belt}}
+\index{Belt@{Belt}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{Belt}{Belt}}
+{\footnotesize\ttfamily std\+::array$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classpotion}{potion}}$>$, \mbox{\hyperlink{main__char_8h_a0f8d5e6722f630f88f7794862005af25}{BELT\+\_\+\+SIZE}}$>$ main\+\_\+char\+::\+Belt \{\}}
+
+\Hypertarget{classmain__char_a354fd4da4ba571a81498a5581011bb78}\label{classmain__char_a354fd4da4ba571a81498a5581011bb78} 
+\index{main\_char@{main\_char}!currentPosition@{currentPosition}}
+\index{currentPosition@{currentPosition}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{currentPosition}{currentPosition}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::current\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmain__char_a6eecf5e63ad4cd3d5acc968a229b4e5e}\label{classmain__char_a6eecf5e63ad4cd3d5acc968a229b4e5e} 
+\index{main\_char@{main\_char}!Equipment@{Equipment}}
+\index{Equipment@{Equipment}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{Equipment}{Equipment}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{slot__of__equipment_8h_ad7d5d54cac1cebaefb608c6e37efd4ae}{slot\+Of\+Equipment}}, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classequipment}{equipment}}$>$ $>$ main\+\_\+char\+::\+Equipment}
+
+\Hypertarget{classmain__char_a0095a3f0f04cc94a182d4935a509a2da}\label{classmain__char_a0095a3f0f04cc94a182d4935a509a2da} 
+\index{main\_char@{main\_char}!experience@{experience}}
+\index{experience@{experience}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{experience}{experience}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::experience = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmain__char_abd717740d045623d31c876c159356043}\label{classmain__char_abd717740d045623d31c876c159356043} 
+\index{main\_char@{main\_char}!experienceToLevelUp@{experienceToLevelUp}}
+\index{experienceToLevelUp@{experienceToLevelUp}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{experienceToLevelUp}{experienceToLevelUp}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::experience\+To\+Level\+Up = 100\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmain__char_ab76ce77872c0c269c856291e8183bdc3}\label{classmain__char_ab76ce77872c0c269c856291e8183bdc3} 
+\index{main\_char@{main\_char}!gun@{gun}}
+\index{gun@{gun}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{gun}{gun}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classweapon}{weapon}}$>$ main\+\_\+char\+::gun}
+
+\Hypertarget{classmain__char_a7b9f03f3fe8c0f56368a8f25b464e508}\label{classmain__char_a7b9f03f3fe8c0f56368a8f25b464e508} 
+\index{main\_char@{main\_char}!id@{id}}
+\index{id@{id}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::id \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmain__char_acc7437923ca2f1098bc91e9d9f3cf560}\label{classmain__char_acc7437923ca2f1098bc91e9d9f3cf560} 
+\index{main\_char@{main\_char}!level@{level}}
+\index{level@{level}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily unsigned int main\+\_\+char\+::level \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmain__char_aef69405a9d99e9478303bb46eaac9f41}\label{classmain__char_aef69405a9d99e9478303bb46eaac9f41} 
+\index{main\_char@{main\_char}!name@{name}}
+\index{name@{name}!main\_char@{main\_char}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string main\+\_\+char\+::name \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/characters/main\+\_\+char/\mbox{\hyperlink{main__char_8h}{main\+\_\+char.\+h}}\item 
+src/characters/main\+\_\+char/\mbox{\hyperlink{main__char_8cpp}{main\+\_\+char.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\doxysection{Класс damage\+Potion}
+\hypertarget{classdamagePotion}{}\label{classdamagePotion}\index{damagePotion@{damagePotion}}
+
+
+{\ttfamily \#include $<$potion.\+h$>$}
+
+
+
+Граф наследования\+:damage\+Potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classdamagePotion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса damage\+Potion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classdamagePotion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdamagePotion_aba90d9d208667055e9516ffa5a1c6540}{damage\+Potion}} (const std\+::string \&\+\_\+name, unsigned int \+\_\+level, unsigned int \+\_\+damage, \mbox{\hyperlink{classcoins}{coins}} \+\_\+price)
+\item 
+unsigned int \mbox{\hyperlink{classdamagePotion_a08deece97083f8959d2dfa1c7242b4d0}{get\+Damage}} () const
+\item 
+void \mbox{\hyperlink{classdamagePotion_aed1a816993dd26822cb46c82e676d3bc}{set\+Damage}} (unsigned int \mbox{\hyperlink{classdamagePotion_a2ff78fba6455ec0e27a09b9879cf840f}{damage}})
+\item 
+void \mbox{\hyperlink{classdamagePotion_adce291cccc1906a6cb2879bc240a7170}{show\+In\+Shop}} () override
+\item 
+void \mbox{\hyperlink{classdamagePotion_ab7d9ff88f5567c011381a024138b716f}{show\+In\+Inventory}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ \mbox{\hyperlink{classdamagePotion_a572d9c8929e3bf7c50c933fc33218e8a}{clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classpotion}{potion}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpotion_a48c3d5c030b0f4980e8b416691ed81f3}{potion}} ()=default
+\item 
+virtual \mbox{\hyperlink{classpotion_aefd230ed198ff1d35d24992a76345b1a}{\texorpdfstring{$\sim$}{\string~}potion}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classpotion_a334f810a0b41d066415400248ceb59d0}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classpotion_aea5e109d9f63a27680404c6def2f15c3}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classpotion_a24965830c71348aa7a2e146ef83bf6d1}{name}})
+\item 
+unsigned int \mbox{\hyperlink{classpotion_a8ce4b451d56bab99ba4c0012e7f84de2}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classpotion_a518a86310d4d71405754ef6684ba5b70}{set\+Level}} (unsigned int \mbox{\hyperlink{classpotion_af8b6d559b3ad34aea125c9f2c4ef67ce}{level}})
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a46efdaf3140eae8b90f07dc0c8f03258}{get\+Slot}} () const
+\item 
+void \mbox{\hyperlink{classpotion_acc7c4595ff3db611b68c85821fbcacfc}{set\+Slot}} (\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classdamagePotion_a2ff78fba6455ec0e27a09b9879cf840f}{damage}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classpotion}{potion}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slot\+Of\+Potion}} \mbox{\hyperlink{classpotion_a34893de4538e1b7cf41f09f91f5f983c}{slot}} \{\}
+\item 
+\mbox{\hyperlink{classcoins}{coins}} \mbox{\hyperlink{classpotion_a323c00c1bffab263c7c164539482390a}{price}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classdamagePotion_aba90d9d208667055e9516ffa5a1c6540}\label{classdamagePotion_aba90d9d208667055e9516ffa5a1c6540} 
+\index{damagePotion@{damagePotion}!damagePotion@{damagePotion}}
+\index{damagePotion@{damagePotion}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{damagePotion()}{damagePotion()}}
+{\footnotesize\ttfamily damage\+Potion\+::damage\+Potion (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{unsigned int}]{\+\_\+level,  }\item[{unsigned int}]{\+\_\+damage,  }\item[{\mbox{\hyperlink{classcoins}{coins}}}]{\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classdamagePotion_a572d9c8929e3bf7c50c933fc33218e8a}\label{classdamagePotion_a572d9c8929e3bf7c50c933fc33218e8a} 
+\index{damagePotion@{damagePotion}!clone@{clone}}
+\index{clone@{clone}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpotion}{potion}} $>$ damage\+Potion\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a30980bb75bf2f090a36e73efc08eb9d7}{potion}}.
+
+\Hypertarget{classdamagePotion_a08deece97083f8959d2dfa1c7242b4d0}\label{classdamagePotion_a08deece97083f8959d2dfa1c7242b4d0} 
+\index{damagePotion@{damagePotion}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{getDamage()}{getDamage()}}
+{\footnotesize\ttfamily unsigned int damage\+Potion\+::get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classdamagePotion_aed1a816993dd26822cb46c82e676d3bc}\label{classdamagePotion_aed1a816993dd26822cb46c82e676d3bc} 
+\index{damagePotion@{damagePotion}!setDamage@{setDamage}}
+\index{setDamage@{setDamage}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{setDamage()}{setDamage()}}
+{\footnotesize\ttfamily void damage\+Potion\+::set\+Damage (\begin{DoxyParamCaption}\item[{unsigned int}]{damage }\end{DoxyParamCaption})}
+
+\Hypertarget{classdamagePotion_ab7d9ff88f5567c011381a024138b716f}\label{classdamagePotion_ab7d9ff88f5567c011381a024138b716f} 
+\index{damagePotion@{damagePotion}!showInInventory@{showInInventory}}
+\index{showInInventory@{showInInventory}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{showInInventory()}{showInInventory()}}
+{\footnotesize\ttfamily void damage\+Potion\+::show\+In\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a2735769ed144c3f58dca5f8199cc2e09}{potion}}.
+
+\Hypertarget{classdamagePotion_adce291cccc1906a6cb2879bc240a7170}\label{classdamagePotion_adce291cccc1906a6cb2879bc240a7170} 
+\index{damagePotion@{damagePotion}!showInShop@{showInShop}}
+\index{showInShop@{showInShop}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{showInShop()}{showInShop()}}
+{\footnotesize\ttfamily void damage\+Potion\+::show\+In\+Shop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classpotion_a4e22ec1c4fac27b9c9b7f811827fec68}{potion}}.
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classdamagePotion_a2ff78fba6455ec0e27a09b9879cf840f}\label{classdamagePotion_a2ff78fba6455ec0e27a09b9879cf840f} 
+\index{damagePotion@{damagePotion}!damage@{damage}}
+\index{damage@{damage}!damagePotion@{damagePotion}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily unsigned int damage\+Potion\+::damage \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/inventory/potion/\mbox{\hyperlink{potion_8h}{potion.\+h}}\item 
+src/inventory/potion/\mbox{\hyperlink{potion_8cpp}{potion.\+cpp}}\end{DoxyCompactItemize}

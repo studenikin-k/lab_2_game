@@ -1,0 +1,39 @@
+\doxysection{war\+\_\+style.\+h}
+\hypertarget{war__style_8h_source}{}\label{war__style_8h_source}\index{include/utils/war\_style.h@{include/utils/war\_style.h}}
+\mbox{\hyperlink{war__style_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_WAR\_STYLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_WAR\_STYLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ данный\ enum\ необходим\ для\ определения\ стиля\ боя}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{warStyle}}\{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab9f24e83531326204197015b2f43a93f}{Damage}},}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab01b83048682460e96eb4bd2482b8c32}{Dodge}},}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ac77a8030f463c2c14aebd6452fc9f0a8}{Armor}},}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab13082ea3fe2642f1fd1fb76de03058b}{Elite}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777a79e783b8e639c7b49391934862107164}{Non\_style}}}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{war__style_8h_a0bc59df05491a6563854456b546b0a49}{warStyleToString}}(\mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{warStyle}}\ style)\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{switch}\ (style)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab9f24e83531326204197015b2f43a93f}{warStyle::Damage}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Урон"{}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ac77a8030f463c2c14aebd6452fc9f0a8}{warStyle::Armor}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Броня"{}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab01b83048682460e96eb4bd2482b8c32}{warStyle::Dodge}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Уворот"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab13082ea3fe2642f1fd1fb76de03058b}{warStyle::Elite}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Элита"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Если\ вы\ собрались\ играть\ за\ орду,\ вы\ ошиблись\ игрой,\ тут\ уже\ победил\ альянс\ \(\backslash\)n"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ данный\ метод\ разыменовывания\ строки\ как\ enum\ необходим\ для\ того,\ чтобы\ загружать\ из\ БД\ предметы\ персонажа}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ с\ нужным\ стилем\ боя}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777}{warStyle}}\ \mbox{\hyperlink{war__style_8h_a0019fac33b97cf1409566322efeb2f8a}{stringToWarStyle}}(\textcolor{keyword}{const}\ std::string\&\ str)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Урон"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab9f24e83531326204197015b2f43a93f}{warStyle::Damage}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Броня"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ac77a8030f463c2c14aebd6452fc9f0a8}{warStyle::Armor}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Уворот"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab01b83048682460e96eb4bd2482b8c32}{warStyle::Dodge}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Элита"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{war__style_8h_a7076aca7f6e08ff21b3f99f9a27af777ab13082ea3fe2642f1fd1fb76de03058b}{warStyle::Elite}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Неизвестный\ боевой\ стиль:\ "{}}\ +\ str);}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_WAR\_STYLE\_H}}
+
+\end{DoxyCode}

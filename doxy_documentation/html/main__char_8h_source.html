@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Исходный файл include/characters/main_char/main_char.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3a500453c6cd85a8ba6317c04bfc9f7d.html">characters</a></li><li class="navelem"><a class="el" href="dir_c79c7097b328fa3bd4e0d2f0e16a4b7c.html">main_char</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">main_char.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="main__char_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LAB_2_GAME_MAIN_CHAR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LAB_2_GAME_MAIN_CHAR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../../all_headers.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">    8</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">BELT_SIZE</a> = 6; <span class="comment">// максимальный объём пояса у персонажа</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmain__char.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classmain__char.html">main_char</a> : <span class="keyword">public</span> <a class="code hl_class" href="classcharacter.html">character</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmain__char.html#a9c2b81e4399fc94a3906f7705ade11d9">getExperience</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#af25078875b9d47495ccbf8c36b439cca">setExperience</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmain__char.html#a0095a3f0f04cc94a182d4935a509a2da">experience</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmain__char.html#a4815067ec6df2ab6413aa29aced5d26f">getExperienceToLevelUp</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a9ba7462db0c8f15ba2dc39fb18f2abd7">setExperienceToLevelUp</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> experience_to_level_up);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmain__char.html#a1f64ed3f32a722425fda3b99c7214d31">getCurrentPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a99d6d28202794560ea78ba2c1149a4be">setCurrentPosition</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> current_position);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="classmain__char.html">main_char</a>(<span class="keyword">const</span> std::string &amp;_name, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _level, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _health, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _damage,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _armor, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _accuracy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _stun,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _dodge, <span class="keyword">const</span> <a class="code hl_class" href="classcoins.html">coins</a> &amp;cash, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> position);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmain__char.html#a3fad025242d8ad194f65fc4816969e21">   28</a></span>    <a class="code hl_function" href="classmain__char.html#a3fad025242d8ad194f65fc4816969e21">~main_char</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmain__char.html#a6eecf5e63ad4cd3d5acc968a229b4e5e">   30</a></span>    std::unordered_map&lt;slotOfEquipment, std::shared_ptr&lt;equipment&gt; &gt; <a class="code hl_variable" href="classmain__char.html#a6eecf5e63ad4cd3d5acc968a229b4e5e">Equipment</a>; <span class="comment">// снаряжение персонажа</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmain__char.html#a6096723441eb5f04f799abbc056874cb">   31</a></span>    std::array&lt;std::shared_ptr&lt;potion&gt;, <a class="code hl_variable" href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">BELT_SIZE</a>&gt; <a class="code hl_variable" href="classmain__char.html#a6096723441eb5f04f799abbc056874cb">Belt</a>{}; <span class="comment">// пояс зелий персонажа</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmain__char.html#ac98fd33055906677f40fc1d632028ccc">   33</a></span>    <a class="code hl_class" href="classbag.html">bag</a> <a class="code hl_variable" href="classmain__char.html#ac98fd33055906677f40fc1d632028ccc">Bag</a>{}; <span class="comment">// портфель персонажа, содержит в себе векторы оружия, снаряжения и зелий</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classmain__char.html#ab76ce77872c0c269c856291e8183bdc3">   35</a></span>    std::shared_ptr&lt;weapon&gt; <a class="code hl_variable" href="classmain__char.html#ab76ce77872c0c269c856291e8183bdc3">gun</a>; <span class="comment">// оружие персонажа</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classmain__char.html#ac37855cfa52e55ad61a3de06d2fa8762">   37</a></span>    <a class="code hl_class" href="classcoins.html">coins</a> <a class="code hl_variable" href="classmain__char.html#ac37855cfa52e55ad61a3de06d2fa8762">balance</a>{}; <span class="comment">// баланс персонажа, содержит в себе медяки, перерасчитываемое алгортимом: 1 золото 100 серебра</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// 1 серебро, 100 медяков</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#af52517b1474691d87ca8f179280cef9a">equip</a>(std::shared_ptr&lt;equipment&gt; item); <span class="comment">// позволяет надеть предмет</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a6061401c77e1967f520667072f28471b">takeOffEquipment</a>(std::shared_ptr&lt;equipment&gt; item); <span class="comment">// позволяет снять часть экипировки</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#af52517b1474691d87ca8f179280cef9a">equip</a>(std::shared_ptr&lt;weapon&gt;); <span class="comment">// позволяет надеть оружие</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#ac8d78a869458e21b44cc4d46b884c6ec">takeOffWeapon</a>(); <span class="comment">// позволяет снять оружие</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmain__char.html#ad347b8bead5553e551a2c346ef7902f1">isBeltFull</a>() <span class="keyword">const</span>; <span class="comment">// проверка на наличие места в поясе</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a03dc50f47d7a7c8d5a2665a481215497">displayBelt</a>() <span class="keyword">const</span>; <span class="comment">// метод показывающий содержимое пояса</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#af52517b1474691d87ca8f179280cef9a">equip</a>(std::shared_ptr&lt;potion&gt; item); <span class="comment">// метод, кладём в пояс зелье</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a400f1fa282fdd09ea59c6142068f2d2e">takeOffPotion</a>(); <span class="comment">// метод напрямую работает с поясом и интерактивно позволяет снять зелье</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#adad1057668f27e12c5234047bcf1ffc2">buyEquipment</a>(<span class="keyword">const</span> std::shared_ptr&lt;equipment&gt; &amp;_item);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a7acff57d80c6a3da4156eaddd54696b2">buyWeapon</a>(<span class="keyword">const</span> std::shared_ptr&lt;weapon&gt; &amp;);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a8c91b1a0868c2785dfe23d57ea4fca8f">buyPotion</a>(<span class="keyword">const</span> std::shared_ptr&lt;potion&gt; &amp;);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#ac5584489e8b230cb735e33b745b7da30">showBag</a>(); <span class="comment">//метод осмотра портфеля, проходим по векторам снаряжения, оружия, зелий, позволяет</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// надевать нужные предметы в экипировку</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a73c0abeb6ca631fd13a923f54f6a9b6f">showGear</a>(); <span class="comment">// метод осмотра экипировки, позволяет снять предметы с экипировки, снять оружие,</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// снять элемент пояса зелий</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    [[nodiscard]] <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="classmain__char.html#aa6530fe2d5ce540fc1c3c9d5f61d0c45">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#adeba9349081f412c1efdb52eddcc988d">setName</a>(<span class="keyword">const</span> std::string &amp;<a class="code hl_variable" href="classmain__char.html#aef69405a9d99e9478303bb46eaac9f41">name</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmain__char.html#af08b49a96dc2c59becfdad74a2b6bb77">getLevel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a68aa1b5f0e5082158638996ce5e1beab">setLevel</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmain__char.html#acc7437923ca2f1098bc91e9d9f3cf560">level</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a89f31e92e80c50d7266a7f2ccc586733">usePotion</a>(); <span class="comment">// метод позволяет использовать зелья</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classmain__char.html#a7b9f03f3fe8c0f56368a8f25b464e508">   79</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>{};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmain__char.html#a72c83b725251f2d4f7e42e445adeabae">id1</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmain__char.html#a0b7d63f4da98eab53de5794e2b8fdc17">set_id</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classmain__char.html#a0095a3f0f04cc94a182d4935a509a2da">   87</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmain__char.html#a0095a3f0f04cc94a182d4935a509a2da">experience</a> = 0;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classmain__char.html#abd717740d045623d31c876c159356043">   88</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmain__char.html#abd717740d045623d31c876c159356043">experienceToLevelUp</a> = 100;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classmain__char.html#a354fd4da4ba571a81498a5581011bb78">   89</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmain__char.html#a354fd4da4ba571a81498a5581011bb78">currentPosition</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classmain__char.html#acc7437923ca2f1098bc91e9d9f3cf560">   90</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmain__char.html#acc7437923ca2f1098bc91e9d9f3cf560">level</a>{};</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classmain__char.html#aef69405a9d99e9478303bb46eaac9f41">   91</a></span>    std::string <a class="code hl_variable" href="classmain__char.html#aef69405a9d99e9478303bb46eaac9f41">name</a>{};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="main__char_8h.html#a33d61d533f10439575903970c769d766">   94</a></span>std::ostream &amp;<a class="code hl_function" href="main__char_8h.html#a33d61d533f10439575903970c769d766">operator&lt;&lt;</a>(std::ostream &amp;os, <span class="keyword">const</span> <a class="code hl_class" href="classmain__char.html">main_char</a> &amp;pers);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif </span><span class="comment">//LAB_2_GAME_MAIN_CHAR_H</span></div>
+<div class="ttc" id="aclassbag_html"><div class="ttname"><a href="classbag.html">bag</a></div><div class="ttdef"><b>Definition</b> bag.h:9</div></div>
+<div class="ttc" id="aclasscharacter_html"><div class="ttname"><a href="classcharacter.html">character</a></div><div class="ttdef"><b>Definition</b> character.h:7</div></div>
+<div class="ttc" id="aclasscoins_html"><div class="ttname"><a href="classcoins.html">coins</a></div><div class="ttdef"><b>Definition</b> coins.h:4</div></div>
+<div class="ttc" id="aclassmain__char_html"><div class="ttname"><a href="classmain__char.html">main_char</a></div><div class="ttdef"><b>Definition</b> main_char.h:10</div></div>
+<div class="ttc" id="aclassmain__char_html_a0095a3f0f04cc94a182d4935a509a2da"><div class="ttname"><a href="classmain__char.html#a0095a3f0f04cc94a182d4935a509a2da">main_char::experience</a></div><div class="ttdeci">unsigned int experience</div><div class="ttdef"><b>Definition</b> main_char.h:87</div></div>
+<div class="ttc" id="aclassmain__char_html_a03dc50f47d7a7c8d5a2665a481215497"><div class="ttname"><a href="classmain__char.html#a03dc50f47d7a7c8d5a2665a481215497">main_char::displayBelt</a></div><div class="ttdeci">void displayBelt() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:191</div></div>
+<div class="ttc" id="aclassmain__char_html_a0b7d63f4da98eab53de5794e2b8fdc17"><div class="ttname"><a href="classmain__char.html#a0b7d63f4da98eab53de5794e2b8fdc17">main_char::set_id</a></div><div class="ttdeci">void set_id(unsigned int id)</div><div class="ttdef"><b>Definition</b> main_char.cpp:77</div></div>
+<div class="ttc" id="aclassmain__char_html_a1f64ed3f32a722425fda3b99c7214d31"><div class="ttname"><a href="classmain__char.html#a1f64ed3f32a722425fda3b99c7214d31">main_char::getCurrentPosition</a></div><div class="ttdeci">unsigned int getCurrentPosition() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:65</div></div>
+<div class="ttc" id="aclassmain__char_html_a354fd4da4ba571a81498a5581011bb78"><div class="ttname"><a href="classmain__char.html#a354fd4da4ba571a81498a5581011bb78">main_char::currentPosition</a></div><div class="ttdeci">unsigned int currentPosition</div><div class="ttdef"><b>Definition</b> main_char.h:89</div></div>
+<div class="ttc" id="aclassmain__char_html_a3fad025242d8ad194f65fc4816969e21"><div class="ttname"><a href="classmain__char.html#a3fad025242d8ad194f65fc4816969e21">main_char::~main_char</a></div><div class="ttdeci">~main_char()=default</div></div>
+<div class="ttc" id="aclassmain__char_html_a400f1fa282fdd09ea59c6142068f2d2e"><div class="ttname"><a href="classmain__char.html#a400f1fa282fdd09ea59c6142068f2d2e">main_char::takeOffPotion</a></div><div class="ttdeci">void takeOffPotion()</div><div class="ttdef"><b>Definition</b> main_char.cpp:250</div></div>
+<div class="ttc" id="aclassmain__char_html_a4815067ec6df2ab6413aa29aced5d26f"><div class="ttname"><a href="classmain__char.html#a4815067ec6df2ab6413aa29aced5d26f">main_char::getExperienceToLevelUp</a></div><div class="ttdeci">unsigned int getExperienceToLevelUp() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:57</div></div>
+<div class="ttc" id="aclassmain__char_html_a6061401c77e1967f520667072f28471b"><div class="ttname"><a href="classmain__char.html#a6061401c77e1967f520667072f28471b">main_char::takeOffEquipment</a></div><div class="ttdeci">void takeOffEquipment(std::shared_ptr&lt; equipment &gt; item)</div><div class="ttdef"><b>Definition</b> main_char.cpp:114</div></div>
+<div class="ttc" id="aclassmain__char_html_a6096723441eb5f04f799abbc056874cb"><div class="ttname"><a href="classmain__char.html#a6096723441eb5f04f799abbc056874cb">main_char::Belt</a></div><div class="ttdeci">std::array&lt; std::shared_ptr&lt; potion &gt;, BELT_SIZE &gt; Belt</div><div class="ttdef"><b>Definition</b> main_char.h:31</div></div>
+<div class="ttc" id="aclassmain__char_html_a68aa1b5f0e5082158638996ce5e1beab"><div class="ttname"><a href="classmain__char.html#a68aa1b5f0e5082158638996ce5e1beab">main_char::setLevel</a></div><div class="ttdeci">void setLevel(unsigned int level)</div><div class="ttdef"><b>Definition</b> main_char.cpp:44</div></div>
+<div class="ttc" id="aclassmain__char_html_a6eecf5e63ad4cd3d5acc968a229b4e5e"><div class="ttname"><a href="classmain__char.html#a6eecf5e63ad4cd3d5acc968a229b4e5e">main_char::Equipment</a></div><div class="ttdeci">std::unordered_map&lt; slotOfEquipment, std::shared_ptr&lt; equipment &gt; &gt; Equipment</div><div class="ttdef"><b>Definition</b> main_char.h:30</div></div>
+<div class="ttc" id="aclassmain__char_html_a72c83b725251f2d4f7e42e445adeabae"><div class="ttname"><a href="classmain__char.html#a72c83b725251f2d4f7e42e445adeabae">main_char::id1</a></div><div class="ttdeci">unsigned int id1() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:73</div></div>
+<div class="ttc" id="aclassmain__char_html_a73c0abeb6ca631fd13a923f54f6a9b6f"><div class="ttname"><a href="classmain__char.html#a73c0abeb6ca631fd13a923f54f6a9b6f">main_char::showGear</a></div><div class="ttdeci">void showGear()</div><div class="ttdef"><b>Definition</b> main_char.cpp:531</div></div>
+<div class="ttc" id="aclassmain__char_html_a7acff57d80c6a3da4156eaddd54696b2"><div class="ttname"><a href="classmain__char.html#a7acff57d80c6a3da4156eaddd54696b2">main_char::buyWeapon</a></div><div class="ttdeci">void buyWeapon(const std::shared_ptr&lt; weapon &gt; &amp;)</div><div class="ttdef"><b>Definition</b> main_char.cpp:287</div></div>
+<div class="ttc" id="aclassmain__char_html_a89f31e92e80c50d7266a7f2ccc586733"><div class="ttname"><a href="classmain__char.html#a89f31e92e80c50d7266a7f2ccc586733">main_char::usePotion</a></div><div class="ttdeci">void usePotion()</div><div class="ttdef"><b>Definition</b> main_char.cpp:697</div></div>
+<div class="ttc" id="aclassmain__char_html_a8c91b1a0868c2785dfe23d57ea4fca8f"><div class="ttname"><a href="classmain__char.html#a8c91b1a0868c2785dfe23d57ea4fca8f">main_char::buyPotion</a></div><div class="ttdeci">void buyPotion(const std::shared_ptr&lt; potion &gt; &amp;)</div><div class="ttdef"><b>Definition</b> main_char.cpp:294</div></div>
+<div class="ttc" id="aclassmain__char_html_a99d6d28202794560ea78ba2c1149a4be"><div class="ttname"><a href="classmain__char.html#a99d6d28202794560ea78ba2c1149a4be">main_char::setCurrentPosition</a></div><div class="ttdeci">void setCurrentPosition(unsigned int current_position)</div><div class="ttdef"><b>Definition</b> main_char.cpp:69</div></div>
+<div class="ttc" id="aclassmain__char_html_a9ba7462db0c8f15ba2dc39fb18f2abd7"><div class="ttname"><a href="classmain__char.html#a9ba7462db0c8f15ba2dc39fb18f2abd7">main_char::setExperienceToLevelUp</a></div><div class="ttdeci">void setExperienceToLevelUp(const unsigned int experience_to_level_up)</div><div class="ttdef"><b>Definition</b> main_char.cpp:61</div></div>
+<div class="ttc" id="aclassmain__char_html_a9c2b81e4399fc94a3906f7705ade11d9"><div class="ttname"><a href="classmain__char.html#a9c2b81e4399fc94a3906f7705ade11d9">main_char::getExperience</a></div><div class="ttdeci">unsigned int getExperience() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:49</div></div>
+<div class="ttc" id="aclassmain__char_html_aa6530fe2d5ce540fc1c3c9d5f61d0c45"><div class="ttname"><a href="classmain__char.html#aa6530fe2d5ce540fc1c3c9d5f61d0c45">main_char::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:32</div></div>
+<div class="ttc" id="aclassmain__char_html_ab76ce77872c0c269c856291e8183bdc3"><div class="ttname"><a href="classmain__char.html#ab76ce77872c0c269c856291e8183bdc3">main_char::gun</a></div><div class="ttdeci">std::shared_ptr&lt; weapon &gt; gun</div><div class="ttdef"><b>Definition</b> main_char.h:35</div></div>
+<div class="ttc" id="aclassmain__char_html_abd717740d045623d31c876c159356043"><div class="ttname"><a href="classmain__char.html#abd717740d045623d31c876c159356043">main_char::experienceToLevelUp</a></div><div class="ttdeci">unsigned int experienceToLevelUp</div><div class="ttdef"><b>Definition</b> main_char.h:88</div></div>
+<div class="ttc" id="aclassmain__char_html_ac37855cfa52e55ad61a3de06d2fa8762"><div class="ttname"><a href="classmain__char.html#ac37855cfa52e55ad61a3de06d2fa8762">main_char::balance</a></div><div class="ttdeci">coins balance</div><div class="ttdef"><b>Definition</b> main_char.h:37</div></div>
+<div class="ttc" id="aclassmain__char_html_ac5584489e8b230cb735e33b745b7da30"><div class="ttname"><a href="classmain__char.html#ac5584489e8b230cb735e33b745b7da30">main_char::showBag</a></div><div class="ttdeci">void showBag()</div><div class="ttdef"><b>Definition</b> main_char.cpp:302</div></div>
+<div class="ttc" id="aclassmain__char_html_ac8d78a869458e21b44cc4d46b884c6ec"><div class="ttname"><a href="classmain__char.html#ac8d78a869458e21b44cc4d46b884c6ec">main_char::takeOffWeapon</a></div><div class="ttdeci">void takeOffWeapon()</div><div class="ttdef"><b>Definition</b> main_char.cpp:170</div></div>
+<div class="ttc" id="aclassmain__char_html_ac98fd33055906677f40fc1d632028ccc"><div class="ttname"><a href="classmain__char.html#ac98fd33055906677f40fc1d632028ccc">main_char::Bag</a></div><div class="ttdeci">bag Bag</div><div class="ttdef"><b>Definition</b> main_char.h:33</div></div>
+<div class="ttc" id="aclassmain__char_html_acc7437923ca2f1098bc91e9d9f3cf560"><div class="ttname"><a href="classmain__char.html#acc7437923ca2f1098bc91e9d9f3cf560">main_char::level</a></div><div class="ttdeci">unsigned int level</div><div class="ttdef"><b>Definition</b> main_char.h:90</div></div>
+<div class="ttc" id="aclassmain__char_html_ad347b8bead5553e551a2c346ef7902f1"><div class="ttname"><a href="classmain__char.html#ad347b8bead5553e551a2c346ef7902f1">main_char::isBeltFull</a></div><div class="ttdeci">bool isBeltFull() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:186</div></div>
+<div class="ttc" id="aclassmain__char_html_adad1057668f27e12c5234047bcf1ffc2"><div class="ttname"><a href="classmain__char.html#adad1057668f27e12c5234047bcf1ffc2">main_char::buyEquipment</a></div><div class="ttdeci">void buyEquipment(const std::shared_ptr&lt; equipment &gt; &amp;_item)</div><div class="ttdef"><b>Definition</b> main_char.cpp:279</div></div>
+<div class="ttc" id="aclassmain__char_html_adeba9349081f412c1efdb52eddcc988d"><div class="ttname"><a href="classmain__char.html#adeba9349081f412c1efdb52eddcc988d">main_char::setName</a></div><div class="ttdeci">void setName(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> main_char.cpp:36</div></div>
+<div class="ttc" id="aclassmain__char_html_aef69405a9d99e9478303bb46eaac9f41"><div class="ttname"><a href="classmain__char.html#aef69405a9d99e9478303bb46eaac9f41">main_char::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> main_char.h:91</div></div>
+<div class="ttc" id="aclassmain__char_html_af08b49a96dc2c59becfdad74a2b6bb77"><div class="ttname"><a href="classmain__char.html#af08b49a96dc2c59becfdad74a2b6bb77">main_char::getLevel</a></div><div class="ttdeci">unsigned int getLevel() const</div><div class="ttdef"><b>Definition</b> main_char.cpp:40</div></div>
+<div class="ttc" id="aclassmain__char_html_af25078875b9d47495ccbf8c36b439cca"><div class="ttname"><a href="classmain__char.html#af25078875b9d47495ccbf8c36b439cca">main_char::setExperience</a></div><div class="ttdeci">void setExperience(const unsigned int experience)</div><div class="ttdef"><b>Definition</b> main_char.cpp:53</div></div>
+<div class="ttc" id="aclassmain__char_html_af52517b1474691d87ca8f179280cef9a"><div class="ttname"><a href="classmain__char.html#af52517b1474691d87ca8f179280cef9a">main_char::equip</a></div><div class="ttdeci">void equip(std::shared_ptr&lt; equipment &gt; item)</div><div class="ttdef"><b>Definition</b> main_char.cpp:81</div></div>
+<div class="ttc" id="amain__char_8h_html_a0f8d5e6722f630f88f7794862005af25"><div class="ttname"><a href="main__char_8h.html#a0f8d5e6722f630f88f7794862005af25">BELT_SIZE</a></div><div class="ttdeci">constexpr int BELT_SIZE</div><div class="ttdef"><b>Definition</b> main_char.h:8</div></div>
+<div class="ttc" id="amain__char_8h_html_a33d61d533f10439575903970c769d766"><div class="ttname"><a href="main__char_8h.html#a33d61d533f10439575903970c769d766">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const main_char &amp;pers)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

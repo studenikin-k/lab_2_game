@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab_2_game: Класс potion</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab_2_game
+   </div>
+   <div id="projectbrief">A C++ text-based RPG game.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classpotion-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс potion<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="potion_8h_source.html">potion.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:potion:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpotion__inherit__graph.png" border="0" usemap="#apotion_inherit__map" alt="Inheritance graph"/></div>
+<map name="apotion_inherit__map" id="apotion_inherit__map">
+<area shape="rect" title=" " alt="" coords="371,5,433,31"/>
+<area shape="rect" href="classaccuracyPotion.html" title=" " alt="" coords="5,79,127,104"/>
+<area shape="poly" title=" " alt="" coords="358,31,121,81,120,76,356,26"/>
+<area shape="rect" href="classarmorPotion.html" title=" " alt="" coords="151,79,253,104"/>
+<area shape="poly" title=" " alt="" coords="358,38,235,81,233,76,356,33"/>
+<area shape="rect" href="classdamagePotion.html" title=" " alt="" coords="277,79,393,104"/>
+<area shape="poly" title=" " alt="" coords="383,43,348,80,344,77,380,39"/>
+<area shape="rect" href="classdodgePotion.html" title=" " alt="" coords="417,79,520,104"/>
+<area shape="poly" title=" " alt="" coords="424,39,460,77,456,80,421,43"/>
+<area shape="rect" href="classhealthPotion.html" title=" " alt="" coords="545,79,649,104"/>
+<area shape="poly" title=" " alt="" coords="447,33,566,76,564,81,445,38"/>
+<area shape="rect" href="classstunPotion.html" title=" " alt="" coords="673,79,763,104"/>
+<area shape="poly" title=" " alt="" coords="447,27,673,77,672,82,446,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса potion:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpotion__coll__graph.png" border="0" usemap="#apotion_coll__map" alt="Collaboration graph"/></div>
+<map name="apotion_coll__map" id="apotion_coll__map">
+<area shape="rect" title=" " alt="" coords="5,93,68,119"/>
+<area shape="rect" href="classcoins.html" title=" " alt="" coords="9,5,65,31"/>
+<area shape="poly" title=" " alt="" coords="39,45,39,93,34,93,34,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a48c3d5c030b0f4980e8b416691ed81f3" id="r_a48c3d5c030b0f4980e8b416691ed81f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a48c3d5c030b0f4980e8b416691ed81f3">potion</a> ()=default</td></tr>
+<tr class="separator:a48c3d5c030b0f4980e8b416691ed81f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd230ed198ff1d35d24992a76345b1a" id="r_aefd230ed198ff1d35d24992a76345b1a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#aefd230ed198ff1d35d24992a76345b1a">~potion</a> ()=default</td></tr>
+<tr class="separator:aefd230ed198ff1d35d24992a76345b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334f810a0b41d066415400248ceb59d0" id="r_a334f810a0b41d066415400248ceb59d0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a334f810a0b41d066415400248ceb59d0">getName</a> () const</td></tr>
+<tr class="separator:a334f810a0b41d066415400248ceb59d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5e109d9f63a27680404c6def2f15c3" id="r_aea5e109d9f63a27680404c6def2f15c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#aea5e109d9f63a27680404c6def2f15c3">setName</a> (const std::string &amp;<a class="el" href="classpotion.html#a24965830c71348aa7a2e146ef83bf6d1">name</a>)</td></tr>
+<tr class="separator:aea5e109d9f63a27680404c6def2f15c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce4b451d56bab99ba4c0012e7f84de2" id="r_a8ce4b451d56bab99ba4c0012e7f84de2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a8ce4b451d56bab99ba4c0012e7f84de2">getLevel</a> () const</td></tr>
+<tr class="separator:a8ce4b451d56bab99ba4c0012e7f84de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518a86310d4d71405754ef6684ba5b70" id="r_a518a86310d4d71405754ef6684ba5b70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a518a86310d4d71405754ef6684ba5b70">setLevel</a> (unsigned int <a class="el" href="classpotion.html#af8b6d559b3ad34aea125c9f2c4ef67ce">level</a>)</td></tr>
+<tr class="separator:a518a86310d4d71405754ef6684ba5b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e22ec1c4fac27b9c9b7f811827fec68" id="r_a4e22ec1c4fac27b9c9b7f811827fec68"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a4e22ec1c4fac27b9c9b7f811827fec68">showInShop</a> ()=0</td></tr>
+<tr class="separator:a4e22ec1c4fac27b9c9b7f811827fec68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2735769ed144c3f58dca5f8199cc2e09" id="r_a2735769ed144c3f58dca5f8199cc2e09"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a2735769ed144c3f58dca5f8199cc2e09">showInInventory</a> ()=0</td></tr>
+<tr class="separator:a2735769ed144c3f58dca5f8199cc2e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46efdaf3140eae8b90f07dc0c8f03258" id="r_a46efdaf3140eae8b90f07dc0c8f03258"><td class="memItemLeft" align="right" valign="top"><a class="el" href="slot__of__potion_8h.html#a10aa34bb5465c334505f6a90e582b6c6">slotOfPotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a46efdaf3140eae8b90f07dc0c8f03258">getSlot</a> () const</td></tr>
+<tr class="separator:a46efdaf3140eae8b90f07dc0c8f03258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7c4595ff3db611b68c85821fbcacfc" id="r_acc7c4595ff3db611b68c85821fbcacfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#acc7c4595ff3db611b68c85821fbcacfc">setSlot</a> (<a class="el" href="slot__of__potion_8h.html#a10aa34bb5465c334505f6a90e582b6c6">slotOfPotion</a> <a class="el" href="classpotion.html#a34893de4538e1b7cf41f09f91f5f983c">slot</a>)</td></tr>
+<tr class="separator:acc7c4595ff3db611b68c85821fbcacfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30980bb75bf2f090a36e73efc08eb9d7" id="r_a30980bb75bf2f090a36e73efc08eb9d7"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a30980bb75bf2f090a36e73efc08eb9d7">clone</a> () const =0</td></tr>
+<tr class="separator:a30980bb75bf2f090a36e73efc08eb9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a34893de4538e1b7cf41f09f91f5f983c" id="r_a34893de4538e1b7cf41f09f91f5f983c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="slot__of__potion_8h.html#a10aa34bb5465c334505f6a90e582b6c6">slotOfPotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a34893de4538e1b7cf41f09f91f5f983c">slot</a> {}</td></tr>
+<tr class="separator:a34893de4538e1b7cf41f09f91f5f983c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323c00c1bffab263c7c164539482390a" id="r_a323c00c1bffab263c7c164539482390a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcoins.html">coins</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a323c00c1bffab263c7c164539482390a">price</a> {}</td></tr>
+<tr class="separator:a323c00c1bffab263c7c164539482390a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a24965830c71348aa7a2e146ef83bf6d1" id="r_a24965830c71348aa7a2e146ef83bf6d1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#a24965830c71348aa7a2e146ef83bf6d1">name</a> {}</td></tr>
+<tr class="separator:a24965830c71348aa7a2e146ef83bf6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b6d559b3ad34aea125c9f2c4ef67ce" id="r_af8b6d559b3ad34aea125c9f2c4ef67ce"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpotion.html#af8b6d559b3ad34aea125c9f2c4ef67ce">level</a> {}</td></tr>
+<tr class="separator:af8b6d559b3ad34aea125c9f2c4ef67ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a48c3d5c030b0f4980e8b416691ed81f3" name="a48c3d5c030b0f4980e8b416691ed81f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c3d5c030b0f4980e8b416691ed81f3">&#9670;&#160;</a></span>potion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">potion::potion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefd230ed198ff1d35d24992a76345b1a" name="aefd230ed198ff1d35d24992a76345b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd230ed198ff1d35d24992a76345b1a">&#9670;&#160;</a></span>~potion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual potion::~potion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a30980bb75bf2f090a36e73efc08eb9d7" name="a30980bb75bf2f090a36e73efc08eb9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30980bb75bf2f090a36e73efc08eb9d7">&#9670;&#160;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classpotion.html">potion</a> &gt; potion::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="classhealthPotion.html#af6d47ad7f060fa037e99132b1dad7259">healthPotion</a>, <a class="el" href="classdamagePotion.html#a572d9c8929e3bf7c50c933fc33218e8a">damagePotion</a>, <a class="el" href="classarmorPotion.html#a2cdd113d4d392ba72f7a34c9aa933d11">armorPotion</a>, <a class="el" href="classaccuracyPotion.html#a2aafd093f2d3d7263f617714dbd8bcb9">accuracyPotion</a>, <a class="el" href="classstunPotion.html#ad4348ef82371635e69949a4937e3b656">stunPotion</a> и <a class="el" href="classdodgePotion.html#ab6548cc7070db28dd59a9fd309b0039e">dodgePotion</a>.</p>
+
+</div>
+</div>
+<a id="a8ce4b451d56bab99ba4c0012e7f84de2" name="a8ce4b451d56bab99ba4c0012e7f84de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce4b451d56bab99ba4c0012e7f84de2">&#9670;&#160;</a></span>getLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int potion::getLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a334f810a0b41d066415400248ceb59d0" name="a334f810a0b41d066415400248ceb59d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334f810a0b41d066415400248ceb59d0">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; potion::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46efdaf3140eae8b90f07dc0c8f03258" name="a46efdaf3140eae8b90f07dc0c8f03258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46efdaf3140eae8b90f07dc0c8f03258">&#9670;&#160;</a></span>getSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="slot__of__potion_8h.html#a10aa34bb5465c334505f6a90e582b6c6">slotOfPotion</a> potion::getSlot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a518a86310d4d71405754ef6684ba5b70" name="a518a86310d4d71405754ef6684ba5b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a518a86310d4d71405754ef6684ba5b70">&#9670;&#160;</a></span>setLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void potion::setLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea5e109d9f63a27680404c6def2f15c3" name="aea5e109d9f63a27680404c6def2f15c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5e109d9f63a27680404c6def2f15c3">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void potion::setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc7c4595ff3db611b68c85821fbcacfc" name="acc7c4595ff3db611b68c85821fbcacfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7c4595ff3db611b68c85821fbcacfc">&#9670;&#160;</a></span>setSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void potion::setSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="slot__of__potion_8h.html#a10aa34bb5465c334505f6a90e582b6c6">slotOfPotion</a>&#160;</td>
+          <td class="paramname"><em>slot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2735769ed144c3f58dca5f8199cc2e09" name="a2735769ed144c3f58dca5f8199cc2e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2735769ed144c3f58dca5f8199cc2e09">&#9670;&#160;</a></span>showInInventory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void potion::showInInventory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="classhealthPotion.html#a5f1cf335fb5629cc98c3a280094c40ff">healthPotion</a>, <a class="el" href="classdamagePotion.html#ab7d9ff88f5567c011381a024138b716f">damagePotion</a>, <a class="el" href="classarmorPotion.html#addb25a45e0b6d7df11335d0367a2009d">armorPotion</a>, <a class="el" href="classaccuracyPotion.html#a6e39f6f65414ee3fc5383ab8f02645b5">accuracyPotion</a>, <a class="el" href="classstunPotion.html#a3e9ff726689c6a19f0e22d027c6618e4">stunPotion</a> и <a class="el" href="classdodgePotion.html#a7e23907d7cba1dd7b27bdbdb391d588c">dodgePotion</a>.</p>
+
+</div>
+</div>
+<a id="a4e22ec1c4fac27b9c9b7f811827fec68" name="a4e22ec1c4fac27b9c9b7f811827fec68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e22ec1c4fac27b9c9b7f811827fec68">&#9670;&#160;</a></span>showInShop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void potion::showInShop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="classhealthPotion.html#a470bdd177b45d63e845c5218a85edb0d">healthPotion</a>, <a class="el" href="classdamagePotion.html#adce291cccc1906a6cb2879bc240a7170">damagePotion</a>, <a class="el" href="classarmorPotion.html#a64c9a106f637ff491093e06aa32094e8">armorPotion</a>, <a class="el" href="classaccuracyPotion.html#a9baaeb64a3931f9b64c7eb99a76ccf95">accuracyPotion</a>, <a class="el" href="classstunPotion.html#a6cd2ffe62fdda94c9f7c645e9d5b2132">stunPotion</a> и <a class="el" href="classdodgePotion.html#ab39ef28dfe42592b27194d9048b6ced7">dodgePotion</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af8b6d559b3ad34aea125c9f2c4ef67ce" name="af8b6d559b3ad34aea125c9f2c4ef67ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b6d559b3ad34aea125c9f2c4ef67ce">&#9670;&#160;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int potion::level {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24965830c71348aa7a2e146ef83bf6d1" name="a24965830c71348aa7a2e146ef83bf6d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24965830c71348aa7a2e146ef83bf6d1">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string potion::name {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a323c00c1bffab263c7c164539482390a" name="a323c00c1bffab263c7c164539482390a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323c00c1bffab263c7c164539482390a">&#9670;&#160;</a></span>price</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcoins.html">coins</a> potion::price {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34893de4538e1b7cf41f09f91f5f983c" name="a34893de4538e1b7cf41f09f91f5f983c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34893de4538e1b7cf41f09f91f5f983c">&#9670;&#160;</a></span>slot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="slot__of__potion_8h.html#a10aa34bb5465c334505f6a90e582b6c6">slotOfPotion</a> potion::slot {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/inventory/potion/<a class="el" href="potion_8h_source.html">potion.h</a></li>
+<li>src/inventory/potion/<a class="el" href="potion_8cpp.html">potion.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

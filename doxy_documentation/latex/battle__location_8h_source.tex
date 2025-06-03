@@ -1,0 +1,28 @@
+\doxysection{battle\+\_\+location.\+h}
+\hypertarget{battle__location_8h_source}{}\label{battle__location_8h_source}\index{include/location/battle\_location/battle\_location.h@{include/location/battle\_location/battle\_location.h}}
+\mbox{\hyperlink{battle__location_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BATTLE\_LOCATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BATTLE\_LOCATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}array"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../../all\_headers.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ класс\ боевых\ локаций\ как\ шаблон\ для\ объектов\ локации}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbattle__location}{battle\_location}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlocation}{location}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classbattle__location}{battle\_location}}(\textcolor{keyword}{const}\ std::string\ \&name,\ \textcolor{keyword}{const}\ std::array<opponent*,\ 3>\ \&opponents);}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ конструктор\ принимает\ на\ вход\ массив\ оппонентов\ с\ которыи\ можно\ будет\ вступить\ в\ бой.}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classbattle__location_a98b87340a5e40ce41aa34d14efe8b057}{\string~battle\_location}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ std::array<opponent*,3>\ \mbox{\hyperlink{classbattle__location_a9865e3e34d315b144d4229faa6e9780b}{\_opponents}}\{\};\ \textcolor{comment}{//\ массив\ оппонентов}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BATTLE\_LOCATION\_H}}
+\DoxyCodeLine{00022\ }
+
+\end{DoxyCode}

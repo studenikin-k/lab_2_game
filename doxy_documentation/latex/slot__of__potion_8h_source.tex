@@ -1,0 +1,45 @@
+\doxysection{slot\+\_\+of\+\_\+potion.\+h}
+\hypertarget{slot__of__potion_8h_source}{}\label{slot__of__potion_8h_source}\index{include/utils/slot\_of\_potion.h@{include/utils/slot\_of\_potion.h}}
+\mbox{\hyperlink{slot__of__potion_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_SLOT\_OF\_POTION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_SLOT\_OF\_POTION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}iostream"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}unordered\_map"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ данный\ enum\ определяет\ различие\ между\ разными\ типами\ зелий}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slotOfPotion}}\{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6a605669cab962bf944d99ce89cf9e58d9}{Health}},}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ab9f24e83531326204197015b2f43a93f}{Damage}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ac77a8030f463c2c14aebd6452fc9f0a8}{Armor}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ad78f1fb7e69f7cddcf3e168f2663db20}{Accuracy}},}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6a27e9c0d7972e999a5bbe094c4cede584}{Stun}},}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ab01b83048682460e96eb4bd2482b8c32}{Dodge}}}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ данный\ метод\ нужен\ для\ разыменовывания\ enum\ и\ для\ метода\ сохранения}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{slot__of__potion_8h_ab20f7983412b41c2968c3cc10fca85b0}{slotOfPotionToString}}(\mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slotOfPotion}}\ slot)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{switch}\ (slot)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6a605669cab962bf944d99ce89cf9e58d9}{slotOfPotion::Health}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Здоровье"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ab9f24e83531326204197015b2f43a93f}{slotOfPotion::Damage}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Урон"{}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ac77a8030f463c2c14aebd6452fc9f0a8}{slotOfPotion::Armor}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Броня"{}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ad78f1fb7e69f7cddcf3e168f2663db20}{slotOfPotion::Accuracy}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Точность"{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6a27e9c0d7972e999a5bbe094c4cede584}{slotOfPotion::Stun}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Оглушение"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ab01b83048682460e96eb4bd2482b8c32}{slotOfPotion::Dodge}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Уворот"{}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Водки\ здесь\ не\ будет,\ не\ ждите"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ данный\ метод\ разыменовывания\ строки\ как\ enum\ необходим\ для\ того,\ чтобы\ загружать\ из\ БД\ предметы\ персонажа}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6}{slotOfPotion}}\ \mbox{\hyperlink{slot__of__potion_8h_ace1600a78f601c67f95316680b4f36bd}{stringToSlotOfPotion}}(\textcolor{keyword}{const}\ std::string\&\ str)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Здоровье"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6a605669cab962bf944d99ce89cf9e58d9}{slotOfPotion::Health}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Урон"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ab9f24e83531326204197015b2f43a93f}{slotOfPotion::Damage}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Броня"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ac77a8030f463c2c14aebd6452fc9f0a8}{slotOfPotion::Armor}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Точность"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ad78f1fb7e69f7cddcf3e168f2663db20}{slotOfPotion::Accuracy}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Оглушение"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6a27e9c0d7972e999a5bbe094c4cede584}{slotOfPotion::Stun}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Уворот"{}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{slot__of__potion_8h_a10aa34bb5465c334505f6a90e582b6c6ab01b83048682460e96eb4bd2482b8c32}{slotOfPotion::Dodge}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Неизвестный\ слот\ зелья:\ "{}}\ +\ str);}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_SLOT\_OF\_POTION\_H}}
+
+\end{DoxyCode}

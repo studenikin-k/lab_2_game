@@ -1,0 +1,17 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classinventory.html" title=" " alt="" coords="5,129,89,155"/>
+<area shape="rect" id="Node000001" href="$classequipment.html" title=" " alt="" coords="137,104,229,129"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="102,129,136,123,137,128,103,134"/>
+<area shape="rect" id="Node000007" href="$classweapon.html" title=" " alt="" coords="147,153,220,179"/>
+<area shape="poly" id="edge9_Node000000_Node000007" title=" " alt="" coords="103,149,147,157,146,162,102,154"/>
+<area shape="rect" id="Node000002" href="$classBoots.html" title=" " alt="" coords="294,5,353,31"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="208,93,276,40,295,29,297,33,279,44,211,97"/>
+<area shape="rect" id="Node000003" href="$classChestplate.html" title=" " alt="" coords="277,55,369,80"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="232,97,285,78,287,83,234,102"/>
+<area shape="rect" id="Node000004" href="$classGloves.html" title=" " alt="" coords="290,104,357,129"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="243,114,290,114,290,119,243,119"/>
+<area shape="rect" id="Node000005" href="$classHelmet.html" title=" " alt="" coords="288,153,359,179"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="234,131,289,151,287,156,232,136"/>
+<area shape="rect" id="Node000006" href="$classPants.html" title=" " alt="" coords="295,203,352,228"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="225,134,231,139,255,163,279,188,298,200,295,205,276,192,252,167,228,143,222,139"/>
+</map>

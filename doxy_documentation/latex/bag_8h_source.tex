@@ -1,0 +1,37 @@
+\doxysection{bag.\+h}
+\hypertarget{bag_8h_source}{}\label{bag_8h_source}\index{include/inventory/bag/bag.h@{include/inventory/bag/bag.h}}
+\mbox{\hyperlink{bag_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LAB\_2\_GAME\_BAG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LAB\_2\_GAME\_BAG\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../all\_headers.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbag}{bag}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbag_a5dd436ef1341ccbd45aa3ea5ea4f1aae}{bag}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbag_aaa8dad2586d1deba70a2ed9c1e43f4d0}{inputIntoBag}}(std::shared\_ptr<equipment>\ item);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbag_aaa8dad2586d1deba70a2ed9c1e43f4d0}{inputIntoBag}}(std::shared\_ptr<weapon>\ gun);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbag_aaa8dad2586d1deba70a2ed9c1e43f4d0}{inputIntoBag}}(std::shared\_ptr<potion>\ \mbox{\hyperlink{classpotion}{potion}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbag_ab265d46386b5a6c993cee354cb71a604}{outputEquipmentFromBag}}(\textcolor{keyword}{const}\ std::string\ \&name);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbag_aac5b428f95e5c14122c644a7532ae954}{outputWeaponFromBag}}(\textcolor{keyword}{const}\ std::string\ \&name);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbag_a472bd6e1e61c189d96e6609efe7e827e}{outputPotionFromBag}}(\textcolor{keyword}{const}\ std::string\ \&name);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<equipment>\ >\ \mbox{\hyperlink{classbag_ad06d3cdb5a98e75072309cff11aa4e46}{bagEquipment}};\ \textcolor{comment}{//\ контейнер\ снаряжения}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<weapon>\ >\ \mbox{\hyperlink{classbag_aa0ec4732dc7e1e2fb3c0c60e0aa28196}{bagWeapon}};\ \textcolor{comment}{//\ контейнер\ оружия}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<potion>\ >\ \mbox{\hyperlink{classbag_abaa1aff61f4b0d6486a7039c55f4c4c3}{bagPotion}};\ \textcolor{comment}{//\ контейнер\ зелья}}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LAB\_2\_GAME\_BAG\_H}}
+
+\end{DoxyCode}
